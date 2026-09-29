@@ -1,0 +1,1037 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="LUMINA 2048 Player handbook"><title>LUMINA · Player handbook</title><link rel="stylesheet" href="../reader.css"></head><body><div class="shell"><aside class="sidebar"><a class="brand" href="../index.html">LUMINA</a><div class="edition">Native 1.0.1 · English</div><nav class="languages" aria-label="Language"><a class="" data-language="../zh-CN/index.html" href="../zh-CN/index.html" lang="zh-CN">简体中文</a><a class="selected" data-language="../en/index.html" href="../en/index.html" lang="en">English</a><a class="" data-language="../ja/index.html" href="../ja/index.html" lang="ja">日本語</a></nav><label><span class="print-only">Search rules, controls, questions…</span><input id="search" class="searchbox" type="search" placeholder="Search rules, controls, questions…" aria-label="Search rules, controls, questions…"></label><div class="nav-title">Contents</div><nav class="chapter-list" aria-label="Contents"><a class="chapter-link" href="#01-start"><b>01</b><span>Getting started and controls</span></a><a class="chapter-link" href="#02-rules"><b>02</b><span>Rules for all six modes</span></a><a class="chapter-link" href="#03-expedition"><b>03</b><span>Expedition stages and abilities</span></a><a class="chapter-link" href="#04-ai-data"><b>04</b><span>AI, records and saves</span></a><a class="chapter-link" href="#05-faq"><b>05</b><span>Troubleshooting and support</span></a><a class="chapter-link" href="#06-build"><b>06</b><span>Installation and development</span></a><a class="chapter-link" href="#07-gallery"><b>07</b><span>Nine animated tutorials</span></a><a class="chapter-link" href="#08-solutions"><b>08</b><span>Puzzle and Rescue solutions (spoilers)</span></a><a class="chapter-link" href="#09-release"><b>09</b><span>Release and validation</span></a></nav><div class="side-footer"><button id="print" class="print-button">Print / save PDF</button><p>The current app UI is Chinese. This handbook is available in three languages.</p><p>2026.09.29 · OFFLINE EDITION</p></div></aside><main class="main"><div class="topline"><span class="doc-title">Player handbook</span><span>Nine chapters · Nine demonstrations</span></div><div id="results" class="search-results" hidden></div><p class="lead-note">The current app UI is Chinese. This handbook is available in three languages.</p><article data-chapter="01-start" aria-labelledby="01-start"><h1 id="01-start">Getting started and controls</h1>
+<p>For LUMINA Native 1.0.1, the iPhone / iPad project. Updated 2026-09-29. <strong>The current app interface is in Chinese.</strong> This English manual translates and identifies those controls; it does not imply that an English interface or an in-app language selector exists.</p>
+<h2 id="01-start-s1">Your first game</h2>
+<ol>
+<li>If you received source code, start with <a href="#06-build">Installation and building</a>. A source ZIP cannot be installed directly on an iPhone. This delivery does not include a signed IPA or a TestFlight invitation.</li>
+<li>Launch opens <strong>Classic 2048</strong>, restoring its saved game when available. Other modes retain their progress, but the app does not automatically reopen the last non-Classic mode.</li>
+<li>Swipe left, up, right or down <strong>inside the board</strong>. A swipe moves the entire board; you do not drag an individual tile.</li>
+<li>Equal tiles merge. Watch the score and move counter change.</li>
+<li>Tap the mode title and downward chevron to choose another mode. Classic appears first.</li>
+<li>Leaving the app requests a save. Before uninstalling or moving devices, also export a backup yourself.</li>
+</ol>
+<h2 id="01-start-s2">Find every control</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Chinese label / location</th>
+<th>English meaning</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>经典 2048, or another title at the top</td>
+<td>Current mode</td>
+<td>Opens the six-mode selector; changing mode saves and stops AI</td>
+</tr>
+<tr>
+<td>Slider icon at top right</td>
+<td>Settings</td>
+<td>Appearance, feedback, motion, AI, records and backups</td>
+</tr>
+<tr>
+<td>本局得分</td>
+<td>Current score</td>
+<td>Total earned by merges, not the largest tile; undo restores it</td>
+</tr>
+<tr>
+<td>手动最高 / 辅助最高</td>
+<td>Manual / assisted best</td>
+<td>Highest score for this mode and category; undo does not lower the record</td>
+</tr>
+<tr>
+<td>步数 / 剩余步数</td>
+<td>Moves / moves left</td>
+<td>Valid directional moves; Expedition powers do not use a move</td>
+</tr>
+<tr>
+<td>Curved-back arrow</td>
+<td>Undo</td>
+<td>Restores the previous action, within the combined 100-entry history</td>
+</tr>
+<tr>
+<td>提示 or lightbulb icon</td>
+<td>Hint</td>
+<td>Requests advice; requesting it immediately marks the game assisted</td>
+</tr>
+<tr>
+<td>走这一步</td>
+<td>Play this step</td>
+<td>Executes the suggestion on the hint card</td>
+</tr>
+<tr>
+<td>自动玩 / 暂停</td>
+<td>Autoplay / pause</td>
+<td>Starts or stops repeated AI decisions</td>
+</tr>
+<tr>
+<td>Ellipsis</td>
+<td>More</td>
+<td>Redo, restart, select mode; extra puzzle or rescue entries when relevant</td>
+</tr>
+<tr>
+<td>手动局 / 辅助局 at bottom</td>
+<td>Manual / assisted game</td>
+<td>The category of the current run; once assisted, it stays assisted</td>
+</tr>
+<tr>
+<td>完成 / 知道了 / 取消</td>
+<td>Done / OK / cancel</td>
+<td>Closes the relevant sheet, alert or operation</td>
+</tr>
+</tbody></table></div>
+<p>On a small screen the hint may use an icon instead of text. Scroll below the board or down the side panel to see objectives, abilities, hints and results.</p>
+<h2 id="01-start-s3">Touch and keyboard</h2>
+<p>Make a clear horizontal or vertical swipe inside the board. A diagonal swipe uses the axis with the larger displacement. Very short gestures may be ignored. External keyboards support arrow keys and <strong>A = left, W = up, D = right, S = down</strong>. Other keyboard shortcuts are not implemented; do not assume Cmd+Z performs undo.</p>
+<p>At most two swipes are queued while a move animation is running. Extra rapid input is not stored indefinitely. For precise play, let each move settle. Opening a sheet, displaying an alert or restart confirmation, or going to the background clears queued moves and stops AI. After returning, move manually or tap Autoplay again.</p>
+<p>To swap in Expedition, tap 交换, then two occupied tiles with different values. Tap the first selected tile again to deselect it. Tap 取消 to leave selection mode.</p>
+<h2 id="01-start-s4">Undo, redo and restart</h2>
+<p><strong>Undo / 撤销一步</strong> restores the board, random generator, score, move count and Expedition state. Repeating the same move after undo gives the same random result rather than rerolling it. Freeze and swap each create an undo entry too.</p>
+<p><strong>Redo / 重做一步</strong> is in the ellipsis menu. A new valid action after undo discards the old redo branch. Choosing an initial Expedition ability or a between-stage reward clears history: you cannot undo into the previous stage to choose another reward.</p>
+<p><strong>Restart / 重新开始</strong> asks for confirmation and replaces only the current mode&#39;s active game. Classic, Sprint and Expedition get a new random start; Puzzle and Rescue reset the selected challenge. Daily restarts the date currently being played, even if that is yesterday. To open today&#39;s Daily game, choose 每日同局 from the mode selector again. Best scores and earned puzzle stars remain.</p>
+<h2 id="01-start-s5">iPhone and iPad layouts</h2>
+<p>Narrow layouts stack the title, scores, board, controls and details. Wide layouts place the board on the left and information on the right. Short landscape layouts scroll the detail panel. The iPad layout responds to available window width; this is not simultaneous play in two independent windows. Rotation and Split View transitions still require physical-device acceptance testing.</p>
+<h2 id="01-start-s6">Settings reference</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Chinese setting</th>
+<th>Options / default</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>外观</td>
+<td>跟随系统 system, 浅色 light, 深色 dark</td>
+<td>System is the default</td>
+</tr>
+<tr>
+<td>声音</td>
+<td>Sound, on by default</td>
+<td>Move and merge sounds, subject to system audio conditions</td>
+</tr>
+<tr>
+<td>轻触反馈</td>
+<td>Haptics, on by default</td>
+<td>Requires suitable device hardware; some iPads provide no such feedback</td>
+</tr>
+<tr>
+<td>减少动态效果</td>
+<td>Reduce motion, off by default</td>
+<td>Reduces tile effects; the system accessibility preference also applies</td>
+</tr>
+<tr>
+<td>思考强度</td>
+<td>灵敏 responsive / 深度思考 deep</td>
+<td>Responsive is the default; deep gives search more time</td>
+</tr>
+<tr>
+<td>自动游玩节奏</td>
+<td>Autoplay pacing, 0.20–1.50 s, default 0.42 s</td>
+<td>A pacing setting, not a guaranteed end-to-end interval</td>
+</tr>
+</tbody></table></div>
+<h2 id="01-start-s7">Accessibility</h2>
+<p>Board cells expose row, column and value, including empty cells. The board offers four directional accessibility actions; swap targets are selectable controls. Current spoken labels are Chinese. Enable Reduce motion when helpful. VoiceOver end-to-end use, very large text and hardware keyboard focus have not yet been verified on an iOS device. Report concrete steps using the <a href="#05-faq">support template</a>.</p>
+<p>Continue with <a href="#02-rules">Rules for all six modes</a>, or watch the <a href="#07-gallery">animated tutorials</a>.</p>
+<div class="chapter-nav"><span></span><a href="#02-rules">Rules for all six modes →</a></div></article>
+<article data-chapter="02-rules" aria-labelledby="02-rules"><h1 id="02-rules">Complete rules for all six modes</h1>
+<h2 id="02-rules-s1">Shared board rules</h2>
+<p>The board is 4 × 4, with 16 cells. Each directional move slides all tiles toward that edge. Adjacent equal values merge in pairs. <strong>A tile created by a merge cannot merge again during the same move.</strong></p>
+<p>These examples show one row moving left, before the new tile spawns. A dot means an empty cell.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Before</th>
+<th>After sliding left</th>
+<th>Base score</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>2 · 2 · 0 · 0</td>
+<td>4 · 0 · 0 · 0</td>
+<td>4</td>
+</tr>
+<tr>
+<td>2 · 2 · 2 · 0</td>
+<td>4 · 2 · 0 · 0</td>
+<td>4</td>
+</tr>
+<tr>
+<td>2 · 2 · 4 · 0</td>
+<td>4 · 4 · 0 · 0</td>
+<td>4; it does not become 8 yet</td>
+</tr>
+<tr>
+<td>2 · 2 · 2 · 2</td>
+<td>4 · 4 · 0 · 0</td>
+<td>8</td>
+</tr>
+<tr>
+<td>4 · 4 · 8 · 8</td>
+<td>8 · 16 · 0 · 0</td>
+<td>24</td>
+</tr>
+<tr>
+<td>2 · 4 · 8 · 16</td>
+<td>Unchanged</td>
+<td>0; invalid if the entire board is unchanged</td>
+</tr>
+</tbody></table></div>
+<p>A move is valid when it changes the board. It increments the move counter and normally spawns a new tile in an empty cell: <strong>90% chance of 2, 10% chance of 4</strong>. Expedition abilities can alter this probability or suppress spawning. A slide without a merge still spends a move and spawns a tile, but earns no score. An invalid direction does none of these and does not advance the random generator.</p>
+<p>Base score is the sum of all newly merged values. Expedition then applies its bonuses. Score and largest tile are different statistics. A full board with no horizontally or vertically adjacent equal pair has no legal slide. Expedition also checks whether an active power remains available.</p>
+<h2 id="02-rules-s2">Mode comparison</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>In-app name / English name</th>
+<th>Goal</th>
+<th>Move limit</th>
+<th>End condition</th>
+<th>Restart</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>经典 2048 / Classic</td>
+<td>Bigger tiles and higher score</td>
+<td>None</td>
+<td>No legal move; 2048 does not stop play</td>
+<td>New random game</td>
+</tr>
+<tr>
+<td>能力远征 / Expedition</td>
+<td>Meet six stage score targets</td>
+<td>Per stage</td>
+<td>Reach target to advance; complete stage six to win</td>
+<td>New expedition</td>
+</tr>
+<tr>
+<td>败局重生 / Rescue</td>
+<td>Create the required empty cells</td>
+<td>Per challenge; practices use 6</td>
+<td>Reach empty-cell goal after spawning</td>
+<td>Same challenge</td>
+</tr>
+<tr>
+<td>每日同局 / Daily</td>
+<td>Play the local date&#39;s shared start</td>
+<td>None</td>
+<td>No legal move</td>
+<td>Same date&#39;s initial board</td>
+</tr>
+<tr>
+<td>谜题剧场 / Puzzle Theatre</td>
+<td>Make the target tile</td>
+<td>3–6 per built-in puzzle</td>
+<td>Largest tile reaches target</td>
+<td>Same puzzle</td>
+</tr>
+<tr>
+<td>六十步冲刺 / 60-Move Sprint</td>
+<td>Maximize score within 60 moves</td>
+<td>60</td>
+<td>Move 60 or an earlier blocked board</td>
+<td>New random game</td>
+</tr>
+</tbody></table></div>
+<h2 id="02-rules-s3">Classic 2048</h2>
+<p>A new Classic game starts with two tiles. Reaching 2048 does not force a stop: continue toward 4096 and beyond. After losing, undo may let you explore another move. A truly blocked board may also qualify for Rescue extraction.</p>
+<p>A useful practice is to keep the largest value near one corner, arrange neighboring values in descending order and preserve empty cells. Before moving, check whether you will pull the largest tile away from its corner. These are strategies, not mandatory rules or a guarantee of winning.</p>
+<h2 id="02-rules-s4">Daily</h2>
+<p>The seed is derived from the device&#39;s <strong>local calendar date</strong>, formatted <code>YYYY-MM-DD</code>. The same date, rules and sequence of actions reproduce the same board. A different route can produce different spawn positions because available cells differ. This is an offline shared-start mode, not a server competition: there is no global leaderboard, synchronized countdown or enforced common time zone.</p>
+<p>An open game from yesterday is not erased at midnight. Choose Daily from the mode selector to open today&#39;s game. Restarting while still on yesterday&#39;s board restarts yesterday. The app retains progress for the most recent seven saved dates. Manual and assisted best scores are recorded across the Daily mode, not as separate leaderboards for each date.</p>
+<h2 id="02-rules-s5">60-Move Sprint</h2>
+<p>Only valid directional moves count. It is <strong>not a 60-second timer</strong>: you can think as long as you like. Play ends at move 60, or earlier if blocked. Undo restores remaining moves, while the historical best score remains.</p>
+<p>On the final move, immediate merge score matters because there is no move 61. AI respects that horizon. Earlier in the run, balance immediate points against future opportunities. Reaching 60 moves while the board still has legal moves does not qualify as a blocked-board Rescue source.</p>
+<h2 id="02-rules-s6">Puzzle Theatre</h2>
+<p>There are twelve fixed puzzles, targeting 64 through 2048. Open More → 选择谜题 (Choose puzzle). All puzzles are selectable; there is no unlock gate. Each puzzle has a maximum move count and a shorter par. Its random state is deterministic, so repeating the same actions reproduces the same result.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>No.</th>
+<th>In-app title / English title</th>
+<th>Target</th>
+<th>Par</th>
+<th>Limit</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>01</td>
+<td>借一步 / A Step in Advance</td>
+<td>64</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr>
+<td>02</td>
+<td>转身 / Turn Around</td>
+<td>64</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr>
+<td>03</td>
+<td>留白 / Room to Breathe</td>
+<td>128</td>
+<td>3</td>
+<td>4</td>
+</tr>
+<tr>
+<td>04</td>
+<td>折返 / Double Back</td>
+<td>128</td>
+<td>3</td>
+<td>4</td>
+</tr>
+<tr>
+<td>05</td>
+<td>暗流 / Undercurrent</td>
+<td>256</td>
+<td>3</td>
+<td>4</td>
+</tr>
+<tr>
+<td>06</td>
+<td>挪一寸 / Make a Little Room</td>
+<td>256</td>
+<td>4</td>
+<td>5</td>
+</tr>
+<tr>
+<td>07</td>
+<td>连锁 / Chain Reaction</td>
+<td>512</td>
+<td>4</td>
+<td>5</td>
+</tr>
+<tr>
+<td>08</td>
+<td>破局 / Breakthrough</td>
+<td>512</td>
+<td>4</td>
+<td>5</td>
+</tr>
+<tr>
+<td>09</td>
+<td>回声 / Echo</td>
+<td>1024</td>
+<td>4</td>
+<td>5</td>
+</tr>
+<tr>
+<td>10</td>
+<td>逆风 / Against the Wind</td>
+<td>1024</td>
+<td>5</td>
+<td>6</td>
+</tr>
+<tr>
+<td>11</td>
+<td>归位 / Back in Place</td>
+<td>2048</td>
+<td>5</td>
+<td>6</td>
+</tr>
+<tr>
+<td>12</td>
+<td>最后一线 / The Last Opening</td>
+<td>2048</td>
+<td>5</td>
+<td>6</td>
+</tr>
+</tbody></table></div>
+<ul>
+<li><strong>Three stars:</strong> unassisted, no undo, finished at or below par.</li>
+<li><strong>Two stars:</strong> unassisted completion within the limit, but over par or with an undo.</li>
+<li><strong>One star:</strong> completed after using assistance.</li>
+</ul>
+<p>Redo does not erase the fact that undo was used. Achieving the target on the last permitted move wins. The best star rating per puzzle is retained. Starting another puzzle replaces the Puzzle mode&#39;s current unfinished board; it does not maintain twelve simultaneous unfinished sessions. Exact routes are isolated in the <a href="#08-solutions">solutions chapter</a>.</p>
+<h2 id="02-rules-s7">Rescue</h2>
+<p>The objective is <strong>empty cells</strong>, not a 2048 tile. The goal is checked after sliding, merging <strong>and spawning</strong>. If three empty cells become two after the new tile appears, the three-cell goal is not yet met.</p>
+<p>Three built-in practices each require three empty cells within six moves: 一线生机 (A Glimmer of Hope), 腾挪之间 (Room to Maneuver), and 逆转时刻 (Turning Point). In Rescue, open More → 残局档案 (Rescue archive) to choose one. Undo, restart, hints and autoplay remain available.</p>
+<p>To extract a challenge from your own game:</p>
+<ol>
+<li>Reach an actually blocked board in Classic, Daily or Sprint.</li>
+<li>Tap 寻找这局的另一种结局 (Find another ending) in the result area.</li>
+<li>Search examines candidate positions in the last ten moves, with at most one empty cell, seeking a verified route to three empty cells within six moves.</li>
+<li>If found, tap 试着改写这局 (Try a different ending) to start an independent challenge. The source mode&#39;s game is retained.</li>
+<li>Failure to find a challenge means none was confirmed within that search range or time budget, not proof that every earlier position was hopeless.</li>
+</ol>
+<p>The personal archive holds up to six challenges. New entries may remove older ones that are not needed by the current challenge. Built-in practices do not consume these slots. Two-route replay is a Rescue feature, not a full video replay of every Classic game.</p>
+<p>对照复盘 (Compare routes) shows 原来的路线 (Original route) and 转机路线 (Recovery route). Use 上一步 / 下一步 (Previous / Next); changing route resets to step zero. <strong>Opening replay before winning marks the challenge assisted</strong>, even if you intended only to view the original route, because it initially presents the verified solution. Opening it after winning does not change that completed run&#39;s category.</p>
+<p>For stage numbers and all abilities, see the <a href="#03-expedition">Expedition handbook</a>.</p>
+<div class="chapter-nav"><a href="#01-start">← Getting started and controls</a><a href="#03-expedition">Expedition stages and abilities →</a></div></article>
+<article data-chapter="03-expedition" aria-labelledby="03-expedition"><h1 id="03-expedition">Expedition: stages, energy and all nine abilities</h1>
+<h2 id="03-expedition-s1">A complete expedition</h2>
+<p>Start by choosing one of three abilities: 连击引擎 (Combo Engine), 蓄能核心 (Battery Core), or 豪赌协议 (Gambit Protocol). Each stage requires its own score target within a limited number of valid moves. The top score is cumulative; the stage progress bar measures <strong>current score minus the score at stage entry</strong>.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Stage</th>
+<th>In-app name / meaning</th>
+<th>Stage target</th>
+<th>Base moves</th>
+<th>With Reserve I / II</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>启程 / Departure</td>
+<td>100</td>
+<td>26</td>
+<td>30 / 34</td>
+</tr>
+<tr>
+<td>2</td>
+<td>蓄势 / Gathering Momentum</td>
+<td>260</td>
+<td>34</td>
+<td>38 / 42</td>
+</tr>
+<tr>
+<td>3</td>
+<td>回响 / Resonance</td>
+<td>520</td>
+<td>42</td>
+<td>46 / 50</td>
+</tr>
+<tr>
+<td>4</td>
+<td>临界 / Threshold</td>
+<td>900</td>
+<td>46</td>
+<td>50 / 54</td>
+</tr>
+<tr>
+<td>5</td>
+<td>跃迁 / Leap</td>
+<td>1400</td>
+<td>52</td>
+<td>56 / 60</td>
+</tr>
+<tr>
+<td>6</td>
+<td>终章 / Finale</td>
+<td>2200</td>
+<td>60</td>
+<td>64 / 68</td>
+</tr>
+</tbody></table></div>
+<p>After each of the first five stages, play pauses for a three-choice reward. Add an ability or upgrade one to rank II. Maxed-out abilities are excluded from offers. Your board, total score, abilities and energy carry forward. If more than one tile is occupied, one smallest tile is removed to create space; ties use the first cell in reading order from top left.</p>
+<p>Unused moves and excess target score do not carry into the next stage. Choosing a reward resets combo streak, freeze duration, cooldown and undo/redo history. Stage six completes the expedition. Hitting the target on the final allowed move wins the stage; otherwise, running out of moves or having neither a legal slide nor an available power loses.</p>
+<h2 id="03-expedition-s2">Energy and active powers</h2>
+<p>Each merged pair earns one energy, capped at <strong>12</strong>. Battery Core adds more per pair. Sliding without merging earns none. Energy exists only in Expedition.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Power</th>
+<th>Base cost</th>
+<th>How to use it</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>凝时 / Freeze</td>
+<td>5 energy</td>
+<td>Tap 凝时 · 5</td>
+<td>Suppress spawning on the next two valid moves; set a six-move cooldown</td>
+</tr>
+<tr>
+<td>交换 / Swap</td>
+<td>6 energy</td>
+<td>Tap 交换, then two occupied tiles with different values</td>
+<td>Exchange positions without merging or spawning</td>
+</tr>
+</tbody></table></div>
+<p>Neither power spends a directional move or awards points directly; each does create an undo entry. You cannot swap empty cells or equal-valued tiles. Freeze requires sufficient energy, zero cooldown, no active freeze and at least one legal slide. It cannot rescue an already immovable board directly; a swap sometimes can.</p>
+<p>Freeze duration and cooldown decrease only on valid directional moves. Waiting, invalid swipes and swaps do not advance them. If Flow also suppresses spawning during a frozen move, that move still consumes one freeze charge. Stage transitions reset freeze and cooldown.</p>
+<h2 id="03-expedition-s3">Exact ability reference</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>In-app name / translation</th>
+<th>Rank I</th>
+<th>Rank II</th>
+<th>Conditions</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>连击引擎 / Combo Engine</td>
+<td>+25% per streak layer</td>
+<td>+40% per layer</td>
+<td>Starts with the second consecutive merging move; at most four bonus layers</td>
+</tr>
+<tr>
+<td>蓄能核心 / Battery Core</td>
+<td>+1 extra energy per merged pair</td>
+<td>+2 extra per pair</td>
+<td>Total 2 / 3 per pair including base; capped at 12</td>
+</tr>
+<tr>
+<td>豪赌协议 / Gambit Protocol</td>
+<td>Score ×2; 4-spawn chance 30%</td>
+<td>Score ×2.5; 4-spawn chance 40%</td>
+<td>Higher score comes with more 4 tiles</td>
+</tr>
+<tr>
+<td>角落增幅 / Corner Amplifier</td>
+<td>+50% of corner merge output values</td>
+<td>+100%</td>
+<td>Uses the destination of a merge, not its starting cell</td>
+</tr>
+<tr>
+<td>共鸣回路 / Echo Circuit</td>
+<td>+50% of base score when at least two pairs merge</td>
+<td>+100%</td>
+<td>Applied once per move, even with three or four pairs</td>
+</tr>
+<tr>
+<td>空间回流 / Spatial Flow</td>
+<td>No spawn with at least three merged pairs</td>
+<td>No spawn with at least two</td>
+<td>Passive effect, no energy cost</td>
+</tr>
+<tr>
+<td>从容节拍 / Measured Tempo (Reserve)</td>
+<td>+4 moves per stage</td>
+<td>+8 per stage</td>
+<td>Applies immediately; II means +8 total, not +4 plus another +8</td>
+</tr>
+<tr>
+<td>折跃透镜 / Warp Lens</td>
+<td>Swap costs 4</td>
+<td>Swap costs 3</td>
+<td>Freeze still costs 5</td>
+</tr>
+<tr>
+<td>凝时晶体 / Freeze Crystal</td>
+<td>Freeze lasts three valid moves</td>
+<td>Lasts four</td>
+<td>Cooldown stays six valid moves</td>
+</tr>
+</tbody></table></div>
+<p>A combo streak counts successive <strong>moves with a merge</strong>, not the number of pairs within one move. A valid non-merging slide breaks it. Invalid swipes and active powers neither advance nor break it.</p>
+<h2 id="03-expedition-s4">Score calculation</h2>
+<p>Let G be base merge points, C the corner bonus and E the Echo bonus:</p>
+<p><code>Move score = (G + C + E) × combo multiplier × gambit multiplier</code></p>
+<p>The final number is rounded to the nearest integer, with exact halves rounded to the nearest even integer. Example: G = 24, an 8 is merged into a corner, at least two pairs merge, and you have Corner I, Echo I, Combo I on the second successive merging move, plus Gambit I. Score is <code>(24 + 4 + 12) × 1.25 × 2 = 100</code>.</p>
+<p>Combo I gives multipliers 1, 1.25, 1.50, 1.75 and 2 over the first five consecutive merging moves, then stays at 2. Combo II gives 1, 1.40, 1.80, 2.20 and 2.60, then stays at 2.60.</p>
+<h2 id="03-expedition-s5">Three practice approaches</h2>
+<p><strong>Energy control:</strong> Battery plus Warp gives more opportunities to rearrange tiles. Energy beyond 12 is lost; consider a useful power before another large energy gain.</p>
+<p><strong>Multiple merges:</strong> Echo plus Flow rewards preparing two or more simultaneous pairs with both points and space. Do not destroy a stable board merely to chase a trigger.</p>
+<p><strong>Multipliers:</strong> Combo plus Gambit can reach stage targets quickly, but more 4 tiles and the need to maintain a streak make planning harder. Gambit is a tradeoff, not a free score multiplier.</p>
+<p>Rewards offer only three choices at a time, so no combination is guaranteed. AI can use powers during play, but stage rewards are always chosen by the player. Watch the <a href="#07-gallery">Expedition demonstrations</a>.</p>
+<div class="chapter-nav"><a href="#02-rules">← Rules for all six modes</a><a href="#04-ai-data">AI, records and saves →</a></div></article>
+<article data-chapter="04-ai-data" aria-labelledby="04-ai-data"><h1 id="04-ai-data">AI assistance, records and saved progress</h1>
+<h2 id="04-ai-data-s1">Hint versus autoplay</h2>
+<p>提示 (Hint) computes a suggestion without making the move. The card shows a direction or power; 走这一步 (Play this step) executes it. You may instead make your own move. 自动玩 (Autoplay) repeatedly decides and acts; 暂停 (Pause) stops it.</p>
+<p>Manual swipes, undo, redo, changing modes, opening settings, alerts, backgrounding and choosing stage abilities stop autoplay. Closing a menu does not restart it: tap Autoplay again.</p>
+<p>Requesting a hint immediately marks the game <strong>assisted</strong>, even if ignored. Starting autoplay does too. Opening Rescue replay before winning also marks assistance. Stopping AI, undoing, or exporting and importing cannot remove that flag. A restarted game begins unassisted again.</p>
+<h2 id="04-ai-data-s2">What the algorithms actually do</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>Method</th>
+<th>Interpretation</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Classic and Daily</td>
+<td>Expectimax probability search</td>
+<td>Compares moves and random spawn outcomes; favors space, merge opportunities, orderly values and a large corner tile</td>
+</tr>
+<tr>
+<td>Sprint</td>
+<td>Probability search bounded by remaining moves</td>
+<td>Does not value fictional turns beyond the limit; the last move compares immediate points</td>
+</tr>
+<tr>
+<td>Expedition</td>
+<td>Probability search with ability effects</td>
+<td>Includes score and spawn effects; swap and freeze use additional heuristics, not exhaustive optimization of every build</td>
+</tr>
+<tr>
+<td>Puzzle and Rescue</td>
+<td>Breadth-first search with complete random state</td>
+<td>Explores shorter routes first and returns a reproducible shortest solution when found, within a time budget</td>
+</tr>
+</tbody></table></div>
+<p>Classic search uses precomputed row tables, repeated-state caching, iterative deepening and a cutoff for very low-probability branches. “优先 / 备选” means preferred / alternative in this search ranking, <strong>not a win probability or guaranteed score</strong>. Normal random modes do not inspect the future random sequence to cheat. Fixed Puzzle and Rescue searches intentionally use their deterministic state to find reproducible solutions.</p>
+<p>灵敏 (Responsive) normally budgets about 0.14 seconds; 深度思考 (Deep) about 0.55 seconds. These are search budgets, not guaranteed full turn latency. Puzzle and Rescue receive at least about one second. Deeper search can cost more battery and still does not guarantee a globally optimal decision. An unfinished search is different from exhausting the permitted search space without a solution. Retry or undo when appropriate.</p>
+<h2 id="04-ai-data-s3">Learning from the assistant</h2>
+<p>Try a hint in Classic, compare its choice with your own, then follow it. Slow autoplay makes decisions easier to observe. Expedition stops at reward selection; choose a reward and start autoplay again. For a manual record, avoid assistance from the start.</p>
+<p>Retained host evidence includes a Classic run of 3,200 moves, 69,592 points and a 4096 tile from version 1.0. Expedition was rerun on 1.0.1: six stages, 138 actions, 6,422 points. These are specific seeded runs, not device performance figures, average win rates or promised scores.</p>
+<h2 id="04-ai-data-s4">Records and stars</h2>
+<p>Each mode has separate manual and assisted best scores. Daily records cover the mode as a whole, not a separate daily leaderboard. Undo can reduce the current score without reducing a previously earned record. Puzzle stars retain the best rating for each puzzle; a later one-star finish does not replace three stars. There are no online leaderboards, account-based record merging, friend matches or server statistics.</p>
+<h2 id="04-ai-data-s5">What autosave contains</h2>
+<p>Current sessions, boards and random states, scores, move counts, assistance flags, undo/redo history, Expedition abilities, best puzzle stars, personal Rescue challenges, records and settings. Each non-Daily mode has one active session. Daily retains seven saved dates, and the personal Rescue archive holds six entries.</p>
+<p>Ordinary changes are coalesced into a write scheduled after about 280 ms; continuous play does not postpone saving indefinitely. Backgrounding requests an immediate write. Abrupt system termination, lack of storage or device failure can still affect the latest save, so export important progress too. Writes are atomic and retain the previous readable save as a backup. If the primary is missing or corrupt, loading tries the backup; an unreadable original is preserved separately before replacement.</p>
+<h2 id="04-ai-data-s6">Exporting a backup</h2>
+<ol>
+<li>Open the top-right settings button.</li>
+<li>Under 进度 (Progress), tap 导出进度备份 (Export progress backup).</li>
+<li>Choose a destination in the system file panel. The default name resembles <code>LUMINA-2026-09-29.json</code>.</li>
+<li>Confirm that the file exists in Files before uninstalling or migrating.</li>
+<li>For multiple exports on one day, add a device name or time to avoid replacing your only copy.</li>
+</ol>
+<p>The export includes all mode progress, settings and records, not just the current game. Saving the file to iCloud Drive or sending it through AirDrop is <strong>manual file transfer</strong>, not automatic iCloud synchronization by the app.</p>
+<h2 id="04-ai-data-s7">Import and migration</h2>
+<p>Install a runnable native app on the destination device. Open Settings → 导入进度备份 (Import progress backup), then choose the JSON. The app validates size, structure, board values, random state and challenges before asking 用备份替换本机进度？ (Replace local progress with this backup?). Confirming <strong>replaces all local mode progress, records and settings</strong>; it does not merge the devices. Export the destination&#39;s existing progress first.</p>
+<p>After import, Classic appears first; switch modes to continue another session. Invalid files or files larger than 24,000,000 bytes are rejected. Native JSON is incompatible with Python desktop, Windows and PWA saves. Renaming a file to <code>.json</code> does not convert it.</p>
+<h2 id="04-ai-data-s8">Local data and privacy scope</h2>
+<p>Gameplay and AI run locally, with no server dependency, login requirement or advertising SDK. Saves live in the app sandbox under <code>Application Support/Lumina</code>. Players should use the import/export controls rather than edit internal files. Backups contain game state and preferences, not the developer&#39;s signing account. Sharing a backup also shares its records and unfinished boards; choose recipients accordingly.</p>
+<p>See <a href="#05-faq">Troubleshooting</a> for errors, sound issues and installation problems.</p>
+<div class="chapter-nav"><a href="#03-expedition">← Expedition stages and abilities</a><a href="#05-faq">Troubleshooting and support →</a></div></article>
+<article data-chapter="05-faq" aria-labelledby="05-faq"><h1 id="05-faq">Troubleshooting and reporting a problem</h1>
+<h2 id="05-faq-s1">A swipe or button does nothing</h2>
+<p>Check for a sheet, alert, reward choice or finished game. A direction must change the board to count as a move. Start the gesture inside the board and swipe far enough. At most two moves queue during animation; more rapid input is not accumulated. On narrow screens the lightbulb is the Hint control.</p>
+<p>If 准备棋盘… (Preparing board) never finishes, note any built-in resource error. Try closing and reopening; developers should check packaged resources. Do not uninstall unbacked-up progress just to troubleshoot.</p>
+<h2 id="05-faq-s2">Why does play continue after 2048?</h2>
+<p>Classic and Daily allow larger tiles. Puzzle checks its own target, Sprint checks the move limit, and Expedition checks stage points. Their ending conditions differ.</p>
+<h2 id="05-faq-s3">I merged tiles, but Rescue did not complete</h2>
+<p>The normal new tile spawns after the merge. Rescue counts empty cells after that spawn. Three spaces immediately after merging may become two. Only Expedition has Freeze and Flow to suppress spawning.</p>
+<h2 id="05-faq-s4">Why is this an assisted game?</h2>
+<p>A hint request, autoplay, or opening Rescue replay before winning marks assistance, even if you ignore the advice. Undo and import do not remove it. A previously earned manual best remains, but subsequent scores from this run belong to assisted records.</p>
+<h2 id="05-faq-s5">Why did I miss three stars?</h2>
+<p>Three stars require no assistance, no undo and completion at or below par. Par is not the maximum allowed move count. Unassisted completion with an undo earns at most two; assisted completion earns one. Restart the puzzle for a fresh three-star attempt.</p>
+<h2 id="05-faq-s6">Why did AI stop, or why can it still lose?</h2>
+<p>AI pauses at rewards, the end of a game, menus and manual intervention. Restart it after closing a menu. Finite-time search and heuristic evaluation do not guarantee endless survival in a random game. Deep mode grants more search time, not a proof of global optimality. You choose Expedition rewards yourself.</p>
+<h2 id="05-faq-s7">Why are Expedition powers disabled?</h2>
+<p>Freeze requires 5 energy, no cooldown, no active freeze and a legal slide. Swap requires enough energy and two occupied, different-valued tiles. Powers also wait for the current animation. Energy is capped at 12. A six-move cooldown means six valid directional moves, not six seconds.</p>
+<h2 id="05-faq-s8">Why does a friend&#39;s Daily board differ?</h2>
+<p>Compare local dates, mode, version and moves already made. Different time zones can produce different dates. Matching board states require matching action sequences, not just the date. There is no live synchronization. Yesterday&#39;s open game does not automatically become today&#39;s; select Daily again.</p>
+<h2 id="05-faq-s9">Import failed or older progress appeared</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Symptom</th>
+<th>What to check</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>存档格式不正确 / Invalid format</td>
+<td>Use a complete, unmodified export from this native app; desktop, Windows and PWA files differ</td>
+</tr>
+<tr>
+<td>超过 24 MB / Too large</td>
+<td>Limit is 24,000,000 bytes; preserve the original instead of deleting arbitrary JSON fields</td>
+</tr>
+<tr>
+<td>已从备用存档恢复 / Restored backup</td>
+<td>Primary was missing or corrupt; the previous readable version may omit the latest action</td>
+</tr>
+<tr>
+<td>Import opens Classic</td>
+<td>Expected behavior; choose the saved mode from the selector</td>
+</tr>
+<tr>
+<td>Both devices have new progress</td>
+<td>Import replaces everything; export both first and choose which to keep</td>
+</tr>
+<tr>
+<td>保存失败 / Save failed</td>
+<td>Check free storage, attempt an export and retain the complete error message</td>
+</tr>
+</tbody></table></div>
+<p>Do not repeatedly restart and overwrite your only useful state while investigating a save failure.</p>
+<h2 id="05-faq-s10">Sound, haptics or animation seem wrong</h2>
+<p>Check app settings, system volume, silent mode and audio output. The implementation uses an ambient audio category that can mix with other audio. Haptics depend on hardware; some iPads do not support the same feedback. Reduce motion can come from the app or system. Tutorial GIFs are sampled demonstrations and cannot measure an iPhone&#39;s refresh rate. Hardware audio, haptics and animation still need device testing.</p>
+<h2 id="05-faq-s11">How do I install this on an iPhone or iPad?</h2>
+<p>A source ZIP, Xcode project or macOS preview is not an installable IPA. A full Xcode installation, matching SDK and signing setup are required. No TestFlight invitation has been delivered. Follow <a href="#06-build">Installation</a>.</p>
+<h2 id="05-faq-s12">English or Japanese UI? Windows? Multiplayer?</h2>
+<p>This documentation is available in Chinese, English and Japanese; the current native interface remains Chinese. There is no language-switch button. Earlier Python desktop, Windows and PWA editions remain separate; this handbook does not claim they are iOS apps or share save formats. The native edition has no multiplayer, cloud leaderboard or automatic cloud synchronization.</p>
+<h2 id="05-faq-s13">A useful bug report</h2>
+<p>Copy these fields and describe the exact action that triggers the issue.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Example information</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>App version</td>
+<td>1.0.1 Native and build number</td>
+</tr>
+<tr>
+<td>Device and OS</td>
+<td>iPhone / iPad model and iOS / iPadOS version</td>
+</tr>
+<tr>
+<td>Mode and position</td>
+<td>Puzzle 03, or Expedition stage 2</td>
+</tr>
+<tr>
+<td>Reproduction</td>
+<td>Launch → select mode → swipe left → undo → observed result</td>
+</tr>
+<tr>
+<td>Expected versus actual</td>
+<td>What should happen, and what happened instead</td>
+</tr>
+<tr>
+<td>Frequency</td>
+<td>Every time, or approximately how often</td>
+</tr>
+<tr>
+<td>Relevant state</td>
+<td>AI, Reduce motion, keyboard, Split View</td>
+</tr>
+<tr>
+<td>Evidence</td>
+<td>Screenshot / recording, complete error; optionally a backup you are comfortable sharing</td>
+</tr>
+</tbody></table></div>
+<p>There is no built-in ticket submission button or designated public support email for this project. Send the report to your project maintainer. See <a href="#09-release">Release and validation</a> for known boundaries.</p>
+<div class="chapter-nav"><a href="#04-ai-data">← AI, records and saves</a><a href="#06-build">Installation and development →</a></div></article>
+<article data-chapter="06-build" aria-labelledby="06-build"><h1 id="06-build">Installation, builds and developer guide</h1>
+<h2 id="06-build-s1">Delivery status</h2>
+<p>LUMINA 1.0.1 is a native Swift / SwiftUI Universal App project for iPhone and iPad, with a minimum deployment target of iOS / iPadOS 16.4. It contains no WebView. The source includes the core, resources, Xcode project, tests, documentation and tutorial media. It currently includes <strong>no signed IPA, simulator build, TestFlight release or App Store release</strong>.</p>
+<p>A deployment target is not a compiler requirement: the package requires a Swift 6.0+ toolchain and uses Swift 5 language mode. Xcode must also support your device OS. This development machine has only Command Line Tools; macOS checks have run, but an iOS SDK build and device acceptance have not.</p>
+<h2 id="06-build-s2">Run on your own device</h2>
+<ol>
+<li>Install full Xcode on a Mac. Choose a release compatible with the Mac and device using Apple&#39;s <a href="https://developer.apple.com/xcode/system-requirements">Xcode requirements</a>. Command Line Tools installed by <code>xcode-select --install</code> are insufficient.</li>
+<li>Launch Xcode and finish installing required components. In Settings → Locations → Command Line Tools, select that Xcode.</li>
+<li>Extract the project to a writable local directory. Open <code>Lumina.xcodeproj</code> and choose the shared <strong>Lumina</strong> scheme.</li>
+<li>Add your Apple Account under Xcode → Settings → Accounts. In the target&#39;s Signing &amp; Capabilities, select your Team. Change the Bundle Identifier if necessary to one unique to you.</li>
+<li>Connect and unlock your device, complete trust pairing, and follow Xcode / system prompts for Developer Mode. Choose the iPhone or iPad as the run destination.</li>
+<li>Press ▶ Run. Allow the initial build and signing to finish. If it fails, inspect the actual first error; changing a filename extension cannot fix signing.</li>
+<li>Test Classic movement, orientation changes, all modes, saves, feedback and file import/export.</li>
+</ol>
+<p>Apple references: <a href="https://developer.apple.com/documentation/xcode/running-your-app-on-simulated-or-physical-devices">Running on simulated or physical devices</a>, <a href="https://help.apple.com/xcode/mac/current/en.lproj/dev60b6fbbc7.html">accounts and teams</a>. Eligibility and distribution rules are governed by Apple at the time of use. Running on a personal device is distinct from distributing through TestFlight.</p>
+<h2 id="06-build-s3">Source map</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Path</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>App/</code></td>
+<td>SwiftUI, GameModel, input, feedback, app assets and privacy manifest</td>
+</tr>
+<tr>
+<td><code>Sources/LuminaCore/</code></td>
+<td>Rules, RNG, modes, search and persistence</td>
+</tr>
+<tr>
+<td><code>Sources/LuminaCore/Resources/</code></td>
+<td>12 puzzles and 3 Rescue practices</td>
+</tr>
+<tr>
+<td><code>Tests/LuminaCoreTests/</code></td>
+<td>Rule fixtures, save regressions and AI endurance</td>
+</tr>
+<tr>
+<td><code>Tests/LuminaAppTests/</code></td>
+<td>Lifecycle, layouts and opt-in documentation capture</td>
+</tr>
+<tr>
+<td><code>Lumina.xcodeproj/</code></td>
+<td>Shared scheme and local package reference</td>
+</tr>
+<tr>
+<td><code>tools/</code></td>
+<td>Project generation, validation, archive and documentation tools</td>
+</tr>
+<tr>
+<td><code>docs/</code></td>
+<td>Three languages, offline HTML, shared GIFs and source demo videos</td>
+</tr>
+<tr>
+<td><code>QA/</code></td>
+<td>Retained test logs and layout images</td>
+</tr>
+</tbody></table></div>
+<p>The runtime has no third-party SDK and requires no remote Swift package. Documentation-generation dependencies are separate from app runtime dependencies.</p>
+<h2 id="06-build-s4">Build and test commands</h2>
+<p>Run from the project root:</p>
+<pre><code class="language-sh">swift test -c release --disable-xctest
+python3 tools/validate-project.py
+./tools/check.sh
+</code></pre>
+<p>The first runs Swift Testing on the host Mac; the second checks configuration and resources. The third also attempts an iOS Simulator build and fails explicitly if the SDK is missing. Host tests do not substitute for an iOS build.</p>
+<pre><code class="language-sh">LUMINA_BENCHMARK=1 swift test -c release --disable-xctest --filter Benchmark
+LUMINA_RENDER_DIRECTORY=/tmp/lumina-layouts swift test -c release --disable-xctest --filter renderNativeLayouts
+</code></pre>
+<p>These opt into endurance tests and static SwiftUI layout images. Layout images use a test container and are not device screenshots. Capture and conversion commands are in the <a href="../media/index.html">media notes</a>.</p>
+<h2 id="06-build-s5">Archive and distribution</h2>
+<p>Use Product → Archive in Xcode, or:</p>
+<pre><code class="language-sh">LUMINA_TEAM_ID=YOUR_TEAM_ID ./tools/archive.sh
+</code></pre>
+<p>The script creates <code>build/Lumina.xcarchive</code> only. It does not upload or export an IPA. Export must match your certificates, account eligibility, devices and distribution intent. Do not publish account credentials, certificates or device identifiers in source. These commands do not enroll you in a developer program.</p>
+<h2 id="06-build-s6">Maintaining the project</h2>
+<p>After adding <code>App/*.swift</code>, run <code>python3 tools/generate-project.py</code> to update references. The generator restores default Team / Bundle Identifier values, so preserve your local signing changes first. The optional capture test uses its own temporary save directory and does not touch a player&#39;s normal data.</p>
+<p>Desktop-compatible random behavior is verified with fixtures, while native JSON remains a distinct format. When rules, abilities, levels or labels change, update all three manuals and relevant media. Documentation revisions are separate from gameplay versions; this documentation pass does not change game rules.</p>
+<h2 id="06-build-s7">Physical-device acceptance plan</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Expected outcome</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>iPhone portrait / landscape</td>
+<td>Complete board, reachable controls, scrollable objectives and results</td>
+</tr>
+<tr>
+<td>iPad full screen / Split View</td>
+<td>Resizing and rotation do not reset play or obscure controls</td>
+</tr>
+<tr>
+<td>Fast swipes followed by a menu</td>
+<td>Board stops; no stale queued move after dismissal</td>
+</tr>
+<tr>
+<td>AI search while switching mode / backgrounding</td>
+<td>Old search does not move or overwrite the new game</td>
+</tr>
+<tr>
+<td>Relaunch after background / system termination</td>
+<td>Latest persisted state restores; errors are reported</td>
+</tr>
+<tr>
+<td>Export / import / cancel</td>
+<td>Export can be read back; cancel and invalid files preserve progress</td>
+</tr>
+<tr>
+<td>Keyboard / VoiceOver</td>
+<td>Board is operable and focus behaves correctly around sheets</td>
+</tr>
+<tr>
+<td>Six modes and powers</td>
+<td>Limits, rewards, assistance and results match the rules</td>
+</tr>
+<tr>
+<td>Sound / silent mode / haptics</td>
+<td>Matches settings and hardware capabilities</td>
+</tr>
+</tbody></table></div>
+<p>This is a pending acceptance plan, not a report that every device check has passed.</p>
+<div class="chapter-nav"><a href="#05-faq">← Troubleshooting and support</a><a href="#07-gallery">Nine animated tutorials →</a></div></article>
+<article data-chapter="07-gallery" aria-labelledby="07-gallery"><h1 id="07-gallery">Nine animated tutorials</h1>
+<p>These nine GIFs are converted from sampled videos of the actual native code running. The MP4 source videos are included. Capture platform: macOS native preview, <strong>not iPhone / iPad screen recording or a device FPS test</strong>. The English bottom strip is a tutorial annotation. The HTML reader can pause animations; Markdown viewers usually loop them. MP4 uses H.264. Expand the video player in the HTML reader or download it for separate playback. All media is local and works offline.</p>
+<h2 id="07-gallery-s1">Classic: slide, merge and spawn</h2>
+<p>Continue a real seed-42 game from midgame. Watch the entire board slide, equal values merge, the score rise and a new tile appear. The bottom strip identifies directions.</p>
+<figure class="motion"><img src="../media/01-classic-poster.png" data-gif="../media/01-classic.gif" data-poster="../media/01-classic-poster.png" alt="Classic: slide, merge and spawn" loading="lazy" width="1000" height="700"><button class="motion-toggle" type="button" aria-pressed="false">Play animation</button><figcaption>Classic: slide, merge and spawn</figcaption></figure><details class="video-source"><summary>MP4 · Video player</summary><video controls playsinline preload="none" poster="../media/01-classic-poster.png" src="../media/01-classic.mp4" width="1000" height="700" aria-label="Classic: slide, merge and spawn"></video></details>
+<p>Try keeping your largest tile near a corner. A slide without a merge still spawns a tile.</p>
+<p><a href="../media/01-classic.gif">GIF</a> · <a href="../media/01-classic.mp4">MP4 · 6.08 s</a> · <a href="../media/01-classic-poster.png">PNG</a></p>
+<h2 id="07-gallery-s2">Undo and redo: restore the same spawn</h2>
+<p>Make one move, undo it, then redo. The board, score and counter change together.</p>
+<figure class="motion"><img src="../media/02-undo-redo-poster.png" data-gif="../media/02-undo-redo.gif" data-poster="../media/02-undo-redo-poster.png" alt="Undo and redo: restore the same spawn" loading="lazy" width="1000" height="700"><button class="motion-toggle" type="button" aria-pressed="false">Play animation</button><figcaption>Undo and redo: restore the same spawn</figcaption></figure><details class="video-source"><summary>MP4 · Video player</summary><video controls playsinline preload="none" poster="../media/02-undo-redo-poster.png" src="../media/02-undo-redo.mp4" width="1000" height="700" aria-label="Undo and redo: restore the same spawn"></video></details>
+<p>Redo is in the ellipsis menu. The random state is restored too; this is not a reroll.</p>
+<p><a href="../media/02-undo-redo.gif">GIF</a> · <a href="../media/02-undo-redo.mp4">MP4 · 5.58 s</a> · <a href="../media/02-undo-redo-poster.png">PNG</a></p>
+<h2 id="07-gallery-s3">AI: hint, follow, autoplay and pause</h2>
+<p>Request a hint, follow it, run autoplay, then pause.</p>
+<figure class="motion"><img src="../media/03-ai-poster.png" data-gif="../media/03-ai.gif" data-poster="../media/03-ai-poster.png" alt="AI: hint, follow, autoplay and pause" loading="lazy" width="1000" height="700"><button class="motion-toggle" type="button" aria-pressed="false">Play animation</button><figcaption>AI: hint, follow, autoplay and pause</figcaption></figure><details class="video-source"><summary>MP4 · Video player</summary><video controls playsinline preload="none" poster="../media/03-ai-poster.png" src="../media/03-ai.mp4" width="1000" height="700" aria-label="AI: hint, follow, autoplay and pause"></video></details>
+<p>The footer changes from manual to assisted. Pausing does not clear the assisted flag.</p>
+<p><a href="../media/03-ai.gif">GIF</a> · <a href="../media/03-ai.mp4">MP4 · 11.5 s</a> · <a href="../media/03-ai-poster.png">PNG</a></p>
+<h2 id="07-gallery-s4">Expedition: draft and opening moves</h2>
+<p>Begin a seed-42 expedition, choose Battery Core and make several valid moves.</p>
+<figure class="motion"><img src="../media/04-expedition-draft-poster.png" data-gif="../media/04-expedition-draft.gif" data-poster="../media/04-expedition-draft-poster.png" alt="Expedition: draft and opening moves" loading="lazy" width="1000" height="700"><button class="motion-toggle" type="button" aria-pressed="false">Play animation</button><figcaption>Expedition: draft and opening moves</figcaption></figure><details class="video-source"><summary>MP4 · Video player</summary><video controls playsinline preload="none" poster="../media/04-expedition-draft-poster.png" src="../media/04-expedition-draft.mp4" width="1000" height="700" aria-label="Expedition: draft and opening moves"></video></details>
+<p>Multiple merged pairs earn more energy. Distinguish the stage target from cumulative score.</p>
+<p><a href="../media/04-expedition-draft.gif">GIF</a> · <a href="../media/04-expedition-draft.mp4">MP4 · 7.25 s</a> · <a href="../media/04-expedition-draft-poster.png">PNG</a></p>
+<h2 id="07-gallery-s5">Expedition: freeze and swap</h2>
+<p>Continue from an actually played position with 12 energy. Freeze, select two different values to swap, then make two moves.</p>
+<figure class="motion"><img src="../media/05-expedition-powers-poster.png" data-gif="../media/05-expedition-powers.gif" data-poster="../media/05-expedition-powers-poster.png" alt="Expedition: freeze and swap" loading="lazy" width="1000" height="700"><button class="motion-toggle" type="button" aria-pressed="false">Play animation</button><figcaption>Expedition: freeze and swap</figcaption></figure><details class="video-source"><summary>MP4 · Video player</summary><video controls playsinline preload="none" poster="../media/05-expedition-powers-poster.png" src="../media/05-expedition-powers.mp4" width="1000" height="700" aria-label="Expedition: freeze and swap"></video></details>
+<p>Active powers leave the move counter unchanged. Frozen moves do not spawn a new tile.</p>
+<p><a href="../media/05-expedition-powers.gif">GIF</a> · <a href="../media/05-expedition-powers.mp4">MP4 · 6.42 s</a> · <a href="../media/05-expedition-powers-poster.png">PNG</a></p>
+<h2 id="07-gallery-s6">Puzzle: make 64 in two moves</h2>
+<p>Puzzle 01 from its reset state: up, then up, reaching 64.</p>
+<figure class="motion"><img src="../media/06-puzzle-poster.png" data-gif="../media/06-puzzle.gif" data-poster="../media/06-puzzle-poster.png" alt="Puzzle: make 64 in two moves" loading="lazy" width="1000" height="700"><button class="motion-toggle" type="button" aria-pressed="false">Play animation</button><figcaption>Puzzle: make 64 in two moves</figcaption></figure><details class="video-source"><summary>MP4 · Video player</summary><video controls playsinline preload="none" poster="../media/06-puzzle-poster.png" src="../media/06-puzzle.mp4" width="1000" height="700" aria-label="Puzzle: make 64 in two moves"></video></details>
+<p>Contains the solution. No hint or undo is used, so the result earns three stars.</p>
+<p><a href="../media/06-puzzle.gif">GIF</a> · <a href="../media/06-puzzle.mp4">MP4 · 4.67 s</a> · <a href="../media/06-puzzle-poster.png">PNG</a></p>
+<h2 id="07-gallery-s7">Rescue: a failed move and a recovery route</h2>
+<p>Practice A Glimmer of Hope: left reproduces the original blocked outcome. Restart, then right, up, up.</p>
+<figure class="motion"><img src="../media/07-rescue-poster.png" data-gif="../media/07-rescue.gif" data-poster="../media/07-rescue-poster.png" alt="Rescue: a failed move and a recovery route" loading="lazy" width="1000" height="700"><button class="motion-toggle" type="button" aria-pressed="false">Play animation</button><figcaption>Rescue: a failed move and a recovery route</figcaption></figure><details class="video-source"><summary>MP4 · Video player</summary><video controls playsinline preload="none" poster="../media/07-rescue-poster.png" src="../media/07-rescue.mp4" width="1000" height="700" aria-label="Rescue: a failed move and a recovery route"></video></details>
+<p>Compare the outcomes. Success requires at least three empty cells after spawning. This shows actual challenge actions, not a full Classic recording.</p>
+<p><a href="../media/07-rescue.gif">GIF</a> · <a href="../media/07-rescue.mp4">MP4 · 7.58 s</a> · <a href="../media/07-rescue-poster.png">PNG</a></p>
+<h2 id="07-gallery-s8">Daily: same date, same restart</h2>
+<p>Use the fixed demonstration date 2026-09-29, make three moves, then restart.</p>
+<figure class="motion"><img src="../media/08-daily-poster.png" data-gif="../media/08-daily.gif" data-poster="../media/08-daily-poster.png" alt="Daily: same date, same restart" loading="lazy" width="1000" height="700"><button class="motion-toggle" type="button" aria-pressed="false">Play animation</button><figcaption>Daily: same date, same restart</figcaption></figure><details class="video-source"><summary>MP4 · Video player</summary><video controls playsinline preload="none" poster="../media/08-daily-poster.png" src="../media/08-daily.mp4" width="1000" height="700" aria-label="Daily: same date, same restart"></video></details>
+<p>The two initial tiles match the opening. No network synchronization is involved.</p>
+<p><a href="../media/08-daily.gif">GIF</a> · <a href="../media/08-daily.mp4">MP4 · 5.83 s</a> · <a href="../media/08-daily-poster.png">PNG</a></p>
+<h2 id="07-gallery-s9">Sprint: final three moves</h2>
+<p>A real seed-42 Sprint is advanced to move 57, then the last three moves and result are captured.</p>
+<figure class="motion"><img src="../media/09-sprint-poster.png" data-gif="../media/09-sprint.gif" data-poster="../media/09-sprint-poster.png" alt="Sprint: final three moves" loading="lazy" width="1000" height="700"><button class="motion-toggle" type="button" aria-pressed="false">Play animation</button><figcaption>Sprint: final three moves</figcaption></figure><details class="video-source"><summary>MP4 · Video player</summary><video controls playsinline preload="none" poster="../media/09-sprint-poster.png" src="../media/09-sprint.mp4" width="1000" height="700" aria-label="Sprint: final three moves"></video></details>
+<p>Remaining moves fall from 3 to 0. This is not a timer, and there is no move 61.</p>
+<p><a href="../media/09-sprint.gif">GIF</a> · <a href="../media/09-sprint.mp4">MP4 · 5.58 s</a> · <a href="../media/09-sprint-poster.png">PNG</a></p>
+<p><a href="../media/index.html">Media / 媒体 / メディア</a></p>
+<div class="chapter-nav"><a href="#06-build">← Installation and development</a><a href="#08-solutions">Puzzle and Rescue solutions (spoilers) →</a></div></article>
+<article data-chapter="08-solutions" aria-labelledby="08-solutions"><h1 id="08-solutions">Puzzle and Rescue solutions (spoilers)</h1>
+<p>Try each challenge yourself before reading. Every route starts at its original board: restart the matching challenge first. Arrows are move directions; 0 is empty. Routes are generated directly from bundled game resources so translation cannot alter a direction.</p>
+<p>Reading an external manual is outside the app, so it cannot automatically mark that you consulted these solutions. For your own unassisted challenge, avoid external answers; a practiced known route is different from solving a puzzle blind.</p>
+<h2 id="08-solutions-s1">Puzzle 01 · 借一步</h2>
+<p>Target / par / limit: <strong>64 / 2 / 3</strong></p>
+<pre><code class="language-text">   2    8    8   16
+   4    4    2   16
+   4    8    8    0
+  16    4    4   32
+</code></pre>
+<p>Route: <strong>↑  ↑</strong></p>
+<h2 id="08-solutions-s2">Puzzle 02 · 转身</h2>
+<p>Target / par / limit: <strong>64 / 2 / 3</strong></p>
+<pre><code class="language-text">   8   32    2    0
+   8    8   16   16
+   4    4    8    8
+   0   16    4   16
+</code></pre>
+<p>Route: <strong>←  ↑</strong></p>
+<h2 id="08-solutions-s3">Puzzle 03 · 留白</h2>
+<p>Target / par / limit: <strong>128 / 3 / 4</strong></p>
+<pre><code class="language-text">   2    2   64   32
+   8   16   16   16
+  16    0    0    4
+  32   16    8    4
+</code></pre>
+<p>Route: <strong>→  ↑  ←</strong></p>
+<h2 id="08-solutions-s4">Puzzle 04 · 折返</h2>
+<p>Target / par / limit: <strong>128 / 3 / 4</strong></p>
+<pre><code class="language-text">   0   16   16    0
+  32   16   16   32
+  16    4   16    0
+   4    4    0   32
+</code></pre>
+<p>Route: <strong>↑  →  ←</strong></p>
+<h2 id="08-solutions-s5">Puzzle 05 · 暗流</h2>
+<p>Target / par / limit: <strong>256 / 3 / 4</strong></p>
+<pre><code class="language-text">   2    2   64   16
+   0    4    0    4
+   0   32   32  128
+  64    0   16    4
+</code></pre>
+<p>Route: <strong>←  ↑  ←</strong></p>
+<h2 id="08-solutions-s6">Puzzle 06 · 挪一寸</h2>
+<p>Target / par / limit: <strong>256 / 4 / 5</strong></p>
+<pre><code class="language-text">  16   32   32   32
+  16    4    0   16
+   4    0   32   64
+  64   64    0   32
+</code></pre>
+<p>Route: <strong>←  ↑  ←  ←</strong></p>
+<h2 id="08-solutions-s7">Puzzle 07 · 连锁</h2>
+<p>Target / par / limit: <strong>512 / 4 / 5</strong></p>
+<pre><code class="language-text"> 128   64    0    2
+ 256   32    2   64
+   0   32    2    4
+ 128    0   32   64
+</code></pre>
+<p>Route: <strong>↑  ↑  ←  ↑</strong></p>
+<h2 id="08-solutions-s8">Puzzle 08 · 破局</h2>
+<p>Target / par / limit: <strong>512 / 4 / 5</strong></p>
+<pre><code class="language-text">   4   64   64  128
+   0    2  128    4
+  32   64   64    0
+  64    0    0   64
+</code></pre>
+<p>Route: <strong>←  ←  ↑  ↑</strong></p>
+<h2 id="08-solutions-s9">Puzzle 09 · 回声</h2>
+<p>Target / par / limit: <strong>1024 / 4 / 5</strong></p>
+<pre><code class="language-text">   4  256    0  256
+ 128  256   64  128
+  64   64   64    0
+ 256    4   64    2
+</code></pre>
+<p>Route: <strong>←  ↑  →  ↑</strong></p>
+<h2 id="08-solutions-s10">Puzzle 10 · 逆风</h2>
+<p>Target / par / limit: <strong>1024 / 5 / 6</strong></p>
+<pre><code class="language-text">   4    4  128    2
+  64    0  512   64
+ 128  256  128  256
+   0   64    4  256
+</code></pre>
+<p>Route: <strong>↑  ←  ←  ↑  ←</strong></p>
+<h2 id="08-solutions-s11">Puzzle 11 · 归位</h2>
+<p>Target / par / limit: <strong>2048 / 5 / 6</strong></p>
+<pre><code class="language-text"> 128    0    4  256
+ 256  256    0  512
+   4    4    0    4
+ 512    2    0  512
+</code></pre>
+<p>Route: <strong>←  ↑  →  ↑  ↑</strong></p>
+<h2 id="08-solutions-s12">Puzzle 12 · 最后一线</h2>
+<p>Target / par / limit: <strong>2048 / 5 / 6</strong></p>
+<pre><code class="language-text"> 256    0  256    0
+ 256  128  512  256
+ 256  128  256  128
+   2  128  512  256
+</code></pre>
+<p>Route: <strong>↑  ↓  ←  ←  ↑</strong></p>
+<h2 id="08-solutions-s13">Built-in Rescue</h2>
+<p>Create three empty cells within six moves, checked after spawning. The original route below ends in a blocked board and is included for comparison, not as advice.</p>
+<h3 id="08-solutions-s14">一线生机</h3>
+<p>Original route (loss): ←</p>
+<p>Recovery route (success): <strong>→ ↑ ↑</strong></p>
+<h3 id="08-solutions-s15">腾挪之间</h3>
+<p>Original route (loss): ↓</p>
+<p>Recovery route (success): <strong>↑ ← ↑ ← ↑</strong></p>
+<h3 id="08-solutions-s16">逆转时刻</h3>
+<p>Original route (loss): ↑</p>
+<p>Recovery route (success): <strong>← ← → ↓ ←</strong></p>
+<p>Personal Rescue starting positions vary. There is no universal arrow sequence; use the individual challenge hint or comparison replay.</p>
+<div class="chapter-nav"><a href="#07-gallery">← Nine animated tutorials</a><a href="#09-release">Release and validation →</a></div></article>
+<article data-chapter="09-release" aria-labelledby="09-release"><h1 id="09-release">Release notes, evidence and documentation maintenance</h1>
+<h2 id="09-release-s1">Versions</h2>
+<p>Game: <strong>1.0.1 Native</strong>, build 2. Save schema: 1. Documentation revision: 2026-09-29. This handbook describes the current Swift native implementation. Earlier desktop / PWA manuals do not replace these rules or save instructions.</p>
+<h2 id="09-release-s2">Main fixes in 1.0.1</h2>
+<ul>
+<li>Queued input could continue behind mode sheets, confirmations or background transitions.</li>
+<li>Continuous input postponed saving; a missing primary did not trigger backup recovery.</li>
+<li>Damaged originals could be overwritten; mixed-mode metadata, invalid calendar dates and inconsistent Rescue data could be accepted.</li>
+<li>Sprint&#39;s last move valued nonexistent future turns.</li>
+<li>Changing replay routes could leave an out-of-range cursor.</li>
+<li>Choosing a stage reward during animation could retain old actions.</li>
+<li>Keyboard focus and background saving were adjusted; their iOS branches still require SDK and device verification.</li>
+</ul>
+<p>The original detailed repair record is <a href="../../BUGFIXES-1.0.1.md">BUGFIXES-1.0.1.md</a>.</p>
+<h2 id="09-release-s3">Retained validation evidence</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Check</th>
+<th>Result</th>
+<th>Boundary</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Core and interaction</td>
+<td>38 passed</td>
+<td>macOS host, not iOS device</td>
+</tr>
+<tr>
+<td>Mixed operations</td>
+<td>5,760 across six modes</td>
+<td>Moves, powers, undo, redo and related state</td>
+</tr>
+<tr>
+<td>Save round trips</td>
+<td>144</td>
+<td>Encoding and decoding</td>
+</tr>
+<tr>
+<td>Static layouts</td>
+<td>Four sizes rendered and inspected</td>
+<td>Cannot establish touch behavior or frame rate</td>
+</tr>
+<tr>
+<td>Expedition AI on 1.0.1</td>
+<td>Six stages, 6,422 points</td>
+<td>Fixed seed and reward priority</td>
+</tr>
+<tr>
+<td>Classic AI</td>
+<td>3,200 moves, 69,592 points, 4096 tile</td>
+<td>Historical 1.0 result, not rerun for this documentation</td>
+</tr>
+</tbody></table></div>
+<p>Logs and images are in <code>QA/</code>; the source report is <a href="../../QA.md">QA.md</a>. Swift Testing summaries may count skipped optional checks in their displayed total. The 38 figure counts the core and interaction checks actually executed.</p>
+<h2 id="09-release-s4">What tutorial media represents</h2>
+<p>Nine demonstrations run the actual native GameModel and SwiftUI on macOS. Sampled frames are assembled as videos and converted to GIF. They are instructional captures, <strong>not iPhone / iPad screen recordings, touch tests or frame-rate measurements</strong>. The English strip at the bottom belongs to the recorder, not the app. Midgame checkpoints come from real engine actions rather than invented scores or modified rules. Seeds, methods and scripts are in the <a href="../media/index.html">media notes</a>.</p>
+<h2 id="09-release-s5">Still outstanding</h2>
+<p>No signed IPA, App Store / TestFlight release or completed iOS SDK build. Device animation, system file panels, suspended-state saving, keyboard, VoiceOver, haptics and rotation still need validation. The native UI is currently Chinese; translated manuals do not constitute UI localization. There is no automatic iCloud sync, multiplayer or cloud leaderboard.</p>
+<h2 id="09-release-s6">Reading and maintaining the manual</h2>
+<p>Chinese button names identify controls; translated names explain them. Arrows always mean board direction: ← left, ↑ up, → right, ↓ down. A zero or dot in a board example means an empty cell, not a zero tile. Solution routes must start from a freshly reset matching challenge.</p>
+<p>Open <code>docs/index.html</code> for offline reading, language selection, chapters, search and animations. Markdown is the editable source. Printing or saving as PDF produces a static document: GIFs cannot animate on paper or in that PDF. Distribute HTML and media together when animation is needed.</p>
+<div class="chapter-nav"><a href="#08-solutions">← Puzzle and Rescue solutions (spoilers)</a><span>LUMINA · 1.0.1</span></div></article></main></div><script id="reader-config" type="application/json">{"play":"Play animation","pause":"Pause animation","results":"Search results","none":"No matches found"}</script><script src="../reader.js"></script></body></html>

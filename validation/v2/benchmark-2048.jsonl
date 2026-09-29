@@ -1,0 +1,15 @@
+{"seed": 2048, "moves": 500, "score": 9228, "tile": 1024, "seconds": 12.6, "depth": 3}
+{"seed": 2048, "moves": 1000, "score": 20880, "tile": 2048, "seconds": 25.2, "depth": 3}
+{"seed": 2048, "moves": 1500, "score": 30376, "tile": 2048, "seconds": 37.8, "depth": 3}
+{"seed": 2048, "moves": 2000, "score": 46252, "tile": 4096, "seconds": 50.4, "depth": 3}
+{"seed": 2048, "moves": 2500, "score": 55316, "tile": 4096, "seconds": 63.0, "depth": 5}
+{"seed": 2048, "moves": 3000, "score": 67108, "tile": 4096, "seconds": 75.7, "depth": 4}
+{"seed": 2048, "moves": 3500, "score": 76956, "tile": 4096, "seconds": 88.3, "depth": 4}
+{"seed": 2048, "moves": 4000, "score": 101084, "tile": 8192, "seconds": 100.9, "depth": 3}
+{"seed": 2048, "moves": 4500, "score": 110472, "tile": 8192, "seconds": 113.5, "depth": 5}
+{"seed": 2048, "moves": 5000, "score": 122100, "tile": 8192, "seconds": 126.1, "depth": 3}
+{"seed": 2048, "moves": 5500, "score": 131656, "tile": 8192, "seconds": 138.7, "depth": 5}
+{"seed": 2048, "moves": 6000, "score": 147516, "tile": 8192, "seconds": 151.4, "depth": 4}
+{"seed": 2048, "moves": 6500, "score": 157012, "tile": 8192, "seconds": 164.0, "depth": 5}
+{"seed": 2048, "moves": 7000, "score": 170344, "tile": 8192, "seconds": 176.6, "depth": 3}
+{"seed": 2048, "moves": 7376, "score": 176192, "tile": 8192, "seconds": 186.1, "budget": 0.025, "complete": true, "mean_depth": 3.75, "nodes": 3153248209, "backend": "native"}

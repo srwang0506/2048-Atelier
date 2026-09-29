@@ -1,0 +1,660 @@
+[
+  {
+    "name": "10-desktop-lobby",
+    "fps": 12,
+    "frames": 72,
+    "duration": 6.0,
+    "source": "Python desktop v12 / macOS / SDL dummy renderer",
+    "events": [
+      {
+        "frame": 0,
+        "action": "lobby",
+        "mode": "classic",
+        "moves": 0,
+        "score": 0
+      },
+      {
+        "frame": 18,
+        "action": "tab_featured",
+        "mode": "classic",
+        "moves": 0,
+        "score": 0
+      },
+      {
+        "frame": 42,
+        "action": "tab_classic",
+        "mode": "classic",
+        "moves": 0,
+        "score": 0
+      },
+      {
+        "frame": 60,
+        "action": "mode_classic",
+        "mode": "classic",
+        "moves": 0,
+        "score": 0
+      }
+    ],
+    "final": {
+      "mode": "classic",
+      "moves": 0,
+      "score": 0,
+      "assisted": false
+    },
+    "video_codec": "H.264 / yuv420p",
+    "decoded_video_frames": 72,
+    "gif_source": "decoded delivered MP4",
+    "size": [
+      1080,
+      820
+    ],
+    "gif_frames": 64,
+    "gif_duration_ms": 6000,
+    "files": {
+      "10-desktop-lobby.mp4": {
+        "bytes": 211889,
+        "sha256": "8271dc8b876aa8b86fa82b0ceedcb10bb5c2e88fee7620f1dc8b8dbe93ed7ded"
+      },
+      "10-desktop-lobby.gif": {
+        "bytes": 3647141,
+        "sha256": "fcbac13bc562d39fab90549f7da13377893fff552617f0c1cc4ae26bc38570c4"
+      },
+      "10-desktop-lobby-poster.png": {
+        "bytes": 144778,
+        "sha256": "8484faf995422aa072d02f1cb98ad2fa04c397305eebaa1e020330538d23b6f1"
+      }
+    }
+  },
+  {
+    "name": "11-desktop-classic",
+    "fps": 12,
+    "frames": 84,
+    "duration": 7.0,
+    "source": "Python desktop v12 / macOS / SDL dummy renderer",
+    "events": [
+      {
+        "frame": 12,
+        "action": "left",
+        "mode": "classic",
+        "moves": 1,
+        "score": 0,
+        "changed": true
+      },
+      {
+        "frame": 22,
+        "action": "down",
+        "mode": "classic",
+        "moves": 2,
+        "score": 4,
+        "changed": true
+      },
+      {
+        "frame": 32,
+        "action": "left",
+        "mode": "classic",
+        "moves": 3,
+        "score": 4,
+        "changed": true
+      },
+      {
+        "frame": 42,
+        "action": "up",
+        "mode": "classic",
+        "moves": 4,
+        "score": 8,
+        "changed": true
+      },
+      {
+        "frame": 52,
+        "action": "right",
+        "mode": "classic",
+        "moves": 5,
+        "score": 8,
+        "changed": true
+      },
+      {
+        "frame": 62,
+        "action": "undo",
+        "mode": "classic",
+        "moves": 4,
+        "score": 8
+      },
+      {
+        "frame": 73,
+        "action": "redo",
+        "mode": "classic",
+        "moves": 5,
+        "score": 8
+      }
+    ],
+    "final": {
+      "mode": "classic",
+      "moves": 5,
+      "score": 8,
+      "assisted": false
+    },
+    "video_codec": "H.264 / yuv420p",
+    "decoded_video_frames": 84,
+    "gif_source": "decoded delivered MP4",
+    "size": [
+      1080,
+      820
+    ],
+    "gif_frames": 80,
+    "gif_duration_ms": 7000,
+    "files": {
+      "11-desktop-classic.mp4": {
+        "bytes": 123126,
+        "sha256": "ef7075ea82516655917e48fe663c8328bd578bef10e5789808496e409c85717f"
+      },
+      "11-desktop-classic.gif": {
+        "bytes": 6686537,
+        "sha256": "43dbb2ff8ee48b8be83b6ebcfa5faf9cab86349bcff0db5693b6d82143f77625"
+      },
+      "11-desktop-classic-poster.png": {
+        "bytes": 73427,
+        "sha256": "70bc426af44d477b371dccb319c66dc5118c6bd7cafec2bc97ffdb207c81ca4d"
+      }
+    }
+  },
+  {
+    "name": "12-desktop-ai-replay",
+    "fps": 12,
+    "frames": 102,
+    "duration": 8.5,
+    "source": "Python desktop v12 / macOS / SDL dummy renderer",
+    "events": [
+      {
+        "frame": 0,
+        "action": "intelligence",
+        "mode": "classic",
+        "moves": 5,
+        "score": 8
+      },
+      {
+        "frame": 24,
+        "action": "preview_left",
+        "mode": "classic",
+        "moves": 5,
+        "score": 8
+      },
+      {
+        "frame": 36,
+        "action": "close",
+        "mode": "classic",
+        "moves": 5,
+        "score": 8
+      },
+      {
+        "frame": 42,
+        "action": "step",
+        "mode": "classic",
+        "moves": 5,
+        "score": 8
+      },
+      {
+        "frame": 60,
+        "action": "replay",
+        "mode": "classic",
+        "moves": 6,
+        "score": 12
+      },
+      {
+        "frame": 72,
+        "action": "replay_first",
+        "mode": "classic",
+        "moves": 6,
+        "score": 12
+      },
+      {
+        "frame": 78,
+        "action": "replay_play",
+        "mode": "classic",
+        "moves": 6,
+        "score": 12
+      }
+    ],
+    "final": {
+      "mode": "classic",
+      "moves": 6,
+      "score": 12,
+      "assisted": true
+    },
+    "video_codec": "H.264 / yuv420p",
+    "decoded_video_frames": 102,
+    "gif_source": "decoded delivered MP4",
+    "size": [
+      1080,
+      820
+    ],
+    "gif_frames": 97,
+    "gif_duration_ms": 8500,
+    "files": {
+      "12-desktop-ai-replay.mp4": {
+        "bytes": 382649,
+        "sha256": "d8258b53be213561e35bb1d7ea9351cf07b734f5ef55c8304e308b5222b2eb11"
+      },
+      "12-desktop-ai-replay.gif": {
+        "bytes": 8290547,
+        "sha256": "5bb35c84aeb9f3a67fc475aa49034f3bb4cbf447159b54f78c3f9d521a0d7fcc"
+      },
+      "12-desktop-ai-replay-poster.png": {
+        "bytes": 132445,
+        "sha256": "690c5d4972a90c32f56f15369da09e7701a8fb49dcf3b41f804bae3961a2be90"
+      }
+    }
+  },
+  {
+    "name": "13-desktop-puzzle",
+    "fps": 12,
+    "frames": 64,
+    "duration": 5.333333333333333,
+    "source": "Python desktop v12 / macOS / SDL dummy renderer",
+    "events": [
+      {
+        "frame": 18,
+        "action": "up",
+        "mode": "puzzle",
+        "moves": 1,
+        "score": 40,
+        "changed": true
+      },
+      {
+        "frame": 32,
+        "action": "up",
+        "mode": "puzzle",
+        "moves": 2,
+        "score": 104,
+        "changed": true
+      }
+    ],
+    "final": {
+      "mode": "puzzle",
+      "moves": 2,
+      "score": 104,
+      "assisted": false
+    },
+    "video_codec": "H.264 / yuv420p",
+    "decoded_video_frames": 64,
+    "gif_source": "decoded delivered MP4",
+    "size": [
+      1080,
+      820
+    ],
+    "gif_frames": 62,
+    "gif_duration_ms": 5330,
+    "files": {
+      "13-desktop-puzzle.mp4": {
+        "bytes": 126058,
+        "sha256": "2863e27fad569cda54bc497efde437fe26b4733e68aa63614e74978f54d29642"
+      },
+      "13-desktop-puzzle.gif": {
+        "bytes": 4069982,
+        "sha256": "e16231dd33d82d157927c9bbf61388378d35a132a7a093fedeb1912542f0cdef"
+      },
+      "13-desktop-puzzle-poster.png": {
+        "bytes": 144611,
+        "sha256": "ad909bd6d4c79beeab3b7f86e29813f90fdc55993e59dd033ae9bf9bdb67e7d7"
+      }
+    }
+  },
+  {
+    "name": "14-desktop-expedition",
+    "fps": 12,
+    "frames": 96,
+    "duration": 8.0,
+    "source": "Python desktop v12 / macOS / SDL dummy renderer",
+    "events": [
+      {
+        "frame": 18,
+        "action": "perk_battery",
+        "mode": "expedition",
+        "moves": 0,
+        "score": 0
+      },
+      {
+        "frame": 30,
+        "action": "left",
+        "mode": "expedition",
+        "moves": 1,
+        "score": 0,
+        "changed": true
+      },
+      {
+        "frame": 38,
+        "action": "down",
+        "mode": "expedition",
+        "moves": 2,
+        "score": 4,
+        "changed": true
+      },
+      {
+        "frame": 46,
+        "action": "left",
+        "mode": "expedition",
+        "moves": 3,
+        "score": 4,
+        "changed": true
+      },
+      {
+        "frame": 54,
+        "action": "up",
+        "mode": "expedition",
+        "moves": 4,
+        "score": 4,
+        "changed": true
+      },
+      {
+        "frame": 62,
+        "action": "right",
+        "mode": "expedition",
+        "moves": 5,
+        "score": 8,
+        "changed": true
+      },
+      {
+        "frame": 70,
+        "action": "down",
+        "mode": "expedition",
+        "moves": 6,
+        "score": 16,
+        "changed": true
+      },
+      {
+        "frame": 78,
+        "action": "expedition_rules",
+        "mode": "expedition",
+        "moves": 6,
+        "score": 16
+      }
+    ],
+    "final": {
+      "mode": "expedition",
+      "moves": 6,
+      "score": 16,
+      "assisted": false
+    },
+    "video_codec": "H.264 / yuv420p",
+    "decoded_video_frames": 96,
+    "gif_source": "decoded delivered MP4",
+    "size": [
+      1080,
+      820
+    ],
+    "gif_frames": 94,
+    "gif_duration_ms": 8000,
+    "files": {
+      "14-desktop-expedition.mp4": {
+        "bytes": 503647,
+        "sha256": "88177cc0f257fb05e25cce9f04ec63ebb75149984e8eb2cd1c7174d7430b55cc"
+      },
+      "14-desktop-expedition.gif": {
+        "bytes": 9842067,
+        "sha256": "3c70f7fa1da9b038d1a9844d70f3e926a540b8f5ce448935a9b887a332a42b44"
+      },
+      "14-desktop-expedition-poster.png": {
+        "bytes": 199058,
+        "sha256": "cfd9ce551ef71a35d1532d430069641087cc14daaf657a38cb49fa82ee0be0bb"
+      }
+    }
+  },
+  {
+    "name": "15-desktop-rescue",
+    "fps": 12,
+    "frames": 82,
+    "duration": 6.833333333333333,
+    "source": "Python desktop v12 / macOS / SDL dummy renderer",
+    "events": [
+      {
+        "frame": 18,
+        "action": "right",
+        "mode": "rescue",
+        "moves": 1,
+        "score": 4,
+        "changed": true
+      },
+      {
+        "frame": 30,
+        "action": "up",
+        "mode": "rescue",
+        "moves": 2,
+        "score": 24,
+        "changed": true
+      },
+      {
+        "frame": 42,
+        "action": "up",
+        "mode": "rescue",
+        "moves": 3,
+        "score": 44,
+        "changed": true
+      },
+      {
+        "frame": 54,
+        "action": "rescue_review",
+        "mode": "rescue",
+        "moves": 3,
+        "score": 44
+      },
+      {
+        "frame": 66,
+        "action": "review_next",
+        "mode": "rescue",
+        "moves": 3,
+        "score": 44
+      },
+      {
+        "frame": 74,
+        "action": "review_next",
+        "mode": "rescue",
+        "moves": 3,
+        "score": 44
+      }
+    ],
+    "final": {
+      "mode": "rescue",
+      "moves": 3,
+      "score": 44,
+      "assisted": false
+    },
+    "video_codec": "H.264 / yuv420p",
+    "decoded_video_frames": 82,
+    "gif_source": "decoded delivered MP4",
+    "size": [
+      1080,
+      820
+    ],
+    "gif_frames": 77,
+    "gif_duration_ms": 6830,
+    "files": {
+      "15-desktop-rescue.mp4": {
+        "bytes": 330873,
+        "sha256": "beba91fbee5de3f3f9a6b05b28e887b81d9a9360d3e3da2d6cd25a87cb4af95b"
+      },
+      "15-desktop-rescue.gif": {
+        "bytes": 7985092,
+        "sha256": "b70311eac929436c3432f05594a9db06b5e6d5c154215af62047a58691d15826"
+      },
+      "15-desktop-rescue-poster.png": {
+        "bytes": 152485,
+        "sha256": "89a4284b9fc15387a6e1054ffc6e5185ed99018b467a1e51f5b72bb90f8ceec7"
+      }
+    }
+  },
+  {
+    "name": "16-desktop-daily",
+    "fps": 12,
+    "frames": 80,
+    "duration": 6.666666666666667,
+    "source": "Python desktop v12 / macOS / SDL dummy renderer",
+    "events": [
+      {
+        "frame": 18,
+        "action": "left",
+        "mode": "daily",
+        "moves": 1,
+        "score": 0,
+        "changed": true
+      },
+      {
+        "frame": 28,
+        "action": "down",
+        "mode": "daily",
+        "moves": 2,
+        "score": 4,
+        "changed": true
+      },
+      {
+        "frame": 38,
+        "action": "left",
+        "mode": "daily",
+        "moves": 2,
+        "score": 4,
+        "changed": false
+      },
+      {
+        "frame": 48,
+        "action": "up",
+        "mode": "daily",
+        "moves": 3,
+        "score": 4,
+        "changed": true
+      },
+      {
+        "frame": 58,
+        "action": "undo",
+        "mode": "daily",
+        "moves": 2,
+        "score": 4
+      },
+      {
+        "frame": 69,
+        "action": "redo",
+        "mode": "daily",
+        "moves": 3,
+        "score": 4
+      }
+    ],
+    "final": {
+      "mode": "daily",
+      "moves": 3,
+      "score": 4,
+      "assisted": false
+    },
+    "video_codec": "H.264 / yuv420p",
+    "decoded_video_frames": 80,
+    "gif_source": "decoded delivered MP4",
+    "size": [
+      1080,
+      820
+    ],
+    "gif_frames": 73,
+    "gif_duration_ms": 6660,
+    "files": {
+      "16-desktop-daily.mp4": {
+        "bytes": 87812,
+        "sha256": "ff2facbf1aa9d0715cb55f0d06ff19a1a5bce4d126ccb44e07df3df3e7dab80c"
+      },
+      "16-desktop-daily.gif": {
+        "bytes": 5107403,
+        "sha256": "62a590bc5c950803aa51c24817beb057e44e7080f14cf22419b11ce42591cebe"
+      },
+      "16-desktop-daily-poster.png": {
+        "bytes": 73571,
+        "sha256": "52988b2b789c836e8f416eb5a3cc50c313c341ac0e1e4bc22937070dfefbfbfa"
+      }
+    }
+  },
+  {
+    "name": "17-desktop-sprint",
+    "fps": 12,
+    "frames": 90,
+    "duration": 7.5,
+    "source": "Python desktop v12 / macOS / SDL dummy renderer",
+    "events": [
+      {
+        "frame": 18,
+        "action": "left",
+        "mode": "sprint",
+        "moves": 1,
+        "score": 0,
+        "changed": true
+      },
+      {
+        "frame": 28,
+        "action": "down",
+        "mode": "sprint",
+        "moves": 2,
+        "score": 4,
+        "changed": true
+      },
+      {
+        "frame": 38,
+        "action": "left",
+        "mode": "sprint",
+        "moves": 3,
+        "score": 4,
+        "changed": true
+      },
+      {
+        "frame": 48,
+        "action": "up",
+        "mode": "sprint",
+        "moves": 4,
+        "score": 8,
+        "changed": true
+      },
+      {
+        "frame": 58,
+        "action": "right",
+        "mode": "sprint",
+        "moves": 5,
+        "score": 8,
+        "changed": true
+      },
+      {
+        "frame": 68,
+        "action": "undo",
+        "mode": "sprint",
+        "moves": 4,
+        "score": 8
+      },
+      {
+        "frame": 79,
+        "action": "redo",
+        "mode": "sprint",
+        "moves": 5,
+        "score": 8
+      }
+    ],
+    "final": {
+      "mode": "sprint",
+      "moves": 5,
+      "score": 8,
+      "assisted": false
+    },
+    "video_codec": "H.264 / yuv420p",
+    "decoded_video_frames": 90,
+    "gif_source": "decoded delivered MP4",
+    "size": [
+      1080,
+      820
+    ],
+    "gif_frames": 87,
+    "gif_duration_ms": 7500,
+    "files": {
+      "17-desktop-sprint.mp4": {
+        "bytes": 140970,
+        "sha256": "2dc4f978ed3837d1f7a050c075962a706a330848d5a1813f97c7f72970be70e4"
+      },
+      "17-desktop-sprint.gif": {
+        "bytes": 6368861,
+        "sha256": "803567eda806dc1a231ff98efd9bad1883c75f2287f56044b67a360c5caa5e89"
+      },
+      "17-desktop-sprint-poster.png": {
+        "bytes": 104621,
+        "sha256": "9a5806fac35cef32d126169e09bc658840a41649ba521b0d04c4094f4f933158"
+      }
+    }
+  }
+]

@@ -1,0 +1,9 @@
+{
+  "n": 840,
+  "mean_ms": 4.28,
+  "p95_ms": 5.48,
+  "max_ms": 11.79,
+  "over_16_ms": 0,
+  "material_builds_during_animation": 0,
+  "input_lock_ms": 205
+}

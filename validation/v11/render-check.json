@@ -1,0 +1,28 @@
+{
+  "views": [
+    "featured",
+    "classic-lobby",
+    "expedition-intro",
+    "draft",
+    "upgrade",
+    "expedition-game",
+    "swap",
+    "abilities",
+    "restart",
+    "rescue-empty",
+    "rescue-library",
+    "rescue-game",
+    "rescue-win",
+    "rescue-review",
+    "dark",
+    "dark-abilities"
+  ],
+  "font_samples": 541,
+  "clipped": [],
+  "missing": [],
+  "driver": "dummy",
+  "steady_draw_ms": {
+    "median": 5.25,
+    "p95": 6.47
+  }
+}

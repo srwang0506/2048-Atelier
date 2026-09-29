@@ -1,0 +1,48 @@
+{
+  "chapters": [
+    "01-start",
+    "02-rules",
+    "03-expedition",
+    "04-ai-data",
+    "05-faq",
+    "06-build",
+    "07-gallery",
+    "08-solutions",
+    "09-release"
+  ],
+  "titles": {
+    "zh-CN": [
+      "开始游玩与完整操作",
+      "六种玩法的完整规则",
+      "能力远征：关卡与能力",
+      "智能助手、记录与存档",
+      "常见问题与问题反馈",
+      "安装、构建与开发",
+      "九段动图教程",
+      "谜题与残局解答（含剧透）",
+      "版本与验证范围"
+    ],
+    "en": [
+      "Getting started and controls",
+      "Rules for all six modes",
+      "Expedition stages and abilities",
+      "AI, records and saves",
+      "Troubleshooting and support",
+      "Installation and development",
+      "Nine animated tutorials",
+      "Puzzle and Rescue solutions (spoilers)",
+      "Release and validation"
+    ],
+    "ja": [
+      "はじめに・操作ガイド",
+      "六つのモードのルール",
+      "能力遠征・ステージと能力",
+      "AI・記録・セーブ",
+      "よくある質問と報告",
+      "インストールと開発",
+      "九本の動くチュートリアル",
+      "パズルとレスキューの解答（ネタバレ）",
+      "更新履歴と検証範囲"
+    ]
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "puzzles": [
+    {
+      "id": 0,
+      "steps": 2,
+      "target": 64,
+      "achieved": 64,
+      "matched_native": true
+    },
+    {
+      "id": 1,
+      "steps": 2,
+      "target": 64,
+      "achieved": 64,
+      "matched_native": true
+    },
+    {
+      "id": 2,
+      "steps": 3,
+      "target": 128,
+      "achieved": 128,
+      "matched_native": true
+    },
+    {
+      "id": 3,
+      "steps": 3,
+      "target": 128,
+      "achieved": 128,
+      "matched_native": true
+    },
+    {
+      "id": 4,
+      "steps": 3,
+      "target": 256,
+      "achieved": 256,
+      "matched_native": true
+    },
+    {
+      "id": 5,
+      "steps": 4,
+      "target": 256,
+      "achieved": 256,
+      "matched_native": true
+    },
+    {
+      "id": 6,
+      "steps": 4,
+      "target": 512,
+      "achieved": 512,
+      "matched_native": true
+    },
+    {
+      "id": 7,
+      "steps": 4,
+      "target": 512,
+      "achieved": 512,
+      "matched_native": true
+    },
+    {
+      "id": 8,
+      "steps": 4,
+      "target": 1024,
+      "achieved": 1024,
+      "matched_native": true
+    },
+    {
+      "id": 9,
+      "steps": 5,
+      "target": 1024,
+      "achieved": 1024,
+      "matched_native": true
+    },
+    {
+      "id": 10,
+      "steps": 5,
+      "target": 2048,
+      "achieved": 2048,
+      "matched_native": true
+    },
+    {
+      "id": 11,
+      "steps": 5,
+      "target": 2048,
+      "achieved": 2048,
+      "matched_native": true
+    }
+  ],
+  "rescue": [
+    {
+      "id": "1c079d73c80ad190ae4c",
+      "steps": 3,
+      "empty": 3,
+      "matched_native": true
+    },
+    {
+      "id": "d08a684cfbf0060b1184",
+      "steps": 5,
+      "empty": 3,
+      "matched_native": true
+    },
+    {
+      "id": "c89c42a636714ab1b732",
+      "steps": 5,
+      "empty": 4,
+      "matched_native": true
+    }
+  ],
+  "resource_comparison": {
+    "puzzle_levels.json": "ae78bbefaab6c11d844fcf1737e6519310f9dacb0877754dc9d52e9f390ebb01",
+    "rescue_practice.json": "9ef03e1395f2bf1470d299142d199282df1a8f86d58530a6221edf115e3eb1bf"
+  }
+}

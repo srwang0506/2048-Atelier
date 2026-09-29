@@ -1,0 +1,105 @@
+[Distribution note: local build paths shortened; diagnostics and results preserved.]
+Building for production...
+[0/5] Write sources
+[2/5] Write swift-version--5D8278C139DD3AD0.txt
+[4/6] Compiling LuminaPreview BoardView.swift
+<project>/App/LuminaApp.swift:14:18: warning: 'onChange(of:perform:)' was deprecated in macOS 14.0: Use `onChange` with a two or zero parameter action closure instead.
+12 |                 .preferredColorScheme(model.settings.appearance == .system ? nil : model.settings.appearance == .dark ? .dark : .light)
+13 |                 .task { await model.load() }
+14 |                 .onChange(of: scenePhase) { phase in
+   |                  `- warning: 'onChange(of:perform:)' was deprecated in macOS 14.0: Use `onChange` with a two or zero parameter action closure instead.
+15 |                     if phase != .active { model.suspend() }
+16 |                 }
+
+<project>/App/NativeGameView.swift:31:14: warning: 'onChange(of:perform:)' was deprecated in macOS 14.0: Use `onChange` with a two or zero parameter action closure instead.
+ 29 |         }.tint(Atelier.accent).foregroundStyle(scheme == .dark ? Color(hex: 0xEEF3F0) : Color(hex: 0x28352F))
+ 30 |             .onAppear { model.motionReduced = reduceMotion }
+ 31 |             .onChange(of: reduceMotion) { model.motionReduced = $0 }
+    |              `- warning: 'onChange(of:perform:)' was deprecated in macOS 14.0: Use `onChange` with a two or zero parameter action closure instead.
+ 32 |             .sheet(item: $model.sheet) { sheet in
+ 33 |                 SheetHost(model: model, sheet: sheet).presentationDetents([.large]).presentationDragIndicator(.visible)
+
+<project>/App/Sheets.swift:120:11: warning: 'onChange(of:perform:)' was deprecated in macOS 14.0: Use `onChange` with a two or zero parameter action closure instead.
+118 |                 Text("离线游玩。无需登录，没有广告。\n为 iPhone 与 iPad 设计。").font(.subheadline).foregroundStyle(.secondary)
+119 |             }
+120 |         }.onChange(of: model.settings) { _ in model.settingsChanged() }
+    |           `- warning: 'onChange(of:perform:)' was deprecated in macOS 14.0: Use `onChange` with a two or zero parameter action closure instead.
+121 |             .fileExporter(isPresented: $exporting, document: document, contentType: .json, defaultFilename: "LUMINA-\(Rules.dateToken()).json") { result in if case .failure(let e) = result { error = e.localizedDescription } }
+122 |             .fileImporter(isPresented: $importing, allowedContentTypes: [.json]) { result in
+
+<project>/App/Sheets.swift:156:11: warning: 'onChange(of:perform:)' was deprecated in macOS 14.0: Use `onChange` with a two or zero parameter action closure instead.
+154 |                 Text("过关前查看转机路线，会将本次挑战记为辅助局。").font(.caption).foregroundStyle(.tertiary)
+155 |             }.padding(24).frame(maxWidth: 520).frame(maxWidth: .infinity)
+156 |         }.onChange(of: alternative) { _ in step = 0 }
+    |           `- warning: 'onChange(of:perform:)' was deprecated in macOS 14.0: Use `onChange` with a two or zero parameter action closure instead.
+157 |     }
+158 | }
+[4/7] Write Objects.LinkFileList
+[5/7] Linking LuminaPreview
+[7/8] Compiling LuminaAppTests AppTests.swift
+[7/9] Write Objects.LinkFileList
+[8/9] Linking LuminaPackageTests
+Build complete! (6.38s)
+◇ Test run started.
+↳ Testing Library Version: 124.4
+↳ Target Platform: arm64e-apple-macos14.0
+◇ Suite "Optional native AI endurance" started.
+◇ Suite "Native interaction lifecycle" started.
+◇ Suite "Native rules and desktop parity" started.
+✘ Test classicAndExpedition() skipped.
+◇ Test noOpDoesNotConsumeRandomOrHistory() started.
+◇ Test invalidStageAndOrphanRescueAreRejectedBeforePlay() started.
+◇ Test automaticBackupRecoveryAndRevisionOrdering() started.
+◇ Test nativeBackupRoundTripAndValidation() started.
+◇ Test stageClearAndFinalWinHavePriorityOnLastMove() started.
+◇ Test realFailedGameCanBecomeAnIndependentChallenge() started.
+◇ Test seededRandomMatchesPython() started.
+◇ Test allRescuesAreReplayableAndSolvable() started.
+◇ Test recordsStarsDailyRetentionAndArchivePinning() started.
+◇ Test threeHundredMovesMatchDesktopIncludingRandomState() started.
+◇ Test powersPreserveTurnAndRandomAndAreUndoable() started.
+◇ Test fourHundredSlidesMatchDesktop() started.
+◇ Test oneHundredAbilityRewardsMatchDesktop() started.
+◇ Test undoRedoAndBranchRestoreRandomness() started.
+◇ Test sprintStopsAtSixtyAndUndoRestoresBudget() started.
+◇ Test puzzleWinHasPriorityOnLastMove() started.
+✔ Suite "Optional native AI endurance" passed after 0.001 seconds.
+◇ Test solverChoosesLegalActionAndHandlesLargeTiles() started.
+◇ Test cancelAnimationWithUndoDoesNotLeaveGhostTiles() started.
+◇ Test allTwelvePuzzlesHaveVerifiedMinimalSolutions() started.
+✔ Test noOpDoesNotConsumeRandomOrHistory() passed after 0.008 seconds.
+✔ Test powersPreserveTurnAndRandomAndAreUndoable() passed after 0.008 seconds.
+✔ Test stageClearAndFinalWinHavePriorityOnLastMove() passed after 0.008 seconds.
+✔ Test realFailedGameCanBecomeAnIndependentChallenge() passed after 0.008 seconds.
+✔ Test undoRedoAndBranchRestoreRandomness() passed after 0.008 seconds.
+✔ Test sprintStopsAtSixtyAndUndoRestoresBudget() passed after 0.008 seconds.
+✔ Test nativeBackupRoundTripAndValidation() passed after 0.008 seconds.
+✔ Test puzzleWinHasPriorityOnLastMove() passed after 0.008 seconds.
+✔ Test invalidStageAndOrphanRescueAreRejectedBeforePlay() passed after 0.008 seconds.
+✔ Test recordsStarsDailyRetentionAndArchivePinning() passed after 0.008 seconds.
+✔ Test allRescuesAreReplayableAndSolvable() passed after 0.009 seconds.
+✔ Test automaticBackupRecoveryAndRevisionOrdering() passed after 0.013 seconds.
+✔ Test allTwelvePuzzlesHaveVerifiedMinimalSolutions() passed after 0.016 seconds.
+✔ Test solverChoosesLegalActionAndHandlesLargeTiles() passed after 0.108 seconds.
+✔ Test oneHundredAbilityRewardsMatchDesktop() passed after 0.141 seconds.
+✔ Test seededRandomMatchesPython() passed after 0.142 seconds.
+✔ Test fourHundredSlidesMatchDesktop() passed after 0.144 seconds.
+✔ Test threeHundredMovesMatchDesktopIncludingRandomState() passed after 0.144 seconds.
+✔ Suite "Native rules and desktop parity" passed after 0.144 seconds.
+✔ Test cancelAnimationWithUndoDoesNotLeaveGhostTiles() passed after 0.285 seconds.
+◇ Test switchingModesCancelsAutoplayAndRetainsBothSessions() started.
+✔ Test switchingModesCancelsAutoplayAndRetainsBothSessions() passed after 0.375 seconds.
+◇ Test backgroundDuringAnimationSettlesAndSaves() started.
+✔ Test backgroundDuringAnimationSettlesAndSaves() passed after 0.271 seconds.
+◇ Test rapidSwipesDoNotCreateDuplicateTiles() started.
+✔ Test rapidSwipesDoNotCreateDuplicateTiles() passed after 0.495 seconds.
+◇ Test hintCannotMutateBoardAfterRestart() started.
+✔ Test hintCannotMutateBoardAfterRestart() passed after 0.375 seconds.
+◇ Test menusAndRestartConfirmationBlockBoardInput() started.
+✔ Test menusAndRestartConfirmationBlockBoardInput() passed after 0.002 seconds.
+◇ Test invalidImportPreservesExistingSession() started.
+✔ Test invalidImportPreservesExistingSession() passed after 0.003 seconds.
+◇ Test renderNativeLayouts() started.
+✔ Test renderNativeLayouts() passed after 1.026 seconds.
+✔ Suite "Native interaction lifecycle" passed after 2.837 seconds.
+✔ Test run with 27 tests passed after 2.837 seconds.

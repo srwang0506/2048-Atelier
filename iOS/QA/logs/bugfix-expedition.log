@@ -1,0 +1,46 @@
+[Distribution note: local build paths shortened; diagnostics and results preserved.]
+[0/1] Planning build
+Building for production...
+[0/5] Write sources
+[2/5] Write swift-version--5D8278C139DD3AD0.txt
+[4/7] Compiling LuminaPreview BoardView.swift
+<project>/App/LuminaApp.swift:14:18: warning: 'onChange(of:perform:)' was deprecated in macOS 14.0: Use `onChange` with a two or zero parameter action closure instead.
+12 |                 .preferredColorScheme(model.settings.appearance == .system ? nil : model.settings.appearance == .dark ? .dark : .light)
+13 |                 .task { await model.load() }
+14 |                 .onChange(of: scenePhase) { phase in
+   |                  `- warning: 'onChange(of:perform:)' was deprecated in macOS 14.0: Use `onChange` with a two or zero parameter action closure instead.
+15 |                     if phase == .active { model.resume() } else { model.suspend() }
+16 |                 }
+
+<project>/App/NativeGameView.swift:31:14: warning: 'onChange(of:perform:)' was deprecated in macOS 14.0: Use `onChange` with a two or zero parameter action closure instead.
+ 29 |         }.tint(Atelier.accent).foregroundStyle(scheme == .dark ? Color(hex: 0xEEF3F0) : Color(hex: 0x28352F))
+ 30 |             .onAppear { model.motionReduced = reduceMotion }
+ 31 |             .onChange(of: reduceMotion) { model.motionReduced = $0 }
+    |              `- warning: 'onChange(of:perform:)' was deprecated in macOS 14.0: Use `onChange` with a two or zero parameter action closure instead.
+ 32 |             .sheet(item: $model.sheet) { sheet in
+ 33 |                 SheetHost(model: model, sheet: sheet).presentationDetents([.large]).presentationDragIndicator(.visible)
+
+<project>/App/Sheets.swift:120:11: warning: 'onChange(of:perform:)' was deprecated in macOS 14.0: Use `onChange` with a two or zero parameter action closure instead.
+118 |                 Text("离线游玩。无需登录，没有广告。\n为 iPhone 与 iPad 设计。").font(.subheadline).foregroundStyle(.secondary)
+119 |             }
+120 |         }.onChange(of: model.settings) { _ in model.settingsChanged() }
+    |           `- warning: 'onChange(of:perform:)' was deprecated in macOS 14.0: Use `onChange` with a two or zero parameter action closure instead.
+121 |             .fileExporter(isPresented: $exporting, document: document, contentType: .json, defaultFilename: "LUMINA-\(Rules.dateToken()).json") { result in if case .failure(let e) = result { error = e.localizedDescription } }
+122 |             .fileImporter(isPresented: $importing, allowedContentTypes: [.json]) { result in
+[4/8] Write Objects.LinkFileList
+[5/8] Linking LuminaPreview
+[7/9] Compiling LuminaCoreTests Benchmark.swift
+[8/10] Compiling LuminaAppTests AppTests.swift
+[9/11] Compiling LuminaPackageTests runner.swift
+[9/11] Write Objects.LinkFileList
+[10/11] Linking LuminaPackageTests
+Build complete! (6.56s)
+◇ Test run started.
+↳ Testing Library Version: 124.4
+↳ Target Platform: arm64e-apple-macos14.0
+◇ Suite "Optional native AI endurance" started.
+◇ Test expeditionEndurance() started.
+NATIVE_BENCH expedition: actions=138 score=6422 cleared=6 phase=won
+✔ Test expeditionEndurance() passed after 8.316 seconds.
+✔ Suite "Optional native AI endurance" passed after 8.316 seconds.
+✔ Test run with 1 test passed after 8.316 seconds.

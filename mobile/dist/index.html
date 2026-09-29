@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f3f4f8"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="description" content="LUMINA 2048：为触屏而生的数字游戏。经典、能力远征与败局重生，在指尖慢慢展开。">
+  <title>LUMINA · 2048</title><link rel="icon" href="./icon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="./icon-180.png"><link rel="manifest" href="./manifest.webmanifest"><link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="app">
+    <header class="topbar"><a class="wordmark" href="./" aria-label="LUMINA 2048 首页"><span class="brand-icon">✦</span> LUMINA<span class="brand-sub">2048</span></a><button class="icon-button" id="settings" aria-label="设置"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 17h16M9 4v6M15 14v6"/></svg></button></header>
+    <main class="layout">
+      <section class="play-area" aria-label="游戏">
+        <div class="title-row"><div><p class="eyebrow" id="mode-kicker">THE ORIGINAL</p><h1 id="mode-title">经典 2048</h1></div><button class="mode-button" id="modes">切换玩法 <span>⌄</span></button></div>
+        <div class="scores"><div><span id="score-label">本局得分</span><strong id="score">0</strong><i id="gain" aria-hidden="true"></i></div><div><span id="best-label">个人最佳</span><strong id="best">0</strong></div><div class="score-detail"><span id="detail-label">移动次数</span><strong id="detail">0</strong></div></div>
+        <div class="board-wrap"><div class="board" id="board" role="group" tabindex="0" aria-label="2048 棋盘。滑动或使用方向键移动。"><div class="cells" aria-hidden="true"></div><div class="tiles" aria-hidden="true"></div></div><div id="board-message" class="board-message" hidden></div></div>
+        <div class="power-bar" id="power-bar" hidden></div>
+        <nav class="controls" aria-label="游戏操作">
+          <button id="undo"><svg viewBox="0 0 24 24"><path d="m9 5-5 5 5 5M4 10h9a6 6 0 0 1 0 12" transform="translate(0 -2)"/></svg><span>撤销</span></button>
+          <button id="hint"><svg viewBox="0 0 24 24"><path d="M9 18h6M10 21h4M8 14a7 7 0 1 1 8 0l-1 2H9z"/></svg><span>提示</span></button>
+          <button id="auto"><svg viewBox="0 0 24 24"><path d="m9 5 10 7-10 7z"/></svg><span>自动玩</span></button>
+          <button id="more"><svg viewBox="0 0 24 24"><circle cx="5" cy="12" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/></svg><span>更多</span></button>
+        </nav>
+        <p class="gesture-tip" id="gesture-tip">轻轻滑动，让相同的数字相遇。</p>
+        <p class="sr-only" id="announcement" role="status" aria-live="polite" aria-atomic="true"></p>
+      </section>
+      <aside class="sidebar">
+        <section class="insight-card"><div class="card-heading"><span class="small-orb"></span><h2 id="insight-title">慢一点，也很好。</h2><span class="live-dot" id="thinking-dot" hidden></span></div><p id="insight-copy">留一点空间，等待下一次相遇。滑动棋盘开始，或让智能助手陪你探索。</p><div class="analysis" id="analysis" hidden></div><div class="stats-line"><span>最大方块 <b id="max-tile">2</b></span><span>空格 <b id="empty-count">14</b></span></div></section>
+        <section class="mode-note"><p class="eyebrow">ROOM TO EXPLORE</p><h2 id="note-title">一局之外，还有惊喜。</h2><p id="note-copy">搭配能力，走得更远。<br>重返败局，找到另一种可能。</p><button class="text-button" id="featured">探索精选玩法 <span>↗</span></button></section>
+        <div class="direction-pad" aria-label="点击方向移动"><button data-dir="left" aria-label="向左移动">←</button><button data-dir="up" aria-label="向上移动">↑</button><button data-dir="down" aria-label="向下移动">↓</button><button data-dir="right" aria-label="向右移动">→</button></div>
+        <div class="device-note"><span class="save-dot"></span><span id="save-state">自动保存在此设备</span></div>
+      </aside>
+    </main>
+    <footer><span>LUMINA ATELIER</span><span>A little space to play.</span></footer>
+  </div>
+  <dialog id="dialog"><div class="dialog-top"><p class="eyebrow" id="dialog-kicker">LUMINA ATELIER</p><button id="close-dialog" class="icon-button" aria-label="关闭">×</button></div><div id="dialog-content"></div></dialog>
+  <div class="toast" id="toast" role="status" hidden></div>
+  <script type="module" src="./app.js"></script>
+</body></html>

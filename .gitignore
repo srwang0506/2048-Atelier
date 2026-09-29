@@ -1,0 +1,30 @@
+# Local metadata, credentials, environments and caches
+.*
+!**/.gitignore
+!**/.vercelignore
+!/.gitattributes
+!/.github/
+!/.github/**
+__pycache__/
+*.py[cod]
+*.nbc
+*.nbi
+node_modules/
+DerivedData/
+xcuserdata/
+*.xcuserstate
+build/
+
+# Player data and local exports
+/data/
+/backups/
+/exports/
+/logs/
+/captures/
+/iOS/captures/
+
+# Download packages belong in Releases
+*.zip
+*.ipa
+*.xcarchive/
+/outputs/

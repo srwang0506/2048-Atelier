@@ -1,0 +1,36 @@
+[Distribution note: local build paths shortened; diagnostics and results preserved.]
+{
+  "python": "3.12.9 (v3.12.9:fdb81425a9a, Feb  4 2025, 12:21:36) [Clang 13.0.0 (clang-1300.0.29.30)]",
+  "platform": "darwin",
+  "bits": 64,
+  "dependencies": {
+    "pygame-ce": "2.5.8",
+    "numpy": "2.5.3",
+    "numba": "0.67.0",
+    "Pillow": "12.3.0",
+    "llvmlite": "0.49.0"
+  },
+  "puzzles": 12,
+  "rescue_practice": 3,
+  "fonts": {
+    "regular": [
+      "/System/Library/AssetsV2/com_apple_MobileAsset_Font7/3419f2a427639ad8c8e139149a287865a90fa17e.asset/AssetData/PingFang.ttc",
+      3
+    ],
+    "medium": [
+      "/System/Library/AssetsV2/com_apple_MobileAsset_Font7/3419f2a427639ad8c8e139149a287865a90fa17e.asset/AssetData/PingFang.ttc",
+      7
+    ],
+    "semibold": [
+      "/System/Library/AssetsV2/com_apple_MobileAsset_Font7/3419f2a427639ad8c8e139149a287865a90fa17e.asset/AssetData/PingFang.ttc",
+      11
+    ]
+  },
+  "ai": {
+    "backend": "native",
+    "direction": "down",
+    "nodes": 585728
+  },
+  "status": "PASS"
+}
+Saved diagnostics: <project>/logs/diagnostics.json

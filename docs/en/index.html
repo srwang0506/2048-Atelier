@@ -1,0 +1,1002 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="LUMINA 2048 Player handbook"><title>LUMINA · Player handbook</title><link rel="stylesheet" href="../reader.css"></head><body><div class="shell"><aside class="sidebar"><a class="brand" href="../index.html">LUMINA</a><div class="edition">All platforms · English</div><nav class="languages" aria-label="Language"><a class="" data-language="../zh-CN/index.html" href="../zh-CN/index.html" lang="zh-CN">简体中文</a><a class="selected" data-language="../en/index.html" href="../en/index.html" lang="en">English</a><a class="" data-language="../ja/index.html" href="../ja/index.html" lang="ja">日本語</a></nav><label><span class="print-only">Search rules, controls, questions…</span><input id="search" class="searchbox" type="search" placeholder="Search rules, controls, questions…" aria-label="Search rules, controls, questions…"></label><div class="nav-title">Contents</div><nav class="chapter-list" aria-label="Contents"><a class="chapter-link" href="#01-platforms"><b>01</b><span>Choose a platform and edition</span></a><a class="chapter-link" href="#02-controls"><b>02</b><span>Desktop quick start and controls</span></a><a class="chapter-link" href="#03-rules"><b>03</b><span>Desktop modes and scoring</span></a><a class="chapter-link" href="#04-expedition"><b>04</b><span>Desktop Expedition in depth</span></a><a class="chapter-link" href="#05-ai-replay"><b>05</b><span>Desktop AI, Coach and Replay</span></a><a class="chapter-link" href="#06-saves"><b>06</b><span>Saves, backup, transfer and updates</span></a><a class="chapter-link" href="#07-macos"><b>07</b><span>macOS installation and troubleshooting</span></a><a class="chapter-link" href="#08-windows"><b>08</b><span>Windows installation and troubleshooting</span></a><a class="chapter-link" href="#09-mobile"><b>09</b><span>iPhone, iPad and the web edition</span></a><a class="chapter-link" href="#10-gallery"><b>10</b><span>Seventeen animated demonstrations</span></a><a class="chapter-link" href="#11-solutions"><b>11</b><span>Twelve puzzles and three Rescue solutions</span></a><a class="chapter-link" href="#12-support"><b>12</b><span>FAQ, development and validation</span></a></nav><div class="side-footer"><button id="print" class="print-button">Print / save PDF</button><p>Desktop v12 · Native 1.0.1 · Touch v1. Game labels are primarily Chinese; documentation is trilingual.</p><p>2026.09.29 · OFFLINE EDITION</p></div></aside><main class="main"><div class="topline"><span class="doc-title">Player handbook</span><span>Twelve chapters · Seventeen demonstrations</span></div><div id="results" class="search-results" hidden></div><p class="lead-note">Desktop v12 · Native 1.0.1 · Touch v1. Game labels are primarily Chinese; documentation is trilingual.</p><article data-chapter="01-platforms" aria-labelledby="01-platforms"><h1 id="01-platforms">Choose a platform and edition</h1>
+<p>This handbook covers <strong>Mac, Windows, iPhone, iPad and Web</strong>. They belong to one game family but use separate builds, version numbers, interfaces and save formats. This edition describes the source and delivery files available on 2026-09-29.</p>
+<h2 id="01-platforms-s1">Start with your device</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Device / edition</th>
+<th>Delivery and launch</th>
+<th>Read next</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Mac · Python Desktop v12</td>
+<td>Double-click <code>启动游戏.command</code> in the game folder; first-time setup needs compatible Python</td>
+<td><a href="#07-macos">Mac installation</a>, then <a href="#02-controls">controls</a></td>
+</tr>
+<tr>
+<td>Windows · Python Desktop v12</td>
+<td>Fully extract the Windows x64 portable ZIP; open <code>2048.exe</code></td>
+<td><a href="#08-windows">Windows installation</a>, then <a href="#02-controls">controls</a></td>
+</tr>
+<tr>
+<td>iPhone / iPad · Native 1.0.1, build 2</td>
+<td>SwiftUI source project; install after building and signing with Xcode and an iOS SDK</td>
+<td><a href="#09-mobile">App overview</a>, then <a href="../native/docs/en/index.html">nine-chapter native manual</a></td>
+</tr>
+<tr>
+<td>Browser · Touch v1</td>
+<td>Separate Web / PWA edition; Safari can add it to the Home Screen</td>
+<td><a href="#09-mobile">Web instructions</a></td>
+</tr>
+</tbody></table></div>
+<p>The Windows package targets Intel/AMD x64 computers running Windows 10/11. Mac execution has been checked on an Apple Silicon host; other Macs require dependency and runtime checks. The native project targets iOS/iPadOS 16.4 or later. An iOS build, signing and device acceptance remain outstanding in this environment. <strong>Native source is not an installable IPA; a Home Screen web app is a different edition.</strong></p>
+<h2 id="01-platforms-s2">Feature differences</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Mac / Windows v12</th>
+<th>Native 1.0.1</th>
+<th>Touch v1</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Six modes, Classic first</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Hints, autoplay, undo/redo</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Automatic Coach analysis</td>
+<td>Yes, C</td>
+<td>No equivalent desktop control</td>
+<td>No equivalent desktop control</td>
+</tr>
+<tr>
+<td>General last-100-action Replay</td>
+<td>Yes, R</td>
+<td>No; Rescue has route comparison</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>In-game JSON import/export</td>
+<td>No; copy save files</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>P screenshot / F fullscreen</td>
+<td>Yes</td>
+<td>Use system controls</td>
+<td>Use browser/system controls</td>
+</tr>
+<tr>
+<td>Storage</td>
+<td>Local files</td>
+<td>App sandbox</td>
+<td>Browser site storage</td>
+</tr>
+</tbody></table></div>
+<p>The <strong>documentation</strong> is trilingual; current game labels are primarily Chinese. English and Japanese instructions retain Chinese button labels to help you find them. There is no automatic cross-device cloud sync or shared online leaderboard. Do not import saves across editions. <strong>Matching desktop v12</strong> saves can be moved between Mac and Windows using the <a href="#06-saves">file-transfer procedure</a>.</p>
+<h2 id="01-platforms-s3">How to use this handbook</h2>
+<p>Install the correct edition, read controls and rules, then explore AI assistance. Chapter 4 contains Expedition numbers; chapter 6 covers backups before updates or computer changes. Chapter 11 contains full solutions and spoilers.</p>
+<p>Keep the whole folder for offline reading. Open <code>docs/index.html</code> and choose a language. Search covers the twelve chapters in that language; the separate native manual has its own search. Language switching preserves the chapter. GIFs start paused; press Play or expand the MP4 player. Reading the manual does not upload or modify game progress.</p>
+<div class="chapter-nav"><span></span><a href="#02-controls">Desktop quick start and controls →</a></div></article>
+<article data-chapter="02-controls" aria-labelledby="02-controls"><h1 id="02-controls">Desktop quick start and controls</h1>
+<p>This chapter applies to <strong>Mac / Windows Desktop v12</strong>. Both platforms use the same game controls.</p>
+<h2 id="02-controls-s1">Your first game</h2>
+<ol>
+<li>Launch the game to open 「选择玩法」 (mode selection). 「经典与挑战」 is the default page; the large Classic card is on the left.</li>
+<li>Select 「经典」. Scores are at the top, with a 4×4 board in the center.</li>
+<li>Use arrows, WASD or a mouse drag on the board. A move slides the whole board; you cannot drag individual tiles.</li>
+<li>Merge equal numbers and keep space available. Try a few manual moves before requesting a hint.</li>
+<li>Click the mode title or press B to return. 「精选玩法」 contains Expedition and Rescue. 「继续当前局」 resumes the current board. Each mode retains its own progress.</li>
+</ol>
+<h2 id="02-controls-s2">Keyboard reference</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Key</th>
+<th>During play</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Arrows / WASD</td>
+<td>Slide; manual input can take over from AI</td>
+</tr>
+<tr>
+<td>Space</td>
+<td>Start / pause autoplay</td>
+</tr>
+<tr>
+<td>Z</td>
+<td>Undo</td>
+</tr>
+<tr>
+<td>Shift+Z / Y</td>
+<td>Redo</td>
+</tr>
+<tr>
+<td>H</td>
+<td>Request a hint</td>
+</tr>
+<tr>
+<td>Enter</td>
+<td>One AI move</td>
+</tr>
+<tr>
+<td>C</td>
+<td>Toggle Coach; an actual analysis counts as assistance</td>
+</tr>
+<tr>
+<td>R</td>
+<td>Open Replay</td>
+</tr>
+<tr>
+<td>B</td>
+<td>Mode lobby</td>
+</tr>
+<tr>
+<td>N</td>
+<td>Restart the current mode; complete a confirmation if shown</td>
+</tr>
+<tr>
+<td>T / M</td>
+<td>Toggle appearance / sound</td>
+</tr>
+<tr>
+<td>F / P</td>
+<td>Fullscreen / save screenshot</td>
+</tr>
+<tr>
+<td>F1</td>
+<td>Rules and control help</td>
+</tr>
+<tr>
+<td>Esc</td>
+<td>Close a panel, leave fullscreen or pause, depending on state</td>
+</tr>
+</tbody></table></div>
+<p>Inside Replay, Left/Right step between frames, Home selects the beginning, End selects the current final frame and Space plays/pauses. Focus the game window before using shortcuts. Buttons also work with a mouse. Desktop touch depends on the OS and SDL input device support; it has not been validated on every touchscreen computer.</p>
+<h2 id="02-controls-s3">Undo, Replay and restart are different</h2>
+<p><strong>Undo</strong> restores board, score, move count and random state. <strong>Redo</strong> restores the undone action. Making a different move after Undo creates a new branch and discards the previous redo branch. Up to 100 actions are retained; saved history survives restart. Assistance flags remain after Undo.</p>
+<p><strong>Replay</strong> only views history. <strong>原局重试</strong> restarts the fixed Puzzle/Rescue challenge. <strong>新开一局</strong> replaces the current game of that mode, keeping other modes. Restarting Daily retries its current challenge date; use the lobby to enter today&#39;s challenge.</p>
+<h2 id="02-controls-s4">Settings and display</h2>
+<p>The round settings button at the upper right contains AI quality, playback speed, light/dark appearance, sound, animation, fullscreen, records and help. AI thinking quality and autoplay speed are separate settings. 「冲分」 skips step-by-step animations; choose normal/slow speed with animation enabled to watch transitions.</p>
+<p>P saves a file in <a href="#06-saves">the local exports folder</a>, rather than the clipboard. Screenshot failures show a message without intentionally exiting; filenames avoid same-second overwrites. Close normally and let saving finish before disconnecting an external drive.</p>
+<div class="chapter-nav"><a href="#01-platforms">← Choose a platform and edition</a><a href="#03-rules">Desktop modes and scoring →</a></div></article>
+<article data-chapter="03-rules" aria-labelledby="03-rules"><h1 id="03-rules">Desktop modes and scoring</h1>
+<h2 id="03-rules-s1">The merge rule</h2>
+<p>On a 4×4 board, slide all tiles as far as possible in one direction. Adjacent equal values merge into double their value. A newly merged tile cannot merge again in the same move. Left-move examples, before the new tile spawns:</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Before</th>
+<th>After</th>
+<th align="right">Score gained</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>2, 2, 2, 2</td>
+<td>4, 4, 0, 0</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>2, 2, 4, 0</td>
+<td>4, 4, 0, 0</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>4, 0, 4, 4</td>
+<td>8, 4, 0, 0</td>
+<td align="right">8</td>
+</tr>
+</tbody></table></div>
+<p>A valid move normally spawns a 2 (90%) or 4 (10%) in an empty cell. Invalid moves do not spawn a tile, consume a move or advance randomness. Expedition abilities can change scoring and spawning. A full board is not necessarily lost: adjacent equal values can still merge.</p>
+<h2 id="03-rules-s2">Classic and Daily</h2>
+<p>Classic has unlimited moves. Reaching 2048 does not end play; keep going until no legal move remains. A merge awards the resulting value: 8+8 makes 16 and awards 16 base points.</p>
+<p>Daily uses a date-based seed. The same date <strong>and action sequence</strong> reproduce spawns; the same date with different moves does not imply the same board. Enter today&#39;s challenge through the lobby. Restart keeps the current challenge date. Up to seven saved dates are retained locally, without an older-date picker or online leaderboard.</p>
+<h2 id="03-rules-s3">60-Move Sprint</h2>
+<p>Score as much as possible in 60 valid moves, or until the board becomes immobile. Undo restores the move allowance; invalid directions cost nothing. Manual and assisted best scores are separate and do not contribute to the Classic best. Merely reaching move 60 does not trigger Rescue extraction; a blocked board can.</p>
+<h2 id="03-rules-s4">Puzzle Theatre: twelve chapters</h2>
+<p>Each chapter has a fixed board and random state, with targets from 64 to 2048. Shortest solutions take 2–5 moves. The limit is one move above par: 3–6 moves. The side panel shows remaining moves and the next tile value. Retrying the same route reproduces spawns; a different direction changes available spawn locations.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Completion</th>
+<th>Stars</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>No assistance, no undo, finish within par</td>
+<td>Three</td>
+</tr>
+<tr>
+<td>Any other unassisted completion</td>
+<td>Two</td>
+</tr>
+<tr>
+<td>Completion with assistance</td>
+<td>One</td>
+</tr>
+</tbody></table></div>
+<p>Each chapter retains its highest star result. Re-selecting the same unfinished chapter resumes it; 「原局重试」 resets it. Selecting another chapter replaces the current puzzle board but keeps earned stars. AI analysis can show the deterministic next board, solvability within remaining moves and the full route. Solutions are spoilers.</p>
+<h2 id="03-rules-s5">Rescue: recover space in six moves</h2>
+<p>When Classic, Daily or Sprint ends because no slide is possible, a background search examines up to ten recent positions. A candidate must have zero or one empty cell and permit recovery to at least three empty cells with continued legal movement within six valid moves. Search preserves full random state, finds a shortest route and verifies it through the real engine before offering a challenge.</p>
+<p>Rescue starts as a separate zero-score, zero-move game. The original loss remains intact in its own mode. Retry, undo, hints and autoplay are available. Manual and assisted best move counts are stored separately. Opening 「路线对照」 while the challenge is in progress marks assistance; it compares your route or the original loss with the verified route, step by step. Undo does not clear assistance.</p>
+<p>Up to six personal challenges are retained, preserving the current one. Three clearly labelled practice challenges are available, with shortest routes of 3, 5 and 5 moves. Not every loss yields a challenge. Search has a time limit; no result does not prove impossibility.</p>
+<h2 id="03-rules-s6">Expedition and record categories</h2>
+<p>Expedition combines six score-target stages, move limits, ability choices and active powers. See <a href="#04-expedition">chapter 4</a>. Its score is separate from Classic.</p>
+<p>Hints, actual Coach analysis, AI single moves and autoplay count as assistance. Undo cannot remove that flag. Modes use different records—stars, score or moves—so multiplied Expedition scores are not directly comparable to Classic. The game cannot detect that you read an external solution; distinguish independent solving from practice with a known route.</p>
+<div class="chapter-nav"><a href="#02-controls">← Desktop quick start and controls</a><a href="#04-expedition">Desktop Expedition in depth →</a></div></article>
+<article data-chapter="04-expedition" aria-labelledby="04-expedition"><h1 id="04-expedition">Desktop Expedition in depth</h1>
+<p>This chapter covers Desktop v12. Reward offers are fixed when generated; closing a panel or restarting does not reroll them. Up to twelve higher-ranked Expedition results and their builds are retained separately, ordered by cleared stages and score.</p>
+<h2 id="04-expedition-s1">A complete expedition</h2>
+<p>Start by choosing one of three abilities: 连击引擎 (Combo Engine), 蓄能核心 (Battery Core), or 豪赌协议 (Gambit Protocol). Each stage requires its own score target within a limited number of valid moves. The top score is cumulative; the stage progress bar measures <strong>current score minus the score at stage entry</strong>.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Stage</th>
+<th>In-app name / meaning</th>
+<th>Stage target</th>
+<th>Base moves</th>
+<th>With Reserve I / II</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>启程 / Departure</td>
+<td>100</td>
+<td>26</td>
+<td>30 / 34</td>
+</tr>
+<tr>
+<td>2</td>
+<td>蓄势 / Gathering Momentum</td>
+<td>260</td>
+<td>34</td>
+<td>38 / 42</td>
+</tr>
+<tr>
+<td>3</td>
+<td>回响 / Resonance</td>
+<td>520</td>
+<td>42</td>
+<td>46 / 50</td>
+</tr>
+<tr>
+<td>4</td>
+<td>临界 / Threshold</td>
+<td>900</td>
+<td>46</td>
+<td>50 / 54</td>
+</tr>
+<tr>
+<td>5</td>
+<td>跃迁 / Leap</td>
+<td>1400</td>
+<td>52</td>
+<td>56 / 60</td>
+</tr>
+<tr>
+<td>6</td>
+<td>终章 / Finale</td>
+<td>2200</td>
+<td>60</td>
+<td>64 / 68</td>
+</tr>
+</tbody></table></div>
+<p>After each of the first five stages, play pauses for a three-choice reward. Add an ability or upgrade one to rank II. Maxed-out abilities are excluded from offers. Your board, total score, abilities and energy carry forward. If more than one tile is occupied, one smallest tile is removed to create space; ties use the first cell in reading order from top left.</p>
+<p>Unused moves and excess target score do not carry into the next stage. Choosing a reward resets combo streak, freeze duration, cooldown and undo/redo history. Stage six completes the expedition. Hitting the target on the final allowed move wins the stage; otherwise, running out of moves or having neither a legal slide nor an available power loses.</p>
+<h2 id="04-expedition-s2">Energy and active powers</h2>
+<p>Each merged pair earns one energy, capped at <strong>12</strong>. Battery Core adds more per pair. Sliding without merging earns none. Energy exists only in Expedition.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Power</th>
+<th>Base cost</th>
+<th>How to use it</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>凝时 / Freeze</td>
+<td>5 energy</td>
+<td>Tap 凝时 · 5</td>
+<td>Suppress spawning on the next two valid moves; set a six-move cooldown</td>
+</tr>
+<tr>
+<td>交换 / Swap</td>
+<td>6 energy</td>
+<td>Click 交换, select two occupied tiles with different values, then 确认交换 (Confirm swap)</td>
+<td>Exchange positions without merging or spawning</td>
+</tr>
+</tbody></table></div>
+<p>Neither power spends a directional move or awards points directly; each does create an undo entry. You cannot swap empty cells or equal-valued tiles. Freeze requires sufficient energy, zero cooldown, no active freeze and at least one legal slide. It cannot rescue an already immovable board directly; a swap sometimes can.</p>
+<p>Freeze duration and cooldown decrease only on valid directional moves. Waiting, invalid swipes and swaps do not advance them. If Flow also suppresses spawning during a frozen move, that move still consumes one freeze charge. Stage transitions reset freeze and cooldown.</p>
+<h2 id="04-expedition-s3">Exact ability reference</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>In-app name / translation</th>
+<th>Rank I</th>
+<th>Rank II</th>
+<th>Conditions</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>连击引擎 / Combo Engine</td>
+<td>+25% per streak layer</td>
+<td>+40% per layer</td>
+<td>Starts with the second consecutive merging move; at most four bonus layers</td>
+</tr>
+<tr>
+<td>蓄能核心 / Battery Core</td>
+<td>+1 extra energy per merged pair</td>
+<td>+2 extra per pair</td>
+<td>Total 2 / 3 per pair including base; capped at 12</td>
+</tr>
+<tr>
+<td>豪赌协议 / Gambit Protocol</td>
+<td>Score ×2; 4-spawn chance 30%</td>
+<td>Score ×2.5; 4-spawn chance 40%</td>
+<td>Higher score comes with more 4 tiles</td>
+</tr>
+<tr>
+<td>角落增幅 / Corner Amplifier</td>
+<td>+50% of corner merge output values</td>
+<td>+100%</td>
+<td>Uses the destination of a merge, not its starting cell</td>
+</tr>
+<tr>
+<td>共鸣回路 / Echo Circuit</td>
+<td>+50% of base score when at least two pairs merge</td>
+<td>+100%</td>
+<td>Applied once per move, even with three or four pairs</td>
+</tr>
+<tr>
+<td>空间回流 / Spatial Flow</td>
+<td>No spawn with at least three merged pairs</td>
+<td>No spawn with at least two</td>
+<td>Passive effect, no energy cost</td>
+</tr>
+<tr>
+<td>从容节拍 / Measured Tempo (Reserve)</td>
+<td>+4 moves per stage</td>
+<td>+8 per stage</td>
+<td>Applies immediately; II means +8 total, not +4 plus another +8</td>
+</tr>
+<tr>
+<td>折跃透镜 / Warp Lens</td>
+<td>Swap costs 4</td>
+<td>Swap costs 3</td>
+<td>Freeze still costs 5</td>
+</tr>
+<tr>
+<td>凝时晶体 / Freeze Crystal</td>
+<td>Freeze lasts three valid moves</td>
+<td>Lasts four</td>
+<td>Cooldown stays six valid moves</td>
+</tr>
+</tbody></table></div>
+<p>A combo streak counts successive <strong>moves with a merge</strong>, not the number of pairs within one move. A valid non-merging slide breaks it. Invalid swipes and active powers neither advance nor break it.</p>
+<h2 id="04-expedition-s4">Score calculation</h2>
+<p>Let G be base merge points, C the corner bonus and E the Echo bonus:</p>
+<p><code>Move score = (G + C + E) × combo multiplier × gambit multiplier</code></p>
+<p>The final number is rounded to the nearest integer, with exact halves rounded to the nearest even integer. Example: G = 24, an 8 is merged into a corner, at least two pairs merge, and you have Corner I, Echo I, Combo I on the second successive merging move, plus Gambit I. Score is <code>(24 + 4 + 12) × 1.25 × 2 = 100</code>.</p>
+<p>Combo I gives multipliers 1, 1.25, 1.50, 1.75 and 2 over the first five consecutive merging moves, then stays at 2. Combo II gives 1, 1.40, 1.80, 2.20 and 2.60, then stays at 2.60.</p>
+<h2 id="04-expedition-s5">Three practice approaches</h2>
+<p><strong>Energy control:</strong> Battery plus Warp gives more opportunities to rearrange tiles. Energy beyond 12 is lost; consider a useful power before another large energy gain.</p>
+<p><strong>Multiple merges:</strong> Echo plus Flow rewards preparing two or more simultaneous pairs with both points and space. Do not destroy a stable board merely to chase a trigger.</p>
+<p><strong>Multipliers:</strong> Combo plus Gambit can reach stage targets quickly, but more 4 tiles and the need to maintain a streak make planning harder. Gambit is a tradeoff, not a free score multiplier.</p>
+<p>Rewards offer only three choices at a time, so no combination is guaranteed. AI can use powers during play, but stage rewards are always chosen by the player. Watch the <a href="#10-gallery">Expedition demonstrations</a>.</p>
+<div class="chapter-nav"><a href="#03-rules">← Desktop modes and scoring</a><a href="#05-ai-replay">Desktop AI, Coach and Replay →</a></div></article>
+<article data-chapter="05-ai-replay" aria-labelledby="05-ai-replay"><h1 id="05-ai-replay">Desktop AI, Coach and Replay</h1>
+<h2 id="05-ai-replay-s1">Choose the assistance you need</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Use</th>
+<th>Executes a move?</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Hint, H</td>
+<td>Recommended direction, merge count and immediate gain</td>
+<td>No</td>
+</tr>
+<tr>
+<td>AI step, Enter</td>
+<td>Ask AI for one action</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Autoplay, Space</td>
+<td>Continuous decisions; press again to pause</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Coach, C</td>
+<td>Background analysis after roughly 450 ms without manual action</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Settings → 查看 AI 分析</td>
+<td>Compare directions, previews, depth, nodes and time</td>
+<td>Preview does not move; analysis counts as assistance</td>
+</tr>
+<tr>
+<td>Replay, R</td>
+<td>Review actions already taken</td>
+<td>No; randomness is unchanged</td>
+</tr>
+</tbody></table></div>
+<p>Manual input takes over from autoplay. Mode changes, undo and pauses invalidate stale AI results. The compiled search core may need a few seconds to prepare at startup; manual play remains available. Expedition pauses after each cleared stage for your ability choice.</p>
+<h2 id="05-ai-replay-s2">Thinking quality versus playback speed</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Search quality</th>
+<th align="right">Per-move budget</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>快速 / Fast</td>
+<td align="right">About 25 ms</td>
+</tr>
+<tr>
+<td>标准 / Standard</td>
+<td align="right">About 100 ms</td>
+</tr>
+<tr>
+<td>深入 / Deep</td>
+<td align="right">About 450 ms</td>
+</tr>
+<tr>
+<td>自适应 / Adaptive, default</td>
+<td align="right">Based on 120 ms, roughly 90–300 ms depending on empty cells; may stop early when direction stabilizes</td>
+</tr>
+</tbody></table></div>
+<p>Slow, Normal, Fast and 「冲分」 are separate <strong>playback speeds</strong>. Score-push skips animations; it does not imply deeper search. Load affects actual time, and budgets are not frame-rate promises. Standard/Adaptive at normal speed is convenient for watching. Algorithm comparisons require matched seeds, quality, versions, hardware and enough trials; one high-scoring game is not a win-rate estimate.</p>
+<h2 id="05-ai-replay-s3">Read direction analysis correctly</h2>
+<p>Classic/Daily/Sprint previews show the board <strong>after merging but before a random tile spawns</strong>. Empty-space and risk descriptions account for the next random spawn. Terminal risk means immediate loss after that one spawn, not the probability of losing the entire future game. Relative score bars are not win probabilities.</p>
+<p>Puzzle/Rescue randomness is fixed, so analysis can include the new tile and verified routes. Classic, Daily and Sprint do not peek at future RNG state. Up to 32 same-board/same-budget analyses can be reused; 「重新分析」 forces a fresh search.</p>
+<h2 id="05-ai-replay-s4">What the algorithms do</h2>
+<p>Desktop Classic uses Numba-compiled Expectimax in a separate process: maximize player choices, weight tile spawns by probability and deepen iteratively while retaining fully completed depth results. It uses row tables, state caching, low-probability pruning and heuristics for empty space, ordering and merge potential. Its two-word 80-bit board allocates five bits per cell, retains full search beyond 32768 and encodes tiles through 2³⁰. It is not a trained neural network and does not guarantee a global optimum.</p>
+<p>Expedition uses a separate bounded search aware of abilities, energy, Freeze, Swap and altered spawn probabilities, sampling spawn locations on open boards. Puzzle/Rescue use breadth-first search with complete random state and replay verification of shortest solutions. Timeout or no discovered route is not proof of impossibility. Budgets and scores from one algorithm should not be applied to every mode.</p>
+<h2 id="05-ai-replay-s5">Replay</h2>
+<p>R opens up to 100 recent actions. Step through, play automatically or seek via the score graph. Viewing does not roll back the current game, modify undo history or alter randomness. Expedition starts a new history after stage rewards, so cross-stage playback is not implied. Rescue&#39;s separate route comparison contrasts your/original moves with the verified reference.</p>
+<div class="chapter-nav"><a href="#04-expedition">← Desktop Expedition in depth</a><a href="#06-saves">Saves, backup, transfer and updates →</a></div></article>
+<article data-chapter="06-saves" aria-labelledby="06-saves"><h1 id="06-saves">Saves, backup, transfer and updates</h1>
+<h2 id="06-saves-s1">Find the right data</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Edition</th>
+<th>Main save / backup</th>
+<th>Images and logs</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Mac Desktop v12</td>
+<td>Game folder: <code>data/save.json</code>, <code>data/save.bak</code></td>
+<td>Game folder <code>exports/</code>; launcher Terminal output</td>
+</tr>
+<tr>
+<td>Windows Desktop v12</td>
+<td><code>%LOCALAPPDATA%\2048-Atelier\data\save.json</code>, adjacent <code>save.bak</code></td>
+<td><code>%LOCALAPPDATA%\2048-Atelier\exports</code> and <code>logs</code></td>
+</tr>
+<tr>
+<td>Native 1.0.1</td>
+<td>App sandbox; use settings JSON export/import</td>
+<td>See the native backup guide</td>
+</tr>
+<tr>
+<td>Touch v1</td>
+<td>Site IndexedDB; use settings export/import</td>
+<td>Bound to browser, device and site identity</td>
+</tr>
+</tbody></table></div>
+<p>Desktop saves in the background about every five seconds and after key actions. Normal exit waits for the final write. Missing or damaged main saves trigger an attempt to restore the last readable <code>save.bak</code>. This is one rolling backup, not unlimited history. Copy important progress elsewhere. Saves include RNG, undo history, mode progress and records; editing numbers by hand can break consistency.</p>
+<h2 id="06-saves-s2">Manual desktop backup</h2>
+<ol>
+<li>Stop autoplay and close every game window normally.</li>
+<li>On Mac, open the game folder&#39;s <code>data</code> directory in Finder. On Windows, paste <code>%LOCALAPPDATA%\2048-Atelier\data</code> into Explorer&#39;s address bar.</li>
+<li>Copy <code>save.json</code> and <code>save.bak</code>, when present, together into a separate dated folder.</li>
+<li>Copy <code>exports</code> separately if you want screenshots. An image cannot restore a game.</li>
+</ol>
+<p>Do not run the game during copying. Close older versions too: the new lock cannot protect against an old process that does not use it. Copying <code>2048.exe</code> or <code>game.py</code> alone does not back up progress in the user-data folder.</p>
+<h2 id="06-saves-s3">Transfer between Mac and Windows v12</h2>
+<ol>
+<li>Confirm both are Desktop v12 and back up both original profiles.</li>
+<li>Launch and close the destination game once to establish its folders.</li>
+<li>With both games closed, copy the source main save and backup as a pair into the destination <code>data</code> folder.</li>
+<li>If the source has no <code>save.bak</code>, move the destination&#39;s old backup into your separate backup folder first. Otherwise a damaged new main save might restore an unrelated old game.</li>
+<li>Relaunch and verify mode, score, board and undo history before continuing. This <strong>replaces</strong> destination progress; it does not merge two profiles.</li>
+</ol>
+<p>Windows automatically imports old game-folder saves only when <strong>neither save.json nor save.bak exists</strong> in user data. If either exists, it does not overwrite automatically. Old files are left in place. Use the explicit backup procedure instead of repeatedly deleting files to provoke migration.</p>
+<h2 id="06-saves-s4">Updates and recovery</h2>
+<p>For Windows updates, keep the user-data folder and fully extract the new game into a new folder after closing the old window. For Mac source updates, retain <code>data</code>, <code>exports</code> and the local environment. A copied virtual environment is not portable to another computer; recreate dependencies as described in the installation chapter.</p>
+<p>After a backup-recovery message, verify the board and back up the current files. If both files are unusable, preserve the damaged originals for diagnosis and restore your separate valid copy. Without a valid copy, recovery cannot be promised. Disk-full, read-only folders or disconnecting a drive can prevent saving; resolve the reported issue and exit normally.</p>
+<h2 id="06-saves-s5">Edition boundaries</h2>
+<p>Native JSON, Touch JSON and Python desktop saves are different formats. The <code>.json</code> extension does not make them interchangeable. Native/Web import replaces that edition&#39;s current progress; export the destination first. There is no automatic iCloud or cross-platform cloud sync. Back up before deleting the App, clearing site data or changing browsers.</p>
+<div class="chapter-nav"><a href="#05-ai-replay">← Desktop AI, Coach and Replay</a><a href="#07-macos">macOS installation and troubleshooting →</a></div></article>
+<article data-chapter="07-macos" aria-labelledby="07-macos"><h1 id="07-macos">macOS installation and troubleshooting</h1>
+<h2 id="07-macos-s1">Which edition runs on Mac?</h2>
+<p>Use <strong>Python Desktop v12</strong>. The current delivery is a source folder with a launcher, not a separately packaged <code>.app</code>. <code>iOS/Lumina.xcodeproj</code> is the iPhone/iPad project; SwiftUI host previews in this manual are not a replacement Mac desktop distribution.</p>
+<p>The examples use <code>~/2048-Atelier</code>; replace it with your game folder. Create a fresh Python environment on your Mac rather than copying one from another computer.</p>
+<h2 id="07-macos-s2">This prepared Mac</h2>
+<ol>
+<li>Mount the external drive and open the game folder.</li>
+<li>Double-click <code>启动游戏.command</code> and wait for the window and AI preparation.</li>
+<li>Choose Classic or resume in the lobby. Terminal output helps diagnose startup failures.</li>
+<li>Exit normally and let saving finish before ejecting the drive.</li>
+</ol>
+<p>Alternatively:</p>
+<pre><code class="language-sh">cd ~/2048-Atelier
+.venv/bin/python game.py
+</code></pre>
+<h2 id="07-macos-s3">First setup on another Mac</h2>
+<p>Use <strong>64-bit Python 3.12–3.14</strong>, subject to successful installation of the pinned dependencies. In Terminal, enter the actual game directory and run each command:</p>
+<pre><code class="language-sh">python3 --version
+python3 -m venv .venv
+.venv/bin/python -m pip install -r requirements.txt
+.venv/bin/python game.py
+</code></pre>
+<p>Check the first output. If <code>python3</code> is incompatible, create the environment with an installed compatible interpreter. Initial dependency downloads need a network connection; prepared gameplay and AI do not require a server. Pinned versions are in the <a href="../../reference/desktop-requirements.txt">requirements reference</a>. Use the game&#39;s <code>.venv</code>, without modifying system Python via <code>sudo pip</code>.</p>
+<p>If an existing copied <code>.venv</code> is unusable, close the game, rename that environment to retain it, then create a new one locally. Keep <code>data</code>. Recreate environments across CPU architectures too. The tested development host is an Apple Silicon Mac; this is not a claim of physical testing across every Intel Mac or macOS release.</p>
+<h2 id="07-macos-s4">Startup troubleshooting</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Symptom</th>
+<th>Check and action</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Path or file missing</td>
+<td>Confirm drive mount and folder name; quote paths containing spaces</td>
+</tr>
+<tr>
+<td>Double-click does not start</td>
+<td>Run <code>/bin/zsh &quot;启动游戏.command&quot;</code> in Terminal and read the first error</td>
+</tr>
+<tr>
+<td>Python/package missing</td>
+<td>Check version; install requirements with <code>.venv/bin/python -m pip</code></td>
+</tr>
+<tr>
+<td><code>.venv/bin/python</code> fails</td>
+<td>Was it copied from another computer? Preserve it, then recreate locally</td>
+</tr>
+<tr>
+<td>Another instance is reported</td>
+<td>Find and close the existing window normally; do not delete a lock while it runs</td>
+</tr>
+<tr>
+<td>Manual play works, AI not ready</td>
+<td>Allow compilation preparation; retain output if it remains stuck</td>
+</tr>
+<tr>
+<td>Missing glyphs</td>
+<td>Keep <code>fonts/</code> and all resources; system PingFang is read locally, not redistributed</td>
+</tr>
+<tr>
+<td>Save/screenshot failure</td>
+<td>Check game-folder write access, disk space and drive connection; saves are in <code>data/</code></td>
+</tr>
+</tbody></table></div>
+<p>If macOS flags the download, verify its source and integrity and follow the system&#39;s per-item opening flow. Do not disable system protection globally. Existing windows do not load new source automatically; exit and relaunch after updates.</p>
+<div class="chapter-nav"><a href="#06-saves">← Saves, backup, transfer and updates</a><a href="#08-windows">Windows installation and troubleshooting →</a></div></article>
+<article data-chapter="08-windows" aria-labelledby="08-windows"><h1 id="08-windows">Windows installation and troubleshooting</h1>
+<h2 id="08-windows-s1">Windows portable edition</h2>
+<p>Target: <strong>Windows 10/11 on Intel/AMD x64</strong>. This is neither a 32-bit build nor a native ARM64 package; ARM emulation has not been validated. The original is <code>2048-v12-Windows-x64.zip</code>. The new <code>2048-v12-Windows-x64-with-docs.zip</code> adds the complete trilingual handbook while retaining the same game and runtime.</p>
+<ol>
+<li>Copy the ZIP to the Windows computer. Right-click → Extract All into a local folder.</li>
+<li>Open the extracted <code>2048-Windows</code> folder and double-click <strong>2048.exe</strong>.</li>
+<li>Allow a few seconds for initial AI preparation. Manual play is available. No separate Python installation or gameplay network connection is required.</li>
+<li>Select Classic, try arrow-key moves, then close and reopen to check restoration.</li>
+<li>Read <code>README.zh-CN.md / README.en.md / README.ja.md</code> or <code>docs/index.html</code> offline.</li>
+</ol>
+<p>Keep the complete structure, including <code>runtime/</code>, <code>fonts/</code>, level JSON and Python files. <strong>Do not run inside the ZIP or copy only the exe.</strong> Python 3.13.15 and pinned dependencies are included; a different system Python does not need replacement.</p>
+<h2 id="08-windows-s2">Data is not next to the exe</h2>
+<p>Paste <code>%LOCALAPPDATA%\2048-Atelier</code> into Explorer:</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Folder</th>
+<th>Contents</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>data</code></td>
+<td>Main <code>save.json</code>, backup <code>save.bak</code>, process lock</td>
+</tr>
+<tr>
+<td><code>exports</code></td>
+<td>Screenshots saved with P</td>
+</tr>
+<tr>
+<td><code>logs</code></td>
+<td>Startup <code>latest.log</code>; self-check <code>diagnostics.json</code></td>
+</tr>
+<tr>
+<td><code>cache/numba</code></td>
+<td>Regenerable AI cache, not player progress</td>
+</tr>
+</tbody></table></div>
+<p>See <a href="#06-saves">chapter 6</a> for backups, updates and migration. Extracting a different game folder does not reset progress in user data.</p>
+<h2 id="08-windows-s3">Diagnose startup failures</h2>
+<ol>
+<li>Confirm full extraction and Windows 10/11 x64.</li>
+<li>Open <strong>启动游戏.bat</strong> and retain the first console error.</li>
+<li>Run <strong>check-windows.bat</strong>. It checks dependency versions, Chinese fonts, twelve puzzles, three practices, temporary storage and background AI. Temporary checks do not modify your personal game. The console pauses for reading.</li>
+<li>Inspect <code>%LOCALAPPDATA%\2048-Atelier\logs</code>. <code>diagnostics.json</code> only exists if the report was successfully written; if importing a dependency fails earlier, keep the console output.</li>
+<li>Use the table, then report version, OS, exact error and reproduction steps.</li>
+</ol>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Symptom</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Missing runtime/Python/DLL</td>
+<td>Check extraction and extract the original package again; do not obtain individual DLLs from unknown sites</td>
+</tr>
+<tr>
+<td>Another instance reported</td>
+<td>Return to that window; normal exit releases the OS lock. A leftover lock file alone does not mean an active lock</td>
+</tr>
+<tr>
+<td>Chinese square glyphs</td>
+<td>Check bundled <code>fonts/NotoSansSC-*.otf</code> and <code>fonts/OFL.txt</code>; keep the fonts</td>
+</tr>
+<tr>
+<td>Only exe startup fails</td>
+<td>Use the bat console and latest.log; provide console output when no log exists</td>
+</tr>
+<tr>
+<td>AI never moves, manual play works</td>
+<td>Wait for initial preparation, then use diagnostics for worker/Numba failures</td>
+</tr>
+<tr>
+<td>Scaling/fullscreen trouble</td>
+<td>Return to windowed mode and record display scale and resolution</td>
+</tr>
+<tr>
+<td>Save or screenshot failure</td>
+<td>Check user-folder permissions and disk capacity; no system-folder installation is necessary</td>
+</tr>
+<tr>
+<td>Update appears unchanged</td>
+<td>Close the old window and launch from the new fully extracted folder</td>
+</tr>
+</tbody></table></div>
+<p>The launcher configures DPI awareness before creating a window; this is not proof of all multi-monitor scaling behavior. If Windows flags the source, verify the package and origin and use the system&#39;s per-file handling. Do not globally disable protection or force administrator execution.</p>
+<h2 id="08-windows-s4">Windows source setup</h2>
+<p>Portable users can skip this. Source setup needs <strong>64-bit Python 3.12–3.14</strong>. <code>启动游戏.bat</code> prefers a bundled runtime, then an existing <code>.venv</code>, otherwise finds compatible Python and prepares an environment with pinned dependencies. Initial setup needs networking; prepared launches do not reinstall everything.</p>
+<p>Manual Command Prompt example with Python 3.13 installed, from the game directory:</p>
+<pre><code class="language-bat">py -3.13 -m venv .venv
+.venv\Scripts\python.exe -m pip install --only-binary=:all: -r requirements.txt
+.venv\Scripts\python.exe game.py
+</code></pre>
+<h2 id="08-windows-s5">Validation status</h2>
+<p>The original package passed ZIP CRC checks, dependency SHA-256 checks and inspection of 135 x64 PE files and required DLL imports. See the <a href="../../reference/desktop-v12-validation.md">v12 report</a>. <strong>No Windows hardware run has been completed.</strong> Static checks do not validate windows, audio, GPU, scaling or real display frame rate. Desktop clips show the same Python game running on Mac; they are not Windows recordings.</p>
+<div class="chapter-nav"><a href="#07-macos">← macOS installation and troubleshooting</a><a href="#09-mobile">iPhone, iPad and the web edition →</a></div></article>
+<article data-chapter="09-mobile" aria-labelledby="09-mobile"><h1 id="09-mobile">iPhone, iPad and the web edition</h1>
+<h2 id="09-mobile-s1">iPhone and iPad: one native project, adaptive layouts</h2>
+<p><strong>Native 1.0.1 (build 2)</strong> is a real Swift/SwiftUI Universal App source project, with no WebView. iPhone and iPad share rules and source while adapting layout to width. The deployment target is iOS/iPadOS 16.4; the toolchain requires Swift 6.0+ with Swift 5 language mode. A deployment target and a compiler requirement are different.</p>
+<p>The game root&#39;s <code>iOS/</code> folder contains <code>Lumina.xcodeproj</code>, core, UI, resources, tests and the native handbook. <strong>There is no signed IPA, TestFlight invitation or App Store release.</strong> Install full Xcode and a compatible iOS SDK on Mac, open the project, configure your Team/Bundle Identifier, select a device and Run. Command Line Tools alone cannot install the app on an iPhone. Follow the <a href="../native/docs/en/index.html#06-build">installation, signing, build and acceptance guide</a>.</p>
+<h2 id="09-mobile-s2">Native controls</h2>
+<p>Launch defaults to Classic. The top mode title opens other modes. Swipe inside the board, use the curved arrow for Undo, the lightbulb for Hint and autoplay to start/pause. The ellipsis contains Redo, restart and mode-specific puzzle/Rescue choices. Settings include appearance, sound, haptics, reduced motion, AI strength and JSON backups.</p>
+<p>External keyboards support arrows/WASD; desktop Z/R/C/P shortcuts do not apply. Up to two swipes can queue during animation; menus, backgrounding and manual takeover handle pending input and pause AI. Narrow iPhone layouts stack vertically; wider iPad layouts place board and information side by side. Smaller windows adapt, and long information can scroll.</p>
+<p>Pause AI, then export JSON through settings to Files or another location. Back up the destination before importing, which replaces native progress. This format differs from both Python desktop saves and Touch JSON. Requesting a native hint immediately marks assistance even if you never use the suggested move.</p>
+<h2 id="09-mobile-s3">All nine native chapters remain available</h2>
+<ul>
+<li><a href="../native/docs/en/index.html#01-start">Getting started, gestures and iPhone/iPad layouts</a></li>
+<li><a href="../native/docs/en/index.html#02-rules">Six modes</a> and <a href="../native/docs/en/index.html#03-expedition">abilities/scoring</a></li>
+<li><a href="../native/docs/en/index.html#04-ai-data">AI, records and backups</a></li>
+<li><a href="../native/docs/en/index.html#05-faq">Troubleshooting</a> and <a href="../native/docs/en/index.html#06-build">build/install</a></li>
+<li><a href="../native/docs/en/index.html#07-gallery">Nine native demonstrations</a>, <a href="../native/docs/en/index.html#08-solutions">solutions</a>, <a href="../native/docs/en/index.html#09-release">release validation</a></li>
+</ul>
+<p>If the App is already installed, begin with controls. If you received source, begin with builds. Mac host tests and layout images do not replace device testing of touch, rotation, Split View, backgrounding, VoiceOver or display performance.</p>
+<h2 id="09-mobile-s4">Touch v1: the separate web edition</h2>
+<p>The web edition is separate from the native App. It supports Safari touch controls and adding the game to the Home Screen. For the native App, use the installation and control instructions above.</p>
+<ol>
+<li>Open <a href="https://lumina-2048.vercel.app/">LUMINA for the web</a> in Safari. Access is currently restricted; sign in with an authorized Vercel account.</li>
+<li>Wait for full initial loading, then Share → Add to Home Screen.</li>
+<li>Wait for offline preparation before testing a disconnected Home Screen launch. Offline availability is not promised before caching completes.</li>
+<li>Swipe inside the board, use direction buttons or arrows/WASD.</li>
+<li>Export JSON in settings. Import only into another <strong>Touch</strong> edition, after backing up that destination.</li>
+</ol>
+<p>Touch has all six modes, hints, Worker-based AI, undo/redo, last-100-action Replay, Rescue route comparison, appearance, sound and reduced motion. Menus, backgrounding and manual takeover pause autoplay. It does not implement the full Python desktop keyboard map, and desktop AI time presets do not describe its settings.</p>
+<p>Progress lives in site IndexedDB with backup and a page-leaving emergency snapshot. Browser/device/Home Screen contexts do not synchronize automatically. Clearing site data, private browsing or storage eviction can affect progress. Export important data first. If an old web interface persists after an update, export before reconnecting/reopening for the update; do not begin by deleting site data.</p>
+<p>When moving from the old address, first choose 「导出进度」 in the old site’s settings, then 「导入进度」 on the new site. Browser saves do not move automatically between addresses. Add a new Home Screen icon from the new address as well.</p>
+<p>Source lives in <code>mobile/</code>. Local <code>python3 serve.py</code> is for development and skips Service Worker registration by default; phone deployment needs HTTPS. Native rule comparisons, web tests and browser layout checks do not prove physical-device offline cold start, haptics or system-gesture behavior.</p>
+<div class="chapter-nav"><a href="#08-windows">← Windows installation and troubleshooting</a><a href="#10-gallery">Seventeen animated demonstrations →</a></div></article>
+<article data-chapter="10-gallery" aria-labelledby="10-gallery"><h1 id="10-gallery">Seventeen animated demonstrations</h1>
+<p>Eight desktop clips plus nine native clips, all from the actual game code. Each GIF was made by decoding its delivered MP4. Sampling at 12 fps serves instruction, not display performance measurement. GIFs start paused in HTML; play them or expand MP4. Markdown viewers usually loop GIFs automatically.</p>
+<h2 id="10-gallery-s1">Mac / Windows Desktop v12 controls</h2>
+<p>Captured from the real Python/pygame renderer on Mac using SDL dummy and an isolated temporary profile. Windows shares this code, but these are not Windows hardware recordings. Silent; no personal player save was used.</p>
+<h3 id="10-gallery-s2">Lobby: Classic first and featured modes</h3>
+<p>Switch from Classic/Challenges to Featured, return and enter Classic. B returns to the lobby during play.</p>
+<figure class="motion"><img src="../media/10-desktop-lobby-poster.png" data-gif="../media/10-desktop-lobby.gif" data-poster="../media/10-desktop-lobby-poster.png" alt="Lobby: Classic first and featured modes" loading="lazy" width="1080" height="820"><button class="motion-toggle" type="button" aria-pressed="false">Play animation</button><figcaption>Lobby: Classic first and featured modes</figcaption></figure><details class="video-source"><summary>MP4 · Video player</summary><video controls playsinline preload="none" poster="../media/10-desktop-lobby-poster.png" src="../media/10-desktop-lobby.mp4" width="1080" height="820" aria-label="Lobby: Classic first and featured modes"></video></details>
+<p><a href="../media/10-desktop-lobby.gif">GIF</a> · <a href="../media/10-desktop-lobby.mp4">MP4 · 6.00 s</a> · <a href="../media/10-desktop-lobby-poster.png">PNG</a></p>
+<h3 id="10-gallery-s3">Classic: move, undo and redo</h3>
+<p>A real seed-42 opening: left, down, left, up, right, then undo and redo. Board, score and move count restore together.</p>
+<figure class="motion"><img src="../media/11-desktop-classic-poster.png" data-gif="../media/11-desktop-classic.gif" data-poster="../media/11-desktop-classic-poster.png" alt="Classic: move, undo and redo" loading="lazy" width="1080" height="820"><button class="motion-toggle" type="button" aria-pressed="false">Play animation</button><figcaption>Classic: move, undo and redo</figcaption></figure><details class="video-source"><summary>MP4 · Video player</summary><video controls playsinline preload="none" poster="../media/11-desktop-classic-poster.png" src="../media/11-desktop-classic.mp4" width="1080" height="820" aria-label="Classic: move, undo and redo"></video></details>
+<p><a href="../media/11-desktop-classic.gif">GIF</a> · <a href="../media/11-desktop-classic.mp4">MP4 · 7.00 s</a> · <a href="../media/11-desktop-classic-poster.png">PNG</a></p>
+<h3 id="10-gallery-s4">AI analysis, one step and Replay</h3>
+<p>The actual worker computes direction analysis. Preview left, execute one AI move, then review history without changing the current board.</p>
+<figure class="motion"><img src="../media/12-desktop-ai-replay-poster.png" data-gif="../media/12-desktop-ai-replay.gif" data-poster="../media/12-desktop-ai-replay-poster.png" alt="AI analysis, one step and Replay" loading="lazy" width="1080" height="820"><button class="motion-toggle" type="button" aria-pressed="false">Play animation</button><figcaption>AI analysis, one step and Replay</figcaption></figure><details class="video-source"><summary>MP4 · Video player</summary><video controls playsinline preload="none" poster="../media/12-desktop-ai-replay-poster.png" src="../media/12-desktop-ai-replay.mp4" width="1080" height="820" aria-label="AI analysis, one step and Replay"></video></details>
+<p><a href="../media/12-desktop-ai-replay.gif">GIF</a> · <a href="../media/12-desktop-ai-replay.mp4">MP4 · 8.50 s</a> · <a href="../media/12-desktop-ai-replay-poster.png">PNG</a></p>
+<h3 id="10-gallery-s5">Puzzle: reach 64 in two moves</h3>
+<p>Puzzle 01 from its original state: up, up, then the actual three-star result. Contains the solution.</p>
+<figure class="motion"><img src="../media/13-desktop-puzzle-poster.png" data-gif="../media/13-desktop-puzzle.gif" data-poster="../media/13-desktop-puzzle-poster.png" alt="Puzzle: reach 64 in two moves" loading="lazy" width="1080" height="820"><button class="motion-toggle" type="button" aria-pressed="false">Play animation</button><figcaption>Puzzle: reach 64 in two moves</figcaption></figure><details class="video-source"><summary>MP4 · Video player</summary><video controls playsinline preload="none" poster="../media/13-desktop-puzzle-poster.png" src="../media/13-desktop-puzzle.mp4" width="1080" height="820" aria-label="Puzzle: reach 64 in two moves"></video></details>
+<p><a href="../media/13-desktop-puzzle.gif">GIF</a> · <a href="../media/13-desktop-puzzle.mp4">MP4 · 5.33 s</a> · <a href="../media/13-desktop-puzzle-poster.png">PNG</a></p>
+<h3 id="10-gallery-s6">Expedition: choose an ability and gain energy</h3>
+<p>A seed-13 opening, Battery Core selection, moves, energy and the rules panel. This is stage-one instruction, not a full six-stage run.</p>
+<figure class="motion"><img src="../media/14-desktop-expedition-poster.png" data-gif="../media/14-desktop-expedition.gif" data-poster="../media/14-desktop-expedition-poster.png" alt="Expedition: choose an ability and gain energy" loading="lazy" width="1080" height="820"><button class="motion-toggle" type="button" aria-pressed="false">Play animation</button><figcaption>Expedition: choose an ability and gain energy</figcaption></figure><details class="video-source"><summary>MP4 · Video player</summary><video controls playsinline preload="none" poster="../media/14-desktop-expedition-poster.png" src="../media/14-desktop-expedition.mp4" width="1080" height="820" aria-label="Expedition: choose an ability and gain energy"></video></details>
+<p><a href="../media/14-desktop-expedition.gif">GIF</a> · <a href="../media/14-desktop-expedition.mp4">MP4 · 8.00 s</a> · <a href="../media/14-desktop-expedition-poster.png">PNG</a></p>
+<h3 id="10-gallery-s7">Rescue: three moves and route comparison</h3>
+<p>Practice 01: right, up, up creates three empty cells. Open comparison after success and step through. Contains the solution.</p>
+<figure class="motion"><img src="../media/15-desktop-rescue-poster.png" data-gif="../media/15-desktop-rescue.gif" data-poster="../media/15-desktop-rescue-poster.png" alt="Rescue: three moves and route comparison" loading="lazy" width="1080" height="820"><button class="motion-toggle" type="button" aria-pressed="false">Play animation</button><figcaption>Rescue: three moves and route comparison</figcaption></figure><details class="video-source"><summary>MP4 · Video player</summary><video controls playsinline preload="none" poster="../media/15-desktop-rescue-poster.png" src="../media/15-desktop-rescue.mp4" width="1080" height="820" aria-label="Rescue: three moves and route comparison"></video></details>
+<p><a href="../media/15-desktop-rescue.gif">GIF</a> · <a href="../media/15-desktop-rescue.mp4">MP4 · 6.83 s</a> · <a href="../media/15-desktop-rescue-poster.png">PNG</a></p>
+<h3 id="10-gallery-s8">Daily: fixed date, undo and redo</h3>
+<p>Created by the production daily_game function for 2026-09-29. Demonstrates moves, undo and redo; invalid directions do not add moves.</p>
+<figure class="motion"><img src="../media/16-desktop-daily-poster.png" data-gif="../media/16-desktop-daily.gif" data-poster="../media/16-desktop-daily-poster.png" alt="Daily: fixed date, undo and redo" loading="lazy" width="1080" height="820"><button class="motion-toggle" type="button" aria-pressed="false">Play animation</button><figcaption>Daily: fixed date, undo and redo</figcaption></figure><details class="video-source"><summary>MP4 · Video player</summary><video controls playsinline preload="none" poster="../media/16-desktop-daily-poster.png" src="../media/16-desktop-daily.mp4" width="1080" height="820" aria-label="Daily: fixed date, undo and redo"></video></details>
+<p><a href="../media/16-desktop-daily.gif">GIF</a> · <a href="../media/16-desktop-daily.mp4">MP4 · 6.67 s</a> · <a href="../media/16-desktop-daily-poster.png">PNG</a></p>
+<h3 id="10-gallery-s9">Sprint: track the move allowance</h3>
+<p>A real seed-42 Sprint opening, five moves, undo and redo. This explains the counter, not the move-60 result.</p>
+<figure class="motion"><img src="../media/17-desktop-sprint-poster.png" data-gif="../media/17-desktop-sprint.gif" data-poster="../media/17-desktop-sprint-poster.png" alt="Sprint: track the move allowance" loading="lazy" width="1080" height="820"><button class="motion-toggle" type="button" aria-pressed="false">Play animation</button><figcaption>Sprint: track the move allowance</figcaption></figure><details class="video-source"><summary>MP4 · Video player</summary><video controls playsinline preload="none" poster="../media/17-desktop-sprint-poster.png" src="../media/17-desktop-sprint.mp4" width="1080" height="820" aria-label="Sprint: track the move allowance"></video></details>
+<p><a href="../media/17-desktop-sprint.gif">GIF</a> · <a href="../media/17-desktop-sprint.mp4">MP4 · 7.50 s</a> · <a href="../media/17-desktop-sprint-poster.png">PNG</a></p>
+<h2 id="10-gallery-s10">Native iPhone / iPad controls (Mac host preview)</h2>
+<p>These nine GIFs are converted from sampled videos of the actual native code running. The MP4 source videos are included. Capture platform: macOS native preview, <strong>not iPhone / iPad screen recording or a device FPS test</strong>. The English bottom strip is a tutorial annotation. The HTML reader can pause animations; Markdown viewers usually loop them. MP4 uses H.264. Expand the video player in the HTML reader or download it for separate playback. All media is local and works offline.</p>
+<h3 id="10-gallery-s11">Classic: slide, merge and spawn</h3>
+<p>Continue a real seed-42 game from midgame. Watch the entire board slide, equal values merge, the score rise and a new tile appear. The bottom strip identifies directions.</p>
+<figure class="motion"><img src="../native/docs/media/01-classic-poster.png" data-gif="../native/docs/media/01-classic.gif" data-poster="../native/docs/media/01-classic-poster.png" alt="Classic: slide, merge and spawn" loading="lazy" width="1000" height="700"><button class="motion-toggle" type="button" aria-pressed="false">Play animation</button><figcaption>Classic: slide, merge and spawn</figcaption></figure><details class="video-source"><summary>MP4 · Video player</summary><video controls playsinline preload="none" poster="../native/docs/media/01-classic-poster.png" src="../native/docs/media/01-classic.mp4" width="1000" height="700" aria-label="Classic: slide, merge and spawn"></video></details>
+<p>Try keeping your largest tile near a corner. A slide without a merge still spawns a tile.</p>
+<p><a href="../native/docs/media/01-classic.gif">GIF</a> · <a href="../native/docs/media/01-classic.mp4">MP4 · 6.08 s</a> · <a href="../native/docs/media/01-classic-poster.png">PNG</a></p>
+<h3 id="10-gallery-s12">Undo and redo: restore the same spawn</h3>
+<p>Make one move, undo it, then redo. The board, score and counter change together.</p>
+<figure class="motion"><img src="../native/docs/media/02-undo-redo-poster.png" data-gif="../native/docs/media/02-undo-redo.gif" data-poster="../native/docs/media/02-undo-redo-poster.png" alt="Undo and redo: restore the same spawn" loading="lazy" width="1000" height="700"><button class="motion-toggle" type="button" aria-pressed="false">Play animation</button><figcaption>Undo and redo: restore the same spawn</figcaption></figure><details class="video-source"><summary>MP4 · Video player</summary><video controls playsinline preload="none" poster="../native/docs/media/02-undo-redo-poster.png" src="../native/docs/media/02-undo-redo.mp4" width="1000" height="700" aria-label="Undo and redo: restore the same spawn"></video></details>
+<p>Redo is in the ellipsis menu. The random state is restored too; this is not a reroll.</p>
+<p><a href="../native/docs/media/02-undo-redo.gif">GIF</a> · <a href="../native/docs/media/02-undo-redo.mp4">MP4 · 5.58 s</a> · <a href="../native/docs/media/02-undo-redo-poster.png">PNG</a></p>
+<h3 id="10-gallery-s13">AI: hint, follow, autoplay and pause</h3>
+<p>Request a hint, follow it, run autoplay, then pause.</p>
+<figure class="motion"><img src="../native/docs/media/03-ai-poster.png" data-gif="../native/docs/media/03-ai.gif" data-poster="../native/docs/media/03-ai-poster.png" alt="AI: hint, follow, autoplay and pause" loading="lazy" width="1000" height="700"><button class="motion-toggle" type="button" aria-pressed="false">Play animation</button><figcaption>AI: hint, follow, autoplay and pause</figcaption></figure><details class="video-source"><summary>MP4 · Video player</summary><video controls playsinline preload="none" poster="../native/docs/media/03-ai-poster.png" src="../native/docs/media/03-ai.mp4" width="1000" height="700" aria-label="AI: hint, follow, autoplay and pause"></video></details>
+<p>The footer changes from manual to assisted. Pausing does not clear the assisted flag.</p>
+<p><a href="../native/docs/media/03-ai.gif">GIF</a> · <a href="../native/docs/media/03-ai.mp4">MP4 · 11.5 s</a> · <a href="../native/docs/media/03-ai-poster.png">PNG</a></p>
+<h3 id="10-gallery-s14">Expedition: draft and opening moves</h3>
+<p>Begin a seed-42 expedition, choose Battery Core and make several valid moves.</p>
+<figure class="motion"><img src="../native/docs/media/04-expedition-draft-poster.png" data-gif="../native/docs/media/04-expedition-draft.gif" data-poster="../native/docs/media/04-expedition-draft-poster.png" alt="Expedition: draft and opening moves" loading="lazy" width="1000" height="700"><button class="motion-toggle" type="button" aria-pressed="false">Play animation</button><figcaption>Expedition: draft and opening moves</figcaption></figure><details class="video-source"><summary>MP4 · Video player</summary><video controls playsinline preload="none" poster="../native/docs/media/04-expedition-draft-poster.png" src="../native/docs/media/04-expedition-draft.mp4" width="1000" height="700" aria-label="Expedition: draft and opening moves"></video></details>
+<p>Multiple merged pairs earn more energy. Distinguish the stage target from cumulative score.</p>
+<p><a href="../native/docs/media/04-expedition-draft.gif">GIF</a> · <a href="../native/docs/media/04-expedition-draft.mp4">MP4 · 7.25 s</a> · <a href="../native/docs/media/04-expedition-draft-poster.png">PNG</a></p>
+<h3 id="10-gallery-s15">Expedition: freeze and swap</h3>
+<p>Continue from an actually played position with 12 energy. Freeze, select two different values to swap, then make two moves.</p>
+<figure class="motion"><img src="../native/docs/media/05-expedition-powers-poster.png" data-gif="../native/docs/media/05-expedition-powers.gif" data-poster="../native/docs/media/05-expedition-powers-poster.png" alt="Expedition: freeze and swap" loading="lazy" width="1000" height="700"><button class="motion-toggle" type="button" aria-pressed="false">Play animation</button><figcaption>Expedition: freeze and swap</figcaption></figure><details class="video-source"><summary>MP4 · Video player</summary><video controls playsinline preload="none" poster="../native/docs/media/05-expedition-powers-poster.png" src="../native/docs/media/05-expedition-powers.mp4" width="1000" height="700" aria-label="Expedition: freeze and swap"></video></details>
+<p>Active powers leave the move counter unchanged. Frozen moves do not spawn a new tile.</p>
+<p><a href="../native/docs/media/05-expedition-powers.gif">GIF</a> · <a href="../native/docs/media/05-expedition-powers.mp4">MP4 · 6.42 s</a> · <a href="../native/docs/media/05-expedition-powers-poster.png">PNG</a></p>
+<h3 id="10-gallery-s16">Puzzle: make 64 in two moves</h3>
+<p>Puzzle 01 from its reset state: up, then up, reaching 64.</p>
+<figure class="motion"><img src="../native/docs/media/06-puzzle-poster.png" data-gif="../native/docs/media/06-puzzle.gif" data-poster="../native/docs/media/06-puzzle-poster.png" alt="Puzzle: make 64 in two moves" loading="lazy" width="1000" height="700"><button class="motion-toggle" type="button" aria-pressed="false">Play animation</button><figcaption>Puzzle: make 64 in two moves</figcaption></figure><details class="video-source"><summary>MP4 · Video player</summary><video controls playsinline preload="none" poster="../native/docs/media/06-puzzle-poster.png" src="../native/docs/media/06-puzzle.mp4" width="1000" height="700" aria-label="Puzzle: make 64 in two moves"></video></details>
+<p>Contains the solution. No hint or undo is used, so the result earns three stars.</p>
+<p><a href="../native/docs/media/06-puzzle.gif">GIF</a> · <a href="../native/docs/media/06-puzzle.mp4">MP4 · 4.67 s</a> · <a href="../native/docs/media/06-puzzle-poster.png">PNG</a></p>
+<h3 id="10-gallery-s17">Rescue: a failed move and a recovery route</h3>
+<p>Practice A Glimmer of Hope: left reproduces the original blocked outcome. Restart, then right, up, up.</p>
+<figure class="motion"><img src="../native/docs/media/07-rescue-poster.png" data-gif="../native/docs/media/07-rescue.gif" data-poster="../native/docs/media/07-rescue-poster.png" alt="Rescue: a failed move and a recovery route" loading="lazy" width="1000" height="700"><button class="motion-toggle" type="button" aria-pressed="false">Play animation</button><figcaption>Rescue: a failed move and a recovery route</figcaption></figure><details class="video-source"><summary>MP4 · Video player</summary><video controls playsinline preload="none" poster="../native/docs/media/07-rescue-poster.png" src="../native/docs/media/07-rescue.mp4" width="1000" height="700" aria-label="Rescue: a failed move and a recovery route"></video></details>
+<p>Compare the outcomes. Success requires at least three empty cells after spawning. This shows actual challenge actions, not a full Classic recording.</p>
+<p><a href="../native/docs/media/07-rescue.gif">GIF</a> · <a href="../native/docs/media/07-rescue.mp4">MP4 · 7.58 s</a> · <a href="../native/docs/media/07-rescue-poster.png">PNG</a></p>
+<h3 id="10-gallery-s18">Daily: same date, same restart</h3>
+<p>Use the fixed demonstration date 2026-09-29, make three moves, then restart.</p>
+<figure class="motion"><img src="../native/docs/media/08-daily-poster.png" data-gif="../native/docs/media/08-daily.gif" data-poster="../native/docs/media/08-daily-poster.png" alt="Daily: same date, same restart" loading="lazy" width="1000" height="700"><button class="motion-toggle" type="button" aria-pressed="false">Play animation</button><figcaption>Daily: same date, same restart</figcaption></figure><details class="video-source"><summary>MP4 · Video player</summary><video controls playsinline preload="none" poster="../native/docs/media/08-daily-poster.png" src="../native/docs/media/08-daily.mp4" width="1000" height="700" aria-label="Daily: same date, same restart"></video></details>
+<p>The two initial tiles match the opening. No network synchronization is involved.</p>
+<p><a href="../native/docs/media/08-daily.gif">GIF</a> · <a href="../native/docs/media/08-daily.mp4">MP4 · 5.83 s</a> · <a href="../native/docs/media/08-daily-poster.png">PNG</a></p>
+<h3 id="10-gallery-s19">Sprint: final three moves</h3>
+<p>A real seed-42 Sprint is advanced to move 57, then the last three moves and result are captured.</p>
+<figure class="motion"><img src="../native/docs/media/09-sprint-poster.png" data-gif="../native/docs/media/09-sprint.gif" data-poster="../native/docs/media/09-sprint-poster.png" alt="Sprint: final three moves" loading="lazy" width="1000" height="700"><button class="motion-toggle" type="button" aria-pressed="false">Play animation</button><figcaption>Sprint: final three moves</figcaption></figure><details class="video-source"><summary>MP4 · Video player</summary><video controls playsinline preload="none" poster="../native/docs/media/09-sprint-poster.png" src="../native/docs/media/09-sprint.mp4" width="1000" height="700" aria-label="Sprint: final three moves"></video></details>
+<p>Remaining moves fall from 3 to 0. This is not a timer, and there is no move 61.</p>
+<p><a href="../native/docs/media/09-sprint.gif">GIF</a> · <a href="../native/docs/media/09-sprint.mp4">MP4 · 5.58 s</a> · <a href="../native/docs/media/09-sprint-poster.png">PNG</a></p>
+<p><a href="../native/docs/media/index.html">Media / 媒体 / メディア</a></p>
+<div class="chapter-nav"><a href="#09-mobile">← iPhone, iPad and the web edition</a><a href="#11-solutions">Twelve puzzles and three Rescue solutions →</a></div></article>
+<article data-chapter="11-solutions" aria-labelledby="11-solutions"><h1 id="11-solutions">Twelve puzzles and three Rescue solutions</h1>
+<p>The resources, starting boards and routes for these twelve puzzles and three practices have been checked against Desktop v12. Use each edition’s control chapter for its button locations.</p>
+<p>Try each challenge yourself before reading. Every route starts at its original board: restart the matching challenge first. Arrows are move directions; 0 is empty. Routes are generated directly from bundled game resources so translation cannot alter a direction.</p>
+<p>Reading an external manual is outside the app, so it cannot automatically mark that you consulted these solutions. For your own unassisted challenge, avoid external answers; a practiced known route is different from solving a puzzle blind.</p>
+<h2 id="11-solutions-s1">Puzzle 01 · 借一步</h2>
+<p>Target / par / limit: <strong>64 / 2 / 3</strong></p>
+<pre><code class="language-text">   2    8    8   16
+   4    4    2   16
+   4    8    8    0
+  16    4    4   32
+</code></pre>
+<p>Route: <strong>↑  ↑</strong></p>
+<h2 id="11-solutions-s2">Puzzle 02 · 转身</h2>
+<p>Target / par / limit: <strong>64 / 2 / 3</strong></p>
+<pre><code class="language-text">   8   32    2    0
+   8    8   16   16
+   4    4    8    8
+   0   16    4   16
+</code></pre>
+<p>Route: <strong>←  ↑</strong></p>
+<h2 id="11-solutions-s3">Puzzle 03 · 留白</h2>
+<p>Target / par / limit: <strong>128 / 3 / 4</strong></p>
+<pre><code class="language-text">   2    2   64   32
+   8   16   16   16
+  16    0    0    4
+  32   16    8    4
+</code></pre>
+<p>Route: <strong>→  ↑  ←</strong></p>
+<h2 id="11-solutions-s4">Puzzle 04 · 折返</h2>
+<p>Target / par / limit: <strong>128 / 3 / 4</strong></p>
+<pre><code class="language-text">   0   16   16    0
+  32   16   16   32
+  16    4   16    0
+   4    4    0   32
+</code></pre>
+<p>Route: <strong>↑  →  ←</strong></p>
+<h2 id="11-solutions-s5">Puzzle 05 · 暗流</h2>
+<p>Target / par / limit: <strong>256 / 3 / 4</strong></p>
+<pre><code class="language-text">   2    2   64   16
+   0    4    0    4
+   0   32   32  128
+  64    0   16    4
+</code></pre>
+<p>Route: <strong>←  ↑  ←</strong></p>
+<h2 id="11-solutions-s6">Puzzle 06 · 挪一寸</h2>
+<p>Target / par / limit: <strong>256 / 4 / 5</strong></p>
+<pre><code class="language-text">  16   32   32   32
+  16    4    0   16
+   4    0   32   64
+  64   64    0   32
+</code></pre>
+<p>Route: <strong>←  ↑  ←  ←</strong></p>
+<h2 id="11-solutions-s7">Puzzle 07 · 连锁</h2>
+<p>Target / par / limit: <strong>512 / 4 / 5</strong></p>
+<pre><code class="language-text"> 128   64    0    2
+ 256   32    2   64
+   0   32    2    4
+ 128    0   32   64
+</code></pre>
+<p>Route: <strong>↑  ↑  ←  ↑</strong></p>
+<h2 id="11-solutions-s8">Puzzle 08 · 破局</h2>
+<p>Target / par / limit: <strong>512 / 4 / 5</strong></p>
+<pre><code class="language-text">   4   64   64  128
+   0    2  128    4
+  32   64   64    0
+  64    0    0   64
+</code></pre>
+<p>Route: <strong>←  ←  ↑  ↑</strong></p>
+<h2 id="11-solutions-s9">Puzzle 09 · 回声</h2>
+<p>Target / par / limit: <strong>1024 / 4 / 5</strong></p>
+<pre><code class="language-text">   4  256    0  256
+ 128  256   64  128
+  64   64   64    0
+ 256    4   64    2
+</code></pre>
+<p>Route: <strong>←  ↑  →  ↑</strong></p>
+<h2 id="11-solutions-s10">Puzzle 10 · 逆风</h2>
+<p>Target / par / limit: <strong>1024 / 5 / 6</strong></p>
+<pre><code class="language-text">   4    4  128    2
+  64    0  512   64
+ 128  256  128  256
+   0   64    4  256
+</code></pre>
+<p>Route: <strong>↑  ←  ←  ↑  ←</strong></p>
+<h2 id="11-solutions-s11">Puzzle 11 · 归位</h2>
+<p>Target / par / limit: <strong>2048 / 5 / 6</strong></p>
+<pre><code class="language-text"> 128    0    4  256
+ 256  256    0  512
+   4    4    0    4
+ 512    2    0  512
+</code></pre>
+<p>Route: <strong>←  ↑  →  ↑  ↑</strong></p>
+<h2 id="11-solutions-s12">Puzzle 12 · 最后一线</h2>
+<p>Target / par / limit: <strong>2048 / 5 / 6</strong></p>
+<pre><code class="language-text"> 256    0  256    0
+ 256  128  512  256
+ 256  128  256  128
+   2  128  512  256
+</code></pre>
+<p>Route: <strong>↑  ↓  ←  ←  ↑</strong></p>
+<h2 id="11-solutions-s13">Built-in Rescue</h2>
+<p>Create three empty cells within six moves, checked after spawning. The original route below ends in a blocked board and is included for comparison, not as advice.</p>
+<h3 id="11-solutions-s14">一线生机</h3>
+<p>Original route (loss): ←</p>
+<p>Recovery route (success): <strong>→ ↑ ↑</strong></p>
+<h3 id="11-solutions-s15">腾挪之间</h3>
+<p>Original route (loss): ↓</p>
+<p>Recovery route (success): <strong>↑ ← ↑ ← ↑</strong></p>
+<h3 id="11-solutions-s16">逆转时刻</h3>
+<p>Original route (loss): ↑</p>
+<p>Recovery route (success): <strong>← ← → ↓ ←</strong></p>
+<p>Personal Rescue starting positions vary. There is no universal arrow sequence; use the individual challenge hint or comparison replay.</p>
+<div class="chapter-nav"><a href="#10-gallery">← Seventeen animated demonstrations</a><a href="#12-support">FAQ, development and validation →</a></div></article>
+<article data-chapter="12-support" aria-labelledby="12-support"><h1 id="12-support">FAQ, development and validation</h1>
+<h2 id="12-support-s1">Frequently asked questions</h2>
+<p><strong>Why does Mac open a lobby while native opens a board?</strong> Desktop v12 opens mode selection; Native 1.0.1 starts in Classic. They have different entry designs, both keeping Classic first.</p>
+<p><strong>Why is there no Mac exe?</strong> <code>.exe</code> is the Windows entry and <code>.command</code> the Mac launcher. The two share Python game code but prepare platform-specific runtimes. iPhone/iPad use a separate Swift project.</p>
+<p><strong>Why are game labels Chinese if documentation has three languages?</strong> This delivery adds trilingual documentation and READMEs, not a game UI language selector. Translations preserve the actual button names.</p>
+<p><strong>Does autoplay guarantee 32768?</strong> No. Search is bounded and heuristic, with random outcomes. Historical high scores describe specific trials, not a promise for every version or device.</p>
+<p><strong>Why do phone and computer Daily boards differ?</strong> Check edition, date, action order, undo and assistance. Rule fixtures do not imply identical saves or every cross-edition start; Expedition offer shuffling in particular differs by edition.</p>
+<p><strong>Why do tutorial GIFs look slower?</strong> Media is sampled at 12 fps for readability and file size. It is not a display frame-rate recording or benchmark. Expand MP4 for playback controls.</p>
+<p><strong>Why are stars or records different from expected?</strong> Check assistance, undo, par and the mode whose record you are viewing. Undoing a current game does not lower an established best record.</p>
+<h2 id="12-support-s2">Source and development</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Path</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>game.py</code>, <code>air_ui.py</code>, <code>interface_base.py</code></td>
+<td>Desktop entry and UI</td>
+</tr>
+<tr>
+<td><code>engine.py</code>, <code>modes.py</code>, <code>persistence.py</code></td>
+<td>Rules, independent sessions, background saving</td>
+</tr>
+<tr>
+<td><code>ai.py</code>, <code>search_native.py</code></td>
+<td>Search and worker process</td>
+</tr>
+<tr>
+<td><code>expedition.py</code>, <code>rescue.py</code>, <code>puzzles.py</code></td>
+<td>Specialized rules and solvers</td>
+</tr>
+<tr>
+<td><code>desktop_start.py</code>, <code>platform_paths.py</code>, <code>check_runtime.py</code></td>
+<td>Platform launch, paths, locking, diagnostics</td>
+</tr>
+<tr>
+<td><code>tests/</code>, <code>validation/v12/</code></td>
+<td>Desktop tests and retained evidence</td>
+</tr>
+<tr>
+<td><code>iOS/</code></td>
+<td>Native Swift project</td>
+</tr>
+<tr>
+<td><code>mobile/</code></td>
+<td>Touch web project</td>
+</tr>
+<tr>
+<td><code>docs/</code>, <code>README*.md</code></td>
+<td>Unified handbooks and language entry points</td>
+</tr>
+</tbody></table></div>
+<p>The standalone documentation ZIP contains manuals, media, reference reports and generation tools, <strong>not a runnable game or full native source</strong>. The Windows-with-docs ZIP includes the Windows game/runtime but not the full iOS project. The original game root is the collection of edition projects and releases.</p>
+<p>Prepare a desktop environment, then run from the game root:</p>
+<pre><code class="language-sh">python -m unittest discover -s tests
+</code></pre>
+<p>Replace <code>python</code> with the game interpreter: <code>.venv/bin/python</code> on Mac or <code>.venv\Scripts\python.exe</code> for Windows source. Portable Windows users should use <code>check-windows.bat</code>. Within <code>mobile/</code>, use <code>node --test tests/*.test.js</code> and <code>python3 serve.py</code> for local web development. Native tests, Xcode builds and device checks are documented in its build chapter.</p>
+<p>Retain <code>THIRD_PARTY.md</code>, <code>fonts/OFL.txt</code> and Windows <code>licenses/</code> in the complete game. System fonts such as PingFang are read locally, not copied from Mac for Windows distribution. Source visibility does not imply an unstated redistribution license.</p>
+<h2 id="12-support-s3">Separate evidence by edition</h2>
+<p>The retained Desktop v12 report records <strong>90 passing tests</strong>, a six-stage Expedition with 6,098 points/123 moves, real-loss Rescue extraction, font fallback and Windows static package checks. These are earlier v12 results, not new hardware tests performed for this documentation update.</p>
+<p>Native 1.0.1 has <strong>38 core/interaction checks and 5,760 mixed operations</strong> in its retained evidence. Web has separate rule/browser checks. None substitutes for another edition.</p>
+<p>See <a href="../QA.md">documentation QA</a> for this pass: local links and anchors, translated chapters, solution routes, GIF/MP4 decoding and frame counts, packaged resources, unchanged Windows runtime files and unchanged player saves. Offline HTML browser visual/interaction acceptance remains incomplete; structural validation is not a claim of successful clicking through the reader.</p>
+<h2 id="12-support-s4">Useful bug report</h2>
+<pre><code class="language-text">Edition: Mac/Windows v12, Native 1.0.1, or Touch v1
+OS / device / CPU architecture:
+Installation method and package filename:
+Mode, date or chapter:
+Exact reproduction steps:
+Expected / actual result:
+Repeatable?:
+AI, undo or mode changes involved?:
+Full error / screenshot / relevant log:
+</code></pre>
+<p>Back up before investigating save problems and share only a copy you are willing to use for diagnosis. Passwords and signing certificates are unnecessary. Always identify platform and edition so desktop keyboard issues are not confused with mobile gesture behavior.</p>
+<div class="chapter-nav"><a href="#11-solutions">← Twelve puzzles and three Rescue solutions</a><span>LUMINA · ALL EDITIONS</span></div></article></main></div><script id="reader-config" type="application/json">{"play":"Play animation","pause":"Pause animation","results":"Search results","none":"No matches found"}</script><script src="../reader.js"></script></body></html>

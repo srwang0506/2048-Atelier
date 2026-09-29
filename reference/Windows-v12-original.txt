@@ -1,0 +1,45 @@
+2048 Atelier · Windows 便携版
+
+适用：Windows 10 / 11，Intel 或 AMD 64 位电脑。
+
+开始游戏
+1. 将整个 ZIP 解压到一个文件夹。
+2. 双击 2048.exe。
+3. 第一次启动时 AI 会在后台准备；这时可以手动玩。
+
+包内已带 Python、绘图库、AI 依赖和开源中文字体，不需要自行安装
+Python，也不需要联网下载依赖。runtime 和 fonts 文件夹必须保留。
+2048.exe 是便携启动入口，不能单独复制到其他地方使用。
+
+大厅默认显示经典玩法。能力远征与绝境重生位于后面的“精选玩法”。
+方向键 / WASD 移动，空格自动玩，Z 撤销，Shift+Z 重做，B 返回大厅。
+
+存档和截图
+存档：%LOCALAPPDATA%\2048-Atelier\data\save.json
+备份：%LOCALAPPDATA%\2048-Atelier\data\save.bak
+截图：%LOCALAPPDATA%\2048-Atelier\exports
+日志：%LOCALAPPDATA%\2048-Atelier\logs
+
+可以把上述路径直接粘贴到文件资源管理器地址栏。
+更新游戏文件夹不会替换这些个人存档。复制旧版 data 文件夹到新版
+游戏目录后，第一次启动会将 save.json / save.bak 迁移到用户目录；
+若用户目录已有存档，会保留现有进度。迁移不会删除旧文件。
+
+无法启动时
+先确认完整解压了整个 ZIP，再双击 check-windows.bat。
+它会检查依赖、中文资源、字体、临时存档和后台 AI 进程；不修改
+现有对局。首次检查可能需要等待 AI 编译。结果保存在日志目录的
+diagnostics.json。也可以双击 启动游戏.bat 查看控制台错误。
+普通启动发生 Python 异常时，详情写入日志目录的 latest.log。
+
+本次交付已通过 macOS 上的游戏测试、字体回退渲染检查、Windows
+依赖哈希与 PE 架构 / 导入表静态检查。尚未在 Windows 实机运行，
+所以不能将这些检查视为 Windows 窗口、显卡、声音和帧率验证。
+不包含 Windows 32 位或 ARM64 原生包。
+
+源码版
+若下载的是源码包而非便携包，先安装 Python 3.12–3.14 的 64 位版，
+再双击 启动游戏.bat。源码版首次运行需要联网安装依赖。
+
+第三方许可见 THIRD_PARTY.md、licenses、runtime/LICENSE.txt、
+runtime/Lib/site-packages 中的许可证，以及 fonts/OFL.txt。

@@ -1,0 +1,46 @@
+{
+  "driver": "cocoa",
+  "reported_refresh": 60,
+  "desktop_refresh": [
+    60
+  ],
+  "vsync": true,
+  "window": [
+    1080,
+    820
+  ],
+  "autoplay": true,
+  "present_intervals": {
+    "n": 480,
+    "mean_ms": 16.67,
+    "p95_ms": 17.03,
+    "max_ms": 19.33
+  },
+  "update_and_draw": {
+    "n": 480,
+    "mean_ms": 16.63,
+    "p95_ms": 16.98,
+    "max_ms": 19.29
+  },
+  "computation_without_flip": {
+    "n": 480,
+    "mean_ms": 4.74,
+    "p95_ms": 5.52,
+    "max_ms": 8.45
+  },
+  "frame_start_intervals": {
+    "n": 480,
+    "mean_ms": 16.67,
+    "p95_ms": 17.03,
+    "max_ms": 19.33
+  },
+  "moves": 28,
+  "move_intervals": {
+    "n": 27,
+    "mean_ms": 261.72,
+    "p95_ms": 266.71,
+    "max_ms": 266.88
+  },
+  "late_presentations": 0,
+  "slow": []
+}

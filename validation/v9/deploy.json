@@ -1,0 +1,26 @@
+{
+  "updated_files": 19,
+  "save_unchanged": true,
+  "backup": "/Volumes/sirui/2048-Atelier/backups/v8-source",
+  "source_hashes": {
+    "air_ui.py": "101c7f7243d0dded8f541449e479a1472858333abc8a68e7f9a616d0e218eafb",
+    "ui_core.py": "9fefe1bb564d0e5f42c1e5beb96dd5a56a1198f08f234cfca99ddba303885a0e",
+    "interface_base.py": "fbf9cf6cd7cefbb3364f90f9352596a57bbcc5582067b99835e612d9d4a6584b",
+    "engine.py": "b2fba773a15db5004fca38864a8c9e65148f9a21b9f10fc8205cf18de168a11d",
+    "ai.py": "bc0f5bd7de98166c6c8827759ed338e532470d431036eb99ea79ccefc923ef5a",
+    "features.py": "8ed17250c9445e8f3234bb78155ff0ffcf595fff854279049582205a2300c4b4",
+    "modes.py": "6a600faecaec201a8419b94d89e0412762c7fdfab71f27f5cdab80d5f190d091",
+    "journey.py": "1f98b79c66bd2845a573b8bae5d83dcd6b2360bf827090d162cbe1bd5871911d",
+    "puzzles.py": "81d3bcd771adba4d5a1bd93a216ce3250b267e8e075649a307af0c3950133538",
+    "puzzle_levels.json": "ae78bbefaab6c11d844fcf1737e6519310f9dacb0877754dc9d52e9f390ebb01",
+    "README.md": "e36cd6be6d44853745368a6940d26bdc0ecd3471525627e7725da0558ae6012b",
+    "\u6d4b\u8bd5\u62a5\u544a.md": "bc9b81ab2ca33d8f3eaee0a9c500034692254695e30f642f5c14f7d7e3937a50",
+    "tests/test_journey.py": "591a0f1ac1142ff96a785ee12909343317dee28b32a952bab74b628e47991e1d",
+    "validation/v8/\u7b2c\u516b\u7248\u6d4b\u8bd5\u62a5\u544a.md": "d4e4938de9d4ac404c5a6f2bd4ea862b1244bf2f9acceab9dcb8d4d5933fd5d9",
+    "validation/v9/tests-initial.log": "ad3aa32b063da938b5fe34e990a5038b78adde3f070936e16680a4cab0c7a25d",
+    "validation/v9/profile.py": "a7676becea40b7c46a201d2f87ca55eba28340817e5b22d9310de57de4bfaccc",
+    "validation/v9/headless-before-warm.json": "d9482e667eebf89ede74afe172e1634a97dcb57a4c17b56b1bacf249b386d0cf",
+    "validation/v9/tests.log": "885d01c87e540fe81b44906dba3cac360927245ca013e5c2df35ed8b18386ca3",
+    "validation/v9/headless.json": "17034ff34efcb26a8a6471343116dc7931c321a7f2c5a7bb2e2dcd3859b2e2da"
+  }
+}

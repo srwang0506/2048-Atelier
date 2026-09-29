@@ -1,0 +1,8 @@
+10-desktop-lobby 72 {'mode': 'classic', 'moves': 0, 'score': 0, 'assisted': False}
+11-desktop-classic 84 {'mode': 'classic', 'moves': 5, 'score': 8, 'assisted': False}
+12-desktop-ai-replay 102 {'mode': 'classic', 'moves': 6, 'score': 12, 'assisted': True}
+13-desktop-puzzle 64 {'mode': 'puzzle', 'moves': 2, 'score': 104, 'assisted': False}
+14-desktop-expedition 96 {'mode': 'expedition', 'moves': 6, 'score': 16, 'assisted': False}
+15-desktop-rescue 82 {'mode': 'rescue', 'moves': 3, 'score': 44, 'assisted': False}
+16-desktop-daily 80 {'mode': 'daily', 'moves': 3, 'score': 4, 'assisted': False}
+17-desktop-sprint 90 {'mode': 'sprint', 'moves': 5, 'score': 8, 'assisted': False}

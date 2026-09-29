@@ -1,0 +1,67 @@
+{
+  "driver": "cocoa",
+  "refresh": 75,
+  "vsync": true,
+  "present": {
+    "play": {
+      "frames": 2202,
+      "mean_ms": 5.28,
+      "p95_ms": 6.25,
+      "max_ms": 14.71
+    },
+    "panel_open": {
+      "frames": 4,
+      "mean_ms": 18.06,
+      "p95_ms": 23.94,
+      "max_ms": 23.94
+    },
+    "panel_motion": {
+      "frames": 97,
+      "mean_ms": 10.09,
+      "p95_ms": 11.74,
+      "max_ms": 34.3
+    },
+    "panel_idle": {
+      "frames": 625,
+      "mean_ms": 10.07,
+      "p95_ms": 10.89,
+      "max_ms": 11.81
+    }
+  },
+  "compute": {
+    "play": {
+      "frames": 2202,
+      "mean_ms": 4.8,
+      "p95_ms": 5.74,
+      "max_ms": 14.27
+    },
+    "panel_open": {
+      "frames": 4,
+      "mean_ms": 17.53,
+      "p95_ms": 23.37,
+      "max_ms": 23.37
+    },
+    "panel_motion": {
+      "frames": 97,
+      "mean_ms": 9.34,
+      "p95_ms": 11.22,
+      "max_ms": 12.91
+    },
+    "panel_idle": {
+      "frames": 625,
+      "mean_ms": 9.58,
+      "p95_ms": 10.36,
+      "max_ms": 11.16
+    }
+  },
+  "saved_steps": 24,
+  "restored_history": 24,
+  "daily_steps": 12,
+  "checks": {
+    "coach_readonly": true,
+    "preview_readonly": true,
+    "replay_readonly": true,
+    "mode_roundtrip": true,
+    "both_sessions_persisted": true
+  }
+}

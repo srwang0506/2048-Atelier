@@ -1,0 +1,10 @@
+{
+  "static": {
+    "mean_ms": 5.93,
+    "p95_ms": 8.28
+  },
+  "animation": {
+    "mean_ms": 4.86,
+    "p95_ms": 5.78
+  }
+}

@@ -1,0 +1,1002 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="LUMINA 2048 使用手册"><title>LUMINA · 使用手册</title><link rel="stylesheet" href="../reader.css"></head><body><div class="shell"><aside class="sidebar"><a class="brand" href="../index.html">LUMINA</a><div class="edition">Mac / Windows / iPhone / iPad / Web · 中文</div><nav class="languages" aria-label="Language"><a class="selected" data-language="../zh-CN/index.html" href="../zh-CN/index.html" lang="zh-CN">简体中文</a><a class="" data-language="../en/index.html" href="../en/index.html" lang="en">English</a><a class="" data-language="../ja/index.html" href="../ja/index.html" lang="ja">日本語</a></nav><label><span class="print-only">搜索规则、按钮、问题…</span><input id="search" class="searchbox" type="search" placeholder="搜索规则、按钮、问题…" aria-label="搜索规则、按钮、问题…"></label><div class="nav-title">目录</div><nav class="chapter-list" aria-label="目录"><a class="chapter-link" href="#01-platforms"><b>01</b><span>先选平台与版本</span></a><a class="chapter-link" href="#02-controls"><b>02</b><span>桌面版入门与完整操作</span></a><a class="chapter-link" href="#03-rules"><b>03</b><span>桌面版六种玩法与计分</span></a><a class="chapter-link" href="#04-expedition"><b>04</b><span>桌面版能力远征详解</span></a><a class="chapter-link" href="#05-ai-replay"><b>05</b><span>桌面版 AI、教练与复盘</span></a><a class="chapter-link" href="#06-saves"><b>06</b><span>存档、备份、迁移与升级</span></a><a class="chapter-link" href="#07-macos"><b>07</b><span>macOS 安装与排错</span></a><a class="chapter-link" href="#08-windows"><b>08</b><span>Windows 安装与排错</span></a><a class="chapter-link" href="#09-mobile"><b>09</b><span>iPhone、iPad 与网页版</span></a><a class="chapter-link" href="#10-gallery"><b>10</b><span>十七段游戏动图与视频</span></a><a class="chapter-link" href="#11-solutions"><b>11</b><span>十二章谜题与三道残局解答</span></a><a class="chapter-link" href="#12-support"><b>12</b><span>常见问题、开发与验证</span></a></nav><div class="side-footer"><button id="print" class="print-button">打印 / 保存 PDF</button><p>桌面 v12 · Native 1.0.1 · Touch v1。游戏主要为中文；说明有三种语言。</p><p>2026.09.29 · OFFLINE EDITION</p></div></aside><main class="main"><div class="topline"><span class="doc-title">使用手册</span><span>十二章说明 · 十七段演示</span></div><div id="results" class="search-results" hidden></div><p class="lead-note">桌面 v12 · Native 1.0.1 · Touch v1。游戏主要为中文；说明有三种语言。</p><article data-chapter="01-platforms" aria-labelledby="01-platforms"><h1 id="01-platforms">先选平台与版本</h1>
+<p>本手册覆盖 <strong>Mac、Windows、iPhone、iPad 和 Web</strong>。它们属于同一个游戏系列，但并非同一个安装包；版本号、界面和存档格式分别管理。文档基于 2026-09-29 的现有代码与交付文件。</p>
+<h2 id="01-platforms-s1">按你的设备开始</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>设备 / 版本</th>
+<th>交付形态与启动入口</th>
+<th>阅读入口</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Mac · Python 桌面版 v12</td>
+<td>游戏目录内双击 <code>启动游戏.command</code>；首次准备需要兼容 Python</td>
+<td><a href="#07-macos">Mac 安装</a> → <a href="#02-controls">桌面操作</a></td>
+</tr>
+<tr>
+<td>Windows · Python 桌面版 v12</td>
+<td>完整解压 Windows x64 便携 ZIP，双击 <code>2048.exe</code></td>
+<td><a href="#08-windows">Windows 安装</a> → <a href="#02-controls">桌面操作</a></td>
+</tr>
+<tr>
+<td>iPhone / iPad · Native 1.0.1，build 2</td>
+<td>SwiftUI 原生源码工程；需 Xcode、iOS SDK 与签名后安装</td>
+<td><a href="#09-mobile">原生 App 说明</a> → <a href="../native/docs/zh-CN/index.html">九章原生手册</a></td>
+</tr>
+<tr>
+<td>浏览器 · Touch v1</td>
+<td>独立 Web / PWA，Safari 可添加到主屏幕</td>
+<td><a href="#09-mobile">网页版说明</a></td>
+</tr>
+</tbody></table></div>
+<p>Windows 包面向 Windows 10 / 11 的 Intel、AMD x64 电脑。Mac 当前已在 Apple Silicon 主机运行；其他 Mac 需按依赖安装结果核验。原生工程目标是 iOS / iPadOS 16.4 及以上；尚未在本环境完成 iOS 构建、签名和设备验收。<strong>原生源码不是可直接安装的 IPA；Web 添加主屏幕也不等于原生 App。</strong></p>
+<h2 id="01-platforms-s2">同样的游戏，有各自的功能</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>功能</th>
+<th>Mac / Windows v12</th>
+<th>iPhone / iPad Native 1.0.1</th>
+<th>Touch v1</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>六种玩法、经典在前</td>
+<td>有</td>
+<td>有</td>
+<td>有</td>
+</tr>
+<tr>
+<td>提示 / AI 自动玩 / 撤销重做</td>
+<td>有</td>
+<td>有</td>
+<td>有</td>
+</tr>
+<tr>
+<td>自动分析教练</td>
+<td>有，C 键</td>
+<td>无桌面版同等入口</td>
+<td>无桌面版同等入口</td>
+</tr>
+<tr>
+<td>通用最近 100 步复盘</td>
+<td>有，R 键</td>
+<td>无；有重生路线对照</td>
+<td>有</td>
+</tr>
+<tr>
+<td>游戏内 JSON 导入导出</td>
+<td>无，备份存档文件</td>
+<td>有</td>
+<td>有</td>
+</tr>
+<tr>
+<td>P 键截图 / F 全屏</td>
+<td>有</td>
+<td>使用系统功能</td>
+<td>使用浏览器 / 系统功能</td>
+</tr>
+<tr>
+<td>存档位置</td>
+<td>本地文件</td>
+<td>App 沙盒</td>
+<td>浏览器站点存储</td>
+</tr>
+</tbody></table></div>
+<p>三语的是<strong>文档</strong>，当前游戏主界面的标签主要是中文。英语和日语说明会保留按钮的中文名称，方便你对照寻找。没有自动跨设备云同步，也没有统一线上排行榜。版本之间不要互相导入存档；Mac 与 Windows <strong>同版 v12</strong> 可按<a href="#06-saves">文件迁移步骤</a>操作。</p>
+<h2 id="01-platforms-s3">阅读顺序</h2>
+<p>第一次玩：先安装对应版本，再读操作与规则；需要高分辅助时看 AI 章节。能力远征的数值单独列在第四章。需要搬电脑或升级先看存档章节。第十一章包含完整解答，请在自己尝试后再打开。</p>
+<p>离线阅读时保留整个文件夹。打开 <code>docs/index.html</code> 选择语言；侧栏可搜索当前语言的十二章内容，原生九章手册有独立搜索。切换语言会保留所在章节；动图默认静止，点播放后开始，也可展开 MP4 逐段观看。不会因为阅读文档而上传或改动游戏进度。</p>
+<div class="chapter-nav"><span></span><a href="#02-controls">桌面版入门与完整操作 →</a></div></article>
+<article data-chapter="02-controls" aria-labelledby="02-controls"><h1 id="02-controls">桌面版入门与完整操作</h1>
+<p>本章只适用于 <strong>Mac / Windows 桌面 v12</strong>，两个系统的游戏操作相同。</p>
+<h2 id="02-controls-s1">第一次开局</h2>
+<ol>
+<li>打开游戏，进入「选择玩法」。默认是「经典与挑战」，经典占左侧主卡。</li>
+<li>点击「经典」开始。上方显示得分与最佳，中央是 4×4 棋盘。</li>
+<li>按方向键或 WASD，或在棋盘上用鼠标按住拖动。整盘方块一起移动，不能拖动单个方块。</li>
+<li>合并相同数字，留出空格。新手先用手动方式玩几步，再尝试提示。</li>
+<li>点左上角模式名称或 B 返回大厅；「精选玩法」里有能力远征与绝境重生。「继续当前局」返回当前棋盘。切换玩法分别保留进度。</li>
+</ol>
+<h2 id="02-controls-s2">全部快捷键</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>按键</th>
+<th>对局中的作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>↑ ↓ ← → / W S A D</td>
+<td>滑动；手动输入可接管 AI</td>
+</tr>
+<tr>
+<td>空格</td>
+<td>开启 / 暂停自动玩</td>
+</tr>
+<tr>
+<td>Z</td>
+<td>撤销</td>
+</tr>
+<tr>
+<td>Shift+Z / Y</td>
+<td>重做</td>
+</tr>
+<tr>
+<td>H</td>
+<td>请求提示</td>
+</tr>
+<tr>
+<td>Enter</td>
+<td>AI 走一步</td>
+</tr>
+<tr>
+<td>C</td>
+<td>开关教练；实际分析会计入辅助</td>
+</tr>
+<tr>
+<td>R</td>
+<td>打开复盘</td>
+</tr>
+<tr>
+<td>B</td>
+<td>模式大厅</td>
+</tr>
+<tr>
+<td>N</td>
+<td>新开当前玩法；有确认时按提示完成</td>
+</tr>
+<tr>
+<td>T / M</td>
+<td>切换明暗 / 音效</td>
+</tr>
+<tr>
+<td>F / P</td>
+<td>全屏 / 保存截图</td>
+</tr>
+<tr>
+<td>F1</td>
+<td>玩法与操作帮助</td>
+</tr>
+<tr>
+<td>Esc</td>
+<td>关闭面板、退出全屏或暂停，取决于当前状态</td>
+</tr>
+</tbody></table></div>
+<p>复盘面板中，← / → 是前后帧，Home 是起点，End 是当前末帧，空格播放 / 暂停。输入快捷键前让游戏窗口获得焦点。按钮也可用鼠标点击；触控滑动取决于系统和 SDL 设备支持，未把桌面触控作为所有电脑的保证。</p>
+<h2 id="02-controls-s3">关键操作的区别</h2>
+<p><strong>撤销</strong>会回退棋盘、得分、步数及随机状态；<strong>重做</strong>恢复被撤销的一步。撤销后走另一方向会开始新分支，旧分支不能再重做。保留最近 100 步历史，已保存的历史重启后可以继续用；辅助标记不随撤销清除。</p>
+<p><strong>复盘</strong>只是查看过去，不会改当前棋盘；<strong>原局重试</strong>重开固定谜题 / 重生挑战；<strong>新开一局</strong>会替换该模式当前进度，其他模式进度保留。每日新开是重试当前挑战日期，进入今天请经过大厅。</p>
+<h2 id="02-controls-s4">设置与显示</h2>
+<p>右上圆形设置按钮包含 AI 档位、游玩速度、明暗、音效、动画、全屏、战绩和玩法等入口。AI 的思考档位与自动玩的播放速度是两项不同设置。冲分速度会跳过逐步动画；想观看动效请选择正常或慢速并开启动画。</p>
+<p>P 截图保存在<a href="#06-saves">本机 exports 目录</a>，不是剪贴板。截图失败只会提示，不应退出游戏。屏幕截图文件名避免同秒覆盖。关闭窗口后等保存完成再拔出移动硬盘；不要直接终止进程代替正常退出。</p>
+<div class="chapter-nav"><a href="#01-platforms">← 先选平台与版本</a><a href="#03-rules">桌面版六种玩法与计分 →</a></div></article>
+<article data-chapter="03-rules" aria-labelledby="03-rules"><h1 id="03-rules">桌面版六种玩法与计分</h1>
+<h2 id="03-rules-s1">合并的基本规则</h2>
+<p>4×4 棋盘，每次向一个方向滑到底；相邻同数合并成双倍。一次滑动中新生成的合并方块不会再合并。向左例子（均为落新方块之前）：</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>原行</th>
+<th>结果</th>
+<th align="right">加分</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>2, 2, 2, 2</td>
+<td>4, 4, 0, 0</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>2, 2, 4, 0</td>
+<td>4, 4, 0, 0</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>4, 0, 4, 4</td>
+<td>8, 4, 0, 0</td>
+<td align="right">8</td>
+</tr>
+</tbody></table></div>
+<p>一次有效移动后，通常在空位生成 2（90%）或 4（10%）。无效方向不产生新方块、不消耗步数，也不推进随机序列。远征的能力可改变落子与分数。满盘不一定结束：只要有相邻同数仍能继续。</p>
+<h2 id="03-rules-s2">经典与每日同局</h2>
+<p>经典没有步数上限，达到 2048 后继续追求更大数字，无合法移动才结束。合并得到的数字计为本次基础分，例如 8+8 合成 16 得 16 分。</p>
+<p>每日同局以日期固定种子。同日期、相同操作序列可复现落子；仅日期相同而操作不同不保证相同盘面。从大厅进入今天；重开当前局沿用该局日期。本机保留最近七个已保存日期的进度，没有旧日期选择器和联网排名。</p>
+<h2 id="03-rules-s3">六十步冲刺</h2>
+<p>60 次有效移动内争取高分，无法移动会提前结束。撤销回退已用步数；按不能移动的方向不扣步。手动与含辅助成绩分别记录，得分不计入经典最高分。单纯用完 60 步不会生成重生挑战，实际堵死才会进入败局提取条件。</p>
+<h2 id="03-rules-s4">解局剧场：十二章</h2>
+<p>固定开局与随机状态，目标从 64 到 2048。最短解 2–5 步，每章允许比最短解多一步，因此上限 3–6 步。右侧显示剩余步数与下一枚方块；重试同一路线重现落子，改变方向会影响可用落点。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>通关条件</th>
+<th>星级</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>无辅助、无撤销，在最短步数内达标</td>
+<td>三星</td>
+</tr>
+<tr>
+<td>其他无辅助通关</td>
+<td>二星</td>
+</tr>
+<tr>
+<td>使用辅助后通关</td>
+<td>一星</td>
+</tr>
+</tbody></table></div>
+<p>每章保留历史最高星级。再次选择同一未完成章会续玩；「原局重试」才重置该章。选择别章会替换当前谜题进度，已获星级保留。设置内 AI 分析可以看确定下一步、余下步数内的可解性与完整路线。阅读解答属于剧透。</p>
+<h2 id="03-rules-s5">绝境重生：六步救回空间</h2>
+<p>经典、每日或冲刺因无路可走而结束时，后台检查最近最多十步。候选局面须只有零或一个空格，并能在六次有效移动内达到至少三个空格、继续可移动。搜索按完整随机状态求最短路，再用正式引擎验证后才入库。</p>
+<p>进入重生是独立挑战，零分零步开始；原败局保存，切回相应模式仍在。可重试、撤销、提示、自动玩。手动与辅助最佳步数分开保存。进行中打开「路线对照」会标记辅助；它显示本次 / 原败局与验证路线，可逐步比较。撤销不清除辅助标记。</p>
+<p>最近六个个人残局保存在本机，当前挑战保留。没有个人样本时可选三道明确标为练习的残局，最短解分别 3、5、5 步。不是每盘败局都能提取；搜索有时限，未找到不等于证明无解。</p>
+<h2 id="03-rules-s6">能力远征与公平记录</h2>
+<p>远征是六关、限步得分、能力构筑与主动技能，详见<a href="#04-expedition">下一章</a>。它的分数不进入经典纪录。</p>
+<p>提示、实际教练分析、AI 单步与自动玩属于辅助，影响本局的辅助标记；撤销不能洗掉。玩法中各自使用星级、最佳分或最佳步数，不能把远征倍率分与经典得分直接比较。外部手册提供的解答不能被游戏自动检测，请自行区分独立解题与参考解答练习。</p>
+<div class="chapter-nav"><a href="#02-controls">← 桌面版入门与完整操作</a><a href="#04-expedition">桌面版能力远征详解 →</a></div></article>
+<article data-chapter="04-expedition" aria-labelledby="04-expedition"><h1 id="04-expedition">桌面版能力远征详解</h1>
+<p>本章适用于桌面 v12。三选一奖励一旦生成就固定，关闭面板或重启不能刷新。远征单独保留至多 12 场较高成绩及能力组合，按通关数与分数排序。</p>
+<h2 id="04-expedition-s1">一次完整远征</h2>
+<p>进入远征后先三选一：连击引擎、蓄能核心、豪赌协议。选好后开始第一关。每关要求在限定有效移动次数内获得该关目标分数；顶部本局得分是累计值，关卡进度条显示的是<strong>当前分数减去进入该关时分数</strong>。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>关卡</th>
+<th>名称</th>
+<th>本关目标分</th>
+<th>基础移动次数</th>
+<th>从容节拍 I / II 后</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>启程</td>
+<td>100</td>
+<td>26</td>
+<td>30 / 34</td>
+</tr>
+<tr>
+<td>2</td>
+<td>蓄势</td>
+<td>260</td>
+<td>34</td>
+<td>38 / 42</td>
+</tr>
+<tr>
+<td>3</td>
+<td>回响</td>
+<td>520</td>
+<td>42</td>
+<td>46 / 50</td>
+</tr>
+<tr>
+<td>4</td>
+<td>临界</td>
+<td>900</td>
+<td>46</td>
+<td>50 / 54</td>
+</tr>
+<tr>
+<td>5</td>
+<td>跃迁</td>
+<td>1400</td>
+<td>52</td>
+<td>56 / 60</td>
+</tr>
+<tr>
+<td>6</td>
+<td>终章</td>
+<td>2200</td>
+<td>60</td>
+<td>64 / 68</td>
+</tr>
+</tbody></table></div>
+<p>前五关达标后暂停，出现新的三选一奖励。选择新能力或把已有能力升到 II；满级能力不再被提供。奖励后进入下一关，保留棋盘、累计得分、已选能力与能量；如果棋盘有两枚以上数字，移除一枚最小数字，给下一关腾出空间。最小值并列时取棋盘从左上到右下的第一枚。</p>
+<p>关间不结转未使用的移动次数，也不把上一关超出目标的分数算入下一关进度。连击、凝时剩余次数与冷却在选奖励后归零，历史撤销 / 重做也清空。最后一关达标即赢得整段远征。最后一步达标优先判过关；否则移动次数耗尽，或棋盘不能动且无主动能力可用时失败。</p>
+<h2 id="04-expedition-s2">能量与主动能力</h2>
+<p>每合并一组方块获得 1 点能量，能量最多 12。蓄能核心提高每组收益。纯位移无合并不产能量。能量只在远征内存在。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>主动能力</th>
+<th>基础成本</th>
+<th>操作</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>凝时</td>
+<td>5 点</td>
+<td>点“凝时 · 5”</td>
+<td>接下来两次有效移动不生成新方块；立即设置六步冷却</td>
+</tr>
+<tr>
+<td>交换</td>
+<td>6 点</td>
+<td>点交换，选两枚不同数值的非空方块，再点「确认交换」</td>
+<td>交换两者位置，不合并、不生成新方块</td>
+</tr>
+</tbody></table></div>
+<p>两种能力<strong>都不扣移动步数</strong>，不直接得分，但各自会生成撤销记录。交换不能选空格或两枚相同数字。能量不足时按钮不可用。凝时要求尚未处于凝时、冷却为 0 且棋盘仍可移动；它不能直接解救一张已经完全卡死的棋盘，交换有时可以。</p>
+<p>冷却和凝时剩余次数只随有效移动递减，等待、无效滑动、使用交换不会推进。凝时期间若某步也触发空间回流，该步仍会消耗一次凝时次数；不是把次数留到下一步。每次换关会重置凝时与冷却。</p>
+<h2 id="04-expedition-s3">九种能力的精确效果</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>能力</th>
+<th>I 级</th>
+<th>II 级</th>
+<th>生效条件</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>连击引擎</td>
+<td>第二次连续合并起，每层 +25%</td>
+<td>每层 +40%</td>
+<td>最多四层加成；有一次有效移动未合并就中断</td>
+</tr>
+<tr>
+<td>蓄能核心</td>
+<td>每组合并额外 +1 能量</td>
+<td>每组额外 +2</td>
+<td>连同基础值，每组共 2 / 3 点，仍受 12 上限限制</td>
+</tr>
+<tr>
+<td>豪赌协议</td>
+<td>合并总得分 ×2；新方块为 4 的概率 30%</td>
+<td>×2.5；4 的概率 40%</td>
+<td>更高分伴随更密集的大数字落子</td>
+</tr>
+<tr>
+<td>角落增幅</td>
+<td>角落合并结果的数值额外 +50%</td>
+<td>额外 +100%</td>
+<td>看合并后的落点是否为四角</td>
+</tr>
+<tr>
+<td>共鸣回路</td>
+<td>同一步至少两组合并，基础分额外 +50%</td>
+<td>额外 +100%</td>
+<td>三组、四组也只触发一次该比例</td>
+</tr>
+<tr>
+<td>空间回流</td>
+<td>同一步至少三组合并，不落子</td>
+<td>至少两组合并，不落子</td>
+<td>是自动被动效果，不消耗能量</td>
+</tr>
+<tr>
+<td>从容节拍</td>
+<td>每关 +4 步</td>
+<td>每关 +8 步</td>
+<td>当前关立即按等级获得总加成；II 是总 +8，不是额外再 +8</td>
+</tr>
+<tr>
+<td>折跃透镜</td>
+<td>交换成本降到 4</td>
+<td>降到 3</td>
+<td>凝时仍为 5 点</td>
+</tr>
+<tr>
+<td>凝时晶体</td>
+<td>凝时持续三次有效移动</td>
+<td>持续四次</td>
+<td>冷却仍为六次有效移动</td>
+</tr>
+</tbody></table></div>
+<h2 id="04-expedition-s4">连击与得分怎么算</h2>
+<p>连击是连续的“有合并的有效移动”，不是同一步合并了多少组。无效滑动不打断；纯位移的有效移动会打断。主动能力不推进 / 打断连击。</p>
+<p>设基础合并分为 G，角落奖励为 C，共鸣奖励为 E：</p>
+<p><code>本步得分 = (G + C + E) × 连击倍率 × 豪赌倍率</code></p>
+<p>最后四舍六入五取偶到整数，即正好 <code>.5</code> 时取最近的偶数。举例：基础合并分 24，其中角落生成 8，有两组合并；持有角落 I、共鸣 I、连击 I 且处于第二次连续合并、豪赌 I，则本步为 <code>(24 + 4 + 12) × 1.25 × 2 = 100</code> 分。</p>
+<p>连击 I 从连续合并第 1–5 次的倍率依次为 1、1.25、1.50、1.75、2；以后仍为 2。连击 II 为 1、1.40、1.80、2.20、2.60，以后仍为 2.60。</p>
+<h2 id="04-expedition-s5">三种练习思路</h2>
+<p><strong>能量路线</strong>：蓄能核心配折跃透镜，增加可以交换整理棋盘的机会。注意能量接近 12 时继续合并可能溢出，适时使用能力。</p>
+<p><strong>多组合并路线</strong>：共鸣回路配空间回流，计划一步合并两组以上，同时得分和减轻空间压力。不要为了触发能力做破坏布局的无效准备。</p>
+<p><strong>倍率路线</strong>：连击引擎配豪赌协议，可更快接近关卡目标，但更高的 4 概率和维持连击的需求会增加规划难度。不要把“豪赌”误认为免费翻倍。</p>
+<p>以上是练习方向；每次奖励只从当前三项选一，不保证恰好抽到理想组合。AI 可在局内使用能力，但不会替你选关间奖励。录制示例见<a href="#10-gallery">远征动图</a>。</p>
+<div class="chapter-nav"><a href="#03-rules">← 桌面版六种玩法与计分</a><a href="#05-ai-replay">桌面版 AI、教练与复盘 →</a></div></article>
+<article data-chapter="05-ai-replay" aria-labelledby="05-ai-replay"><h1 id="05-ai-replay">桌面版 AI、教练与复盘</h1>
+<h2 id="05-ai-replay-s1">怎么选择辅助</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>功能</th>
+<th>玩家怎么用</th>
+<th>是否会走棋</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>提示 H</td>
+<td>计算推荐方向，查看本步合并数与直接得分</td>
+<td>不会</td>
+</tr>
+<tr>
+<td>AI 单步 Enter</td>
+<td>让 AI 完成一个操作</td>
+<td>会</td>
+</tr>
+<tr>
+<td>自动玩 空格</td>
+<td>连续让 AI 决策；再次空格暂停</td>
+<td>会</td>
+</tr>
+<tr>
+<td>教练 C</td>
+<td>停止手动操作约 450 ms 后后台分析</td>
+<td>不会</td>
+</tr>
+<tr>
+<td>设置 → 查看 AI 分析</td>
+<td>比较方向、棋盘预览、深度、节点、耗时</td>
+<td>预览不会；分析属于辅助</td>
+</tr>
+<tr>
+<td>复盘 R</td>
+<td>浏览已经发生的操作</td>
+<td>不会，不改变随机状态</td>
+</tr>
+</tbody></table></div>
+<p>人工滑动可以接管自动玩。切换模式、撤销、暂停会使过期 AI 结果作废。首次启动后台搜索核心会准备数秒，期间可手动玩。远征每次过关会暂停自动玩，由玩家选能力。</p>
+<h2 id="05-ai-replay-s2">思考质量与播放速度</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>搜索档位</th>
+<th align="right">每步预算</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>快速</td>
+<td align="right">约 25 ms</td>
+</tr>
+<tr>
+<td>标准</td>
+<td align="right">约 100 ms</td>
+</tr>
+<tr>
+<td>深入</td>
+<td align="right">约 450 ms</td>
+</tr>
+<tr>
+<td>自适应（默认）</td>
+<td align="right">以 120 ms 为基础，按空格数约 90–300 ms；方向稳定可提前结束</td>
+</tr>
+</tbody></table></div>
+<p>慢速、正常、快速、冲分是另一组<strong>游玩节奏</strong>。冲分省略逐步动画，不意味着更深入搜索。机器负载会影响实际耗时，预算不是帧率承诺。要观察走势，用标准或自适应配正常速度；要比较算法，请固定种子、档位、版本、设备和统计样本，不凭一盘最高分断言胜率。</p>
+<h2 id="05-ai-replay-s3">四方向分析应当怎么读</h2>
+<p>经典 / 每日 / 冲刺的方向预览是合并后的盘面，<strong>不包含随机新方块</strong>。空格与风险说明会考虑下一次随机落子；终局风险只指那一次落子后立即无路可走的概率，不是整局失败率。相对评分条不是胜率。</p>
+<p>解局 / 重生的落子状态固定，分析可以显示包含新方块的确定盘面与已验证路线。AI 在经典、每日、冲刺里不会读取未来随机状态来作弊。最近 32 个相同棋盘、相同预算的分析可复用；「重新分析」会强制重新算。</p>
+<h2 id="05-ai-replay-s4">算法实际做了什么</h2>
+<p>桌面经典算法是独立进程内的 Numba 本机编译 Expectimax：对玩家走法取优，对随机落子按概率加权，逐层加深，并保留完整完成的深度结果。它使用行查表、局面缓存、低概率分支裁剪、空格 / 排列 / 合并潜力等启发式。双字 80 位棋盘每格 5 位，32768 以后继续完整搜索，编码支持到 2³⁰。不是训练出来的神经网络，也不保证全局最优。</p>
+<p>远征是独立的规则感知限时搜索，考虑能力、能量、凝时、交换与改变后的落子概率；空位多时采样落点。解局与重生采用携带完整随机状态的广度优先搜索，求最短解并重放验证。超时或未发现解不能写成「证明无解」。三个算法各有适用场景，不应把一种预算或分数套给所有玩法。</p>
+<h2 id="05-ai-replay-s5">复盘</h2>
+<p>按 R 查看最近 100 步，可逐步、自动播放或点得分曲线定位。复盘不回滚当前游戏，也不改变撤销记录或随机数。关卡奖励后远征会重新开始记录当前关历史，因此不能假设能跨关回放所有动作。重生的「路线对照」另有原败局 / 本次与参考路线，用于比较选择。</p>
+<div class="chapter-nav"><a href="#04-expedition">← 桌面版能力远征详解</a><a href="#06-saves">存档、备份、迁移与升级 →</a></div></article>
+<article data-chapter="06-saves" aria-labelledby="06-saves"><h1 id="06-saves">存档、备份、迁移与升级</h1>
+<h2 id="06-saves-s1">先找对存档</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>版本</th>
+<th>主存档 / 备份</th>
+<th>截图、日志</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Mac 桌面 v12</td>
+<td>游戏目录 <code>data/save.json</code>、<code>data/save.bak</code></td>
+<td>游戏目录 <code>exports/</code>；启动脚本的终端输出</td>
+</tr>
+<tr>
+<td>Windows 桌面 v12</td>
+<td><code>%LOCALAPPDATA%\2048-Atelier\data\save.json</code>、同目录 <code>save.bak</code></td>
+<td><code>%LOCALAPPDATA%\2048-Atelier\exports</code> 与 <code>logs</code></td>
+</tr>
+<tr>
+<td>Native 1.0.1</td>
+<td>App 沙盒；用游戏设置的 JSON 导出 / 导入</td>
+<td>原生手册的备份说明</td>
+</tr>
+<tr>
+<td>Touch v1</td>
+<td>当前站点的 IndexedDB；用设置导出 / 导入</td>
+<td>与浏览器、设备和站点身份有关</td>
+</tr>
+</tbody></table></div>
+<p>桌面版约每 5 秒及关键操作后在后台保存，正常退出会等待最后写入。主档缺失或损坏会尝试读取上次可用的 <code>save.bak</code>。这是一份滚动备份，不是无限版本历史，重要进度还应复制到别处。存档包含 RNG、撤销历史、各模式进度及记录，手改数字可能破坏一致性。</p>
+<h2 id="06-saves-s2">桌面版手动备份</h2>
+<ol>
+<li>在所有打开的游戏窗口中停止自动玩，正常退出。</li>
+<li>Mac 在 Finder 打开游戏目录的 <code>data</code>；Windows 在资源管理器地址栏粘贴 <code>%LOCALAPPDATA%\2048-Atelier\data</code>。</li>
+<li>将 <code>save.json</code> 和 <code>save.bak</code>（存在时）一起复制到带日期的独立文件夹。</li>
+<li>如需保存截图，另复制 <code>exports</code>。不要把截图当作可恢复的游戏存档。</li>
+</ol>
+<p>复制期间不要运行游戏。若存在更旧版本仍打开，先关闭它；新版锁不能阻止不遵守锁的旧版写入。仅复制 <code>2048.exe</code> 或 <code>game.py</code> 不会备份用户目录进度。</p>
+<h2 id="06-saves-s3">Mac 与 Windows v12 互相迁移</h2>
+<ol>
+<li>确认两端均为桌面 v12，并分别做好原存档备份。</li>
+<li>目标端先正常运行一次并退出，以建立目录。</li>
+<li>两端游戏均关闭后，把源端主档与备份作为一组复制到目标端 <code>data</code>。</li>
+<li>如果源端没有 <code>save.bak</code>，先把目标端旧备份移到单独备份目录，避免源端主档损坏时误回到另一盘旧局。</li>
+<li>重开目标端，核对模式、分数、棋盘、撤销历史；确认无误后再继续。此操作<strong>替换</strong>目标进度，不会合并两台电脑的成绩。</li>
+</ol>
+<p>Windows 的旧版自动迁移仅发生在用户目录内 <strong>save.json 与 save.bak 都不存在</strong> 时，才复制旧游戏目录的两份文件。已有任意一份就不自动覆盖；旧文件不删除。不要通过反复删除存档来尝试迁移，按上面的显式备份步骤处理。</p>
+<h2 id="06-saves-s4">更新与恢复</h2>
+<p>Windows 更新时保留用户目录，完整解压新游戏包到新的文件夹即可；先关闭旧窗口。Mac 更新游戏源码和资源时保留 <code>data</code>、<code>exports</code> 与本机环境。移动 Mac 虚拟环境到另一台机器不可靠，按安装章重建依赖。</p>
+<p>若提示从备份恢复，先核对恢复的棋盘，再备份现有文件。若主档和备份都不可用，保存错误原件以便排查，使用自己另存的有效备份；没有有效副本就不能承诺找回进度。磁盘满、只读目录或拔盘可能导致保存失败，应处理提示后正常退出重试。</p>
+<h2 id="06-saves-s5">跨版本范围</h2>
+<p>Native JSON、Touch JSON、Python 桌面存档不是互换格式。不要因扩展名都为 <code>.json</code> 就互导。原生与 Web 导入会替换各自版的当前进度，操作前先导出目标端。没有自动 iCloud 或跨平台云同步；删除 App、清网站数据、换浏览器前先备份对应版本。</p>
+<div class="chapter-nav"><a href="#05-ai-replay">← 桌面版 AI、教练与复盘</a><a href="#07-macos">macOS 安装与排错 →</a></div></article>
+<article data-chapter="07-macos" aria-labelledby="07-macos"><h1 id="07-macos">macOS 安装与排错</h1>
+<h2 id="07-macos-s1">Mac 应该用哪个版本</h2>
+<p>Mac 游玩使用 <strong>Python 桌面 v12</strong>。现有交付是源码目录与启动脚本，不是单独打包的 <code>.app</code>。同目录下的 <code>iOS/Lumina.xcodeproj</code> 是 iPhone / iPad 工程；文档里的 SwiftUI 主机预览也不是替代桌面版的 Mac 安装包。</p>
+<p>下面以 <code>~/2048-Atelier</code> 为例；请将路径换成实际游戏文件夹。首次使用需要建立自己的 Python 环境，不要从其他电脑复制虚拟环境。</p>
+<h2 id="07-macos-s2">已准备好的本机</h2>
+<ol>
+<li>挂载移动硬盘，打开游戏目录。</li>
+<li>双击 <code>启动游戏.command</code>，等待窗口与后台 AI 准备。</li>
+<li>在大厅选经典或继续当前局。终端窗口用于显示启动问题。</li>
+<li>正常关闭游戏，等保存完成后再弹出硬盘。</li>
+</ol>
+<p>也可在终端运行：</p>
+<pre><code class="language-sh">cd ~/2048-Atelier
+.venv/bin/python game.py
+</code></pre>
+<h2 id="07-macos-s3">新 Mac 的首次准备</h2>
+<p>需要可用的 <strong>64 位 Python 3.12–3.14</strong>，以项目固定依赖可正常安装为准。打开终端进入自己实际的游戏目录，逐条运行：</p>
+<pre><code class="language-sh">python3 --version
+python3 -m venv .venv
+.venv/bin/python -m pip install -r requirements.txt
+.venv/bin/python game.py
+</code></pre>
+<p>先检查第一条输出；如果 <code>python3</code> 不是兼容版本，改用已安装的兼容解释器创建环境。首次下载依赖需要联网，完成后正常游玩与 AI 不依赖服务器。依赖版本记录在 <a href="../../reference/desktop-requirements.txt">requirements 参考</a>。安装在游戏自己的 <code>.venv</code>，不需要用 <code>sudo pip</code> 改系统 Python。</p>
+<p>若源目录已有从别处复制的失效 <code>.venv</code>，退出游戏后将其改名保留，再用本机 Python 新建。不要删 <code>data</code>。CPU 架构变化时同样重建环境。已验证的开发主机是 Apple Silicon Mac；这里没有给所有 Intel Mac 或 macOS 版本作实机兼容承诺。</p>
+<h2 id="07-macos-s4">常见启动问题</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>现象</th>
+<th>检查与处理</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>文件找不到 / 路径失效</td>
+<td>硬盘是否已挂载，目录名是否改变；含空格的路径在命令中用引号</td>
+</tr>
+<tr>
+<td>双击脚本没有启动</td>
+<td>在终端运行 <code>/bin/zsh &quot;启动游戏.command&quot;</code> 看第一条错误</td>
+</tr>
+<tr>
+<td>提示缺少 Python / 包</td>
+<td>检查 Python 版本，用当前 <code>.venv/bin/python -m pip install -r requirements.txt</code></td>
+</tr>
+<tr>
+<td><code>.venv/bin/python</code> 无法执行</td>
+<td>虚拟环境是否来自另一台机器；保留旧环境后重建</td>
+</tr>
+<tr>
+<td>提示已有实例</td>
+<td>找回原游戏窗口并正常退出；不要在仍运行时删除锁文件</td>
+</tr>
+<tr>
+<td>游戏能动但 AI 未就绪</td>
+<td>等待后台编译准备；长时间无结果时保留启动错误输出</td>
+</tr>
+<tr>
+<td>字体或图标异常</td>
+<td>保留整个 <code>fonts/</code> 与资源目录；系统苹方仅在本机读取，不随包分发</td>
+</tr>
+<tr>
+<td>无法保存 / 截图</td>
+<td>检查游戏目录写权限、磁盘容量与连接；存档在游戏内 <code>data/</code></td>
+</tr>
+</tbody></table></div>
+<p>如 macOS 对下载来源提出拦截，先核实来源和文件完整性，按照系统显示的逐项打开流程处理；不要全局关闭系统保护。旧窗口不会自动加载新代码，更新后需要完整退出再启动。</p>
+<div class="chapter-nav"><a href="#06-saves">← 存档、备份、迁移与升级</a><a href="#08-windows">Windows 安装与排错 →</a></div></article>
+<article data-chapter="08-windows" aria-labelledby="08-windows"><h1 id="08-windows">Windows 安装与排错</h1>
+<h2 id="08-windows-s1">Windows 便携版：推荐入口</h2>
+<p>适用范围：<strong>Windows 10 / 11，Intel / AMD x64</strong>。现有包不是 32 位程序，也不是原生 Windows ARM64 包；没有验证 ARM 模拟执行。原包是 <code>2048-v12-Windows-x64.zip</code>，本次另提供附全平台三语手册的 <code>2048-v12-Windows-x64-with-docs.zip</code>，游戏与运行环境不变。</p>
+<ol>
+<li>把 ZIP 复制到 Windows 电脑；右键「全部解压」，选择可用的本地文件夹。</li>
+<li>打开展开后的 <code>2048-Windows</code> 文件夹，双击 <strong>2048.exe</strong>。</li>
+<li>首次等待 AI 初始化数秒，期间可以手动玩。无需另装 Python，也不需要联网玩。</li>
+<li>选择经典，按方向键试走；退出并重新打开，确认棋盘能恢复。</li>
+<li>包内 <code>README.zh-CN.md / README.en.md / README.ja.md</code> 与 <code>docs/index.html</code> 都可离线阅读。</li>
+</ol>
+<p>必须保留 <code>runtime/</code>、<code>fonts/</code>、JSON 关卡和 Python 文件等完整结构。<strong>不要在 ZIP 内直接运行，也不要只复制 exe。</strong> 包内自带 Python 3.13.15 与固定依赖，不会因为电脑装了另一版本 Python 就要求你更换系统版本。</p>
+<h2 id="08-windows-s2">存档并不在 exe 旁边</h2>
+<p>在资源管理器地址栏输入 <code>%LOCALAPPDATA%\2048-Atelier</code>：</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>子目录</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>data</code></td>
+<td><code>save.json</code> 主档、<code>save.bak</code> 备份、进程锁</td>
+</tr>
+<tr>
+<td><code>exports</code></td>
+<td>P 键截图</td>
+</tr>
+<tr>
+<td><code>logs</code></td>
+<td><code>latest.log</code> 启动日志、<code>diagnostics.json</code> 自检结果</td>
+</tr>
+<tr>
+<td><code>cache/numba</code></td>
+<td>AI 编译缓存，可重新生成，不是玩家存档</td>
+</tr>
+</tbody></table></div>
+<p>完整备份 / 升级 / 旧目录迁移见<a href="#06-saves">第六章</a>。换一个解压文件夹不会自动重置用户目录的游戏。</p>
+<h2 id="08-windows-s3">打不开时的诊断顺序</h2>
+<ol>
+<li>确认已经完全解压，且是 x64 Windows 10 / 11。</li>
+<li>双击 <strong>启动游戏.bat</strong>，保留控制台上的第一条错误；不要只描述「闪退」。</li>
+<li>双击 <strong>check-windows.bat</strong>。它检查依赖版本、中文字体、12 道谜题、3 道练习、临时存档与后台 AI。使用临时数据，不改个人对局；运行后窗口会暂停以便阅读。</li>
+<li>检查 <code>%LOCALAPPDATA%\2048-Atelier\logs</code>。只有程序成功写出报告才会有 <code>diagnostics.json</code>；若依赖导入就失败，请保留控制台错误。</li>
+<li>按下表处理，再附版本、系统、错误输出和复现步骤反馈。</li>
+</ol>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>现象</th>
+<th>处理</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>找不到 runtime / Python / DLL</td>
+<td>核对是否少解压；重新完整解压原始包，不从不明站点单独下载 DLL</td>
+</tr>
+<tr>
+<td>提示已有实例</td>
+<td>回到原窗口；真正退出后系统会释放锁，磁盘留有锁文件不代表仍锁住</td>
+</tr>
+<tr>
+<td>中文方框</td>
+<td>核对 <code>fonts/NotoSansSC-*.otf</code> 与 <code>fonts/OFL.txt</code> 均在；不要删除字体</td>
+</tr>
+<tr>
+<td>只在 exe 下失败</td>
+<td>用 bat 入口看错误，提供 latest.log；缺日志时用控制台内容</td>
+</tr>
+<tr>
+<td>手动可玩但 AI 一直不动</td>
+<td>等首次初始化；运行自检查看后台进程 / Numba 错误</td>
+</tr>
+<tr>
+<td>放大缩小或全屏显示异常</td>
+<td>先回到窗口模式，记录 Windows 缩放比例与屏幕分辨率</td>
+</tr>
+<tr>
+<td>截图或保存失败</td>
+<td>检查用户目录权限和可用容量；不必把游戏放进系统目录</td>
+</tr>
+<tr>
+<td>更新后没有新功能</td>
+<td>旧窗口是否已关闭；确认启动的是新的完整解压目录</td>
+</tr>
+</tbody></table></div>
+<p>入口在创建窗口前设置 DPI awareness，但这不意味着已经验证了所有多屏缩放。若系统对来源提出警告，请核验包与来源，使用系统提供的具体文件处理方式；不需要全局关闭保护或以管理员身份强行启动。</p>
+<h2 id="08-windows-s4">Windows 源码版（需要自己准备环境）</h2>
+<p>便携版用户可跳过本节。源码版需要 <strong>64 位 Python 3.12–3.14</strong>。双击 <code>启动游戏.bat</code>：它优先用随附 runtime，其次已建 <code>.venv</code>，否则寻找兼容 Python 创建环境并安装固定依赖。初次安装需要网络；失败时保留错误信息。已就绪时不会每次重新下载。</p>
+<p>手动方式（在游戏目录的命令提示符执行，以已安装 Python 3.13 为例）：</p>
+<pre><code class="language-bat">py -3.13 -m venv .venv
+.venv\Scripts\python.exe -m pip install --only-binary=:all: -r requirements.txt
+.venv\Scripts\python.exe game.py
+</code></pre>
+<h2 id="08-windows-s5">验证范围</h2>
+<p>包经过 ZIP CRC、下载依赖 SHA-256、135 个 x64 PE 文件及必需 DLL 导入检查；保留 <a href="../../reference/desktop-v12-validation.md">v12 测试报告</a>。<strong>尚未在 Windows 实机执行</strong>。这些检查不能代替窗口、声音、显卡、缩放和真实屏幕帧率测试。本文桌面动图来自 Mac 上相同的 Python 游戏代码，不伪称 Windows 录屏。</p>
+<div class="chapter-nav"><a href="#07-macos">← macOS 安装与排错</a><a href="#09-mobile">iPhone、iPad 与网页版 →</a></div></article>
+<article data-chapter="09-mobile" aria-labelledby="09-mobile"><h1 id="09-mobile">iPhone、iPad 与网页版</h1>
+<h2 id="09-mobile-s1">iPhone 与 iPad：同一原生工程，不同布局</h2>
+<p><strong>Native 1.0.1（build 2）</strong> 是真正的 Swift / SwiftUI Universal App 源码，不是 WebView。iPhone 和 iPad 使用同一套规则与源码，按屏幕宽度排布；工程最低部署目标 iOS / iPadOS 16.4，构建工具要求 Swift 6.0+，并使用 Swift 5 语言模式。部署目标不是 Xcode 版本要求，两者不要混淆。</p>
+<p>当前交付位于游戏根目录 <code>iOS/</code>，包含 <code>Lumina.xcodeproj</code>、核心、界面、资源、测试和原生手册。<strong>没有已经签名的 IPA、TestFlight 邀请或 App Store 上架版本</strong>。需在 Mac 安装完整 Xcode 与兼容的 iOS SDK，打开项目、设置自己的 Team 与 Bundle Identifier，选择设备后 Run。只安装 Command Line Tools 不足以完成 iPhone 安装。详见<a href="../native/docs/zh-CN/index.html#06-build">逐步安装、签名、构建和验收</a>。</p>
+<h2 id="09-mobile-s2">原生版怎么操作</h2>
+<p>启动默认进入经典；上方模式名称展开其他玩法。棋盘内四向滑动，撤销按钮回一步，灯泡请求提示，自动玩按钮开始 / 暂停。三点菜单含重做、重开、选择谜题或残局等操作。设置里有外观、声音、触感、减少动态效果、AI 强度与 JSON 备份。</p>
+<p>外接键盘实现方向键和 WASD，不要把桌面 Z、R、C、P 等快捷键套过来。动画期最多排队两次滑动；菜单、后台或手动接管会处理队列并暂停 AI。iPhone 的窄屏纵向排列；iPad 宽屏把棋盘与信息分栏，小窗口按可用空间调整，说明较长时可以滚动。</p>
+<p>导出前暂停 AI，在设置中导出 JSON 到「文件」等位置；导入先备份目标进度，导入会替换当前原生进度。原生备份不等于电脑版文件，也不等于 Touch JSON。请求提示立即标记辅助，即使没有实际按推荐走。</p>
+<h2 id="09-mobile-s3">原有九章手册全部保留</h2>
+<ul>
+<li><a href="../native/docs/zh-CN/index.html#01-start">入门、按钮、手势、iPhone / iPad 布局</a></li>
+<li><a href="../native/docs/zh-CN/index.html#02-rules">六种玩法</a>与<a href="../native/docs/zh-CN/index.html#03-expedition">能力和计分</a></li>
+<li><a href="../native/docs/zh-CN/index.html#04-ai-data">AI、纪录和备份</a></li>
+<li><a href="../native/docs/zh-CN/index.html#05-faq">原生故障排查</a>与<a href="../native/docs/zh-CN/index.html#06-build">构建安装</a></li>
+<li><a href="../native/docs/zh-CN/index.html#07-gallery">九段原生演示</a>、<a href="../native/docs/zh-CN/index.html#08-solutions">解答</a>、<a href="../native/docs/zh-CN/index.html#09-release">版本验证</a></li>
+</ul>
+<p>如果设备已安装 App，直接看操作章；如果拿到源码，先走构建章。Mac 主机上的原生测试和布局图不代替 iPhone / iPad 实机触摸、旋转、分屏、后台、VoiceOver 或帧率验收。</p>
+<h2 id="09-mobile-s4">Touch v1：单独的网页版</h2>
+<p>网页版与原生 App 分开使用，支持 Safari 触屏操作和添加到主屏幕。原生 App 的安装与操作请看本章前半部分。</p>
+<ol>
+<li>在 Safari 打开 <a href="https://lumina-2048.vercel.app/">LUMINA 网页版</a>。当前入口为受限访问，需要有权限的 Vercel 账号登录。</li>
+<li>等首次完整加载，使用分享 → 添加到主屏幕。</li>
+<li>等离线准备完成后，再测试断网从主屏幕进入。首次打开前或资源未缓存完整时不能承诺离线。</li>
+<li>以棋盘内滑动或方向按钮游玩，也可用方向键 / WASD。</li>
+<li>设置里导出 JSON 备份；在另一台设备的 <strong>Touch 版</strong>导入，导入前先导出其原进度。</li>
+</ol>
+<p>从旧网址搬到新网址时，先在旧网页的设置中「导出进度」，再到新网页「导入进度」。浏览器不会自动把旧网址的进度搬到新网址。原来的主屏幕图标也需要从新网址重新添加。</p>
+<p>Touch 有六种玩法、提示、AI Worker、撤销重做、最近 100 次操作复盘、重生路线比较、明暗、声音和减少动态效果。打开菜单、后台和手动接管会暂停自动玩。它没有 Python 桌面版的完整快捷键，也不要按桌面 AI 毫秒档位理解它。</p>
+<p>存档在当前站点 IndexedDB，带备份与离开页面的应急快照；不同浏览器、设备、主屏幕环境不自动同步。清网站数据、隐私浏览和系统回收存储都可能影响进度，先导出重要数据。网页改动后遇到旧界面，先导出，再联网重新打开等待更新，不要首先清空网站数据。</p>
+<p>源码在 <code>mobile/</code>，本地 <code>python3 serve.py</code> 用于开发，默认不启用 Service Worker；手机正式使用需要 HTTPS。原生规则对照、网页自动测试与浏览器布局检查各有范围，不等于实体 iPhone / iPad 的离线冷启动、触感或系统手势已经通过。</p>
+<div class="chapter-nav"><a href="#08-windows">← Windows 安装与排错</a><a href="#10-gallery">十七段游戏动图与视频 →</a></div></article>
+<article data-chapter="10-gallery" aria-labelledby="10-gallery"><h1 id="10-gallery">十七段游戏动图与视频</h1>
+<p>八段桌面实演 + 九段原生实演。全部来自实际游戏代码运行，先生成 MP4，再从交付 MP4 解码转换 GIF。以 12 fps 采样作为操作教学，不是显示器帧率测量。HTML 内动图默认暂停，可点播放或展开 MP4；Markdown 查看器通常自动循环。</p>
+<h2 id="10-gallery-s1">Mac / Windows 桌面 v12 的操作</h2>
+<p>录制环境为 Mac 上的 Python / pygame 实际渲染器，使用 SDL dummy 与隔离临时存档。Windows 共用此代码，但不是 Windows 实机录屏。静音；没有使用玩家个人存档。</p>
+<h3 id="10-gallery-s2">大厅：经典优先与精选玩法</h3>
+<p>从「经典与挑战」切到「精选玩法」，再返回经典。进入游戏后按 B 可以回大厅。</p>
+<figure class="motion"><img src="../media/10-desktop-lobby-poster.png" data-gif="../media/10-desktop-lobby.gif" data-poster="../media/10-desktop-lobby-poster.png" alt="大厅：经典优先与精选玩法" loading="lazy" width="1080" height="820"><button class="motion-toggle" type="button" aria-pressed="false">播放动图</button><figcaption>大厅：经典优先与精选玩法</figcaption></figure><details class="video-source"><summary>MP4 · 视频播放器</summary><video controls playsinline preload="none" poster="../media/10-desktop-lobby-poster.png" src="../media/10-desktop-lobby.mp4" width="1080" height="820" aria-label="大厅：经典优先与精选玩法"></video></details>
+<p><a href="../media/10-desktop-lobby.gif">GIF</a> · <a href="../media/10-desktop-lobby.mp4">MP4 · 6.00 s</a> · <a href="../media/10-desktop-lobby-poster.png">PNG</a></p>
+<h3 id="10-gallery-s3">经典：移动、撤销与重做</h3>
+<p>seed 42 的真实新局。向左、下、左、上、右移动，然后撤销、重做；观察棋盘、得分与步数同步恢复。</p>
+<figure class="motion"><img src="../media/11-desktop-classic-poster.png" data-gif="../media/11-desktop-classic.gif" data-poster="../media/11-desktop-classic-poster.png" alt="经典：移动、撤销与重做" loading="lazy" width="1080" height="820"><button class="motion-toggle" type="button" aria-pressed="false">播放动图</button><figcaption>经典：移动、撤销与重做</figcaption></figure><details class="video-source"><summary>MP4 · 视频播放器</summary><video controls playsinline preload="none" poster="../media/11-desktop-classic-poster.png" src="../media/11-desktop-classic.mp4" width="1080" height="820" aria-label="经典：移动、撤销与重做"></video></details>
+<p><a href="../media/11-desktop-classic.gif">GIF</a> · <a href="../media/11-desktop-classic.mp4">MP4 · 7.00 s</a> · <a href="../media/11-desktop-classic-poster.png">PNG</a></p>
+<h3 id="10-gallery-s4">AI 分析、单步与复盘</h3>
+<p>真正启动后台搜索，展示四方向分析和左方向预览，执行 AI 一步，再查看历史。复盘不会改变当前棋盘。</p>
+<figure class="motion"><img src="../media/12-desktop-ai-replay-poster.png" data-gif="../media/12-desktop-ai-replay.gif" data-poster="../media/12-desktop-ai-replay-poster.png" alt="AI 分析、单步与复盘" loading="lazy" width="1080" height="820"><button class="motion-toggle" type="button" aria-pressed="false">播放动图</button><figcaption>AI 分析、单步与复盘</figcaption></figure><details class="video-source"><summary>MP4 · 视频播放器</summary><video controls playsinline preload="none" poster="../media/12-desktop-ai-replay-poster.png" src="../media/12-desktop-ai-replay.mp4" width="1080" height="820" aria-label="AI 分析、单步与复盘"></video></details>
+<p><a href="../media/12-desktop-ai-replay.gif">GIF</a> · <a href="../media/12-desktop-ai-replay.mp4">MP4 · 8.50 s</a> · <a href="../media/12-desktop-ai-replay-poster.png">PNG</a></p>
+<h3 id="10-gallery-s5">解局：两步合成 64</h3>
+<p>第一章从初始状态连续向上两次，实际达标并获得三星。本段包含解答。</p>
+<figure class="motion"><img src="../media/13-desktop-puzzle-poster.png" data-gif="../media/13-desktop-puzzle.gif" data-poster="../media/13-desktop-puzzle-poster.png" alt="解局：两步合成 64" loading="lazy" width="1080" height="820"><button class="motion-toggle" type="button" aria-pressed="false">播放动图</button><figcaption>解局：两步合成 64</figcaption></figure><details class="video-source"><summary>MP4 · 视频播放器</summary><video controls playsinline preload="none" poster="../media/13-desktop-puzzle-poster.png" src="../media/13-desktop-puzzle.mp4" width="1080" height="820" aria-label="解局：两步合成 64"></video></details>
+<p><a href="../media/13-desktop-puzzle.gif">GIF</a> · <a href="../media/13-desktop-puzzle.mp4">MP4 · 5.33 s</a> · <a href="../media/13-desktop-puzzle-poster.png">PNG</a></p>
+<h3 id="10-gallery-s6">远征：选能力与充能</h3>
+<p>seed 13 开局三选一，选择蓄能核心后移动，查看能量与规则面板。这里展示第一关开局，不是六关通关录像。</p>
+<figure class="motion"><img src="../media/14-desktop-expedition-poster.png" data-gif="../media/14-desktop-expedition.gif" data-poster="../media/14-desktop-expedition-poster.png" alt="远征：选能力与充能" loading="lazy" width="1080" height="820"><button class="motion-toggle" type="button" aria-pressed="false">播放动图</button><figcaption>远征：选能力与充能</figcaption></figure><details class="video-source"><summary>MP4 · 视频播放器</summary><video controls playsinline preload="none" poster="../media/14-desktop-expedition-poster.png" src="../media/14-desktop-expedition.mp4" width="1080" height="820" aria-label="远征：选能力与充能"></video></details>
+<p><a href="../media/14-desktop-expedition.gif">GIF</a> · <a href="../media/14-desktop-expedition.mp4">MP4 · 8.00 s</a> · <a href="../media/14-desktop-expedition-poster.png">PNG</a></p>
+<h3 id="10-gallery-s7">重生：三步救局与路线对照</h3>
+<p>第一道练习从起点向右、上、上，达到三空格后查看对照，逐步比较。本段包含解答。</p>
+<figure class="motion"><img src="../media/15-desktop-rescue-poster.png" data-gif="../media/15-desktop-rescue.gif" data-poster="../media/15-desktop-rescue-poster.png" alt="重生：三步救局与路线对照" loading="lazy" width="1080" height="820"><button class="motion-toggle" type="button" aria-pressed="false">播放动图</button><figcaption>重生：三步救局与路线对照</figcaption></figure><details class="video-source"><summary>MP4 · 视频播放器</summary><video controls playsinline preload="none" poster="../media/15-desktop-rescue-poster.png" src="../media/15-desktop-rescue.mp4" width="1080" height="820" aria-label="重生：三步救局与路线对照"></video></details>
+<p><a href="../media/15-desktop-rescue.gif">GIF</a> · <a href="../media/15-desktop-rescue.mp4">MP4 · 6.83 s</a> · <a href="../media/15-desktop-rescue-poster.png">PNG</a></p>
+<h3 id="10-gallery-s8">每日：固定日期与撤销重做</h3>
+<p>使用正式 daily_game 创建 2026-09-29 挑战；演示方向操作、撤销和重做。无效方向不增加步数。</p>
+<figure class="motion"><img src="../media/16-desktop-daily-poster.png" data-gif="../media/16-desktop-daily.gif" data-poster="../media/16-desktop-daily-poster.png" alt="每日：固定日期与撤销重做" loading="lazy" width="1080" height="820"><button class="motion-toggle" type="button" aria-pressed="false">播放动图</button><figcaption>每日：固定日期与撤销重做</figcaption></figure><details class="video-source"><summary>MP4 · 视频播放器</summary><video controls playsinline preload="none" poster="../media/16-desktop-daily-poster.png" src="../media/16-desktop-daily.mp4" width="1080" height="820" aria-label="每日：固定日期与撤销重做"></video></details>
+<p><a href="../media/16-desktop-daily.gif">GIF</a> · <a href="../media/16-desktop-daily.mp4">MP4 · 6.67 s</a> · <a href="../media/16-desktop-daily-poster.png">PNG</a></p>
+<h3 id="10-gallery-s9">冲刺：观察剩余步数</h3>
+<p>seed 42 的真实冲刺新局，走五步后撤销、重做。这里示范计步，不是第 60 步结算录像。</p>
+<figure class="motion"><img src="../media/17-desktop-sprint-poster.png" data-gif="../media/17-desktop-sprint.gif" data-poster="../media/17-desktop-sprint-poster.png" alt="冲刺：观察剩余步数" loading="lazy" width="1080" height="820"><button class="motion-toggle" type="button" aria-pressed="false">播放动图</button><figcaption>冲刺：观察剩余步数</figcaption></figure><details class="video-source"><summary>MP4 · 视频播放器</summary><video controls playsinline preload="none" poster="../media/17-desktop-sprint-poster.png" src="../media/17-desktop-sprint.mp4" width="1080" height="820" aria-label="冲刺：观察剩余步数"></video></details>
+<p><a href="../media/17-desktop-sprint.gif">GIF</a> · <a href="../media/17-desktop-sprint.mp4">MP4 · 7.50 s</a> · <a href="../media/17-desktop-sprint-poster.png">PNG</a></p>
+<h2 id="10-gallery-s10">iPhone / iPad 原生版的操作（Mac 主机预览）</h2>
+<p>以下九段 GIF 均由原生代码实际运行的采样视频转换，另附 MP4 原视频。录制平台为 macOS 原生预览，<strong>不是 iPhone / iPad 录屏，也不代表设备帧率</strong>。底部英文条是教学标注。页面中可以暂停动图；Markdown 阅读器通常会自动循环。MP4 使用 H.264 编码，可在阅读版展开视频播放器，或下载后单独播放。所有素材本地保存，无需联网。</p>
+<h3 id="10-gallery-s11">经典：移动、合并与落子</h3>
+<p>从 seed 42 实际游玩的中盘继续，依次观察整盘滑动、相同数字合并、得分上涨及新方块出现。方向标在画面底部。</p>
+<figure class="motion"><img src="../native/docs/media/01-classic-poster.png" data-gif="../native/docs/media/01-classic.gif" data-poster="../native/docs/media/01-classic-poster.png" alt="经典：移动、合并与落子" loading="lazy" width="1000" height="700"><button class="motion-toggle" type="button" aria-pressed="false">播放动图</button><figcaption>经典：移动、合并与落子</figcaption></figure><details class="video-source"><summary>MP4 · 视频播放器</summary><video controls playsinline preload="none" poster="../native/docs/media/01-classic-poster.png" src="../native/docs/media/01-classic.mp4" width="1000" height="700" aria-label="经典：移动、合并与落子"></video></details>
+<p>先尝试保持大数字在角落；注意没有合并的位移也会产生新方块。</p>
+<p><a href="../native/docs/media/01-classic.gif">GIF</a> · <a href="../native/docs/media/01-classic.mp4">MP4 · 6.08 s</a> · <a href="../native/docs/media/01-classic-poster.png">PNG</a></p>
+<h3 id="10-gallery-s12">撤销与重做：同一落子被恢复</h3>
+<p>执行一步，撤销，再重做。观察棋盘、得分和移动次数一起变化。</p>
+<figure class="motion"><img src="../native/docs/media/02-undo-redo-poster.png" data-gif="../native/docs/media/02-undo-redo.gif" data-poster="../native/docs/media/02-undo-redo-poster.png" alt="撤销与重做：同一落子被恢复" loading="lazy" width="1000" height="700"><button class="motion-toggle" type="button" aria-pressed="false">播放动图</button><figcaption>撤销与重做：同一落子被恢复</figcaption></figure><details class="video-source"><summary>MP4 · 视频播放器</summary><video controls playsinline preload="none" poster="../native/docs/media/02-undo-redo-poster.png" src="../native/docs/media/02-undo-redo.mp4" width="1000" height="700" aria-label="撤销与重做：同一落子被恢复"></video></details>
+<p>重做藏在三点菜单；随机状态也一起恢复，所以不是重新抽签。</p>
+<p><a href="../native/docs/media/02-undo-redo.gif">GIF</a> · <a href="../native/docs/media/02-undo-redo.mp4">MP4 · 5.58 s</a> · <a href="../native/docs/media/02-undo-redo-poster.png">PNG</a></p>
+<h3 id="10-gallery-s13">智能助手：提示、执行、自动玩、暂停</h3>
+<p>先请求提示，再执行建议，随后打开自动游玩并暂停。</p>
+<figure class="motion"><img src="../native/docs/media/03-ai-poster.png" data-gif="../native/docs/media/03-ai.gif" data-poster="../native/docs/media/03-ai-poster.png" alt="智能助手：提示、执行、自动玩、暂停" loading="lazy" width="1000" height="700"><button class="motion-toggle" type="button" aria-pressed="false">播放动图</button><figcaption>智能助手：提示、执行、自动玩、暂停</figcaption></figure><details class="video-source"><summary>MP4 · 视频播放器</summary><video controls playsinline preload="none" poster="../native/docs/media/03-ai-poster.png" src="../native/docs/media/03-ai.mp4" width="1000" height="700" aria-label="智能助手：提示、执行、自动玩、暂停"></video></details>
+<p>查看底部从手动局变成辅助局；暂停之后辅助标记仍在。</p>
+<p><a href="../native/docs/media/03-ai.gif">GIF</a> · <a href="../native/docs/media/03-ai.mp4">MP4 · 11.5 s</a> · <a href="../native/docs/media/03-ai-poster.png">PNG</a></p>
+<h3 id="10-gallery-s14">远征：三选一与首关</h3>
+<p>开始新的 seed 42 远征，选择蓄能核心，再完成数次有效移动。</p>
+<figure class="motion"><img src="../native/docs/media/04-expedition-draft-poster.png" data-gif="../native/docs/media/04-expedition-draft.gif" data-poster="../native/docs/media/04-expedition-draft-poster.png" alt="远征：三选一与首关" loading="lazy" width="1000" height="700"><button class="motion-toggle" type="button" aria-pressed="false">播放动图</button><figcaption>远征：三选一与首关</figcaption></figure><details class="video-source"><summary>MP4 · 视频播放器</summary><video controls playsinline preload="none" poster="../native/docs/media/04-expedition-draft-poster.png" src="../native/docs/media/04-expedition-draft.mp4" width="1000" height="700" aria-label="远征：三选一与首关"></video></details>
+<p>同一步多组合并会获得更多能量，先理解目标分与总分的区别。</p>
+<p><a href="../native/docs/media/04-expedition-draft.gif">GIF</a> · <a href="../native/docs/media/04-expedition-draft.mp4">MP4 · 7.25 s</a> · <a href="../native/docs/media/04-expedition-draft-poster.png">PNG</a></p>
+<h3 id="10-gallery-s15">远征：凝时与交换</h3>
+<p>从实际获得 12 能量的局面继续，先凝时，再选两枚不同数字交换，最后移动两次。</p>
+<figure class="motion"><img src="../native/docs/media/05-expedition-powers-poster.png" data-gif="../native/docs/media/05-expedition-powers.gif" data-poster="../native/docs/media/05-expedition-powers-poster.png" alt="远征：凝时与交换" loading="lazy" width="1000" height="700"><button class="motion-toggle" type="button" aria-pressed="false">播放动图</button><figcaption>远征：凝时与交换</figcaption></figure><details class="video-source"><summary>MP4 · 视频播放器</summary><video controls playsinline preload="none" poster="../native/docs/media/05-expedition-powers-poster.png" src="../native/docs/media/05-expedition-powers.mp4" width="1000" height="700" aria-label="远征：凝时与交换"></video></details>
+<p>观察使用主动能力时剩余步数不变；凝时后的移动不会生成新方块。</p>
+<p><a href="../native/docs/media/05-expedition-powers.gif">GIF</a> · <a href="../native/docs/media/05-expedition-powers.mp4">MP4 · 6.42 s</a> · <a href="../native/docs/media/05-expedition-powers-poster.png">PNG</a></p>
+<h3 id="10-gallery-s16">谜题：两步合成 64</h3>
+<p>完整演示第 01 题，从重置后的棋盘向上、再向上，合成 64。</p>
+<figure class="motion"><img src="../native/docs/media/06-puzzle-poster.png" data-gif="../native/docs/media/06-puzzle.gif" data-poster="../native/docs/media/06-puzzle-poster.png" alt="谜题：两步合成 64" loading="lazy" width="1000" height="700"><button class="motion-toggle" type="button" aria-pressed="false">播放动图</button><figcaption>谜题：两步合成 64</figcaption></figure><details class="video-source"><summary>MP4 · 视频播放器</summary><video controls playsinline preload="none" poster="../native/docs/media/06-puzzle-poster.png" src="../native/docs/media/06-puzzle.mp4" width="1000" height="700" aria-label="谜题：两步合成 64"></video></details>
+<p>本段含解答；未请求提示且没有撤销，因此得到三星。</p>
+<p><a href="../native/docs/media/06-puzzle.gif">GIF</a> · <a href="../native/docs/media/06-puzzle.mp4">MP4 · 4.67 s</a> · <a href="../native/docs/media/06-puzzle-poster.png">PNG</a></p>
+<h3 id="10-gallery-s17">残局：从错误走法到可解路线</h3>
+<p>精选“一线生机”：先复现原来的向左走法导致无路可走，再从同一起点执行右、上、上。</p>
+<figure class="motion"><img src="../native/docs/media/07-rescue-poster.png" data-gif="../native/docs/media/07-rescue.gif" data-poster="../native/docs/media/07-rescue-poster.png" alt="残局：从错误走法到可解路线" loading="lazy" width="1000" height="700"><button class="motion-toggle" type="button" aria-pressed="false">播放动图</button><figcaption>残局：从错误走法到可解路线</figcaption></figure><details class="video-source"><summary>MP4 · 视频播放器</summary><video controls playsinline preload="none" poster="../native/docs/media/07-rescue-poster.png" src="../native/docs/media/07-rescue.mp4" width="1000" height="700" aria-label="残局：从错误走法到可解路线"></video></details>
+<p>比较两种结局；成功目标是落子后至少三个空位。它展示实际操作过程，不是完整经典局录像。</p>
+<p><a href="../native/docs/media/07-rescue.gif">GIF</a> · <a href="../native/docs/media/07-rescue.mp4">MP4 · 7.58 s</a> · <a href="../native/docs/media/07-rescue-poster.png">PNG</a></p>
+<h3 id="10-gallery-s18">每日：相同日期与重开</h3>
+<p>固定演示 2026-09-29 的每日局，移动三次后重开。</p>
+<figure class="motion"><img src="../native/docs/media/08-daily-poster.png" data-gif="../native/docs/media/08-daily.gif" data-poster="../native/docs/media/08-daily-poster.png" alt="每日：相同日期与重开" loading="lazy" width="1000" height="700"><button class="motion-toggle" type="button" aria-pressed="false">播放动图</button><figcaption>每日：相同日期与重开</figcaption></figure><details class="video-source"><summary>MP4 · 视频播放器</summary><video controls playsinline preload="none" poster="../native/docs/media/08-daily-poster.png" src="../native/docs/media/08-daily.mp4" width="1000" height="700" aria-label="每日：相同日期与重开"></video></details>
+<p>观察重开后的两枚初始方块与开始时一致；不是联网同步。</p>
+<p><a href="../native/docs/media/08-daily.gif">GIF</a> · <a href="../native/docs/media/08-daily.mp4">MP4 · 5.83 s</a> · <a href="../native/docs/media/08-daily-poster.png">PNG</a></p>
+<h3 id="10-gallery-s19">冲刺：最后三步与结束</h3>
+<p>seed 42 的真实冲刺先推进到第 57 步，再记录最后三步及结算。</p>
+<figure class="motion"><img src="../native/docs/media/09-sprint-poster.png" data-gif="../native/docs/media/09-sprint.gif" data-poster="../native/docs/media/09-sprint-poster.png" alt="冲刺：最后三步与结束" loading="lazy" width="1000" height="700"><button class="motion-toggle" type="button" aria-pressed="false">播放动图</button><figcaption>冲刺：最后三步与结束</figcaption></figure><details class="video-source"><summary>MP4 · 视频播放器</summary><video controls playsinline preload="none" poster="../native/docs/media/09-sprint-poster.png" src="../native/docs/media/09-sprint.mp4" width="1000" height="700" aria-label="冲刺：最后三步与结束"></video></details>
+<p>看剩余次数从 3 到 0；不是秒表，也没有第 61 步。</p>
+<p><a href="../native/docs/media/09-sprint.gif">GIF</a> · <a href="../native/docs/media/09-sprint.mp4">MP4 · 5.58 s</a> · <a href="../native/docs/media/09-sprint-poster.png">PNG</a></p>
+<p><a href="../native/docs/media/index.html">Media / 媒体 / メディア</a></p>
+<div class="chapter-nav"><a href="#09-mobile">← iPhone、iPad 与网页版</a><a href="#11-solutions">十二章谜题与三道残局解答 →</a></div></article>
+<article data-chapter="11-solutions" aria-labelledby="11-solutions"><h1 id="11-solutions">十二章谜题与三道残局解答</h1>
+<p>以下 12 章与 3 道练习的资源、起点和路线已与桌面 v12 核对；不同版本按钮位置请分别看对应操作章。</p>
+<p>请先自行尝试，再打开本章。所有路线都从对应问题的初始盘面开始；请先重新开始该题。箭头表示移动方向，0 表示空格。路线直接从随 App 的资源读取，避免翻译时改错方向。</p>
+<p>本章的阅读发生在 App 之外，游戏无法自动标记你读过外部攻略。若要保持个人“纯手动”挑战的意义，请自行避免使用攻略；不要把已经知道解法的练习成绩当作盲解。</p>
+<h2 id="11-solutions-s1">谜题 01 · 借一步</h2>
+<p>目标 / 标准 / 上限: <strong>64 / 2 / 3</strong></p>
+<pre><code class="language-text">   2    8    8   16
+   4    4    2   16
+   4    8    8    0
+  16    4    4   32
+</code></pre>
+<p>路线: <strong>↑  ↑</strong></p>
+<h2 id="11-solutions-s2">谜题 02 · 转身</h2>
+<p>目标 / 标准 / 上限: <strong>64 / 2 / 3</strong></p>
+<pre><code class="language-text">   8   32    2    0
+   8    8   16   16
+   4    4    8    8
+   0   16    4   16
+</code></pre>
+<p>路线: <strong>←  ↑</strong></p>
+<h2 id="11-solutions-s3">谜题 03 · 留白</h2>
+<p>目标 / 标准 / 上限: <strong>128 / 3 / 4</strong></p>
+<pre><code class="language-text">   2    2   64   32
+   8   16   16   16
+  16    0    0    4
+  32   16    8    4
+</code></pre>
+<p>路线: <strong>→  ↑  ←</strong></p>
+<h2 id="11-solutions-s4">谜题 04 · 折返</h2>
+<p>目标 / 标准 / 上限: <strong>128 / 3 / 4</strong></p>
+<pre><code class="language-text">   0   16   16    0
+  32   16   16   32
+  16    4   16    0
+   4    4    0   32
+</code></pre>
+<p>路线: <strong>↑  →  ←</strong></p>
+<h2 id="11-solutions-s5">谜题 05 · 暗流</h2>
+<p>目标 / 标准 / 上限: <strong>256 / 3 / 4</strong></p>
+<pre><code class="language-text">   2    2   64   16
+   0    4    0    4
+   0   32   32  128
+  64    0   16    4
+</code></pre>
+<p>路线: <strong>←  ↑  ←</strong></p>
+<h2 id="11-solutions-s6">谜题 06 · 挪一寸</h2>
+<p>目标 / 标准 / 上限: <strong>256 / 4 / 5</strong></p>
+<pre><code class="language-text">  16   32   32   32
+  16    4    0   16
+   4    0   32   64
+  64   64    0   32
+</code></pre>
+<p>路线: <strong>←  ↑  ←  ←</strong></p>
+<h2 id="11-solutions-s7">谜题 07 · 连锁</h2>
+<p>目标 / 标准 / 上限: <strong>512 / 4 / 5</strong></p>
+<pre><code class="language-text"> 128   64    0    2
+ 256   32    2   64
+   0   32    2    4
+ 128    0   32   64
+</code></pre>
+<p>路线: <strong>↑  ↑  ←  ↑</strong></p>
+<h2 id="11-solutions-s8">谜题 08 · 破局</h2>
+<p>目标 / 标准 / 上限: <strong>512 / 4 / 5</strong></p>
+<pre><code class="language-text">   4   64   64  128
+   0    2  128    4
+  32   64   64    0
+  64    0    0   64
+</code></pre>
+<p>路线: <strong>←  ←  ↑  ↑</strong></p>
+<h2 id="11-solutions-s9">谜题 09 · 回声</h2>
+<p>目标 / 标准 / 上限: <strong>1024 / 4 / 5</strong></p>
+<pre><code class="language-text">   4  256    0  256
+ 128  256   64  128
+  64   64   64    0
+ 256    4   64    2
+</code></pre>
+<p>路线: <strong>←  ↑  →  ↑</strong></p>
+<h2 id="11-solutions-s10">谜题 10 · 逆风</h2>
+<p>目标 / 标准 / 上限: <strong>1024 / 5 / 6</strong></p>
+<pre><code class="language-text">   4    4  128    2
+  64    0  512   64
+ 128  256  128  256
+   0   64    4  256
+</code></pre>
+<p>路线: <strong>↑  ←  ←  ↑  ←</strong></p>
+<h2 id="11-solutions-s11">谜题 11 · 归位</h2>
+<p>目标 / 标准 / 上限: <strong>2048 / 5 / 6</strong></p>
+<pre><code class="language-text"> 128    0    4  256
+ 256  256    0  512
+   4    4    0    4
+ 512    2    0  512
+</code></pre>
+<p>路线: <strong>←  ↑  →  ↑  ↑</strong></p>
+<h2 id="11-solutions-s12">谜题 12 · 最后一线</h2>
+<p>目标 / 标准 / 上限: <strong>2048 / 5 / 6</strong></p>
+<pre><code class="language-text"> 256    0  256    0
+ 256  128  512  256
+ 256  128  256  128
+   2  128  512  256
+</code></pre>
+<p>路线: <strong>↑  ↓  ←  ←  ↑</strong></p>
+<h2 id="11-solutions-s13">精选残局</h2>
+<p>六步内腾出三个空格；目标在新方块生成后检查。以下“原路线”会走向无路可走，用于比较，不是建议。</p>
+<h3 id="11-solutions-s14">一线生机</h3>
+<p>原路线（失败）: ←</p>
+<p>转机路线（成功）: <strong>→ ↑ ↑</strong></p>
+<h3 id="11-solutions-s15">腾挪之间</h3>
+<p>原路线（失败）: ↓</p>
+<p>转机路线（成功）: <strong>↑ ← ↑ ← ↑</strong></p>
+<h3 id="11-solutions-s16">逆转时刻</h3>
+<p>原路线（失败）: ↑</p>
+<p>转机路线（成功）: <strong>← ← → ↓ ←</strong></p>
+<p>个人残局的起点各不相同，没有通用箭头答案。请使用该挑战自己的提示或对照复盘。</p>
+<div class="chapter-nav"><a href="#10-gallery">← 十七段游戏动图与视频</a><a href="#12-support">常见问题、开发与验证 →</a></div></article>
+<article data-chapter="12-support" aria-labelledby="12-support"><h1 id="12-support">常见问题、开发与验证</h1>
+<h2 id="12-support-s1">常见问题</h2>
+<p><strong>为什么经典在 Mac 打开是大厅，手机却直接进棋盘？</strong> 桌面 v12 先显示模式大厅，原生 1.0.1 默认进入经典，属于不同版本的入口设计。经典都排在第一位。</p>
+<p><strong>为什么没有 Mac 的 exe，Windows 为什么不打开 command？</strong> <code>.exe</code> 是 Windows 入口，<code>.command</code> 是 Mac 脚本。它们共享 Python 游戏代码，启动环境按系统准备。iPhone / iPad 则是独立 Swift 工程。</p>
+<p><strong>文档有三种语言，游戏为什么仍是中文？</strong> 本次交付新增的是三语说明与 README，没有把游戏界面改成三语。对应按钮原名保留在译文中。</p>
+<p><strong>能保证自动玩合成 32768 吗？</strong> 不能。AI 有预算、剪枝与启发式，随机局面不同。历史高分仅是具体试跑；这里没有把旧基准说成当前每台设备都能复现的保证。</p>
+<p><strong>同一日为什么手机和电脑不同？</strong> 先确认同版本、日期、操作序列、是否撤销和辅助。对照通过的规则不等于跨版本所有开局和存档相同，尤其远征选卡洗牌存在版本差异。</p>
+<p><strong>文档动图比游戏慢？</strong> 教学媒体按 12 fps 采样，便于阅读且控制文件体积。它不是游戏帧率录像，不用于证明屏幕刷新率。看操作细节可展开 MP4。</p>
+<p><strong>星级或纪录不如预期？</strong> 核对是否用了辅助、撤销、是否达到最短步数，以及是否看的是该玩法的纪录。最高成绩不会因为撤销当前局而下降。</p>
+<h2 id="12-support-s2">源码与开发</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>目录 / 文件</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>game.py</code>, <code>air_ui.py</code>, <code>interface_base.py</code></td>
+<td>桌面入口与界面</td>
+</tr>
+<tr>
+<td><code>engine.py</code>, <code>modes.py</code>, <code>persistence.py</code></td>
+<td>规则、独立模式进度、后台保存</td>
+</tr>
+<tr>
+<td><code>ai.py</code>, <code>search_native.py</code></td>
+<td>桌面搜索与后台进程</td>
+</tr>
+<tr>
+<td><code>expedition.py</code>, <code>rescue.py</code>, <code>puzzles.py</code></td>
+<td>专用玩法规则与解法</td>
+</tr>
+<tr>
+<td><code>desktop_start.py</code>, <code>platform_paths.py</code>, <code>check_runtime.py</code></td>
+<td>平台启动、路径、锁和诊断</td>
+</tr>
+<tr>
+<td><code>tests/</code>, <code>validation/v12/</code></td>
+<td>桌面测试与保留证据</td>
+</tr>
+<tr>
+<td><code>iOS/</code></td>
+<td>Swift 原生 App 工程</td>
+</tr>
+<tr>
+<td><code>mobile/</code></td>
+<td>Touch Web 工程</td>
+</tr>
+<tr>
+<td><code>docs/</code>, <code>README*.md</code></td>
+<td>全平台手册与三语入口</td>
+</tr>
+</tbody></table></div>
+<p>文档单独 ZIP 只含说明、媒体、参考记录和生成工具，<strong>不含可运行游戏或完整 App 源码</strong>。Windows 附文档 ZIP 含 Windows 游戏和其运行环境，但也不含完整 iOS 工程。游戏根目录才是各版工程与发布物的集合。</p>
+<p>桌面开发先准备对应平台虚拟环境，在游戏根目录执行：</p>
+<pre><code class="language-sh">python -m unittest discover -s tests
+</code></pre>
+<p>这里的 <code>python</code> 应替换为当前游戏环境解释器，Mac 为 <code>.venv/bin/python</code>，Windows 源码为 <code>.venv\Scripts\python.exe</code>。Windows 便携自检优先用 <code>check-windows.bat</code>。Web 在 <code>mobile/</code> 内运行 <code>node --test tests/*.test.js</code>，本地启动 <code>python3 serve.py</code>；Native 测试、Xcode 和设备检查见原生构建章。</p>
+<p>字体与运行环境按现有许可证分发，桌面完整游戏中的 <code>THIRD_PARTY.md</code>、<code>fonts/OFL.txt</code> 和 Windows <code>licenses/</code> 应保留。系统苹方等只在本机读取，不从 Mac 复制给 Windows。不要因源码可见就假定所有代码有未声明的再分发授权。</p>
+<h2 id="12-support-s3">验证记录如何区分</h2>
+<p>桌面 v12 的已有报告记录 <strong>90 项测试通过</strong>，另有六关远征 6,098 分 / 123 步、真实败局提取、字体回退与 Windows 静态包检查。这是保留的 v12 证据，非本次文档改动重新跑出的硬件报告。</p>
+<p>原生 1.0.1 的已有记录包括 <strong>38 项核心 / 交互检查、5,760 次混合操作</strong>。网页有自己的规则与浏览器检查。三套证据不可互相代替。</p>
+<p>本次新增文档的检查与媒体来源见 <a href="../QA.md">文档 QA</a>：本地链接和页面锚点、三语章节、谜题路线、GIF / MP4 解码与帧数、包内资源、Windows 运行文件未改与个人存档未变。离线 HTML 的浏览器视觉和交互验收未完成，未将结构检查当作实际点击通过。</p>
+<h2 id="12-support-s4">报告问题的模板</h2>
+<pre><code class="language-text">平台与版本：Mac / Windows v12，Native 1.0.1，或 Touch v1
+系统 / 设备 / 架构：
+安装方式与文件名：
+玩法、日期或章节：
+精确操作步骤：
+期望结果 / 实际结果：
+是否可重复：
+是否用了 AI、撤销或模式切换：
+错误全文 / 截图 / 相关日志：
+</code></pre>
+<p>若涉及存档，先备份，再只分享愿意用于排查的副本；无需账户密码、签名证书等。请写明确平台和版本，这能避免把电脑快捷键问题当成手机手势问题。</p>
+<div class="chapter-nav"><a href="#11-solutions">← 十二章谜题与三道残局解答</a><span>LUMINA · ALL EDITIONS</span></div></article></main></div><script id="reader-config" type="application/json">{"play":"播放动图","pause":"暂停动图","results":"搜索结果","none":"本页没有匹配内容"}</script><script src="../reader.js"></script></body></html>

@@ -1,0 +1,67 @@
+{
+  "expedition": {
+    "phase": "won",
+    "score": 6098,
+    "cleared": 6,
+    "moves": 123,
+    "perks": {
+      "combo": 2,
+      "gambit": 1,
+      "flow": 2,
+      "corner": 1
+    },
+    "choices": [
+      {
+        "stage": 0,
+        "score": 0,
+        "pick": "combo",
+        "moves": 0
+      },
+      {
+        "stage": 0,
+        "score": 109,
+        "pick": "combo",
+        "moves": 16
+      },
+      {
+        "stage": 1,
+        "score": 477,
+        "pick": "gambit",
+        "moves": 36
+      },
+      {
+        "stage": 2,
+        "score": 1038,
+        "pick": "flow",
+        "moves": 64
+      },
+      {
+        "stage": 3,
+        "score": 2025,
+        "pick": "corner",
+        "moves": 76
+      },
+      {
+        "stage": 4,
+        "score": 3466,
+        "pick": "flow",
+        "moves": 111
+      }
+    ],
+    "save_restored": true
+  },
+  "rescue": {
+    "par": 3,
+    "generated_from_real_failure": true,
+    "original_preserved": true,
+    "archive_persisted": true,
+    "assisted_completion_persisted": true
+  },
+  "seconds": 5.03,
+  "draw_ms": {
+    "median": 6.33,
+    "p95": 9.49,
+    "maximum": 60.69
+  },
+  "driver": "dummy"
+}

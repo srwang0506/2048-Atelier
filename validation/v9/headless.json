@@ -1,0 +1,88 @@
+{
+  "driver": "dummy",
+  "refresh": 60,
+  "vsync_reported": false,
+  "fallback": true,
+  "present": {
+    "lobby": {
+      "frames": 119,
+      "mean_ms": 16.64,
+      "p95_ms": 19.67,
+      "max_ms": 25.99
+    },
+    "transition": {
+      "frames": 8,
+      "mean_ms": 23.47,
+      "p95_ms": 59.48,
+      "max_ms": 59.48
+    },
+    "panel": {
+      "frames": 117,
+      "mean_ms": 16.52,
+      "p95_ms": 18.31,
+      "max_ms": 30.99
+    },
+    "puzzle": {
+      "frames": 239,
+      "mean_ms": 16.53,
+      "p95_ms": 19.55,
+      "max_ms": 23.97
+    },
+    "sprint": {
+      "frames": 359,
+      "mean_ms": 16.67,
+      "p95_ms": 19.19,
+      "max_ms": 22.86
+    },
+    "classic": {
+      "frames": 119,
+      "mean_ms": 16.64,
+      "p95_ms": 18.7,
+      "max_ms": 20.02
+    }
+  },
+  "compute": {
+    "lobby": {
+      "frames": 119,
+      "mean_ms": 6.32,
+      "p95_ms": 7.66,
+      "max_ms": 15.67
+    },
+    "transition": {
+      "frames": 8,
+      "mean_ms": 15.28,
+      "p95_ms": 46.42,
+      "max_ms": 46.42
+    },
+    "panel": {
+      "frames": 117,
+      "mean_ms": 10.51,
+      "p95_ms": 11.32,
+      "max_ms": 26.3
+    },
+    "puzzle": {
+      "frames": 239,
+      "mean_ms": 6.89,
+      "p95_ms": 8.51,
+      "max_ms": 15.95
+    },
+    "sprint": {
+      "frames": 359,
+      "mean_ms": 6.69,
+      "p95_ms": 7.88,
+      "max_ms": 12.76
+    },
+    "classic": {
+      "frames": 119,
+      "mean_ms": 4.6,
+      "p95_ms": 7.06,
+      "max_ms": 7.81
+    }
+  },
+  "checks": {
+    "exact_solver_autoplay": true,
+    "sprint_60_moves": true,
+    "classic_unchanged": true,
+    "progress_restored": true
+  }
+}

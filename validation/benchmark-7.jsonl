@@ -1,0 +1,15 @@
+{"seed": 7, "moves": 250, "score": 4072, "tile": 512, "seconds": 6.3}
+{"seed": 7, "moves": 500, "score": 7380, "tile": 512, "seconds": 12.7}
+{"seed": 7, "moves": 750, "score": 12768, "tile": 1024, "seconds": 19.0}
+{"seed": 7, "moves": 1000, "score": 20956, "tile": 2048, "seconds": 25.4}
+{"seed": 7, "moves": 1250, "score": 24408, "tile": 2048, "seconds": 31.7}
+{"seed": 7, "moves": 1500, "score": 30208, "tile": 2048, "seconds": 38.0}
+{"seed": 7, "moves": 1750, "score": 34516, "tile": 2048, "seconds": 44.4}
+{"seed": 7, "moves": 2000, "score": 46216, "tile": 4096, "seconds": 50.7}
+{"seed": 7, "moves": 2250, "score": 50408, "tile": 4096, "seconds": 57.0}
+{"seed": 7, "moves": 2500, "score": 55568, "tile": 4096, "seconds": 63.3}
+{"seed": 7, "moves": 2750, "score": 59756, "tile": 4096, "seconds": 69.6}
+{"seed": 7, "moves": 3000, "score": 67104, "tile": 4096, "seconds": 76.0}
+{"seed": 7, "moves": 3250, "score": 71268, "tile": 4096, "seconds": 82.3}
+{"seed": 7, "moves": 3500, "score": 76492, "tile": 4096, "seconds": 88.6}
+{"seed": 7, "moves": 3610, "score": 78172, "tile": 4096, "seconds": 91.4, "budget": 0.025, "complete": true}

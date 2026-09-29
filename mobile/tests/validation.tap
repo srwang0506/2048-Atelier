@@ -1,0 +1,190 @@
+TAP version 13
+# Subtest: HTML, manifest and service worker reference local assets that all exist
+ok 1 - HTML, manifest and service worker reference local assets that all exist
+  ---
+  duration_ms: 1.905
+  ...
+# Subtest: offline worker precaches the full game, serves cached navigation, ignores external requests
+ok 2 - offline worker precaches the full game, serves cached navigation, ignores external requests
+  ---
+  duration_ms: 1.107
+  ...
+# Subtest: offline preparation refuses authentication redirects
+ok 3 - offline preparation refuses authentication redirects
+  ---
+  duration_ms: 0.424875
+  ...
+# Subtest: MT19937 matches Python for 32-, 53- and 64-bit seeds
+ok 4 - MT19937 matches Python for 32-, 53- and 64-bit seeds
+  ---
+  duration_ms: 2.746125
+  ...
+# Subtest: 400 slide results, score, merge positions and motion tracks match Python
+ok 5 - 400 slide results, score, merge positions and motion tracks match Python
+  ---
+  duration_ms: 5.571916
+  ...
+# Subtest: 300 move attempts match desktop board, score and random state
+ok 6 - 300 move attempts match desktop board, score and random state
+  ---
+  duration_ms: 19.467625
+  ...
+# Subtest: 100 ability combinations and banker rounding match Python
+ok 7 - 100 ability combinations and banker rounding match Python
+  ---
+  duration_ms: 0.802041
+  ...
+# Subtest: puzzle 1: original solution and shortest solver
+ok 8 - puzzle 1: original solution and shortest solver
+  ---
+  duration_ms: 0.99175
+  ...
+# Subtest: puzzle 2: original solution and shortest solver
+ok 9 - puzzle 2: original solution and shortest solver
+  ---
+  duration_ms: 0.367
+  ...
+# Subtest: puzzle 3: original solution and shortest solver
+ok 10 - puzzle 3: original solution and shortest solver
+  ---
+  duration_ms: 0.619458
+  ...
+# Subtest: puzzle 4: original solution and shortest solver
+ok 11 - puzzle 4: original solution and shortest solver
+  ---
+  duration_ms: 0.460833
+  ...
+# Subtest: puzzle 5: original solution and shortest solver
+ok 12 - puzzle 5: original solution and shortest solver
+  ---
+  duration_ms: 0.50425
+  ...
+# Subtest: puzzle 6: original solution and shortest solver
+ok 13 - puzzle 6: original solution and shortest solver
+  ---
+  duration_ms: 0.568208
+  ...
+# Subtest: puzzle 7: original solution and shortest solver
+ok 14 - puzzle 7: original solution and shortest solver
+  ---
+  duration_ms: 1.371833
+  ...
+# Subtest: puzzle 8: original solution and shortest solver
+ok 15 - puzzle 8: original solution and shortest solver
+  ---
+  duration_ms: 1.283458
+  ...
+# Subtest: puzzle 9: original solution and shortest solver
+ok 16 - puzzle 9: original solution and shortest solver
+  ---
+  duration_ms: 0.819667
+  ...
+# Subtest: puzzle 10: original solution and shortest solver
+ok 17 - puzzle 10: original solution and shortest solver
+  ---
+  duration_ms: 1.871458
+  ...
+# Subtest: puzzle 11: original solution and shortest solver
+ok 18 - puzzle 11: original solution and shortest solver
+  ---
+  duration_ms: 1.0155
+  ...
+# Subtest: puzzle 12: original solution and shortest solver
+ok 19 - puzzle 12: original solution and shortest solver
+  ---
+  duration_ms: 3.818334
+  ...
+# Subtest: rescue 一线生机: exact RNG route
+ok 20 - rescue 一线生机: exact RNG route
+  ---
+  duration_ms: 0.334125
+  ...
+# Subtest: rescue 腾挪之间: exact RNG route
+ok 21 - rescue 腾挪之间: exact RNG route
+  ---
+  duration_ms: 0.63275
+  ...
+# Subtest: rescue 逆转时刻: exact RNG route
+ok 22 - rescue 逆转时刻: exact RNG route
+  ---
+  duration_ms: 0.734167
+  ...
+# Subtest: undo/redo preserves random outcomes and assisted status
+ok 23 - undo/redo preserves random outcomes and assisted status
+  ---
+  duration_ms: 0.646625
+  ...
+# Subtest: freeze and swap are undoable, and do not consume turn or randomness
+ok 24 - freeze and swap are undoable, and do not consume turn or randomness
+  ---
+  duration_ms: 0.85075
+  ...
+# Subtest: winning on the last expedition move is a success, drafting isolates undo
+ok 25 - winning on the last expedition move is a success, drafting isolates undo
+  ---
+  duration_ms: 0.407042
+  ...
+# Subtest: daily uses local date token and same SHA256 seed as desktop
+ok 26 - daily uses local date token and same SHA256 seed as desktop
+  ---
+  duration_ms: 7.739292
+  ...
+# Subtest: AI returns legal choice without mutating state, including wide tiles
+ok 27 - AI returns legal choice without mutating state, including wide tiles
+  ---
+  duration_ms: 93.041209
+  ...
+# Subtest: save validation rejects corrupt RNG, board and mode
+ok 28 - save validation rejects corrupt RNG, board and mode
+  ---
+  duration_ms: 0.248542
+  ...
+# Subtest: terminal classic search branches never access expedition abilities
+ok 29 - terminal classic search branches never access expedition abilities
+  ---
+  duration_ms: 0.475958
+  ...
+# Subtest: invalid moves consume neither RNG nor history; sprint stops at 60
+ok 30 - invalid moves consume neither RNG nor history; sprint stops at 60
+  ---
+  duration_ms: 0.273459
+  ...
+# Subtest: rescue extraction replays a real failed classic game and preserves original
+ok 31 - rescue extraction replays a real failed classic game and preserves original
+  ---
+  duration_ms: 16.970416
+  ...
+# Subtest: public rescue archives validate their witness through production rules
+ok 32 - public rescue archives validate their witness through production rules
+  ---
+  duration_ms: 4.679
+  ...
+# Subtest: invalid abilities and undo snapshots are rejected before import
+ok 33 - invalid abilities and undo snapshots are rejected before import
+  ---
+  duration_ms: 0.894459
+  ...
+# Subtest: metadata rejects invalid scores, records, settings and injected challenge objects
+ok 34 - metadata rejects invalid scores, records, settings and injected challenge objects
+  ---
+  duration_ms: 0.16925
+  ...
+# Subtest: malformed imports leave live state intact
+ok 35 - malformed imports leave live state intact
+  ---
+  duration_ms: 0.707292
+  ...
+# Subtest: daily saves retain only seven dates and prune date-specific best scores
+ok 36 - daily saves retain only seven dates and prune date-specific best scores
+  ---
+  duration_ms: 2.557792
+  ...
+1..36
+# tests 36
+# suites 0
+# pass 36
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 214.740416

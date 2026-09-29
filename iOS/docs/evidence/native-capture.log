@@ -1,0 +1,25 @@
+Building for production...
+[0/4] Write sources
+[1/4] Write swift-version--5D8278C139DD3AD0.txt
+[3/4] Compiling LuminaAppTests AppTests.swift
+[4/6] Compiling LuminaPackageTests runner.swift
+[4/6] Write Objects.LinkFileList
+[5/6] Linking LuminaPackageTests
+Build complete! (3.81s)
+◇ Test run started.
+↳ Testing Library Version: 124.4
+↳ Target Platform: arm64e-apple-macos14.0
+◇ Suite "Documentation media" started.
+◇ Test recordDocumentation() started.
+DOCUMENTATION_MOVIE 01-classic: 73 frames
+DOCUMENTATION_MOVIE 02-undo-redo: 67 frames
+DOCUMENTATION_MOVIE 03-ai: 138 frames
+DOCUMENTATION_MOVIE 04-expedition-draft: 87 frames
+DOCUMENTATION_MOVIE 05-expedition-powers: 77 frames
+DOCUMENTATION_MOVIE 06-puzzle: 56 frames
+DOCUMENTATION_MOVIE 07-rescue: 91 frames
+DOCUMENTATION_MOVIE 08-daily: 70 frames
+DOCUMENTATION_MOVIE 09-sprint: 67 frames
+✔ Test recordDocumentation() passed after 241.160 seconds.
+✔ Suite "Documentation media" passed after 241.161 seconds.
+✔ Test run with 1 test passed after 241.161 seconds.

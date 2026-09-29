@@ -1,0 +1,131 @@
+[
+  {
+    "seed": 13,
+    "starter": "combo",
+    "phase": "won",
+    "cleared": 6,
+    "score": 7210,
+    "moves": 117,
+    "powers": 7,
+    "perks": {
+      "combo": 2,
+      "gambit": 1,
+      "flow": 2,
+      "corner": 1
+    },
+    "stages": [
+      [
+        1,
+        14,
+        101
+      ],
+      [
+        2,
+        33,
+        364
+      ],
+      [
+        3,
+        48,
+        986
+      ],
+      [
+        4,
+        70,
+        2267
+      ],
+      [
+        5,
+        112,
+        3842
+      ]
+    ],
+    "seconds": 2.07
+  },
+  {
+    "seed": 29,
+    "starter": "battery",
+    "phase": "lost",
+    "cleared": 5,
+    "score": 4927,
+    "moves": 197,
+    "powers": 6,
+    "perks": {
+      "battery": 2,
+      "echo": 2,
+      "combo": 1,
+      "flow": 1
+    },
+    "stages": [
+      [
+        1,
+        21,
+        112
+      ],
+      [
+        2,
+        39,
+        372
+      ],
+      [
+        3,
+        66,
+        906
+      ],
+      [
+        4,
+        109,
+        1836
+      ],
+      [
+        5,
+        137,
+        3529
+      ]
+    ],
+    "seconds": 3.37
+  },
+  {
+    "seed": 42,
+    "starter": "gambit",
+    "phase": "won",
+    "cleared": 6,
+    "score": 7151,
+    "moves": 125,
+    "powers": 3,
+    "perks": {
+      "gambit": 1,
+      "combo": 2,
+      "flow": 1,
+      "echo": 2
+    },
+    "stages": [
+      [
+        1,
+        11,
+        112
+      ],
+      [
+        2,
+        24,
+        408
+      ],
+      [
+        3,
+        45,
+        1011
+      ],
+      [
+        4,
+        63,
+        2400
+      ],
+      [
+        5,
+        97,
+        3851
+      ]
+    ],
+    "seconds": 2.14
+  }
+]

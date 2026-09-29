@@ -1,0 +1,21 @@
+test_ai_chooses_valid_moves (test_engine.AITest.test_ai_chooses_valid_moves) ... ok
+test_bitboard_matches_reference (test_engine.AITest.test_bitboard_matches_reference) ... ok
+test_full_board_and_high_tile (test_engine.AITest.test_full_board_and_high_tile) ... ok
+test_atomic_save_and_corruption (test_engine.RulesTest.test_atomic_save_and_corruption) ... ok
+test_game_over (test_engine.RulesTest.test_game_over) ... ok
+test_invalid_move_never_spawns (test_engine.RulesTest.test_invalid_move_never_spawns) ... ok
+test_large_tiles_do_not_saturate (test_engine.RulesTest.test_large_tiles_do_not_saturate) ... ok
+test_mass_and_tracks (test_engine.RulesTest.test_mass_and_tracks) ... ok
+test_restore (test_engine.RulesTest.test_restore) ... ok
+test_single_merge_per_move (test_engine.RulesTest.test_single_merge_per_move) ... ok
+test_undo_restores_random_sequence (test_engine.RulesTest.test_undo_restores_random_sequence) ... ok
+test_80_bit_rules_including_65536 (test_native.NativeSearchTest.test_80_bit_rules_including_65536) ... ok
+test_cached_search_retains_valid_directions (test_native.NativeSearchTest.test_cached_search_retains_valid_directions) ... ok
+test_four_direction_values_and_high_rank_search (test_native.NativeSearchTest.test_four_direction_values_and_high_rank_search) ... ok
+test_interaction_and_rendering (test_ui.UITest.test_interaction_and_rendering) ... pygame-ce 2.5.8 (SDL 2.32.10, Python 3.12.9)
+ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 10.628s
+
+OK

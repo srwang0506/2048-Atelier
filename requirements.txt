@@ -1,0 +1,5 @@
+pygame-ce==2.5.8
+numpy==2.5.3
+numba==0.67.0
+llvmlite==0.49.0
+Pillow==12.3.0

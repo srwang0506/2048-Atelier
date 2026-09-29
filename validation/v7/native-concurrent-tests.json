@@ -1,0 +1,60 @@
+{
+  "driver": "cocoa",
+  "refresh": 60,
+  "vsync": true,
+  "present": {
+    "play": {
+      "frames": 436,
+      "mean_ms": 16.66,
+      "p95_ms": 17.43,
+      "max_ms": 19.67
+    },
+    "panel_open": {
+      "frames": 2,
+      "mean_ms": 24.37,
+      "p95_ms": 20.58,
+      "max_ms": 28.15
+    },
+    "panel_motion": {
+      "frames": 38,
+      "mean_ms": 16.31,
+      "p95_ms": 17.1,
+      "max_ms": 17.67
+    },
+    "panel_idle": {
+      "frames": 121,
+      "mean_ms": 17.08,
+      "p95_ms": 17.6,
+      "max_ms": 61.7
+    }
+  },
+  "compute": {
+    "play": {
+      "frames": 436,
+      "mean_ms": 5.76,
+      "p95_ms": 6.69,
+      "max_ms": 14.56
+    },
+    "panel_open": {
+      "frames": 2,
+      "mean_ms": 23.66,
+      "p95_ms": 19.87,
+      "max_ms": 27.44
+    },
+    "panel_motion": {
+      "frames": 38,
+      "mean_ms": 9.48,
+      "p95_ms": 11.4,
+      "max_ms": 11.66
+    },
+    "panel_idle": {
+      "frames": 121,
+      "mean_ms": 10.15,
+      "p95_ms": 10.53,
+      "max_ms": 17.39
+    }
+  },
+  "saved_steps": 22,
+  "restored_history": 22,
+  "restored_rng": true
+}

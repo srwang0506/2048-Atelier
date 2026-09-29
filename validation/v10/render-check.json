@@ -1,0 +1,43 @@
+{
+  "rendered_views": [
+    "lobby",
+    "classic",
+    "settings",
+    "help",
+    "records",
+    "new",
+    "replay",
+    "chapters",
+    "puzzle",
+    "solution",
+    "complete",
+    "sprint",
+    "lobby-dark",
+    "settings-dark"
+  ],
+  "unique_font_samples": 355,
+  "clipped": [],
+  "missing_glyphs": [],
+  "lobby_pointer_checks": [
+    "mode_classic",
+    "mode_daily",
+    "mode_sprint",
+    "puzzle_levels"
+  ],
+  "classic_preserved": true,
+  "font_faces": {
+    "regular": [
+      "/System/Library/AssetsV2/com_apple_MobileAsset_Font7/3419f2a427639ad8c8e139149a287865a90fa17e.asset/AssetData/PingFang.ttc",
+      3
+    ],
+    "medium": [
+      "/System/Library/AssetsV2/com_apple_MobileAsset_Font7/3419f2a427639ad8c8e139149a287865a90fa17e.asset/AssetData/PingFang.ttc",
+      7
+    ],
+    "semibold": [
+      "/System/Library/AssetsV2/com_apple_MobileAsset_Font7/3419f2a427639ad8c8e139149a287865a90fa17e.asset/AssetData/PingFang.ttc",
+      11
+    ]
+  },
+  "driver": "dummy"
+}

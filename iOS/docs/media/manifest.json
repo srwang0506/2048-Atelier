@@ -1,0 +1,486 @@
+[
+  {
+    "capture": "Live macOS NSHostingView running GameModel; frame sampling, not an iOS screen recording or FPS benchmark",
+    "duration": 6.083333333333333,
+    "events": [
+      {
+        "caption": "CLASSIC · A REAL SEEDED GAME",
+        "time": 0
+      },
+      {
+        "caption": "SWIPE UP  ↑",
+        "time": 1.0833333333333333
+      },
+      {
+        "caption": "SWIPE UP  ↑",
+        "time": 2.0833333333333335
+      },
+      {
+        "caption": "SWIPE RIGHT  →",
+        "time": 3.0833333333333335
+      },
+      {
+        "caption": "SWIPE LEFT  ←",
+        "time": 4.083333333333333
+      },
+      {
+        "caption": "SWIPE LEFT  ←",
+        "time": 5.083333333333333
+      }
+    ],
+    "fps": 12,
+    "frames": 73,
+    "name": "01-classic",
+    "video_codec": "H.264 / yuv420p",
+    "decoded_video_frames": 73,
+    "gif_source": "decoded delivered MP4",
+    "size": [
+      1000,
+      700
+    ],
+    "gif_frames": 70,
+    "gif_duration_ms": 6080,
+    "files": {
+      "01-classic.mp4": {
+        "bytes": 117879,
+        "sha256": "c63b4f2e94dfe6a3525a4024892484e7a2814ff08a8271dbd574e0b143c70621"
+      },
+      "01-classic.gif": {
+        "bytes": 595721,
+        "sha256": "fa326b1efafa8aa19fecf076a5a580e3b0e13542b8b80f7bb0d1f74121b25223"
+      },
+      "01-classic-poster.png": {
+        "bytes": 526726,
+        "sha256": "28f6eb18f270873b1700a464344be66459211f31421d797cd8d69437e230f76e"
+      }
+    }
+  },
+  {
+    "capture": "Live macOS NSHostingView running GameModel; frame sampling, not an iOS screen recording or FPS benchmark",
+    "duration": 5.583333333333333,
+    "events": [
+      {
+        "caption": "UNDO & REDO · THE RANDOM STATE IS RESTORED",
+        "time": 0
+      },
+      {
+        "caption": "SWIPE RIGHT  →",
+        "time": 1.0833333333333333
+      },
+      {
+        "caption": "UNDO · SCORE, BOARD & MOVE COUNT RETURN",
+        "time": 2.0833333333333335
+      },
+      {
+        "caption": "REDO · THE SAME TILE RETURNS",
+        "time": 3.8333333333333335
+      }
+    ],
+    "fps": 12,
+    "frames": 67,
+    "name": "02-undo-redo",
+    "video_codec": "H.264 / yuv420p",
+    "decoded_video_frames": 67,
+    "gif_source": "decoded delivered MP4",
+    "size": [
+      1000,
+      700
+    ],
+    "gif_frames": 54,
+    "gif_duration_ms": 5580,
+    "files": {
+      "02-undo-redo.mp4": {
+        "bytes": 91040,
+        "sha256": "153e21e4b5bf7557cb57f408a09586f4e220634942884a2c0e327b32da76396b"
+      },
+      "02-undo-redo.gif": {
+        "bytes": 342904,
+        "sha256": "24308f52629563a5c5fee8adecc9132004080ea67ff431d69fbfcd9767b6287f"
+      },
+      "02-undo-redo-poster.png": {
+        "bytes": 504398,
+        "sha256": "588207dcfdb0825ab5f63c00547988a332744b3559c8e2d8c67496d4f3dd61a4"
+      }
+    }
+  },
+  {
+    "capture": "Live macOS NSHostingView running GameModel; frame sampling, not an iOS screen recording or FPS benchmark",
+    "duration": 11.5,
+    "events": [
+      {
+        "caption": "HINT · THIS GAME IS NOW ASSISTED",
+        "time": 0
+      },
+      {
+        "caption": "HINT · THIS GAME IS NOW ASSISTED",
+        "time": 1.0833333333333333
+      },
+      {
+        "caption": "FOLLOW HINT",
+        "time": 2.4166666666666665
+      },
+      {
+        "caption": "AUTOPLAY · LOCAL EXPECTIMAX SEARCH",
+        "time": 3.5
+      },
+      {
+        "caption": "PAUSED · MANUAL CONTROL RESUMES",
+        "time": 10.5
+      }
+    ],
+    "fps": 12,
+    "frames": 138,
+    "name": "03-ai",
+    "video_codec": "H.264 / yuv420p",
+    "decoded_video_frames": 138,
+    "gif_source": "decoded delivered MP4",
+    "size": [
+      1000,
+      700
+    ],
+    "gif_frames": 138,
+    "gif_duration_ms": 11500,
+    "files": {
+      "03-ai.mp4": {
+        "bytes": 331546,
+        "sha256": "13af6ce6466f7c8597c05abe48b779ce07d15912de71ee298c74e6b93bc3e940"
+      },
+      "03-ai.gif": {
+        "bytes": 2288977,
+        "sha256": "c3df3cb8dbf261badfb7e82ad1598dd5aea54b50c8911c9f8daeaeb99fd001e9"
+      },
+      "03-ai-poster.png": {
+        "bytes": 510308,
+        "sha256": "3b0dad14d4e673d39d1bb3576b79d90ef6c11cf8a8fdd2c48060acdf52b93bac"
+      }
+    }
+  },
+  {
+    "capture": "Live macOS NSHostingView running GameModel; frame sampling, not an iOS screen recording or FPS benchmark",
+    "duration": 7.25,
+    "events": [
+      {
+        "caption": "EXPEDITION · CHOOSE ONE OF THREE ABILITIES",
+        "time": 0
+      },
+      {
+        "caption": "EXPEDITION · CHOOSE ONE OF THREE ABILITIES",
+        "time": 1.0833333333333333
+      },
+      {
+        "caption": "BATTERY CORE · EXTRA ENERGY PER MERGE",
+        "time": 2.25
+      },
+      {
+        "caption": "SWIPE LEFT  ←",
+        "time": 3.25
+      },
+      {
+        "caption": "SWIPE LEFT  ←",
+        "time": 4.25
+      },
+      {
+        "caption": "SWIPE UP  ↑",
+        "time": 5.25
+      },
+      {
+        "caption": "SWIPE DOWN  ↓",
+        "time": 6.25
+      }
+    ],
+    "fps": 12,
+    "frames": 87,
+    "name": "04-expedition-draft",
+    "video_codec": "H.264 / yuv420p",
+    "decoded_video_frames": 87,
+    "gif_source": "decoded delivered MP4",
+    "size": [
+      1000,
+      700
+    ],
+    "gif_frames": 76,
+    "gif_duration_ms": 7250,
+    "files": {
+      "04-expedition-draft.mp4": {
+        "bytes": 113724,
+        "sha256": "924fd51e3f3ae90a39ddccd676bc8f66d9439af027c1504090aee10eace13b37"
+      },
+      "04-expedition-draft.gif": {
+        "bytes": 513292,
+        "sha256": "18c81fbe27b502d432102e2b97e8ebbfd6f45e51c73338401af09c8153288b04"
+      },
+      "04-expedition-draft-poster.png": {
+        "bytes": 467729,
+        "sha256": "1c7aed36eefa0e7f2ec78a57e429a3e0a438a3f85a494fb5aa1aa403ab217506"
+      }
+    }
+  },
+  {
+    "capture": "Live macOS NSHostingView running GameModel; frame sampling, not an iOS screen recording or FPS benchmark",
+    "duration": 6.416666666666667,
+    "events": [
+      {
+        "caption": "EXPEDITION · CONTINUATION WITH EARNED ENERGY",
+        "time": 0
+      },
+      {
+        "caption": "FREEZE · COST 5 · NO MOVE USED",
+        "time": 1.0833333333333333
+      },
+      {
+        "caption": "SWAP · SELECT TWO DIFFERENT VALUES",
+        "time": 2.5833333333333335
+      },
+      {
+        "caption": "SWAP · SELECT TWO DIFFERENT VALUES",
+        "time": 3.3333333333333335
+      },
+      {
+        "caption": "FREEZE ACTIVE · MOVE WITHOUT A NEW TILE",
+        "time": 4.416666666666667
+      },
+      {
+        "caption": "FREEZE ACTIVE · MOVE WITHOUT A NEW TILE",
+        "time": 5.416666666666667
+      }
+    ],
+    "fps": 12,
+    "frames": 77,
+    "name": "05-expedition-powers",
+    "video_codec": "H.264 / yuv420p",
+    "decoded_video_frames": 77,
+    "gif_source": "decoded delivered MP4",
+    "size": [
+      1000,
+      700
+    ],
+    "gif_frames": 75,
+    "gif_duration_ms": 6410,
+    "files": {
+      "05-expedition-powers.mp4": {
+        "bytes": 100213,
+        "sha256": "6464bccf99ac5907c09ebe3ab07f2791ae074597ad6aff92a158bcb839c1420b"
+      },
+      "05-expedition-powers.gif": {
+        "bytes": 433103,
+        "sha256": "cfd03172712a76f012f7c72a0aab8e5c39f24398d9aade1338735bbfc9ac49b9"
+      },
+      "05-expedition-powers-poster.png": {
+        "bytes": 509190,
+        "sha256": "219eb8eaf2a348b2381429808ad86fd031cd656dee47e282aeb6017acc526e6a"
+      }
+    }
+  },
+  {
+    "capture": "Live macOS NSHostingView running GameModel; frame sampling, not an iOS screen recording or FPS benchmark",
+    "duration": 4.666666666666667,
+    "events": [
+      {
+        "caption": "PUZZLE 01 · TARGET 64 · TWO-MOVE SOLUTION",
+        "time": 0
+      },
+      {
+        "caption": "SWIPE UP  ↑",
+        "time": 1.0833333333333333
+      },
+      {
+        "caption": "SWIPE UP  ↑",
+        "time": 2.0833333333333335
+      },
+      {
+        "caption": "COMPLETE · NO HINTS, NO UNDO · THREE STARS",
+        "time": 3.0833333333333335
+      }
+    ],
+    "fps": 12,
+    "frames": 56,
+    "name": "06-puzzle",
+    "video_codec": "H.264 / yuv420p",
+    "decoded_video_frames": 56,
+    "gif_source": "decoded delivered MP4",
+    "size": [
+      1000,
+      700
+    ],
+    "gif_frames": 56,
+    "gif_duration_ms": 4660,
+    "files": {
+      "06-puzzle.mp4": {
+        "bytes": 98132,
+        "sha256": "554791852688a75252970b9fe54bcd76a28ad9a586e47673679f5379cda58926"
+      },
+      "06-puzzle.gif": {
+        "bytes": 393866,
+        "sha256": "809910568bbf860162406fa1aff8fd33296f8d8d83511e35882d82b69981891f"
+      },
+      "06-puzzle-poster.png": {
+        "bytes": 587063,
+        "sha256": "8c9d510b93881043e42367d0b78bf8b005118ad4b632de831d99c9202409c1e6"
+      }
+    }
+  },
+  {
+    "capture": "Live macOS NSHostingView running GameModel; frame sampling, not an iOS screen recording or FPS benchmark",
+    "duration": 7.583333333333333,
+    "events": [
+      {
+        "caption": "RESCUE · ONE START, TWO DIFFERENT OUTCOMES",
+        "time": 0
+      },
+      {
+        "caption": "ORIGINAL ROUTE · NO LEGAL MOVE REMAINS",
+        "time": 1.0833333333333333
+      },
+      {
+        "caption": "RETRY THE SAME START · AIM FOR THREE EMPTY CELLS",
+        "time": 2.0833333333333335
+      },
+      {
+        "caption": "SWIPE RIGHT  →",
+        "time": 3.0833333333333335
+      },
+      {
+        "caption": "SWIPE UP  ↑",
+        "time": 4.083333333333333
+      },
+      {
+        "caption": "SWIPE UP  ↑",
+        "time": 5.083333333333333
+      },
+      {
+        "caption": "RESCUED · THE SOURCE GAME STAYS SEPARATE",
+        "time": 6.083333333333333
+      }
+    ],
+    "fps": 12,
+    "frames": 91,
+    "name": "07-rescue",
+    "video_codec": "H.264 / yuv420p",
+    "decoded_video_frames": 91,
+    "gif_source": "decoded delivered MP4",
+    "size": [
+      1000,
+      700
+    ],
+    "gif_frames": 89,
+    "gif_duration_ms": 7580,
+    "files": {
+      "07-rescue.mp4": {
+        "bytes": 143375,
+        "sha256": "cc4147a93c61b144f7dadcf61b08284f471ecd83765cad9aefe2c11d7fb25429"
+      },
+      "07-rescue.gif": {
+        "bytes": 683239,
+        "sha256": "bb0824ab55b60119aa55e51a1dca572f729bcccd72ecd4e430a5476c38346171"
+      },
+      "07-rescue-poster.png": {
+        "bytes": 613654,
+        "sha256": "09897f77cb3b35d3783aa9c889d6611deb0850c5a79a71e5b40b5508436f2525"
+      }
+    }
+  },
+  {
+    "capture": "Live macOS NSHostingView running GameModel; frame sampling, not an iOS screen recording or FPS benchmark",
+    "duration": 5.833333333333333,
+    "events": [
+      {
+        "caption": "DAILY · FIXED LOCAL DATE 2026-09-29",
+        "time": 0
+      },
+      {
+        "caption": "SWIPE LEFT  ←",
+        "time": 1.0833333333333333
+      },
+      {
+        "caption": "SWIPE UP  ↑",
+        "time": 2.0833333333333335
+      },
+      {
+        "caption": "SWIPE DOWN  ↓",
+        "time": 3.0833333333333335
+      },
+      {
+        "caption": "RESTART · THE SAME INITIAL BOARD RETURNS",
+        "time": 4.083333333333333
+      }
+    ],
+    "fps": 12,
+    "frames": 70,
+    "name": "08-daily",
+    "video_codec": "H.264 / yuv420p",
+    "decoded_video_frames": 70,
+    "gif_source": "decoded delivered MP4",
+    "size": [
+      1000,
+      700
+    ],
+    "gif_frames": 68,
+    "gif_duration_ms": 5830,
+    "files": {
+      "08-daily.mp4": {
+        "bytes": 78190,
+        "sha256": "cd6aa171711bf7fc9804467459d777302fe7d9f593e19c0b7e1854f006a71e39"
+      },
+      "08-daily.gif": {
+        "bytes": 407905,
+        "sha256": "715a7855d0c62a9bfef3e2503d0f1c270f276fb7f3d25cecced39849e5fc7ac5"
+      },
+      "08-daily-poster.png": {
+        "bytes": 474216,
+        "sha256": "34d78f9bcc72359535441d7a603266306c570038f7471eeaea8862fb1594e48f"
+      }
+    }
+  },
+  {
+    "capture": "Live macOS NSHostingView running GameModel; frame sampling, not an iOS screen recording or FPS benchmark",
+    "duration": 5.583333333333333,
+    "events": [
+      {
+        "caption": "SPRINT · A REAL GAME AT MOVE 57",
+        "time": 0
+      },
+      {
+        "caption": "SWIPE LEFT  ←",
+        "time": 1.0833333333333333
+      },
+      {
+        "caption": "SWIPE UP  ↑",
+        "time": 2.0833333333333335
+      },
+      {
+        "caption": "SWIPE UP  ↑",
+        "time": 3.0833333333333335
+      },
+      {
+        "caption": "60 VALID MOVES · FINAL SCORE",
+        "time": 4.083333333333333
+      }
+    ],
+    "fps": 12,
+    "frames": 67,
+    "name": "09-sprint",
+    "video_codec": "H.264 / yuv420p",
+    "decoded_video_frames": 67,
+    "gif_source": "decoded delivered MP4",
+    "size": [
+      1000,
+      700
+    ],
+    "gif_frames": 65,
+    "gif_duration_ms": 5580,
+    "files": {
+      "09-sprint.mp4": {
+        "bytes": 112316,
+        "sha256": "3b58e2493eb65df6aff1c7ef8af87b6c94e77d8986ef5f8c499656c27bb7f8e4"
+      },
+      "09-sprint.gif": {
+        "bytes": 493234,
+        "sha256": "ae6e21dc96b7869a41b166f27ac7f7ab193fa94e967b62babdcd42de3153e764"
+      },
+      "09-sprint-poster.png": {
+        "bytes": 555538,
+        "sha256": "94b3db104851f9af42b131a58c34893c8d74d4f4e5224eb39727889c3e407a6b"
+      }
+    }
+  }
+]

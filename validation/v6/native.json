@@ -1,0 +1,39 @@
+{
+  "driver": "cocoa",
+  "reported_refresh": 60,
+  "desktop_refresh": [
+    60
+  ],
+  "vsync": true,
+  "window": [
+    1080,
+    820
+  ],
+  "present_intervals": {
+    "n": 480,
+    "mean_ms": 16.67,
+    "p95_ms": 17.72,
+    "max_ms": 21.7
+  },
+  "update_and_draw": {
+    "n": 480,
+    "mean_ms": 16.62,
+    "p95_ms": 17.66,
+    "max_ms": 21.66
+  },
+  "computation_without_flip": {
+    "n": 480,
+    "mean_ms": 5.58,
+    "p95_ms": 6.89,
+    "max_ms": 8.73
+  },
+  "frame_start_intervals": {
+    "n": 480,
+    "mean_ms": 16.67,
+    "p95_ms": 17.72,
+    "max_ms": 21.71
+  },
+  "moves": 36,
+  "late_presentations": 0,
+  "slow": []
+}

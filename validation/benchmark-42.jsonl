@@ -1,0 +1,23 @@
+{"seed": 42, "moves": 250, "score": 3584, "tile": 256, "seconds": 6.3}
+{"seed": 42, "moves": 500, "score": 9236, "tile": 1024, "seconds": 12.7}
+{"seed": 42, "moves": 750, "score": 12716, "tile": 1024, "seconds": 19.0}
+{"seed": 42, "moves": 1000, "score": 17704, "tile": 1024, "seconds": 25.4}
+{"seed": 42, "moves": 1250, "score": 25080, "tile": 2048, "seconds": 31.7}
+{"seed": 42, "moves": 1500, "score": 30200, "tile": 2048, "seconds": 38.0}
+{"seed": 42, "moves": 1750, "score": 34420, "tile": 2048, "seconds": 44.4}
+{"seed": 42, "moves": 2000, "score": 45664, "tile": 4096, "seconds": 50.7}
+{"seed": 42, "moves": 2250, "score": 50296, "tile": 4096, "seconds": 57.0}
+{"seed": 42, "moves": 2500, "score": 55436, "tile": 4096, "seconds": 63.3}
+{"seed": 42, "moves": 2750, "score": 59664, "tile": 4096, "seconds": 69.6}
+{"seed": 42, "moves": 3000, "score": 66932, "tile": 4096, "seconds": 76.0}
+{"seed": 42, "moves": 3250, "score": 71296, "tile": 4096, "seconds": 82.3}
+{"seed": 42, "moves": 3500, "score": 76472, "tile": 4096, "seconds": 88.6}
+{"seed": 42, "moves": 3750, "score": 96916, "tile": 8192, "seconds": 94.9}
+{"seed": 42, "moves": 4000, "score": 101068, "tile": 8192, "seconds": 101.2}
+{"seed": 42, "moves": 4250, "score": 106288, "tile": 8192, "seconds": 107.5}
+{"seed": 42, "moves": 4500, "score": 110412, "tile": 8192, "seconds": 113.9}
+{"seed": 42, "moves": 4750, "score": 117852, "tile": 8192, "seconds": 120.2}
+{"seed": 42, "moves": 5000, "score": 121972, "tile": 8192, "seconds": 126.5}
+{"seed": 42, "moves": 5250, "score": 126224, "tile": 8192, "seconds": 132.8}
+{"seed": 42, "moves": 5500, "score": 131832, "tile": 8192, "seconds": 139.1}
+{"seed": 42, "moves": 5628, "score": 133316, "tile": 8192, "seconds": 142.3, "budget": 0.025, "complete": true}

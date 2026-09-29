@@ -1,0 +1,12 @@
+{
+  "default_lobby": "classic",
+  "classic_tab_first": true,
+  "both_tabs_clickable": true,
+  "save_unchanged": true,
+  "source_hashes": {
+    "adventures.py": "fa3830cb48c4cef4bc2812fd7c2bc074045548007931541541780a4b5ab1b85e",
+    "README.md": "53788a308313d1c4455f6590c8571dc926898c2f060c6ea2bba8940c6badd7ea",
+    "测试报告.md": "0211a36364fa808f7a00348bf21c5bbbcb1bca22b076303abeb6f156aa283b31",
+    "validation/v11/render_check.py": "4bfb1b420f7fbdfd04063b3a5f7a669b453589ee398344fd1c17dcaf5d85d093"
+  }
+}

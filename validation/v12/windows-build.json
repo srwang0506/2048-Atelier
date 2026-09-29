@@ -1,0 +1,145 @@
+{
+  "python": "3.13.15",
+  "python_sha256": "d1f04d990aee1253d8569e8e5104e30fa9f5fa830899f14843448872d936a2cf",
+  "dependencies": [
+    {
+      "package": "pygame-ce",
+      "version": "2.5.8",
+      "file": "pygame_ce-2.5.8-cp313-cp313-win_amd64.whl",
+      "sha256": "f495b0eb7a5c54c59da58e964bc7f68073c3f43cf307729fd48309104a04c190",
+      "url": "https://files.pythonhosted.org/packages/c0/1b/da9186e5b88714c16fdb23bc4ba0bca4a75c21e3a5cf9607765773f68d22/pygame_ce-2.5.8-cp313-cp313-win_amd64.whl",
+      "requires": null,
+      "bytes": 9668342
+    },
+    {
+      "package": "numpy",
+      "version": "2.5.3",
+      "file": "numpy-2.5.3-cp313-cp313-win_amd64.whl",
+      "sha256": "71cad2b2a7451ab79d8f5e71b453485b6775963d5cf794179144a7463fe6e8ec",
+      "url": "https://files.pythonhosted.org/packages/f3/ec/100f2b1794ede74a9b3d7ec6b9736927f56713414c1dfe19ab6c383494bf/numpy-2.5.3-cp313-cp313-win_amd64.whl",
+      "requires": null,
+      "bytes": 12560965
+    },
+    {
+      "package": "numba",
+      "version": "0.67.0",
+      "file": "numba-0.67.0-cp313-cp313-win_amd64.whl",
+      "sha256": "b68ad5125fe245339cc8dcc036081fc1ea482c5063387b9612a76ccd83dc91cd",
+      "url": "https://files.pythonhosted.org/packages/0f/80/d48f0ba7442516ceb5a1585f0c81d3aa531bc96bfcabcd9f8f925768c426/numba-0.67.0-cp313-cp313-win_amd64.whl",
+      "requires": [
+        "llvmlite<0.50,>=0.49.0dev0",
+        "numpy<2.6,>=1.22"
+      ],
+      "bytes": 2815504
+    },
+    {
+      "package": "llvmlite",
+      "version": "0.49.0",
+      "file": "llvmlite-0.49.0-cp313-cp313-win_amd64.whl",
+      "sha256": "a1b414dc6b164738ec39dd8987cea73829057b7dd92fc6d91b52838385fc1dd2",
+      "url": "https://files.pythonhosted.org/packages/96/7f/9f5afcf6476b228d6b170408f377a0c4f91477fc1fc91f8141088b45bf46/llvmlite-0.49.0-cp313-cp313-win_amd64.whl",
+      "requires": null,
+      "bytes": 41865544
+    },
+    {
+      "package": "Pillow",
+      "version": "12.3.0",
+      "file": "pillow-12.3.0-cp313-cp313-win_amd64.whl",
+      "sha256": "1cca606cd25738df4ed873d5ad46bbdb3d83b5cbca291f6b4ff13a4df6b0bbe8",
+      "url": "https://files.pythonhosted.org/packages/a6/9b/7a58e61d62be561da3a356fe2384d4059a6345fc130e23ef1c36a5b81d24/pillow-12.3.0-cp313-cp313-win_amd64.whl",
+      "requires": [
+        "furo; extra == \"docs\"",
+        "olefile; extra == \"docs\"",
+        "sphinx>=8.2; extra == \"docs\"",
+        "sphinx-autobuild; extra == \"docs\"",
+        "sphinx-copybutton; extra == \"docs\"",
+        "sphinx-inline-tabs; extra == \"docs\"",
+        "sphinxext-opengraph; extra == \"docs\"",
+        "olefile; extra == \"fpx\"",
+        "olefile; extra == \"mic\"",
+        "arro3-compute; extra == \"test-arrow\"",
+        "arro3-core; extra == \"test-arrow\"",
+        "nanoarrow; extra == \"test-arrow\"",
+        "pyarrow; extra == \"test-arrow\"",
+        "coverage>=7.4.2; extra == \"tests\"",
+        "defusedxml; extra == \"tests\"",
+        "markdown2; extra == \"tests\"",
+        "olefile; extra == \"tests\"",
+        "packaging; extra == \"tests\"",
+        "pytest; extra == \"tests\"",
+        "pytest-cov; extra == \"tests\"",
+        "pytest-timeout; extra == \"tests\"",
+        "pytest-xdist; extra == \"tests\"",
+        "setuptools; extra == \"tests\"",
+        "trove-classifiers>=2024.10.12; extra == \"tests\"",
+        "defusedxml; extra == \"xmp\""
+      ],
+      "bytes": 7239691
+    },
+    {
+      "package": "distlib",
+      "version": "0.4.0",
+      "file": "distlib-0.4.0-py2.py3-none-any.whl",
+      "sha256": "9659f7d87e46584a30b5780e43ac7a2143098441670ff0a49d5f9034c54a6c16",
+      "url": "https://files.pythonhosted.org/packages/33/6b/e0547afaf41bf2c42e52430072fa5658766e3d65bd4b03a563d1b6336f57/distlib-0.4.0-py2.py3-none-any.whl",
+      "requires": null,
+      "bytes": 469047
+    }
+  ],
+  "pe_files": 135,
+  "architecture": "Windows x86-64",
+  "unresolved_imports": {},
+  "optional_unused_backends": {
+    "vcomp140.dll": [
+      "runtime/Lib/site-packages/numba/np/ufunc/omppool.cp313-win_amd64.pyd"
+    ],
+    "tbb12.dll": [
+      "runtime/Lib/site-packages/numba/np/ufunc/tbbpool.cp313-win_amd64.pyd"
+    ]
+  },
+  "msvcp_source": "runtime/Lib/site-packages/numpy.libs/msvcp140-a4c2229bdc2a2a630acdc095b4d86008.dll",
+  "msvcp_sha256": "a4c2229bdc2a2a630acdc095b4d86008e5c3e3bc7773174354f3da4f5beb9cde",
+  "msvcp_symbols_verified": 4,
+  "system_dlls": [
+    "advapi32.dll",
+    "api-ms-win-core-path-l1-1-0.dll",
+    "api-ms-win-crt-conio-l1-1-0.dll",
+    "api-ms-win-crt-convert-l1-1-0.dll",
+    "api-ms-win-crt-environment-l1-1-0.dll",
+    "api-ms-win-crt-filesystem-l1-1-0.dll",
+    "api-ms-win-crt-heap-l1-1-0.dll",
+    "api-ms-win-crt-locale-l1-1-0.dll",
+    "api-ms-win-crt-math-l1-1-0.dll",
+    "api-ms-win-crt-private-l1-1-0.dll",
+    "api-ms-win-crt-process-l1-1-0.dll",
+    "api-ms-win-crt-runtime-l1-1-0.dll",
+    "api-ms-win-crt-stdio-l1-1-0.dll",
+    "api-ms-win-crt-string-l1-1-0.dll",
+    "api-ms-win-crt-time-l1-1-0.dll",
+    "api-ms-win-crt-utility-l1-1-0.dll",
+    "bcrypt.dll",
+    "crypt32.dll",
+    "gdi32.dll",
+    "imm32.dll",
+    "iphlpapi.dll",
+    "kernel32.dll",
+    "mf.dll",
+    "mfplat.dll",
+    "mfreadwrite.dll",
+    "msvcrt.dll",
+    "ntdll.dll",
+    "ole32.dll",
+    "oleaut32.dll",
+    "propsys.dll",
+    "psapi.dll",
+    "rpcrt4.dll",
+    "setupapi.dll",
+    "shell32.dll",
+    "shlwapi.dll",
+    "user32.dll",
+    "version.dll",
+    "winmm.dll",
+    "ws2_32.dll"
+  ],
+  "windows_execution_tested": false
+}

@@ -1,0 +1,30 @@
+{
+  "updated_files": 22,
+  "previous_game_closed": [],
+  "save_unchanged": true,
+  "backup": "/Volumes/sirui/2048-Atelier/backups/v7-source",
+  "source_hashes": {
+    "air_ui.py": "82c5099ad38b2c9af1529f923ce555bb8c68bce6388004026c797d2a992a1dd2",
+    "ui_core.py": "9f98380a966b6c870040586423d74a251c1f02625c6898860f634137b45d6f7b",
+    "interface_base.py": "977ea01f73be7521977d5f224f56cb6c864c204507f3f0670f1fde3d92b8e584",
+    "motion.py": "814b68dc87df0f865328b8d927c419246a63c8698ef35df5310b804606c99c3e",
+    "engine.py": "bfe79d3855b08d491fa2e86c3eda189f5c789e515240efbdbd95e109c6f34d2e",
+    "ai.py": "6b8d9823c1080dad84b17318b7ec5d86f1bceaade72c8c6fdfa6b568a1b2b236",
+    "search_native.py": "197a3d1fac75972fb34e3a40006d60b58f02fe0dfd3a0da1873eff4fdc84df6f",
+    "features.py": "5b9883dd2699d5323895c7c56725c3d2cb67e1b9e2a0feb40c9ca43558a43a94",
+    "modes.py": "b6a8e2caed1b76cb5dc2e4f5fd7b8d9055eb4abd73a28a179c9be0df53f75e15",
+    "insight.py": "33aeaf369a8b268fc49307d2985366de72001bbd894cb86d87a1692821d4b6bd",
+    "README.md": "d8ba0f9291ade11bdd69c1efe38ef3ebeb7fdf5a6438d84dcee11a3bf327fe91",
+    "\u6d4b\u8bd5\u62a5\u544a.md": "d4e4938de9d4ac404c5a6f2bd4ea862b1244bf2f9acceab9dcb8d4d5933fd5d9",
+    "tests/test_interactions.py": "213ef15001c2ef1a3ace92eed58a49903c387509b3cb3188db8888cfb5181964",
+    "tests/test_intelligence.py": "080f181ba20d7206dce613aa797d9c597c3b6ac41722af3873eeed4c5235b0a7",
+    "tests/test_features_ui.py": "1208b2d50244e911a05ed891e86ef4f12cf281019fb0a7da3070f5a3d8cec7a1",
+    "tests/test_pacing.py": "4ec0544f6be0e36e4315a5761e24de38a0b48f18d4df454e5b59924a1633da73",
+    "validation/v7/\u7b2c\u4e03\u7248\u6d4b\u8bd5\u62a5\u544a.md": "ca6543d2dcaeea74f95633e7754b9b76b75a96e9abac51d3c112959e4b4d8e4d",
+    "validation/v8/search.json": "a5589dd35f172589481a224a7726c3009d817e32eb253b688d7f069a04bf98d1",
+    "validation/v8/native_profile.py": "a48ddea28c98d26acabe0343856ec4e916b489d81c229f5bab618d7cc9617036",
+    "validation/v8/native-before-pacing.json": "9447925badf58a8302574295beae13b2ba2439e14adcea9fef10f29d592cb4d2",
+    "validation/v8/native.json": "b5fa1b66e3c44cc4f79f29fc2b85c6ab8147bb19ed6bbbbb049b22844d1d444e",
+    "validation/v8/tests.log": "51edc80a88190373822c87e2da1caa34e73bcc5f8ed005b6b9158d7a4ccb69d5"
+  }
+}

@@ -1,0 +1,1015 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="LUMINA 2048 使用手册"><title>LUMINA · 使用手册</title><link rel="stylesheet" href="../reader.css"></head><body><div class="shell"><aside class="sidebar"><a class="brand" href="../index.html">LUMINA</a><div class="edition">原生版 1.0.1 · 中文</div><nav class="languages" aria-label="Language"><a class="selected" data-language="../zh-CN/index.html" href="../zh-CN/index.html" lang="zh-CN">简体中文</a><a class="" data-language="../en/index.html" href="../en/index.html" lang="en">English</a><a class="" data-language="../ja/index.html" href="../ja/index.html" lang="ja">日本語</a></nav><label><span class="print-only">搜索规则、按钮、问题…</span><input id="search" class="searchbox" type="search" placeholder="搜索规则、按钮、问题…" aria-label="搜索规则、按钮、问题…"></label><div class="nav-title">目录</div><nav class="chapter-list" aria-label="目录"><a class="chapter-link" href="#01-start"><b>01</b><span>开始游玩与完整操作</span></a><a class="chapter-link" href="#02-rules"><b>02</b><span>六种玩法的完整规则</span></a><a class="chapter-link" href="#03-expedition"><b>03</b><span>能力远征：关卡与能力</span></a><a class="chapter-link" href="#04-ai-data"><b>04</b><span>智能助手、记录与存档</span></a><a class="chapter-link" href="#05-faq"><b>05</b><span>常见问题与问题反馈</span></a><a class="chapter-link" href="#06-build"><b>06</b><span>安装、构建与开发</span></a><a class="chapter-link" href="#07-gallery"><b>07</b><span>九段动图教程</span></a><a class="chapter-link" href="#08-solutions"><b>08</b><span>谜题与残局解答（含剧透）</span></a><a class="chapter-link" href="#09-release"><b>09</b><span>版本与验证范围</span></a></nav><div class="side-footer"><button id="print" class="print-button">打印 / 保存 PDF</button><p>当前 App 界面为中文；文档支持三种语言。</p><p>2026.09.29 · OFFLINE EDITION</p></div></aside><main class="main"><div class="topline"><span class="doc-title">使用手册</span><span>九章说明 · 九段演示</span></div><div id="results" class="search-results" hidden></div><p class="lead-note">当前 App 界面为中文；文档支持三种语言。</p><article data-chapter="01-start" aria-labelledby="01-start"><h1 id="01-start">开始游玩与完整操作</h1>
+<p>适用：LUMINA 原生版 1.0.1，iPhone / iPad 工程。文档更新：2026-09-29。App 当前按钮为中文；英文和日文手册提供按钮对照。文档语言与 App 界面语言是两件事，目前没有 App 内语言切换器。</p>
+<h2 id="01-start-s1">第一次打开</h2>
+<ol>
+<li>如果拿到的是源码包，先看<a href="#06-build">安装与构建</a>。源码 ZIP 不能直接在 iPhone 上安装；当前交付没有已签名 IPA 或 TestFlight 链接。</li>
+<li>启动后默认进入<strong>经典 2048</strong>。如果已有经典存档，会继续该局。其他模式仍保留，但启动时不会自动返回上次选中的其他模式。</li>
+<li>在棋盘区域向左、上、右或下滑动。一次滑动让整盘方块朝该方向移动，不需要抓住某一块拖动。</li>
+<li>相同数字相撞会合成一个更大的数字。观察“本局得分”和“步数”。</li>
+<li>想换玩法，点顶部的模式名称与下拉箭头。经典是列表第一项。</li>
+<li>想停下来，直接离开 App；程序会请求保存。换设备或卸载前，请主动导出备份。</li>
+</ol>
+<h2 id="01-start-s2">屏幕上每一部分的含义</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>位置 / 控件</th>
+<th>用途</th>
+<th>需要知道的细节</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>顶部模式名称</td>
+<td>打开六种玩法列表</td>
+<td>换模式会保存当前局并停止 AI</td>
+</tr>
+<tr>
+<td>右上角滑杆图标</td>
+<td>设置</td>
+<td>外观、声音、触感、动态效果、AI、记录、备份</td>
+</tr>
+<tr>
+<td>本局得分</td>
+<td>当前局合并所得总分</td>
+<td>不是最大方块的数字；撤销会恢复分数</td>
+</tr>
+<tr>
+<td>手动最高 / 辅助最高</td>
+<td>当前模式对应类别的历史最高分</td>
+<td>最高纪录不随撤销下降</td>
+</tr>
+<tr>
+<td>步数 / 剩余步数</td>
+<td>已完成的有效移动或该模式剩余次数</td>
+<td>无效滑动不扣步数；远征主动能力不扣移动步数</td>
+</tr>
+<tr>
+<td>棋盘</td>
+<td>四向滑动与交换时选格</td>
+<td>滑动应从棋盘内开始，避免与页面滚动混淆</td>
+</tr>
+<tr>
+<td>回转箭头</td>
+<td>撤销一步</td>
+<td>返回上一条操作记录，最多保留 100 条撤销 / 重做历史</td>
+</tr>
+<tr>
+<td>提示 / 灯泡</td>
+<td>搜索下一步</td>
+<td>仅请求提示也会立即标记辅助局</td>
+</tr>
+<tr>
+<td>自动玩 / 暂停</td>
+<td>开始或停止自动游玩</td>
+<td>手动滑动也会停止 AI</td>
+</tr>
+<tr>
+<td>三点“更多”</td>
+<td>重做、重新开始、模式列表等</td>
+<td>谜题模式增加“选择谜题”；残局增加“残局档案”“对照复盘”</td>
+</tr>
+<tr>
+<td>棋盘下方说明</td>
+<td>目标、AI 状态、提示卡片、关卡结果</td>
+<td>小屏可上下滚动查看</td>
+</tr>
+<tr>
+<td>底部手动局 / 辅助局</td>
+<td>当前局记录类别</td>
+<td>开过辅助后，撤销、重做或手动接管都不会恢复手动类别</td>
+</tr>
+</tbody></table></div>
+<h2 id="01-start-s3">手势、键盘与连续输入</h2>
+<ul>
+<li>在棋盘内做清晰的水平或垂直滑动。斜向滑动按位移更大的轴处理。</li>
+<li>外接键盘支持方向键和 WASD：A 左、W 上、D 右、S 下。键盘其他快捷键没有实现，不应假定 Cmd+Z 能撤销。</li>
+<li>动画期间最多排队两次滑动；极快连续输入不会无限积压。要精确控制，可等这一步落定再滑。</li>
+<li>打开页面、出现提示 / 重开确认或进入后台时，排队的动作会被清空，AI 停止。返回后手动操作，或再次点“自动玩”。</li>
+<li>交换能力先点“交换”，再依次点两枚不同数字且非空的方块；再次点第一枚可取消该枚选择。点“取消”退出交换。</li>
+</ul>
+<h2 id="01-start-s4">撤销、重做与重新开始</h2>
+<p><strong>撤销</strong>恢复棋盘、随机数状态、得分、移动步数和远征状态。随机数状态也被恢复，因此撤销后重复相同动作不会重新抽一个更有利的落子。远征的凝时与交换也各占一条可撤销操作记录。</p>
+<p><strong>重做</strong>在三点菜单中。撤销后如果执行了新的有效操作，旧的重做分支会被清空。远征选择初始能力或关间奖励后会清空历史，不能撤销到上一关重新选奖励。</p>
+<p><strong>重新开始</strong>有确认提示，只替换当前模式的当前局。经典、冲刺和远征会重新生成随机开局；谜题与残局重置当前题；每日重置当前打开日期的相同起点。已有最高分和谜题最佳星级保留。要玩新一天的每日局，请从模式列表重新选择“每日同局”。</p>
+<h2 id="01-start-s5">iPhone 与 iPad 布局</h2>
+<p>窄屏把标题、得分、棋盘、操作和说明纵向排列；宽屏把棋盘放在左侧，信息放右侧。较矮的横屏会滚动显示侧栏内容。iPad 可按可用窗口宽度调整布局；这不是同时玩两局。旋转或分屏调整的设备行为仍需要真机验收。</p>
+<h2 id="01-start-s6">设置建议</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>设置</th>
+<th>默认 / 可选项</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>外观</td>
+<td>跟随系统；可选浅色、深色</td>
+<td>改变界面配色</td>
+</tr>
+<tr>
+<td>声音</td>
+<td>默认开启</td>
+<td>移动与合并反馈，受系统音量 / 音频环境影响</td>
+</tr>
+<tr>
+<td>轻触反馈</td>
+<td>默认开启</td>
+<td>iPhone 等具备相应硬件的设备提供触感；部分 iPad 不支持</td>
+</tr>
+<tr>
+<td>减少动态效果</td>
+<td>默认关闭</td>
+<td>缩减棋子动效；系统的减少动态效果也会生效</td>
+</tr>
+<tr>
+<td>思考强度</td>
+<td>灵敏；可选深度思考</td>
+<td>更长的本地搜索预算，不保证固定胜率</td>
+</tr>
+<tr>
+<td>自动游玩节奏</td>
+<td>默认 0.42 秒，可调 0.20–1.50 秒</td>
+<td>这是节奏设置，实际每步还受搜索和动画耗时影响</td>
+</tr>
+</tbody></table></div>
+<h2 id="01-start-s7">无障碍</h2>
+<p>棋盘提供行、列和数值的语音标签及四向移动的无障碍动作；空格也有标签。交换时格子可作为可选控件。减少动态效果可以在 App 设置中开启。当前语音标签是中文。完整 VoiceOver 流程、动态字体大字号和硬件键盘焦点尚未做真机验收；如有问题，请按<a href="#05-faq">问题反馈格式</a>记录设备与具体操作。</p>
+<p>下一章：<a href="#02-rules">六种玩法的完整规则</a>。看实际操作：<a href="#07-gallery">动图教程</a>。</p>
+<div class="chapter-nav"><span></span><a href="#02-rules">六种玩法的完整规则 →</a></div></article>
+<article data-chapter="02-rules" aria-labelledby="02-rules"><h1 id="02-rules">游戏规则：从合并到六种玩法</h1>
+<h2 id="02-rules-s1">所有模式共用的棋盘规则</h2>
+<p>棋盘为 4 × 4，共 16 格。每次选择一个方向，所有方块都向该方向滑到不能再滑的位置；相邻的相同数字成对合并。<strong>本次刚合成的方块不会在同一步再次合并。</strong></p>
+<p>以下示例只展示一行向左移动后的合并结果，尚未加入新方块：</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>移动前</th>
+<th>向左后</th>
+<th>合并基础分</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>2 · 2 · 0 · 0</td>
+<td>4 · 0 · 0 · 0</td>
+<td>4</td>
+</tr>
+<tr>
+<td>2 · 2 · 2 · 0</td>
+<td>4 · 2 · 0 · 0</td>
+<td>4</td>
+</tr>
+<tr>
+<td>2 · 2 · 4 · 0</td>
+<td>4 · 4 · 0 · 0</td>
+<td>4，不会直接变成 8</td>
+</tr>
+<tr>
+<td>2 · 2 · 2 · 2</td>
+<td>4 · 4 · 0 · 0</td>
+<td>8</td>
+</tr>
+<tr>
+<td>4 · 4 · 8 · 8</td>
+<td>8 · 16 · 0 · 0</td>
+<td>24</td>
+</tr>
+<tr>
+<td>2 · 4 · 8 · 16</td>
+<td>不变</td>
+<td>0，整盘也不变时属于无效移动</td>
+</tr>
+</tbody></table></div>
+<p>一次移动只要整盘发生变化，就是有效移动：增加一步，并通常在一个空格生成新方块。标准生成概率为 2 占 90%、4 占 10%；远征能力可以改变概率或取消落子。只移动位置而没有合并也会生成方块、消耗一步，但得分为 0。无效移动不计步、不落子，也不推进随机状态。</p>
+<p>分数是每组合并结果数值之和，远征再应用能力加成。最大方块是棋盘里最大的一枚，和总分是不同指标。棋盘填满且横竖方向都没有相邻相同数字时，通常无路可走；远征还会检查是否有可用主动能力。</p>
+<h2 id="02-rules-s2">六种模式速查</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>模式</th>
+<th>目标</th>
+<th>步数限制</th>
+<th>结束 / 过关条件</th>
+<th>重开</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>经典 2048</td>
+<td>合成更大数字、提高分数</td>
+<td>无</td>
+<td>无合法移动；达到 2048 后继续</td>
+<td>新随机起点</td>
+</tr>
+<tr>
+<td>能力远征</td>
+<td>六关分别达成关卡得分</td>
+<td>每关独立</td>
+<td>达标过关；最终关完成即胜利</td>
+<td>新远征与能力进度</td>
+</tr>
+<tr>
+<td>败局重生</td>
+<td>在限制内腾出规定空格</td>
+<td>按挑战，精选题为 6 步</td>
+<td>落子完成后达到空格目标即胜利</td>
+<td>同一挑战起点</td>
+</tr>
+<tr>
+<td>每日同局</td>
+<td>当地日期对应的相同起点</td>
+<td>无</td>
+<td>无合法移动</td>
+<td>当前日期的同一初始局面</td>
+</tr>
+<tr>
+<td>谜题剧场</td>
+<td>在限制内合成指定数字</td>
+<td>每题 3–6 步</td>
+<td>最大数字达到目标即胜利</td>
+<td>同一题目</td>
+</tr>
+<tr>
+<td>六十步冲刺</td>
+<td>60 次有效移动内尽量高分</td>
+<td>60 步</td>
+<td>用满 60 步或提前无路可走</td>
+<td>新随机起点</td>
+</tr>
+</tbody></table></div>
+<h2 id="02-rules-s3">经典 2048</h2>
+<p>经典是默认玩法。开局生成两枚方块。合成 2048 不会强制结束，也不弹出必须停下的胜利流程，可以继续合成 4096 或更高数字。结束后可撤回一步，或在符合条件时提取残局挑战。</p>
+<p>入门练习：选定一个角落放最大数字；让相邻行列尽量保持从大到小；移动前先判断是否会把最大数字带离角落；留出空格比每一步都追求眼前分数更有余地。这些是策略建议，不是强制规则，也不保证每一局都能获胜。</p>
+<h2 id="02-rules-s4">每日同局</h2>
+<p>以设备<strong>本地日期</strong>的 <code>YYYY-MM-DD</code> 生成固定随机种子。相同日期、相同规则、相同动作序列会重现同样的局面；走不同路线，落子位置会随可用空格变化。它不是联网比赛，没有全球排行榜、倒计时服务器或强制统一时区。</p>
+<p>打开的昨日局不会在午夜强制清空。想开始今天的棋盘，从模式列表选择每日同局；仍在昨日局时点重新开始，会重置昨日局。保存最近七个日期的每日进度。手动 / 辅助最高分按整个每日模式累计，并不是每个日期一个独立榜单。</p>
+<h2 id="02-rules-s5">六十步冲刺</h2>
+<p>只计算有效的四向移动，无效滑动不扣次数。到第 60 步后计算结束；如果更早无路可走则提前结束。它不是 60 秒倒计时，可以停下来思考。撤销会恢复剩余步数，最高纪录不会随之下降。</p>
+<p>最后一步只剩即时合并收益，没有第 61 步可供布局。AI 已按这个边界处理。还有剩余步数时，需要在当步得分与后续机会之间取舍。仅仅用满 60 步、但棋盘还可移动的结束局，不符合“真实无路可走”的残局提取条件。</p>
+<h2 id="02-rules-s6">谜题剧场</h2>
+<p>十二道固定棋盘，目标从 64 到 2048。通过“更多 → 选择谜题”任选题目；没有逐关解锁门槛。每题有最大允许步数和标准步数，落子是确定的，重复相同操作会重现结果。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>题号</th>
+<th>中文题名</th>
+<th>合成目标</th>
+<th>标准步数</th>
+<th>最多步数</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>01</td>
+<td>借一步</td>
+<td>64</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr>
+<td>02</td>
+<td>转身</td>
+<td>64</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr>
+<td>03</td>
+<td>留白</td>
+<td>128</td>
+<td>3</td>
+<td>4</td>
+</tr>
+<tr>
+<td>04</td>
+<td>折返</td>
+<td>128</td>
+<td>3</td>
+<td>4</td>
+</tr>
+<tr>
+<td>05</td>
+<td>暗流</td>
+<td>256</td>
+<td>3</td>
+<td>4</td>
+</tr>
+<tr>
+<td>06</td>
+<td>挪一寸</td>
+<td>256</td>
+<td>4</td>
+<td>5</td>
+</tr>
+<tr>
+<td>07</td>
+<td>连锁</td>
+<td>512</td>
+<td>4</td>
+<td>5</td>
+</tr>
+<tr>
+<td>08</td>
+<td>破局</td>
+<td>512</td>
+<td>4</td>
+<td>5</td>
+</tr>
+<tr>
+<td>09</td>
+<td>回声</td>
+<td>1024</td>
+<td>4</td>
+<td>5</td>
+</tr>
+<tr>
+<td>10</td>
+<td>逆风</td>
+<td>1024</td>
+<td>5</td>
+<td>6</td>
+</tr>
+<tr>
+<td>11</td>
+<td>归位</td>
+<td>2048</td>
+<td>5</td>
+<td>6</td>
+</tr>
+<tr>
+<td>12</td>
+<td>最后一线</td>
+<td>2048</td>
+<td>5</td>
+<td>6</td>
+</tr>
+</tbody></table></div>
+<p>星级按本次完成方式确定，历史只保留更高星级：</p>
+<ul>
+<li>三星：未使用辅助、没有撤销、在标准步数以内完成。</li>
+<li>两星：未使用辅助并在限制内完成，但超过标准步数，或使用过撤销。</li>
+<li>一星：使用提示 / 自动游玩等辅助后完成。</li>
+</ul>
+<p>重做不会抹掉“曾撤销”的次数。最后一个允许步数正好达成目标仍判胜利。选择另一题会替换谜题模式的当前进行中棋盘，已取得的各题星级仍保留；不是同时保存十二局进行中状态。<a href="#08-solutions">解答章</a>另列具体路线。</p>
+<h2 id="02-rules-s7">败局重生</h2>
+<p>这里的目标是<strong>腾出空格</strong>，不是合成 2048。达标检查发生在滑动、合并及新方块落下之后。例如合并后有三个空格、随即生成一枚新方块，最后只剩两个空格，就还没有达到“腾出三个空位”的目标。</p>
+<p>三道精选残局随 App 提供，均要求六步内腾出三个空格：“一线生机”“腾挪之间”“逆转时刻”。进入残局后，通过“更多 → 残局档案”选择。可撤销、重试、请求提示或自动解题。</p>
+<p>生成自己的残局：</p>
+<ol>
+<li>在经典、每日或冲刺中走到棋盘真正无路可走。</li>
+<li>在结果区点“寻找这局的另一种结局”。</li>
+<li>程序检查最后十步中的候选起点，寻找六步内腾出三个空位的可验证路线。候选起点最多只有一个空位。</li>
+<li>找到后点“试着改写这局”，进入独立挑战。原模式的原局保留。</li>
+<li>如果提示未找到，表示此次范围 / 时间限制内没有确认符合条件的转机；不代表数学上证明所有更早局面都无解。</li>
+</ol>
+<p>个人残局最多保存六条；新增时会清理较旧且未被当前挑战使用的档案。精选残局不占这六条。只有残局具备双路线逐步复盘，并不是任意经典长局都能播放完整录像。</p>
+<p>“对照复盘”可切换原来的路线和转机路线，用上一步 / 下一步逐帧看棋盘。切换路线回到第 0 步。<strong>在过关前打开复盘就会标记辅助局</strong>，即使只是想看原路线；因为复盘默认展示已验证解法。过关后查看不改变已经完成的本局类别。</p>
+<p>远征的完整数值与能力组合见<a href="#03-expedition">能力远征手册</a>。</p>
+<div class="chapter-nav"><a href="#01-start">← 开始游玩与完整操作</a><a href="#03-expedition">能力远征：关卡与能力 →</a></div></article>
+<article data-chapter="03-expedition" aria-labelledby="03-expedition"><h1 id="03-expedition">能力远征：关卡、能量与九种能力</h1>
+<h2 id="03-expedition-s1">一次完整远征</h2>
+<p>进入远征后先三选一：连击引擎、蓄能核心、豪赌协议。选好后开始第一关。每关要求在限定有效移动次数内获得该关目标分数；顶部本局得分是累计值，关卡进度条显示的是<strong>当前分数减去进入该关时分数</strong>。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>关卡</th>
+<th>名称</th>
+<th>本关目标分</th>
+<th>基础移动次数</th>
+<th>从容节拍 I / II 后</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>启程</td>
+<td>100</td>
+<td>26</td>
+<td>30 / 34</td>
+</tr>
+<tr>
+<td>2</td>
+<td>蓄势</td>
+<td>260</td>
+<td>34</td>
+<td>38 / 42</td>
+</tr>
+<tr>
+<td>3</td>
+<td>回响</td>
+<td>520</td>
+<td>42</td>
+<td>46 / 50</td>
+</tr>
+<tr>
+<td>4</td>
+<td>临界</td>
+<td>900</td>
+<td>46</td>
+<td>50 / 54</td>
+</tr>
+<tr>
+<td>5</td>
+<td>跃迁</td>
+<td>1400</td>
+<td>52</td>
+<td>56 / 60</td>
+</tr>
+<tr>
+<td>6</td>
+<td>终章</td>
+<td>2200</td>
+<td>60</td>
+<td>64 / 68</td>
+</tr>
+</tbody></table></div>
+<p>前五关达标后暂停，出现新的三选一奖励。选择新能力或把已有能力升到 II；满级能力不再被提供。奖励后进入下一关，保留棋盘、累计得分、已选能力与能量；如果棋盘有两枚以上数字，移除一枚最小数字，给下一关腾出空间。最小值并列时取棋盘从左上到右下的第一枚。</p>
+<p>关间不结转未使用的移动次数，也不把上一关超出目标的分数算入下一关进度。连击、凝时剩余次数与冷却在选奖励后归零，历史撤销 / 重做也清空。最后一关达标即赢得整段远征。最后一步达标优先判过关；否则移动次数耗尽，或棋盘不能动且无主动能力可用时失败。</p>
+<h2 id="03-expedition-s2">能量与主动能力</h2>
+<p>每合并一组方块获得 1 点能量，能量最多 12。蓄能核心提高每组收益。纯位移无合并不产能量。能量只在远征内存在。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>主动能力</th>
+<th>基础成本</th>
+<th>操作</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>凝时</td>
+<td>5 点</td>
+<td>点“凝时 · 5”</td>
+<td>接下来两次有效移动不生成新方块；立即设置六步冷却</td>
+</tr>
+<tr>
+<td>交换</td>
+<td>6 点</td>
+<td>点交换，依次点两枚不同数值的非空方块</td>
+<td>交换两者位置，不合并、不生成新方块</td>
+</tr>
+</tbody></table></div>
+<p>两种能力<strong>都不扣移动步数</strong>，不直接得分，但各自会生成撤销记录。交换不能选空格或两枚相同数字。能量不足时按钮不可用。凝时要求尚未处于凝时、冷却为 0 且棋盘仍可移动；它不能直接解救一张已经完全卡死的棋盘，交换有时可以。</p>
+<p>冷却和凝时剩余次数只随有效移动递减，等待、无效滑动、使用交换不会推进。凝时期间若某步也触发空间回流，该步仍会消耗一次凝时次数；不是把次数留到下一步。每次换关会重置凝时与冷却。</p>
+<h2 id="03-expedition-s3">九种能力的精确效果</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>能力</th>
+<th>I 级</th>
+<th>II 级</th>
+<th>生效条件</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>连击引擎</td>
+<td>第二次连续合并起，每层 +25%</td>
+<td>每层 +40%</td>
+<td>最多四层加成；有一次有效移动未合并就中断</td>
+</tr>
+<tr>
+<td>蓄能核心</td>
+<td>每组合并额外 +1 能量</td>
+<td>每组额外 +2</td>
+<td>连同基础值，每组共 2 / 3 点，仍受 12 上限限制</td>
+</tr>
+<tr>
+<td>豪赌协议</td>
+<td>合并总得分 ×2；新方块为 4 的概率 30%</td>
+<td>×2.5；4 的概率 40%</td>
+<td>更高分伴随更密集的大数字落子</td>
+</tr>
+<tr>
+<td>角落增幅</td>
+<td>角落合并结果的数值额外 +50%</td>
+<td>额外 +100%</td>
+<td>看合并后的落点是否为四角</td>
+</tr>
+<tr>
+<td>共鸣回路</td>
+<td>同一步至少两组合并，基础分额外 +50%</td>
+<td>额外 +100%</td>
+<td>三组、四组也只触发一次该比例</td>
+</tr>
+<tr>
+<td>空间回流</td>
+<td>同一步至少三组合并，不落子</td>
+<td>至少两组合并，不落子</td>
+<td>是自动被动效果，不消耗能量</td>
+</tr>
+<tr>
+<td>从容节拍</td>
+<td>每关 +4 步</td>
+<td>每关 +8 步</td>
+<td>当前关立即按等级获得总加成；II 是总 +8，不是额外再 +8</td>
+</tr>
+<tr>
+<td>折跃透镜</td>
+<td>交换成本降到 4</td>
+<td>降到 3</td>
+<td>凝时仍为 5 点</td>
+</tr>
+<tr>
+<td>凝时晶体</td>
+<td>凝时持续三次有效移动</td>
+<td>持续四次</td>
+<td>冷却仍为六次有效移动</td>
+</tr>
+</tbody></table></div>
+<h2 id="03-expedition-s4">连击与得分怎么算</h2>
+<p>连击是连续的“有合并的有效移动”，不是同一步合并了多少组。无效滑动不打断；纯位移的有效移动会打断。主动能力不推进 / 打断连击。</p>
+<p>设基础合并分为 G，角落奖励为 C，共鸣奖励为 E：</p>
+<p><code>本步得分 = (G + C + E) × 连击倍率 × 豪赌倍率</code></p>
+<p>最后四舍六入五取偶到整数，即正好 <code>.5</code> 时取最近的偶数。举例：基础合并分 24，其中角落生成 8，有两组合并；持有角落 I、共鸣 I、连击 I 且处于第二次连续合并、豪赌 I，则本步为 <code>(24 + 4 + 12) × 1.25 × 2 = 100</code> 分。</p>
+<p>连击 I 从连续合并第 1–5 次的倍率依次为 1、1.25、1.50、1.75、2；以后仍为 2。连击 II 为 1、1.40、1.80、2.20、2.60，以后仍为 2.60。</p>
+<h2 id="03-expedition-s5">三种练习思路</h2>
+<p><strong>能量路线</strong>：蓄能核心配折跃透镜，增加可以交换整理棋盘的机会。注意能量接近 12 时继续合并可能溢出，适时使用能力。</p>
+<p><strong>多组合并路线</strong>：共鸣回路配空间回流，计划一步合并两组以上，同时得分和减轻空间压力。不要为了触发能力做破坏布局的无效准备。</p>
+<p><strong>倍率路线</strong>：连击引擎配豪赌协议，可更快接近关卡目标，但更高的 4 概率和维持连击的需求会增加规划难度。不要把“豪赌”误认为免费翻倍。</p>
+<p>以上是练习方向；每次奖励只从当前三项选一，不保证恰好抽到理想组合。AI 可在局内使用能力，但不会替你选关间奖励。录制示例见<a href="#07-gallery">远征动图</a>。</p>
+<div class="chapter-nav"><a href="#02-rules">← 六种玩法的完整规则</a><a href="#04-ai-data">智能助手、记录与存档 →</a></div></article>
+<article data-chapter="04-ai-data" aria-labelledby="04-ai-data"><h1 id="04-ai-data">智能助手、记录与存档</h1>
+<h2 id="04-ai-data-s1">提示与自动游玩的区别</h2>
+<p>点“提示”只计算建议，不自动执行。提示卡显示方向或能力，点“走这一步”才执行；也可自行滑动。点“自动玩”则连续计算并执行，按钮变成“暂停”。手动滑动、撤销、重做、换模式、打开设置、弹窗、切后台或换关选能力都会停止自动游玩。关闭菜单后不会自动恢复，需再次点按钮。</p>
+<p><strong>请求提示本身就将当前局标记为辅助局</strong>，即使没有按建议行动；开启自动游玩也一样。残局过关前打开对照复盘也会标记。关闭 AI、撤销、导出再导入都不会把这一局变回手动局。重新开始新的一局才重新按未辅助状态计。</p>
+<h2 id="04-ai-data-s2">算法实际做什么</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>模式</th>
+<th>实现</th>
+<th>输出如何理解</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>经典、每日</td>
+<td>Expectimax 概率搜索</td>
+<td>比较移动与随机落子后的后续局面，倾向空格、可合并数字、平顺排列和大数字靠角</td>
+</tr>
+<tr>
+<td>冲刺</td>
+<td>带剩余移动范围的概率搜索</td>
+<td>不搜索超出剩余步数的假想机会；最后一步以即时分数比较</td>
+</tr>
+<tr>
+<td>远征</td>
+<td>概率搜索 + 能力收益处理</td>
+<td>考虑能力的得分和落子影响；以启发式选择交换 / 凝时；不是所有能力组合的全局穷举</td>
+</tr>
+<tr>
+<td>谜题、残局</td>
+<td>带完整随机状态的广度优先搜索</td>
+<td>按由短到长的路线搜索，找到时给出可重放的最短解；有搜索时间上限</td>
+</tr>
+</tbody></table></div>
+<p>经典搜索使用行表预计算、重复状态缓存、逐层加深和极低概率分支截断。界面中的“优先 / 备选”是搜索排序，<strong>不是获胜概率或保证得分</strong>。普通模式不读取未来随机序列来作弊；谜题 / 残局为了可复现解法使用它们的确定随机状态。</p>
+<p>“灵敏”的通常搜索预算为约 0.14 秒，“深度思考”为约 0.55 秒；这是算法预算而非每步端到端延迟承诺。谜题 / 残局会至少分配约 1 秒搜索预算。更深搜索可能增加耗电与发热，也不保证永远选到最优解。超时与确认搜索范围内无解是不同结果；出现“搜索未完成”可重试或撤销。</p>
+<h2 id="04-ai-data-s3">如何看 AI 演示</h2>
+<p>先在经典点提示，比较它给的方向与自己的想法，再点走这一步。开启自动玩观察它如何保留空位。把节奏调慢便于学习。远征到达奖励选择时会停下来；选择后重新点自动玩。追求手动纪录时请从一开始就不使用辅助。</p>
+<p>已有固定种子的主机检查：经典 3,200 步、69,592 分、最大 4096（1.0 历史检查）；1.0.1 远征六关通过，138 次动作、6,422 分。这只是具体一局的结果，不是设备跑分、平均胜率或高分承诺。</p>
+<h2 id="04-ai-data-s4">记录与星级</h2>
+<p>每种模式分别保存手动和辅助最高分；日常局的纪录按整个每日模式累计。当前局曾经取得的最高分不会因为撤销而被抹去。谜题星级每题取历史最大值，后续一星通关不会覆盖已有三星。App 没有在线排行榜、账户跨设备合并、好友对战或云端战绩。</p>
+<h2 id="04-ai-data-s5">自动保存包含什么</h2>
+<p>各模式当前局、棋盘与随机状态、得分、移动次数、辅助标记、撤销 / 重做历史、远征能力、谜题最佳星级、个人残局档案、最高纪录和设置。每个非每日模式保留一个当前会话；每日保留最近七个日期；个人残局档案最多六条。</p>
+<p>普通操作合并到约 280 毫秒后开始的写入，持续操作不会无限推迟。进入后台请求立即写入；系统突然终止、空间不足或设备异常仍可能影响最后一次保存，因此重要进度应额外导出。文件采用原子写入，保留上一份可读备用文件；主文件缺失或损坏时会尝试备用文件，损坏原文件另行保留。</p>
+<h2 id="04-ai-data-s6">导出备份</h2>
+<ol>
+<li>点右上角设置。</li>
+<li>找到“进度”，点“导出进度备份”。</li>
+<li>在系统文件面板选择保存位置。默认名称形如 <code>LUMINA-2026-09-29.json</code>。</li>
+<li>确认文件已经出现在“文件”中，再卸载或换设备。</li>
+<li>同一天做多次备份时，为文件加上设备名或时间，避免自己覆盖唯一副本。</li>
+</ol>
+<p>导出是一个完整备份，包含设置和各模式进度，不是只有当前一局。通过文件位置选 iCloud Drive 或通过 AirDrop 传输属于手动文件转移，<strong>不代表 App 实现了自动 iCloud 同步</strong>。</p>
+<h2 id="04-ai-data-s7">导入与设备迁移</h2>
+<p>在目标设备安装可运行的原生 App，打开设置 → 导入进度备份 → 选 JSON。程序先检查大小、结构、棋盘、随机状态和挑战等，再询问“用备份替换本机进度？”。确认后<strong>替换所有模式的本机进度、纪录和设置，不做两台设备的合并</strong>。导入前先导出目标设备的现有进度。</p>
+<p>导入完成后先显示经典局，其他模式从模式列表继续。文件无效或超过 24,000,000 字节会拒绝导入；原生备份和 Python 桌面 / Windows / PWA 存档格式不同，不能互导。文件扩展名改成 JSON 并不能转换格式。</p>
+<h2 id="04-ai-data-s8">本地数据与隐私范围</h2>
+<p>运行时无服务器依赖，不要求登录，没有广告 SDK。游戏与 AI 在设备本地运行。进度位于 App 沙盒的 <code>Application Support/Lumina</code>，普通玩家通过设置导入导出即可，无需手工改内部文件。备份包含游戏状态和偏好，不包含开发者签名账号。请自行决定要把备份发给谁；分享备份等于分享其中的战绩与进行中局面。</p>
+<p>关于系统故障、无声音和无法安装，见<a href="#05-faq">常见问题</a>。</p>
+<div class="chapter-nav"><a href="#03-expedition">← 能力远征：关卡与能力</a><a href="#05-faq">常见问题与问题反馈 →</a></div></article>
+<article data-chapter="05-faq" aria-labelledby="05-faq"><h1 id="05-faq">常见问题与问题反馈</h1>
+<h2 id="05-faq-s1">点了没有反应 / 方块没动</h2>
+<p>先看是否在模式菜单、弹窗、选能力或结算状态。在对局中，方向必须能改变棋盘才是有效移动。滑动从棋盘内开始；幅度太小可能被忽略。快速连滑最多排队两次，多出的输入不会继续累积。小屏上的灯泡就是提示按钮。</p>
+<p>如果程序显示“准备棋盘”后始终不进入，记录是否出现内置关卡读取错误。先关闭重开；开发者应检查资源是否进入构建。不要为了排查而直接卸载尚未备份的 App。</p>
+<h2 id="05-faq-s2">2048 出现了，为什么没有结束</h2>
+<p>经典和每日允许继续挑战更大的数字。谜题只检查该题目标；冲刺按步数结算；远征按关卡得分结算。模式不同，结束条件不同。</p>
+<h2 id="05-faq-s3">明明合并了，为什么空格只多一个 / 没达到残局目标</h2>
+<p>标准模式每次有效移动后还会生成一枚新方块。空格目标按落子后的棋盘计算。远征凝时或空间回流可以取消该次落子；其他模式没有此能力。</p>
+<h2 id="05-faq-s4">为什么突然变成辅助局</h2>
+<p>请求过提示、开启过自动玩，或者在残局过关前打开过对照复盘，都会标记辅助局。看完提示不用也算。标记不会被撤销或导入去掉。已经取得的手动最高纪录仍保留，之后该局新的分数归辅助纪录。</p>
+<h2 id="05-faq-s5">为什么三星没拿到</h2>
+<p>检查是否超过标准步数、使用过撤销或任何辅助。标准步数和最大允许步数不同。未辅助但用过撤销，最多两星；辅助完成为一星。想重新挑战三星，重开该题并从头按要求完成。</p>
+<h2 id="05-faq-s6">AI 为什么停了 / 还会输</h2>
+<p>到达关卡奖励、游戏结束、打开菜单或手动接管都会停。关闭菜单后需重新点自动玩。AI 有限时搜索与启发式评估，随机模式不保证无限生存。深度思考提升搜索预算，不代表数学上全局最优。远征的奖励必须玩家选择。</p>
+<h2 id="05-faq-s7">远征按钮为何灰色</h2>
+<p>凝时需要至少 5 能量、没有冷却、尚未凝时且棋盘还可移动。交换需要足够能量和两枚不同数字的非空块。动画执行中暂不接受主动能力。能量不会超过 12；凝时冷却不是等六秒，而是六次有效移动。</p>
+<h2 id="05-faq-s8">每日棋盘为什么和朋友不同</h2>
+<p>核对两人的设备本地日期、模式、版本以及是否已经移动过。跨时区可能日期不同。只有相同日期与相同动作路线才能保证相同局面，不存在联网同步。午夜仍开的昨日局不会自动变成今天，重新选择每日模式即可打开今天的局。</p>
+<h2 id="05-faq-s9">导入失败 / 进度变旧</h2>
+<ul>
+<li>“格式不正确”：确认这是本原生版导出的完整 JSON，且未被截断或修改。Python / Windows / PWA 文件不兼容。</li>
+<li>“超过 24 MB”：该版本限制为 24,000,000 字节；请保留原文件，避免直接删除内容凑大小。</li>
+<li>“已从备用存档恢复”：主文件缺失或损坏，已恢复上一份有效数据，可能少最后一次操作。可另行导入较新的手动备份。</li>
+<li>导入成功却看见经典：这是当前启动 / 导入行为；切换相应模式查看其他进度。</li>
+<li>两台设备都玩过：导入会整体替换，没有自动合并。先分别备份并自行决定保留哪一份。</li>
+<li>“保存失败”：检查设备存储空间，尝试导出当前进度并记录完整错误。不要反复重开覆盖唯一可用状态。</li>
+</ul>
+<h2 id="05-faq-s10">声音、触感或动画不符合预期</h2>
+<p>检查 App 设置和系统音量 / 静音 / 音频输出；代码使用允许与其他音频混合的环境音频类别。触感依赖硬件，部分 iPad 没有对应反馈。减少动态效果可能来自 App 或系统设置。文档 GIF 是采样演示，不能用它判断 iPhone 的实际刷新率。真机触感、静音和帧率仍待设备验证。</p>
+<h2 id="05-faq-s11">怎么安装到 iPhone / iPad</h2>
+<p>源码 ZIP、Xcode 工程和 macOS 预览都不是可直接点击安装的 IPA。需要完整 Xcode、匹配设备的 SDK 和签名配置。当前交付没有 TestFlight 邀请。具体步骤见<a href="#06-build">安装文档</a>。</p>
+<h2 id="05-faq-s12">有没有英文 / 日文界面、Windows 版或联机</h2>
+<p>本套文档提供中文、英文、日文，当前原生 App 按钮仍是中文。英文 / 日文手册附对应名称；不存在语言切换按钮。以前的 Python 桌面 / Windows / PWA 版本独立保留，本手册不把它们当成 iOS App，也不承诺功能和存档完全互通。原生版没有联机、云排行或自动云同步。</p>
+<h2 id="05-faq-s13">清晰反馈一个问题</h2>
+<p>请复制此表填写。不要只写“坏了”，具体到哪个动作后发生。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>字段</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>App 版本</td>
+<td>1.0.1 Native，注明构建号</td>
+</tr>
+<tr>
+<td>设备与系统</td>
+<td>iPhone / iPad 型号、iOS / iPadOS 版本</td>
+</tr>
+<tr>
+<td>模式与进度</td>
+<td>谜题 03；或远征第 2 关</td>
+</tr>
+<tr>
+<td>复现步骤</td>
+<td>打开 → 选模式 → 向左 → 点撤销 → 实际现象</td>
+</tr>
+<tr>
+<td>预期 / 实际</td>
+<td>预期恢复前一步，实际……</td>
+</tr>
+<tr>
+<td>发生频率</td>
+<td>每次 / 偶发，约多少次</td>
+</tr>
+<tr>
+<td>状态</td>
+<td>是否开 AI、减少动态效果、外接键盘、分屏</td>
+</tr>
+<tr>
+<td>证据</td>
+<td>截图 / 屏幕录像、错误全文，必要时自愿提供已脱敏备份</td>
+</tr>
+</tbody></table></div>
+<p>程序没有内置“提交工单”按钮，也没有本项目指定的公开客服邮箱。把上述信息交给项目维护者即可。有关已知验证边界见<a href="#09-release">版本与验收</a>。</p>
+<div class="chapter-nav"><a href="#04-ai-data">← 智能助手、记录与存档</a><a href="#06-build">安装、构建与开发 →</a></div></article>
+<article data-chapter="06-build" aria-labelledby="06-build"><h1 id="06-build">安装、构建与开发者说明</h1>
+<h2 id="06-build-s1">当前交付是什么</h2>
+<p>LUMINA 1.0.1 是 Swift / SwiftUI 原生 iPhone + iPad Universal App 工程，最低部署 iOS / iPadOS 16.4。没有 WebView。源码包包含独立核心、资源、Xcode 工程、测试、文档与演示媒体。当前没有已签名 IPA、模拟器构建产物或 TestFlight / 商店发布。</p>
+<p>最低部署版本不等于任意旧 Xcode 都能构建：Swift 包声明 Swift 工具链 6.0+、Swift 5 语言模式。还需 Xcode 支持目标设备系统。本机只有 Command Line Tools，已完成 macOS 主机检查；未完成 iOS SDK 编译和真机验收。</p>
+<h2 id="06-build-s2">安装到自己的 iPhone / iPad</h2>
+<ol>
+<li>准备 Mac，安装完整 Xcode。按 Apple <a href="https://developer.apple.com/xcode/system-requirements">Xcode 兼容表</a>选择兼容 Mac 与设备系统的版本。不要只安装 <code>xcode-select --install</code> 提供的命令行工具。</li>
+<li>启动 Xcode，完成首次组件安装；在 Settings → Locations → Command Line Tools 选择该 Xcode。</li>
+<li>解压源码到可写的本地目录。双击 <code>Lumina.xcodeproj</code>，选择共享 Scheme <strong>Lumina</strong>。</li>
+<li>Xcode → Settings → Accounts 添加自己的 Apple Account。在 target → Signing &amp; Capabilities 选择自己的 Team；必要时将 Bundle Identifier 改成自己唯一的标识。</li>
+<li>连接并解锁设备，处理系统的信任配对；按 Xcode / 系统提示启用 Developer Mode。在运行目标中选择这台 iPhone 或 iPad。</li>
+<li>点 ▶ Run。第一次构建与签名可能需要等待。失败时先阅读最上面的实际错误，不要把改文件扩展名当成解决办法。</li>
+<li>启动后依次验证经典滑动、横竖屏、所有模式、存档恢复、声音 / 触感和文件导入导出。</li>
+</ol>
+<p>Apple 官方：<a href="https://developer.apple.com/documentation/xcode/running-your-app-on-simulated-or-physical-devices">在模拟器或设备运行 App</a>、<a href="https://help.apple.com/xcode/mac/current/en.lproj/dev60b6fbbc7.html">开发者账户与团队</a>。团队资格与分发要求以 Apple 当时规则为准；不要把个人设备 Run 安装等同于 TestFlight 分发。</p>
+<h2 id="06-build-s3">项目布局</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>路径</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>App/</code></td>
+<td>SwiftUI 界面、GameModel、输入、声音与触感、资源和隐私清单</td>
+</tr>
+<tr>
+<td><code>Sources/LuminaCore/</code></td>
+<td>规则、随机数、六种模式、搜索与存档</td>
+</tr>
+<tr>
+<td><code>Sources/LuminaCore/Resources/</code></td>
+<td>12 道谜题与 3 道精选残局</td>
+</tr>
+<tr>
+<td><code>Tests/LuminaCoreTests/</code></td>
+<td>规则对照、存档、回归、长局 AI</td>
+</tr>
+<tr>
+<td><code>Tests/LuminaAppTests/</code></td>
+<td>生命周期交互、布局、可选文档媒体采集</td>
+</tr>
+<tr>
+<td><code>Lumina.xcodeproj/</code></td>
+<td>共享 Scheme、本地 Swift 包引用</td>
+</tr>
+<tr>
+<td><code>tools/</code></td>
+<td>工程生成、配置检查、Archive、文档生成工具</td>
+</tr>
+<tr>
+<td><code>docs/</code></td>
+<td>三语 Markdown、离线 HTML、共享 GIF 与原始演示视频</td>
+</tr>
+<tr>
+<td><code>QA/</code></td>
+<td>现有测试日志与布局检查图</td>
+</tr>
+</tbody></table></div>
+<p>运行时无第三方 SDK，也无需联网下载 Swift 包。文档制作工具的依赖与 App 运行依赖分开。</p>
+<h2 id="06-build-s4">常用命令</h2>
+<p>在项目根目录执行：</p>
+<pre><code class="language-sh">swift test -c release --disable-xctest
+python3 tools/validate-project.py
+./tools/check.sh
+</code></pre>
+<p>第一条在 Mac 上运行 Swift Testing；第二条验证工程与资源引用；第三条还尝试 iOS Simulator 构建，没有 iOS SDK 时明确失败。macOS 测试通过不能替代 iOS 构建。</p>
+<pre><code class="language-sh">LUMINA_BENCHMARK=1 swift test -c release --disable-xctest --filter Benchmark
+LUMINA_RENDER_DIRECTORY=/tmp/lumina-layouts swift test -c release --disable-xctest --filter renderNativeLayouts
+</code></pre>
+<p>第一条开启长局检查；第二条输出静态 SwiftUI 布局图。布局图使用测试容器，不是设备截图。文档录制命令与转换工具见<a href="../media/index.html">媒体说明</a>。</p>
+<h2 id="06-build-s5">Archive 与交付</h2>
+<p>可在 Xcode 中用 Product → Archive，或：</p>
+<pre><code class="language-sh">LUMINA_TEAM_ID=你的团队ID ./tools/archive.sh
+</code></pre>
+<p>脚本只生成 <code>build/Lumina.xcarchive</code>，不自动上传或导出 IPA。导出方式必须与自己的证书、账户资格、设备和分发目标匹配。不要把团队 ID、证书或设备信息提交到公开源码。文档中的命令不会替你申请开发者资格。</p>
+<h2 id="06-build-s6">工程再生成与开发注意事项</h2>
+<p>新增 <code>App/*.swift</code> 后可执行 <code>python3 tools/generate-project.py</code> 更新引用。生成器会恢复默认 Team / Bundle Identifier，先保留本机签名修改。文档录制测试只在环境变量开启时运行，使用独立临时存档目录，不接触玩家正常存档。</p>
+<p>随机数与桌面版规则兼容通过夹具检查；原生 JSON 结构仍独立。改变规则、能力数值、关卡或按钮名称时，应同时更新三套手册和动图，不能只改中文 README。代码发布与文档修订分开记录；本轮文档没有改变游戏规则。</p>
+<h2 id="06-build-s7">真机验收清单</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>场景</th>
+<th>通过标准</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>iPhone 竖屏 / 横屏</td>
+<td>棋盘完整，按钮可点，目标和结果可滚动看到</td>
+</tr>
+<tr>
+<td>iPad 全屏 / 分屏</td>
+<td>缩放和旋转后没有重置游戏或遮挡控件</td>
+</tr>
+<tr>
+<td>连续滑动后打开菜单</td>
+<td>棋盘停止，关闭后没有遗留输入</td>
+</tr>
+<tr>
+<td>AI 思考时切模式 / 后台</td>
+<td>旧任务不再落子，不错误覆盖新局</td>
+</tr>
+<tr>
+<td>后台与系统终止后重开</td>
+<td>最近已保存状态恢复，异常有提示</td>
+</tr>
+<tr>
+<td>文件导出 / 导入 / 取消</td>
+<td>文件可再次读取，取消不改进度，无效文件不覆盖</td>
+</tr>
+<tr>
+<td>键盘 / VoiceOver</td>
+<td>对局可操作，弹窗和设置期间焦点正确</td>
+</tr>
+<tr>
+<td>六模式与远征能力</td>
+<td>步数、奖励、辅助标记和胜负符合规则</td>
+</tr>
+<tr>
+<td>声音 / 静音 / 触感</td>
+<td>与设置及设备能力一致</td>
+</tr>
+</tbody></table></div>
+<p>该表是待执行验收计划，不是声称已经全部通过的报告。</p>
+<div class="chapter-nav"><a href="#05-faq">← 常见问题与问题反馈</a><a href="#07-gallery">九段动图教程 →</a></div></article>
+<article data-chapter="07-gallery" aria-labelledby="07-gallery"><h1 id="07-gallery">九段动图教程</h1>
+<p>以下九段 GIF 均由原生代码实际运行的采样视频转换，另附 MP4 原视频。录制平台为 macOS 原生预览，<strong>不是 iPhone / iPad 录屏，也不代表设备帧率</strong>。底部英文条是教学标注。页面中可以暂停动图；Markdown 阅读器通常会自动循环。MP4 使用 H.264 编码，可在阅读版展开视频播放器，或下载后单独播放。所有素材本地保存，无需联网。</p>
+<h2 id="07-gallery-s1">经典：移动、合并与落子</h2>
+<p>从 seed 42 实际游玩的中盘继续，依次观察整盘滑动、相同数字合并、得分上涨及新方块出现。方向标在画面底部。</p>
+<figure class="motion"><img src="../media/01-classic-poster.png" data-gif="../media/01-classic.gif" data-poster="../media/01-classic-poster.png" alt="经典：移动、合并与落子" loading="lazy" width="1000" height="700"><button class="motion-toggle" type="button" aria-pressed="false">播放动图</button><figcaption>经典：移动、合并与落子</figcaption></figure><details class="video-source"><summary>MP4 · 视频播放器</summary><video controls playsinline preload="none" poster="../media/01-classic-poster.png" src="../media/01-classic.mp4" width="1000" height="700" aria-label="经典：移动、合并与落子"></video></details>
+<p>先尝试保持大数字在角落；注意没有合并的位移也会产生新方块。</p>
+<p><a href="../media/01-classic.gif">GIF</a> · <a href="../media/01-classic.mp4">MP4 · 6.08 s</a> · <a href="../media/01-classic-poster.png">PNG</a></p>
+<h2 id="07-gallery-s2">撤销与重做：同一落子被恢复</h2>
+<p>执行一步，撤销，再重做。观察棋盘、得分和移动次数一起变化。</p>
+<figure class="motion"><img src="../media/02-undo-redo-poster.png" data-gif="../media/02-undo-redo.gif" data-poster="../media/02-undo-redo-poster.png" alt="撤销与重做：同一落子被恢复" loading="lazy" width="1000" height="700"><button class="motion-toggle" type="button" aria-pressed="false">播放动图</button><figcaption>撤销与重做：同一落子被恢复</figcaption></figure><details class="video-source"><summary>MP4 · 视频播放器</summary><video controls playsinline preload="none" poster="../media/02-undo-redo-poster.png" src="../media/02-undo-redo.mp4" width="1000" height="700" aria-label="撤销与重做：同一落子被恢复"></video></details>
+<p>重做藏在三点菜单；随机状态也一起恢复，所以不是重新抽签。</p>
+<p><a href="../media/02-undo-redo.gif">GIF</a> · <a href="../media/02-undo-redo.mp4">MP4 · 5.58 s</a> · <a href="../media/02-undo-redo-poster.png">PNG</a></p>
+<h2 id="07-gallery-s3">智能助手：提示、执行、自动玩、暂停</h2>
+<p>先请求提示，再执行建议，随后打开自动游玩并暂停。</p>
+<figure class="motion"><img src="../media/03-ai-poster.png" data-gif="../media/03-ai.gif" data-poster="../media/03-ai-poster.png" alt="智能助手：提示、执行、自动玩、暂停" loading="lazy" width="1000" height="700"><button class="motion-toggle" type="button" aria-pressed="false">播放动图</button><figcaption>智能助手：提示、执行、自动玩、暂停</figcaption></figure><details class="video-source"><summary>MP4 · 视频播放器</summary><video controls playsinline preload="none" poster="../media/03-ai-poster.png" src="../media/03-ai.mp4" width="1000" height="700" aria-label="智能助手：提示、执行、自动玩、暂停"></video></details>
+<p>查看底部从手动局变成辅助局；暂停之后辅助标记仍在。</p>
+<p><a href="../media/03-ai.gif">GIF</a> · <a href="../media/03-ai.mp4">MP4 · 11.5 s</a> · <a href="../media/03-ai-poster.png">PNG</a></p>
+<h2 id="07-gallery-s4">远征：三选一与首关</h2>
+<p>开始新的 seed 42 远征，选择蓄能核心，再完成数次有效移动。</p>
+<figure class="motion"><img src="../media/04-expedition-draft-poster.png" data-gif="../media/04-expedition-draft.gif" data-poster="../media/04-expedition-draft-poster.png" alt="远征：三选一与首关" loading="lazy" width="1000" height="700"><button class="motion-toggle" type="button" aria-pressed="false">播放动图</button><figcaption>远征：三选一与首关</figcaption></figure><details class="video-source"><summary>MP4 · 视频播放器</summary><video controls playsinline preload="none" poster="../media/04-expedition-draft-poster.png" src="../media/04-expedition-draft.mp4" width="1000" height="700" aria-label="远征：三选一与首关"></video></details>
+<p>同一步多组合并会获得更多能量，先理解目标分与总分的区别。</p>
+<p><a href="../media/04-expedition-draft.gif">GIF</a> · <a href="../media/04-expedition-draft.mp4">MP4 · 7.25 s</a> · <a href="../media/04-expedition-draft-poster.png">PNG</a></p>
+<h2 id="07-gallery-s5">远征：凝时与交换</h2>
+<p>从实际获得 12 能量的局面继续，先凝时，再选两枚不同数字交换，最后移动两次。</p>
+<figure class="motion"><img src="../media/05-expedition-powers-poster.png" data-gif="../media/05-expedition-powers.gif" data-poster="../media/05-expedition-powers-poster.png" alt="远征：凝时与交换" loading="lazy" width="1000" height="700"><button class="motion-toggle" type="button" aria-pressed="false">播放动图</button><figcaption>远征：凝时与交换</figcaption></figure><details class="video-source"><summary>MP4 · 视频播放器</summary><video controls playsinline preload="none" poster="../media/05-expedition-powers-poster.png" src="../media/05-expedition-powers.mp4" width="1000" height="700" aria-label="远征：凝时与交换"></video></details>
+<p>观察使用主动能力时剩余步数不变；凝时后的移动不会生成新方块。</p>
+<p><a href="../media/05-expedition-powers.gif">GIF</a> · <a href="../media/05-expedition-powers.mp4">MP4 · 6.42 s</a> · <a href="../media/05-expedition-powers-poster.png">PNG</a></p>
+<h2 id="07-gallery-s6">谜题：两步合成 64</h2>
+<p>完整演示第 01 题，从重置后的棋盘向上、再向上，合成 64。</p>
+<figure class="motion"><img src="../media/06-puzzle-poster.png" data-gif="../media/06-puzzle.gif" data-poster="../media/06-puzzle-poster.png" alt="谜题：两步合成 64" loading="lazy" width="1000" height="700"><button class="motion-toggle" type="button" aria-pressed="false">播放动图</button><figcaption>谜题：两步合成 64</figcaption></figure><details class="video-source"><summary>MP4 · 视频播放器</summary><video controls playsinline preload="none" poster="../media/06-puzzle-poster.png" src="../media/06-puzzle.mp4" width="1000" height="700" aria-label="谜题：两步合成 64"></video></details>
+<p>本段含解答；未请求提示且没有撤销，因此得到三星。</p>
+<p><a href="../media/06-puzzle.gif">GIF</a> · <a href="../media/06-puzzle.mp4">MP4 · 4.67 s</a> · <a href="../media/06-puzzle-poster.png">PNG</a></p>
+<h2 id="07-gallery-s7">残局：从错误走法到可解路线</h2>
+<p>精选“一线生机”：先复现原来的向左走法导致无路可走，再从同一起点执行右、上、上。</p>
+<figure class="motion"><img src="../media/07-rescue-poster.png" data-gif="../media/07-rescue.gif" data-poster="../media/07-rescue-poster.png" alt="残局：从错误走法到可解路线" loading="lazy" width="1000" height="700"><button class="motion-toggle" type="button" aria-pressed="false">播放动图</button><figcaption>残局：从错误走法到可解路线</figcaption></figure><details class="video-source"><summary>MP4 · 视频播放器</summary><video controls playsinline preload="none" poster="../media/07-rescue-poster.png" src="../media/07-rescue.mp4" width="1000" height="700" aria-label="残局：从错误走法到可解路线"></video></details>
+<p>比较两种结局；成功目标是落子后至少三个空位。它展示实际操作过程，不是完整经典局录像。</p>
+<p><a href="../media/07-rescue.gif">GIF</a> · <a href="../media/07-rescue.mp4">MP4 · 7.58 s</a> · <a href="../media/07-rescue-poster.png">PNG</a></p>
+<h2 id="07-gallery-s8">每日：相同日期与重开</h2>
+<p>固定演示 2026-09-29 的每日局，移动三次后重开。</p>
+<figure class="motion"><img src="../media/08-daily-poster.png" data-gif="../media/08-daily.gif" data-poster="../media/08-daily-poster.png" alt="每日：相同日期与重开" loading="lazy" width="1000" height="700"><button class="motion-toggle" type="button" aria-pressed="false">播放动图</button><figcaption>每日：相同日期与重开</figcaption></figure><details class="video-source"><summary>MP4 · 视频播放器</summary><video controls playsinline preload="none" poster="../media/08-daily-poster.png" src="../media/08-daily.mp4" width="1000" height="700" aria-label="每日：相同日期与重开"></video></details>
+<p>观察重开后的两枚初始方块与开始时一致；不是联网同步。</p>
+<p><a href="../media/08-daily.gif">GIF</a> · <a href="../media/08-daily.mp4">MP4 · 5.83 s</a> · <a href="../media/08-daily-poster.png">PNG</a></p>
+<h2 id="07-gallery-s9">冲刺：最后三步与结束</h2>
+<p>seed 42 的真实冲刺先推进到第 57 步，再记录最后三步及结算。</p>
+<figure class="motion"><img src="../media/09-sprint-poster.png" data-gif="../media/09-sprint.gif" data-poster="../media/09-sprint-poster.png" alt="冲刺：最后三步与结束" loading="lazy" width="1000" height="700"><button class="motion-toggle" type="button" aria-pressed="false">播放动图</button><figcaption>冲刺：最后三步与结束</figcaption></figure><details class="video-source"><summary>MP4 · 视频播放器</summary><video controls playsinline preload="none" poster="../media/09-sprint-poster.png" src="../media/09-sprint.mp4" width="1000" height="700" aria-label="冲刺：最后三步与结束"></video></details>
+<p>看剩余次数从 3 到 0；不是秒表，也没有第 61 步。</p>
+<p><a href="../media/09-sprint.gif">GIF</a> · <a href="../media/09-sprint.mp4">MP4 · 5.58 s</a> · <a href="../media/09-sprint-poster.png">PNG</a></p>
+<p><a href="../media/index.html">Media / 媒体 / メディア</a></p>
+<div class="chapter-nav"><a href="#06-build">← 安装、构建与开发</a><a href="#08-solutions">谜题与残局解答（含剧透） →</a></div></article>
+<article data-chapter="08-solutions" aria-labelledby="08-solutions"><h1 id="08-solutions">谜题与残局解答（含剧透）</h1>
+<p>请先自行尝试，再打开本章。所有路线都从对应问题的初始盘面开始；请先重新开始该题。箭头表示移动方向，0 表示空格。路线直接从随 App 的资源读取，避免翻译时改错方向。</p>
+<p>本章的阅读发生在 App 之外，游戏无法自动标记你读过外部攻略。若要保持个人“纯手动”挑战的意义，请自行避免使用攻略；不要把已经知道解法的练习成绩当作盲解。</p>
+<h2 id="08-solutions-s1">谜题 01 · 借一步</h2>
+<p>目标 / 标准 / 上限: <strong>64 / 2 / 3</strong></p>
+<pre><code class="language-text">   2    8    8   16
+   4    4    2   16
+   4    8    8    0
+  16    4    4   32
+</code></pre>
+<p>路线: <strong>↑  ↑</strong></p>
+<h2 id="08-solutions-s2">谜题 02 · 转身</h2>
+<p>目标 / 标准 / 上限: <strong>64 / 2 / 3</strong></p>
+<pre><code class="language-text">   8   32    2    0
+   8    8   16   16
+   4    4    8    8
+   0   16    4   16
+</code></pre>
+<p>路线: <strong>←  ↑</strong></p>
+<h2 id="08-solutions-s3">谜题 03 · 留白</h2>
+<p>目标 / 标准 / 上限: <strong>128 / 3 / 4</strong></p>
+<pre><code class="language-text">   2    2   64   32
+   8   16   16   16
+  16    0    0    4
+  32   16    8    4
+</code></pre>
+<p>路线: <strong>→  ↑  ←</strong></p>
+<h2 id="08-solutions-s4">谜题 04 · 折返</h2>
+<p>目标 / 标准 / 上限: <strong>128 / 3 / 4</strong></p>
+<pre><code class="language-text">   0   16   16    0
+  32   16   16   32
+  16    4   16    0
+   4    4    0   32
+</code></pre>
+<p>路线: <strong>↑  →  ←</strong></p>
+<h2 id="08-solutions-s5">谜题 05 · 暗流</h2>
+<p>目标 / 标准 / 上限: <strong>256 / 3 / 4</strong></p>
+<pre><code class="language-text">   2    2   64   16
+   0    4    0    4
+   0   32   32  128
+  64    0   16    4
+</code></pre>
+<p>路线: <strong>←  ↑  ←</strong></p>
+<h2 id="08-solutions-s6">谜题 06 · 挪一寸</h2>
+<p>目标 / 标准 / 上限: <strong>256 / 4 / 5</strong></p>
+<pre><code class="language-text">  16   32   32   32
+  16    4    0   16
+   4    0   32   64
+  64   64    0   32
+</code></pre>
+<p>路线: <strong>←  ↑  ←  ←</strong></p>
+<h2 id="08-solutions-s7">谜题 07 · 连锁</h2>
+<p>目标 / 标准 / 上限: <strong>512 / 4 / 5</strong></p>
+<pre><code class="language-text"> 128   64    0    2
+ 256   32    2   64
+   0   32    2    4
+ 128    0   32   64
+</code></pre>
+<p>路线: <strong>↑  ↑  ←  ↑</strong></p>
+<h2 id="08-solutions-s8">谜题 08 · 破局</h2>
+<p>目标 / 标准 / 上限: <strong>512 / 4 / 5</strong></p>
+<pre><code class="language-text">   4   64   64  128
+   0    2  128    4
+  32   64   64    0
+  64    0    0   64
+</code></pre>
+<p>路线: <strong>←  ←  ↑  ↑</strong></p>
+<h2 id="08-solutions-s9">谜题 09 · 回声</h2>
+<p>目标 / 标准 / 上限: <strong>1024 / 4 / 5</strong></p>
+<pre><code class="language-text">   4  256    0  256
+ 128  256   64  128
+  64   64   64    0
+ 256    4   64    2
+</code></pre>
+<p>路线: <strong>←  ↑  →  ↑</strong></p>
+<h2 id="08-solutions-s10">谜题 10 · 逆风</h2>
+<p>目标 / 标准 / 上限: <strong>1024 / 5 / 6</strong></p>
+<pre><code class="language-text">   4    4  128    2
+  64    0  512   64
+ 128  256  128  256
+   0   64    4  256
+</code></pre>
+<p>路线: <strong>↑  ←  ←  ↑  ←</strong></p>
+<h2 id="08-solutions-s11">谜题 11 · 归位</h2>
+<p>目标 / 标准 / 上限: <strong>2048 / 5 / 6</strong></p>
+<pre><code class="language-text"> 128    0    4  256
+ 256  256    0  512
+   4    4    0    4
+ 512    2    0  512
+</code></pre>
+<p>路线: <strong>←  ↑  →  ↑  ↑</strong></p>
+<h2 id="08-solutions-s12">谜题 12 · 最后一线</h2>
+<p>目标 / 标准 / 上限: <strong>2048 / 5 / 6</strong></p>
+<pre><code class="language-text"> 256    0  256    0
+ 256  128  512  256
+ 256  128  256  128
+   2  128  512  256
+</code></pre>
+<p>路线: <strong>↑  ↓  ←  ←  ↑</strong></p>
+<h2 id="08-solutions-s13">精选残局</h2>
+<p>六步内腾出三个空格；目标在新方块生成后检查。以下“原路线”会走向无路可走，用于比较，不是建议。</p>
+<h3 id="08-solutions-s14">一线生机</h3>
+<p>原路线（失败）: ←</p>
+<p>转机路线（成功）: <strong>→ ↑ ↑</strong></p>
+<h3 id="08-solutions-s15">腾挪之间</h3>
+<p>原路线（失败）: ↓</p>
+<p>转机路线（成功）: <strong>↑ ← ↑ ← ↑</strong></p>
+<h3 id="08-solutions-s16">逆转时刻</h3>
+<p>原路线（失败）: ↑</p>
+<p>转机路线（成功）: <strong>← ← → ↓ ←</strong></p>
+<p>个人残局的起点各不相同，没有通用箭头答案。请使用该挑战自己的提示或对照复盘。</p>
+<div class="chapter-nav"><a href="#07-gallery">← 九段动图教程</a><a href="#09-release">版本与验证范围 →</a></div></article>
+<article data-chapter="09-release" aria-labelledby="09-release"><h1 id="09-release">版本、验证范围与文档维护</h1>
+<h2 id="09-release-s1">版本标识</h2>
+<p>游戏：1.0.1 Native，构建号 2。存档结构版本：1。文档修订：2026-09-29。本套说明以当前 Swift 原生代码为准，覆盖六种模式；旧桌面 / PWA 手册不能替代此处的规则和存档说明。</p>
+<h2 id="09-release-s2">1.0.1 已修复的主要问题</h2>
+<ul>
+<li>模式菜单、确认弹窗或后台期间，排队输入仍可能继续执行。</li>
+<li>连续操作不断推迟写入，主存档缺失时没有尝试备用存档。</li>
+<li>损坏原文件可能被覆盖；混合模式状态、非法每日日期与不一致残局可被接受。</li>
+<li>冲刺末步搜索了不存在的后续机会。</li>
+<li>复盘切换长短路线时旧游标可能越界。</li>
+<li>关卡动画期间选择奖励可能残留旧操作。</li>
+<li>键盘焦点与后台保存分支已调整，仍需 iOS SDK / 真机验证。</li>
+</ul>
+<p>详细触发条件见根目录 <a href="../../BUGFIXES-1.0.1.md">BUGFIXES-1.0.1.md</a>。</p>
+<h2 id="09-release-s3">已有实际验证证据</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>项目</th>
+<th>结果</th>
+<th>边界</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>核心 / 交互</td>
+<td>38 项通过</td>
+<td>macOS 主机，不是 iOS 设备</td>
+</tr>
+<tr>
+<td>混合操作</td>
+<td>六模式共 5,760 次</td>
+<td>覆盖移动、能力、撤销、重做等</td>
+</tr>
+<tr>
+<td>存档往返</td>
+<td>144 次</td>
+<td>编码 / 解码检查</td>
+</tr>
+<tr>
+<td>静态布局</td>
+<td>四种尺寸生成并检查</td>
+<td>不能证明触摸与帧率</td>
+</tr>
+<tr>
+<td>1.0.1 远征 AI</td>
+<td>六关通过，6,422 分</td>
+<td>固定种子与固定奖励优先级</td>
+</tr>
+<tr>
+<td>经典 AI</td>
+<td>3,200 步、69,592 分、4096</td>
+<td>1.0 保留的历史结果，本轮未重跑</td>
+</tr>
+</tbody></table></div>
+<p>原始日志和布局在 <code>QA/</code>，总体记录见 <a href="../../QA.md">QA.md</a>。Swift Testing 输出可能把跳过的可选检查计入运行总数；本表只把实际运行的核心 / 交互检查计为 38 项。</p>
+<h2 id="09-release-s4">文档媒体的性质</h2>
+<p>九段演示由实际原生 GameModel 与 SwiftUI 界面在 macOS 上运行，采样画面后组装为视频，再转换 GIF。是教学录制，不是 iPhone / iPad 屏幕录屏、触摸验证或帧率测试。底部英文条是录制工具的动作标注，不属于 App 界面。预先准备的中盘状态来自同一引擎实际操作；没有人工编造分数或改规则。具体方法、种子和生成脚本见<a href="../media/index.html">媒体说明</a>。</p>
+<h2 id="09-release-s5">仍未交付或验证</h2>
+<p>没有签名 IPA、App Store / TestFlight 上架，没有已完成的 iOS SDK 构建。真机动画、系统文件面板、后台挂起、外接键盘、VoiceOver、触感和旋转仍需验证。App 界面目前仅中文；三语文档不等于界面已完成三语本地化。没有自动 iCloud、联机对战和云排行榜。</p>
+<h2 id="09-release-s6">文档约定</h2>
+<p>中文按钮名是定位控件的依据，英文 / 日文译名用于解释。箭头统一为棋盘移动方向：← 左、↑ 上、→ 右、↓ 下。示例棋盘中的 0 或点代表空格，真实方块没有 0。攻略中的路线必须从对应关卡重新开始执行。</p>
+<p>离线阅读打开 <code>docs/index.html</code>，可切语言、跳章节、搜索和播放动图；Markdown 是可编辑来源。打印或另存 PDF 是静态阅读方式，GIF 在纸面 / PDF 不会播放，请保留 HTML 与媒体文件一起分发。</p>
+<div class="chapter-nav"><a href="#08-solutions">← 谜题与残局解答（含剧透）</a><span>LUMINA · 1.0.1</span></div></article></main></div><script id="reader-config" type="application/json">{"play":"播放动图","pause":"暂停动图","results":"搜索结果","none":"本页没有匹配内容"}</script><script src="../reader.js"></script></body></html>

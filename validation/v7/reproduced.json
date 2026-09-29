@@ -1,0 +1,6 @@
+{
+  "undo_lost_after_restart": true,
+  "random_state_lost_after_restart": true,
+  "malformed_achievements_crash": true,
+  "malformed_record_crash": true
+}

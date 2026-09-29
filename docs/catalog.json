@@ -1,0 +1,60 @@
+{
+  "chapters": [
+    "01-platforms",
+    "02-controls",
+    "03-rules",
+    "04-expedition",
+    "05-ai-replay",
+    "06-saves",
+    "07-macos",
+    "08-windows",
+    "09-mobile",
+    "10-gallery",
+    "11-solutions",
+    "12-support"
+  ],
+  "titles": {
+    "zh-CN": [
+      "先选平台与版本",
+      "桌面版入门与完整操作",
+      "桌面版六种玩法与计分",
+      "桌面版能力远征详解",
+      "桌面版 AI、教练与复盘",
+      "存档、备份、迁移与升级",
+      "macOS 安装与排错",
+      "Windows 安装与排错",
+      "iPhone、iPad 与网页版",
+      "十七段游戏动图与视频",
+      "十二章谜题与三道残局解答",
+      "常见问题、开发与验证"
+    ],
+    "en": [
+      "Choose a platform and edition",
+      "Desktop quick start and controls",
+      "Desktop modes and scoring",
+      "Desktop Expedition in depth",
+      "Desktop AI, Coach and Replay",
+      "Saves, backup, transfer and updates",
+      "macOS installation and troubleshooting",
+      "Windows installation and troubleshooting",
+      "iPhone, iPad and the web edition",
+      "Seventeen animated demonstrations",
+      "Twelve puzzles and three Rescue solutions",
+      "FAQ, development and validation"
+    ],
+    "ja": [
+      "プラットフォームと版を選ぶ",
+      "デスクトップ版の始め方と操作",
+      "デスクトップ版のモードと得点",
+      "デスクトップ版・能力遠征の詳細",
+      "デスクトップ版の AI・コーチ・リプレイ",
+      "セーブ・バックアップ・移行・更新",
+      "macOS の導入とトラブル対処",
+      "Windows の導入とトラブル対処",
+      "iPhone・iPad・Web 版",
+      "十七本のゲーム実演",
+      "十二問のパズルと三問のレスキュー解答",
+      "よくある質問・開発・検証"
+    ]
+  }
+}

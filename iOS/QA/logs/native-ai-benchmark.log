@@ -1,0 +1,11 @@
+[0/1] Planning build
+◇ Test run started.
+↳ Testing Library Version: 124.4
+↳ Target Platform: arm64e-apple-macos14.0
+◇ Suite "Optional native AI endurance" started.
+◇ Test classicAndExpedition() started.
+NATIVE_BENCH classic: moves=3200 score=69592 max=4096 phase=play elapsed=112.38475394248962s
+NATIVE_BENCH expedition: actions=138 score=6422 cleared=6 phase=won
+✔ Test classicAndExpedition() passed after 120.676 seconds.
+✔ Suite "Optional native AI endurance" passed after 120.676 seconds.
+✔ Test run with 1 test passed after 120.676 seconds.

@@ -1,0 +1,13 @@
+* text=auto
+*.py text eol=lf
+*.sh text eol=lf
+*.command text eol=lf
+*.bat text eol=crlf
+*.md text eol=lf
+*.js text eol=lf
+*.swift text eol=lf
+*.png binary
+*.gif binary
+*.mp4 binary
+*.otf binary
+*.ttf binary

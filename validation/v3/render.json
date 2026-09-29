@@ -1,0 +1,15 @@
+{
+  "static": {
+    "mean_ms": 4.29,
+    "p95_ms": 5.38
+  },
+  "sliding": {
+    "mean_ms": 4.19,
+    "p95_ms": 4.88
+  },
+  "canvas": [
+    1920,
+    1800
+  ],
+  "ai_panel": {}
+}

@@ -1,0 +1,4 @@
+.DS_Store
+test-results/
+*.tar.gz
+node_modules/

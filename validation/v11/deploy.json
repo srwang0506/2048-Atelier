@@ -1,0 +1,32 @@
+{
+  "updated_files": 24,
+  "save_unchanged": true,
+  "data_files_checked": 6,
+  "backup": "/Volumes/sirui/2048-Atelier/backups/v10-source",
+  "source_hashes": {
+    "air_ui.py": "39de20fb6d2ea8ec00c4c9c1263325b96d35dc6ce1902969b090cc4113921455",
+    "persistence.py": "ac1cc2a282f13d98e3ea1dea2f5b9887dd7409e1516201969a30b8119cefe2c8",
+    "adventures.py": "ada4430f43e1639a2492f40c3a9a7c9e88051b7c048c33d1f13d720da1c1d78e",
+    "rescue_practice.json": "9ef03e1395f2bf1470d299142d199282df1a8f86d58530a6221edf115e3eb1bf",
+    "rescue.py": "e27d8a6743a5c18fbd502f51cbee7b02d74800eacfc36348a4a66b18a468b97c",
+    "expedition.py": "375e2327ac49a440eaa67d70edfe5525af4a5923db665ae608f7b540b7e0e5c8",
+    "ai.py": "e8c55ee16db1f048994391136aac3d569bf348feabcfd9d0ec90ed8f56982bd9",
+    "features.py": "ccba5c8a737aaeecd01713e098971a2ff12569affa97eb464ea2e2dd2002886a",
+    "modes.py": "f6f6883500d14a10d887f9c99036575c993eaad80ea364ec776e72fcd30f98d6",
+    "interface_base.py": "9d9972cc28c48b9c884122d85cfd748c631917a52168db397278568f514cb8d5",
+    "engine.py": "d56ed9ebe55d37afbf825febf4c34b306ada5f096d2199c6894dce38391911d2",
+    "journey.py": "fce69175b3ba3800fc3a77e8b00182a57cbea200af5d48f0f9e391e61f82a698",
+    "ui_core.py": "5c41cbbd5e6fa163bcf62418be7e3558e624acf0caf0cc53b4723b0ba1eb83e7",
+    "README.md": "edf63143ad43d4f15281578396597fd08f69a2cf73164711403bff7986024314",
+    "测试报告.md": "5b191fdebab5e28682eba0bc3d055477b1cca667d2bfa9b4de71e141495d3b0d",
+    "tests/test_adventures.py": "9dfef29b05258dbfa0d62c0a43889e8e65496f2183ad1a9308b212124ac280e2",
+    "tests/test_journey.py": "0d1eaf3adbc09d304d248947728de57fe5143a7ee008d4b6df0cf64962281c62",
+    "validation/v10/第十版测试报告.md": "9691aee541584ba5c6b1814630e2be5783c940a05ebedc0e4d0e56bf0590abb8",
+    "validation/v11/tests.log": "e81e6f721207551dc99087355feee357888eea660776606ddc7e8309129ba9c0",
+    "validation/v11/full-flow.json": "220c928ffe3d134447672a20bd64f7d9d40b6d866cf2e80214f50cf2da4507c7",
+    "validation/v11/render-check.json": "d7b1dc5f647cd4cc70181d0cb386c3f1ea4873646cb8f9779284d777104331c5",
+    "validation/v11/balance.json": "753f2cd933c1eac83442a86926802490d2aa580f1848238384742f640ce3c3f3",
+    "validation/v11/full_flow.py": "3315331874d60d2c136042f5c856dd697d2eea461cc61ebedaa4eb984617a33b",
+    "validation/v11/render_check.py": "3438141055c7e1dc0de06e0e5ad97c5a12ffa9bd090ff8ad6bfc4a7a0ffa21e0"
+  }
+}

@@ -1,0 +1,14 @@
+LUMINA 2048 · ALL PLATFORMS · 2026-09-29
+
+中文：先打开 README.zh-CN.md 或 docs/index.html。Mac 和 Windows 桌面 v12 分别见第 7、8 章；iPhone / iPad 原生 1.0.1 与 Web Touch v1 见第 9 章。三语各 12 章，另外保留原生各 9 章；17 段 GIF + MP4。保留完整文件夹。
+
+English: Open README.en.md or docs/index.html. Chapters 7/8 cover Mac/Windows Desktop v12; chapter 9 covers Native iPhone/iPad 1.0.1 and Web Touch v1. Each language has 12 unified chapters plus 9 retained native chapters. 17 GIF/MP4 demonstrations. Keep the full folder.
+
+日本語：README.ja.md または docs/index.html を開きます。第 7/8 章は Mac/Windows v12、第 9 章は iPhone/iPad 原生 1.0.1 と Web Touch v1。各言語 12 章に既存の原生 9 章を加え、17 本の GIF/MP4 を収録しています。全フォルダーを保持してください。
+
+文档单独 ZIP 不含游戏。Windows 附文档 ZIP 另含 Windows 游戏与运行环境。
+The documentation-only ZIP contains no game. The Windows-with-docs ZIP separately includes the Windows game/runtime.
+説明書単独 ZIP にゲームは含みません。Windows-with-docs ZIP には Windows ゲームと環境を同梱します。
+
+Native delivery is source; no signed IPA / TestFlight / App Store build.
+Windows hardware run and iPhone/iPad device acceptance remain pending.

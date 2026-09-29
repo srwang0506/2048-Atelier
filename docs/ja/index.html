@@ -1,0 +1,1002 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="LUMINA 2048 プレイヤーガイド"><title>LUMINA · プレイヤーガイド</title><link rel="stylesheet" href="../reader.css"></head><body><div class="shell"><aside class="sidebar"><a class="brand" href="../index.html">LUMINA</a><div class="edition">全プラットフォーム · 日本語</div><nav class="languages" aria-label="Language"><a class="" data-language="../zh-CN/index.html" href="../zh-CN/index.html" lang="zh-CN">简体中文</a><a class="" data-language="../en/index.html" href="../en/index.html" lang="en">English</a><a class="selected" data-language="../ja/index.html" href="../ja/index.html" lang="ja">日本語</a></nav><label><span class="print-only">ルール・操作・問題を検索…</span><input id="search" class="searchbox" type="search" placeholder="ルール・操作・問題を検索…" aria-label="ルール・操作・問題を検索…"></label><div class="nav-title">目次</div><nav class="chapter-list" aria-label="目次"><a class="chapter-link" href="#01-platforms"><b>01</b><span>プラットフォームと版を選ぶ</span></a><a class="chapter-link" href="#02-controls"><b>02</b><span>デスクトップ版の始め方と操作</span></a><a class="chapter-link" href="#03-rules"><b>03</b><span>デスクトップ版のモードと得点</span></a><a class="chapter-link" href="#04-expedition"><b>04</b><span>デスクトップ版・能力遠征の詳細</span></a><a class="chapter-link" href="#05-ai-replay"><b>05</b><span>デスクトップ版の AI・コーチ・リプレイ</span></a><a class="chapter-link" href="#06-saves"><b>06</b><span>セーブ・バックアップ・移行・更新</span></a><a class="chapter-link" href="#07-macos"><b>07</b><span>macOS の導入とトラブル対処</span></a><a class="chapter-link" href="#08-windows"><b>08</b><span>Windows の導入とトラブル対処</span></a><a class="chapter-link" href="#09-mobile"><b>09</b><span>iPhone・iPad・Web 版</span></a><a class="chapter-link" href="#10-gallery"><b>10</b><span>十七本のゲーム実演</span></a><a class="chapter-link" href="#11-solutions"><b>11</b><span>十二問のパズルと三問のレスキュー解答</span></a><a class="chapter-link" href="#12-support"><b>12</b><span>よくある質問・開発・検証</span></a></nav><div class="side-footer"><button id="print" class="print-button">印刷 / PDF 保存</button><p>Desktop v12 · Native 1.0.1 · Touch v1。ゲーム表示は主に中国語、説明書は三言語です。</p><p>2026.09.29 · OFFLINE EDITION</p></div></aside><main class="main"><div class="topline"><span class="doc-title">プレイヤーガイド</span><span>十二章の説明 · 十七本の実演</span></div><div id="results" class="search-results" hidden></div><p class="lead-note">Desktop v12 · Native 1.0.1 · Touch v1。ゲーム表示は主に中国語、説明書は三言語です。</p><article data-chapter="01-platforms" aria-labelledby="01-platforms"><h1 id="01-platforms">プラットフォームと版を選ぶ</h1>
+<p>この説明書は <strong>Mac・Windows・iPhone・iPad・Web</strong> を対象にしています。同じゲームシリーズですが、配布物、バージョン番号、画面、セーブ形式はそれぞれ異なります。2026-09-29 時点のソースコードと配布ファイルに基づく説明です。</p>
+<h2 id="01-platforms-s1">使う端末から選ぶ</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>端末・版</th>
+<th>配布形式と起動方法</th>
+<th>読むページ</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Mac・Python デスクトップ版 v12</td>
+<td>ゲームフォルダーの <code>启动游戏.command</code> をダブルクリック。初回準備には対応する Python が必要</td>
+<td><a href="#07-macos">Mac の導入</a> → <a href="#02-controls">操作</a></td>
+</tr>
+<tr>
+<td>Windows・Python デスクトップ版 v12</td>
+<td>Windows x64 用 ZIP を完全に展開し、<code>2048.exe</code> を開く</td>
+<td><a href="#08-windows">Windows の導入</a> → <a href="#02-controls">操作</a></td>
+</tr>
+<tr>
+<td>iPhone / iPad・Native 1.0.1、build 2</td>
+<td>SwiftUI のソースプロジェクト。Xcode と iOS SDK でビルド・署名して導入</td>
+<td><a href="#09-mobile">App の概要</a> → <a href="../native/docs/ja/index.html">全九章の原生版説明書</a></td>
+</tr>
+<tr>
+<td>ブラウザー・Touch v1</td>
+<td>独立した Web / PWA 版。Safari からホーム画面に追加可能</td>
+<td><a href="#09-mobile">Web 版の説明</a></td>
+</tr>
+</tbody></table></div>
+<p>Windows パッケージの対象は Windows 10 / 11 の Intel・AMD x64 PC です。Mac は Apple Silicon の開発機で動作確認しています。他の Mac は依存関係と実行環境の確認が必要です。原生版の設定は iOS / iPadOS 16.4 以上を対象としていますが、この環境では iOS ビルド・署名・端末検証が未完了です。<strong>ソース一式はそのままインストールできる IPA ではありません。ホーム画面に追加した Web 版も別の版です。</strong></p>
+<h2 id="01-platforms-s2">版ごとの機能</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>機能</th>
+<th>Mac / Windows v12</th>
+<th>Native 1.0.1</th>
+<th>Touch v1</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>六つのモード・クラシックを先頭に配置</td>
+<td>あり</td>
+<td>あり</td>
+<td>あり</td>
+</tr>
+<tr>
+<td>ヒント・自動プレイ・取り消し／やり直し</td>
+<td>あり</td>
+<td>あり</td>
+<td>あり</td>
+</tr>
+<tr>
+<td>自動分析コーチ</td>
+<td>C キー</td>
+<td>同等のデスクトップ操作なし</td>
+<td>同等のデスクトップ操作なし</td>
+</tr>
+<tr>
+<td>通常の直近 100 操作リプレイ</td>
+<td>R キー</td>
+<td>なし。レスキューのルート比較はあり</td>
+<td>あり</td>
+</tr>
+<tr>
+<td>ゲーム内 JSON 読み込み／書き出し</td>
+<td>なし。ファイルをコピー</td>
+<td>あり</td>
+<td>あり</td>
+</tr>
+<tr>
+<td>P で撮影・F で全画面</td>
+<td>あり</td>
+<td>OS の機能を使用</td>
+<td>ブラウザー・OS の機能を使用</td>
+</tr>
+<tr>
+<td>保存場所</td>
+<td>ローカルファイル</td>
+<td>App のサンドボックス</td>
+<td>サイトのブラウザーストレージ</td>
+</tr>
+</tbody></table></div>
+<p>三言語に対応するのは<strong>説明書</strong>です。現在のゲーム表示は主に中国語で、英語・日本語の説明にも操作ボタンの中国語名を併記しています。端末間の自動クラウド同期や共通オンラインランキングはありません。異なる版のセーブは互換ではありません。Mac と Windows の<strong>同じ v12</strong> は<a href="#06-saves">ファイル移行手順</a>で移せます。</p>
+<h2 id="01-platforms-s3">読み方</h2>
+<p>対応する版を導入し、操作とルールから始めてください。遠征の数値は第 4 章、更新・引っ越し前のバックアップは第 6 章です。第 11 章には解答があるので、自分で挑戦してから開くことをおすすめします。</p>
+<p>オフラインで読むにはフォルダー全体を保持し、<code>docs/index.html</code> で言語を選びます。検索対象はその言語の十二章です。原生版の九章には別の検索があります。言語を切り替えても同じ章を開きます。GIF は最初は静止画で、再生ボタンか MP4 プレイヤーで動きを確認できます。説明書を読むだけでゲームの進行が変更・送信されることはありません。</p>
+<div class="chapter-nav"><span></span><a href="#02-controls">デスクトップ版の始め方と操作 →</a></div></article>
+<article data-chapter="02-controls" aria-labelledby="02-controls"><h1 id="02-controls">デスクトップ版の始め方と操作</h1>
+<p>この章は <strong>Mac / Windows のデスクトップ版 v12</strong> 用です。両 OS でゲーム内の操作は共通です。</p>
+<h2 id="02-controls-s1">最初の一局</h2>
+<ol>
+<li>起動すると「选择玩法」（モード選択）が開きます。最初の「经典与挑战」ページでは左の大きなカードがクラシックです。</li>
+<li>「经典」を選びます。上部に得点、中央に 4×4 の盤面があります。</li>
+<li>矢印キー、WASD、または盤面上のマウスドラッグで動かします。盤面全体が動き、個別のタイルをつかむ操作ではありません。</li>
+<li>同じ数字を合体させ、空きマスを残します。まず手動で数手遊んでからヒントを試してください。</li>
+<li>左上のモード名か B でロビーへ。「精选玩法」に遠征とレスキューがあり、「继续当前局」で現在の盤面に戻ります。モードごとに進行を保持します。</li>
+</ol>
+<h2 id="02-controls-s2">キーボード一覧</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>キー</th>
+<th>対局中の動作</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>矢印 / WASD</td>
+<td>スライド。AI から手動操作に戻れる</td>
+</tr>
+<tr>
+<td>Space</td>
+<td>自動プレイ開始／停止</td>
+</tr>
+<tr>
+<td>Z</td>
+<td>取り消し</td>
+</tr>
+<tr>
+<td>Shift+Z / Y</td>
+<td>やり直し</td>
+</tr>
+<tr>
+<td>H</td>
+<td>ヒントを依頼</td>
+</tr>
+<tr>
+<td>Enter</td>
+<td>AI が一手進める</td>
+</tr>
+<tr>
+<td>C</td>
+<td>コーチの切り替え。実際の分析は補助使用扱い</td>
+</tr>
+<tr>
+<td>R</td>
+<td>リプレイ</td>
+</tr>
+<tr>
+<td>B</td>
+<td>モード選択</td>
+</tr>
+<tr>
+<td>N</td>
+<td>現在のモードをやり直す。確認が出た場合は内容に従う</td>
+</tr>
+<tr>
+<td>T / M</td>
+<td>明暗／音の切り替え</td>
+</tr>
+<tr>
+<td>F / P</td>
+<td>全画面／画像保存</td>
+</tr>
+<tr>
+<td>F1</td>
+<td>ルールと操作のヘルプ</td>
+</tr>
+<tr>
+<td>Esc</td>
+<td>状況に応じてパネルを閉じる、全画面解除、停止</td>
+</tr>
+</tbody></table></div>
+<p>リプレイ内では ← / → が前後のフレーム、Home が先頭、End が現在の最終フレーム、Space が再生／停止です。キー操作の前にゲームウィンドウを選択してください。マウスでも各ボタンを押せます。デスクトップのタッチ操作は OS と SDL の入力機器対応に依存し、すべてのタッチ PC で検証したものではありません。</p>
+<h2 id="02-controls-s3">取り消し・リプレイ・再挑戦</h2>
+<p><strong>取り消し</strong>は盤面、得点、手数、乱数状態を戻します。<strong>やり直し</strong>は取り消した操作を復元します。取り消した後に別の手を選ぶと分岐し、元の分岐はやり直せません。直近 100 操作まで保持し、保存済み履歴は再起動後も利用できます。補助使用の印は取り消しでは消えません。</p>
+<p><strong>リプレイ</strong>は履歴の閲覧だけです。<strong>原局重试</strong>は固定パズル・レスキューの再挑戦、<strong>新开一局</strong>はそのモードの進行を置き換える操作です。他のモードは保持します。デイリーの再開局は現在の日付の課題をやり直します。今日の課題へはロビーから入ってください。</p>
+<h2 id="02-controls-s4">設定と表示</h2>
+<p>右上の丸い設定ボタンには AI の品質、速度、明暗、効果音、アニメーション、全画面、記録、遊び方などがあります。AI の思考時間と自動プレイの速度は別の設定です。「冲分」は一手ずつのアニメーションを省きます。動きを見る場合は通常または低速とアニメーション有効を選びます。</p>
+<p>P の画像は<a href="#06-saves">端末の exports フォルダー</a>へ保存され、クリップボードではありません。保存に失敗した場合はメッセージを表示します。同じ秒の連続撮影でも別名を使います。外付けディスクを外す前に、正常終了してセーブの完了を待ってください。</p>
+<div class="chapter-nav"><a href="#01-platforms">← プラットフォームと版を選ぶ</a><a href="#03-rules">デスクトップ版のモードと得点 →</a></div></article>
+<article data-chapter="03-rules" aria-labelledby="03-rules"><h1 id="03-rules">デスクトップ版のモードと得点</h1>
+<h2 id="03-rules-s1">合体の基本</h2>
+<p>4×4 の盤面全体を一方向へ動かし、隣り合う同じ数字を倍の数字に合体させます。その手で合体したタイルは、同じ手の中では再合体しません。左へ動かした例です。新しいタイルが出る前の状態を示します。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>移動前</th>
+<th>移動後</th>
+<th align="right">加点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>2, 2, 2, 2</td>
+<td>4, 4, 0, 0</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>2, 2, 4, 0</td>
+<td>4, 4, 0, 0</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>4, 0, 4, 4</td>
+<td>8, 4, 0, 0</td>
+<td align="right">8</td>
+</tr>
+</tbody></table></div>
+<p>有効な移動後は通常、空きマスに 2（90%）または 4（10%）が出ます。動かない方向は手数を消費せず、出現も乱数の進行もありません。遠征では能力によって得点・出現規則が変わります。満杯でも隣り合う同数があれば続けられます。</p>
+<h2 id="03-rules-s2">クラシックとデイリー</h2>
+<p>クラシックは手数無制限です。2048 に達しても続けられ、合法手がなくなると終了します。合体した数字が基本点になり、8+8→16 なら 16 点です。</p>
+<p>デイリーは日付に基づくシードを使います。同じ日付と操作順なら出現を再現できますが、操作が異なれば同じ盤面にはなりません。今日の課題はロビーから開きます。再開局は現在の課題の日付を維持します。保存済みの直近七日分を保持し、古い日付を選ぶ画面やオンライン順位表はありません。</p>
+<h2 id="03-rules-s3">60 手スプリント</h2>
+<p>有効な 60 手で高得点を目指します。途中で動けなくなると早期終了します。取り消しは残り手数も戻し、無効な方向は手数を消費しません。手動と補助使用の最高得点は別で、クラシックの最高点には入りません。60 手を使い切っただけではレスキューを抽出せず、盤面が詰まった場合が対象です。</p>
+<h2 id="03-rules-s4">パズルシアター：十二章</h2>
+<p>初期盤面と乱数状態が固定され、目標は 64～2048 です。最短解は 2～5 手、上限は最短より一手多い 3～6 手です。横の欄に残り手数と次の数字を表示します。同じ手順の再挑戦では同じ出現になり、方向を変えると空きマスも変わります。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>達成条件</th>
+<th>星</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>補助なし・取り消しなし・最短手数以内</td>
+<td>三つ</td>
+</tr>
+<tr>
+<td>その他の補助なしクリア</td>
+<td>二つ</td>
+</tr>
+<tr>
+<td>補助使用後にクリア</td>
+<td>一つ</td>
+</tr>
+</tbody></table></div>
+<p>各章の最高評価を保持します。同じ未完了の章を選ぶと続きから始まり、「原局重试」でリセットします。別の章を選ぶと現在のパズル盤面は置き換わりますが、星は残ります。AI 分析では確定した次の盤面、残り手数で解けるか、全手順を確認できます。解答を見る操作はネタバレになります。</p>
+<h2 id="03-rules-s5">レスキュー：六手で空間を取り戻す</h2>
+<p>クラシック・デイリー・スプリントが移動不能で終わると、バックグラウンドで直近最大十手を調べます。空きが 0 または 1 マスで、六手以内に三マス以上の空きを作り、移動可能な盤面に戻せる局面が候補です。乱数状態を保持して最短経路を探索し、正式なエンジンで再実行してから出題します。</p>
+<p>独立した課題として 0 点・0 手から始め、元の敗局は元のモードに残します。再挑戦、取り消し、ヒント、自動プレイを使えます。手動・補助使用の最少手数は別々に記録します。進行中に「路线对照」を開くと補助使用となります。自分の手順または元の敗局と、検証済み解答を一手ずつ比較できます。取り消しでも補助の印は消えません。</p>
+<p>個人の残局は直近六件まで保持し、現在の課題を残します。練習と明記した三問もあり、最短解は 3・5・5 手です。すべての敗局から出題されるわけではありません。探索には時間制限があり、未発見は「解なし」の証明ではありません。</p>
+<h2 id="03-rules-s6">遠征と記録の区別</h2>
+<p>遠征は六ステージの得点目標、手数制限、能力選択、能動スキルを組み合わせます。<a href="#04-expedition">第 4 章</a>に詳細があります。得点はクラシックの記録とは別です。</p>
+<p>ヒント、実際のコーチ分析、AI の一手、自動プレイは補助使用です。取り消しでは解除できません。星・得点・手数など記録形式が違うため、倍率のある遠征の得点をクラシックと直接比較できません。外部説明書の解答閲覧はゲームから検出できません。独力の挑戦と解答を知った練習を区別してください。</p>
+<div class="chapter-nav"><a href="#02-controls">← デスクトップ版の始め方と操作</a><a href="#04-expedition">デスクトップ版・能力遠征の詳細 →</a></div></article>
+<article data-chapter="04-expedition" aria-labelledby="04-expedition"><h1 id="04-expedition">デスクトップ版・能力遠征の詳細</h1>
+<p>この章はデスクトップ版 v12 用です。三択の候補は生成時に固定され、画面を閉じる・再起動する操作では引き直せません。遠征の記録は突破ステージ数と得点で順位付けし、能力構成とともに上位十二件まで別に保持します。</p>
+<h2 id="04-expedition-s1">一回の遠征の流れ</h2>
+<p>最初に「连击引擎」（コンボエンジン）、「蓄能核心」（蓄電コア）、「豪赌协议」（ギャンビット）の三つから一つを選びます。各ステージは制限手数内に、そのステージの目標点を稼ぐ形式です。上部スコアは累計、進捗バーは<strong>現在スコアからステージ開始時のスコアを引いた値</strong>です。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>ステージ</th>
+<th>中国語名 / 日本語名</th>
+<th>今回の目標点</th>
+<th>基本手数</th>
+<th>余裕のリズム I / II</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>启程 / 出発</td>
+<td>100</td>
+<td>26</td>
+<td>30 / 34</td>
+</tr>
+<tr>
+<td>2</td>
+<td>蓄势 / 力を蓄えて</td>
+<td>260</td>
+<td>34</td>
+<td>38 / 42</td>
+</tr>
+<tr>
+<td>3</td>
+<td>回响 / 響き</td>
+<td>520</td>
+<td>42</td>
+<td>46 / 50</td>
+</tr>
+<tr>
+<td>4</td>
+<td>临界 / 臨界</td>
+<td>900</td>
+<td>46</td>
+<td>50 / 54</td>
+</tr>
+<tr>
+<td>5</td>
+<td>跃迁 / 飛躍</td>
+<td>1400</td>
+<td>52</td>
+<td>56 / 60</td>
+</tr>
+<tr>
+<td>6</td>
+<td>终章 / 終章</td>
+<td>2200</td>
+<td>60</td>
+<td>64 / 68</td>
+</tr>
+</tbody></table></div>
+<p>最初の五ステージでは達成後に停止し、三択の報酬が出ます。新しい能力か、所有能力の II への強化を選びます。上限に達した能力は候補に出ません。盤面、累計点、能力、エネルギーは持ち越します。二枚以上のタイルがあれば最小値を一枚取り除いて空きを作ります。同値なら左上から行順に見て最初の一枚です。</p>
+<p>余った手数や、目標を超えた分の得点は次ステージの進捗に繰り越しません。報酬選択時にコンボ、凝時の残り回数、クールダウン、戻す / やり直す履歴がリセットされます。第六ステージ達成で遠征クリアです。最後の一手で目標に届けばクリアを優先し、届かなければ手数切れ、または移動も能力使用もできないと失敗です。</p>
+<h2 id="04-expedition-s2">エネルギーと能動能力</h2>
+<p>一組合体するごとに基本 1 エネルギーを得て、最大 <strong>12</strong> まで保持します。蓄電コアで一組あたりの獲得量が増えます。合体しない移動では増えません。エネルギーは遠征だけの要素です。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>能力</th>
+<th>基本消費</th>
+<th>操作</th>
+<th>効果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>凝时 / 凝時</td>
+<td>5</td>
+<td>「凝时 · 5」を押す</td>
+<td>次の有効な移動二回で新タイル出現を止め、六手のクールダウンを設定</td>
+</tr>
+<tr>
+<td>交换 / 交換</td>
+<td>6</td>
+<td>交換を押し、値の異なる二枚を選んで「确认交换」で確定する</td>
+<td>二枚の位置を入れ替える。合体や新タイル出現はしない</td>
+</tr>
+</tbody></table></div>
+<p>どちらも<strong>移動手数を使わず</strong>、直接の得点はありませんが、戻せる操作履歴を一件作ります。空白や同じ数字同士は交換できません。凝時には必要エネルギー、クールダウン 0、凝時中でないこと、盤面が移動可能であることが必要です。完全に詰まった盤面を凝時だけで救うことはできませんが、交換なら救える場合があります。</p>
+<p>凝時回数とクールダウンは有効な方向移動でのみ減ります。待つ、無効スワイプ、交換では進みません。凝時中に空間還流も発動した場合、その手でも凝時を一回消費します。ステージ移行で凝時とクールダウンはリセットされます。</p>
+<h2 id="04-expedition-s3">全能力の正確な効果</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>中国語名 / 日本語名</th>
+<th>I</th>
+<th>II</th>
+<th>条件</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>连击引擎 / コンボエンジン</td>
+<td>連続合体の段階ごとに +25%</td>
+<td>段階ごとに +40%</td>
+<td>二手連続から加算し、最大四段階。合体しない有効移動で途切れる</td>
+</tr>
+<tr>
+<td>蓄能核心 / 蓄電コア</td>
+<td>一組につき追加 +1 エネルギー</td>
+<td>追加 +2</td>
+<td>基本込みで一組 2 / 3。上限 12 は共通</td>
+</tr>
+<tr>
+<td>豪赌协议 / ギャンビット</td>
+<td>得点 ×2、4 の出現率 30%</td>
+<td>×2.5、4 の出現率 40%</td>
+<td>高得点と引き換えに 4 が増える</td>
+</tr>
+<tr>
+<td>角落增幅 / コーナーブースト</td>
+<td>四隅で合体した数値の +50%</td>
+<td>+100%</td>
+<td>合体後の到達位置が四隅かどうかで判定</td>
+</tr>
+<tr>
+<td>共鸣回路 / 共鳴回路</td>
+<td>一手で二組以上合体すると基礎点 +50%</td>
+<td>+100%</td>
+<td>三組・四組でも同じ倍率を一度だけ適用</td>
+</tr>
+<tr>
+<td>空间回流 / 空間還流</td>
+<td>一手で三組以上合体すると新タイルなし</td>
+<td>二組以上で新タイルなし</td>
+<td>自動効果、エネルギー不要</td>
+</tr>
+<tr>
+<td>从容节拍 / 余裕のリズム</td>
+<td>各ステージ +4 手</td>
+<td>各ステージ +8 手</td>
+<td>現在のステージにも即適用。II は合計 +8</td>
+</tr>
+<tr>
+<td>折跃透镜 / ワープレンズ</td>
+<td>交換の消費を 4 に</td>
+<td>消費を 3 に</td>
+<td>凝時は 5 のまま</td>
+</tr>
+<tr>
+<td>凝时晶体 / 凝時クリスタル</td>
+<td>凝時が三回の有効移動に持続</td>
+<td>四回持続</td>
+<td>クールダウンは六手のまま</td>
+</tr>
+</tbody></table></div>
+<p>コンボは一手の合体組数ではなく、「合体のある移動」が何手続いたかです。無効な入力は途切れさせず、合体しない有効移動は途切れさせます。能動能力はコンボを進めず、途切れさせもしません。</p>
+<h2 id="04-expedition-s4">得点計算</h2>
+<p>基礎点を G、角の加点を C、共鳴の加点を E とすると：</p>
+<p><code>一手の得点 = (G + C + E) × コンボ倍率 × ギャンビット倍率</code></p>
+<p>最後に最も近い整数へ丸め、ちょうど .5 の場合は近い偶数を採用します。例えば基礎点 24、角で 8 を生成、二組以上合体し、角 I、共鳴 I、コンボ I の連続二手目、ギャンビット I がある場合は <code>(24 + 4 + 12) × 1.25 × 2 = 100</code> 点です。</p>
+<p>コンボ I の一～五手目の倍率は 1、1.25、1.50、1.75、2。その後も 2 です。II は 1、1.40、1.80、2.20、2.60 で、その後も 2.60 です。</p>
+<h2 id="04-expedition-s5">組み合わせの練習例</h2>
+<p><strong>エネルギー重視</strong>：蓄電コアとワープレンズで交換の機会を増やします。12 を超える分は保持できないため、余裕のあるうちに有効な交換を考えます。</p>
+<p><strong>複数合体重視</strong>：共鳴回路と空間還流で一手二組以上を準備し、得点と空間を得ます。発動のためだけに安定した並びを崩さないことも大切です。</p>
+<p><strong>倍率重視</strong>：コンボエンジンとギャンビットで目標点へ早く近づけますが、4 の増加や連続合体の維持が難しくなります。無条件で有利になる組み合わせではありません。</p>
+<p>報酬はその場の三択から選ぶため、理想の組み合わせが揃う保証はありません。AI はプレイ中の能力を使えますが、ステージ報酬はプレイヤーが選びます。<a href="#10-gallery">遠征の操作例</a>も参照してください。</p>
+<div class="chapter-nav"><a href="#03-rules">← デスクトップ版のモードと得点</a><a href="#05-ai-replay">デスクトップ版の AI・コーチ・リプレイ →</a></div></article>
+<article data-chapter="05-ai-replay" aria-labelledby="05-ai-replay"><h1 id="05-ai-replay">デスクトップ版の AI・コーチ・リプレイ</h1>
+<h2 id="05-ai-replay-s1">補助機能の選び方</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>機能</th>
+<th>使い方</th>
+<th>盤面を進めるか</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>H・ヒント</td>
+<td>推奨方向、合体数、直接の加点を表示</td>
+<td>進めない</td>
+</tr>
+<tr>
+<td>Enter・AI の一手</td>
+<td>一操作を AI に任せる</td>
+<td>進める</td>
+</tr>
+<tr>
+<td>Space・自動プレイ</td>
+<td>連続して判断。もう一度押すと停止</td>
+<td>進める</td>
+</tr>
+<tr>
+<td>C・コーチ</td>
+<td>手動操作が約 450 ms 止まると背景で分析</td>
+<td>進めない</td>
+</tr>
+<tr>
+<td>設定 → 查看 AI 分析</td>
+<td>方向、予測盤面、深さ、局面数、時間を比較</td>
+<td>予測表示では進まない。分析は補助使用</td>
+</tr>
+<tr>
+<td>R・リプレイ</td>
+<td>過去の操作を見る</td>
+<td>進めない。乱数も不変</td>
+</tr>
+</tbody></table></div>
+<p>手動入力で自動プレイから操作を取り戻せます。モード変更、取り消し、停止後には古い分析結果を適用しません。起動直後はコンパイル済み探索コアの準備に数秒かかることがありますが、手動では遊べます。遠征はステージ突破で止まり、プレイヤーが能力を選びます。</p>
+<h2 id="05-ai-replay-s2">思考品質と再生速度</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>品質</th>
+<th align="right">一手の時間予算</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>快速</td>
+<td align="right">約 25 ms</td>
+</tr>
+<tr>
+<td>标准</td>
+<td align="right">約 100 ms</td>
+</tr>
+<tr>
+<td>深入</td>
+<td align="right">約 450 ms</td>
+</tr>
+<tr>
+<td>自适应・初期値</td>
+<td align="right">基準 120 ms。空きに応じて約 90～300 ms、方向が安定すれば早期終了</td>
+</tr>
+</tbody></table></div>
+<p>低速・通常・高速・「冲分」は別の<strong>プレイ速度</strong>です。「冲分」はアニメーションを省略する設定で、探索が深くなる設定ではありません。負荷によって実時間は変わり、フレームレートの保証ではありません。観察には標準または自適応と通常速度が便利です。性能比較にはシード、品質、版、端末、試行数を揃えてください。一局の高得点だけで勝率は判断できません。</p>
+<h2 id="05-ai-replay-s3">四方向分析の見方</h2>
+<p>クラシック・デイリー・スプリントの予測盤面は<strong>合体後、新タイル出現前</strong>です。空きマスや危険度は次の一回の出現を考慮します。終了リスクはその出現直後に動けなくなる確率で、将来の一局全体の敗北率ではありません。相対評価の棒も勝率ではありません。</p>
+<p>パズル・レスキューは乱数状態が固定されるため、新タイル込みの確定盤面と検証済み経路を表示できます。通常三モードでは未来の乱数状態を先読みしません。同盤面・同予算の分析は直近 32 件を再利用でき、「重新分析」で再計算します。</p>
+<h2 id="05-ai-replay-s4">アルゴリズム</h2>
+<p>通常モードは独立プロセスで Numba によるネイティブコンパイル済み Expectimax を実行します。プレイヤーの選択は最大化し、出現は確率で重み付けし、反復深化で完了した深さの結果を保持します。行テーブル、局面キャッシュ、低確率分岐の削減、空き・並び・合体可能性などの評価を使います。二ワードの 80 ビット盤面は各セル 5 ビットで、32768 を超えても通常探索を続け、符号化は 2³⁰ のタイルまで対応します。学習済みニューラルネットではなく、最適解の保証もありません。</p>
+<p>遠征は能力、エネルギー、凝時、交換、出現率を考慮する別の時間制限探索です。空きが多い場合は出現位置を抽出して調べます。パズル・レスキューは完全な乱数状態を含む幅優先探索で最短解を求め、エンジンで検証します。時間切れ・未発見は解なしの証明ではありません。別モードの予算や得点を同一視しないでください。</p>
+<h2 id="05-ai-replay-s5">リプレイ</h2>
+<p>R で直近最大 100 操作を表示し、一手ずつ、再生、得点グラフによる位置選択ができます。現在の盤面、取り消し履歴、乱数は変更しません。遠征は報酬選択後に履歴をリセットするため、全ステージを跨ぐ再生ではありません。レスキューには元の敗局／今回と検証済み経路を比べる専用画面があります。</p>
+<div class="chapter-nav"><a href="#04-expedition">← デスクトップ版・能力遠征の詳細</a><a href="#06-saves">セーブ・バックアップ・移行・更新 →</a></div></article>
+<article data-chapter="06-saves" aria-labelledby="06-saves"><h1 id="06-saves">セーブ・バックアップ・移行・更新</h1>
+<h2 id="06-saves-s1">保存場所</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>版</th>
+<th>主セーブ・予備</th>
+<th>画像・ログ</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Mac v12</td>
+<td>ゲーム内 <code>data/save.json</code>、<code>data/save.bak</code></td>
+<td>ゲーム内 <code>exports/</code>、起動したターミナルの出力</td>
+</tr>
+<tr>
+<td>Windows v12</td>
+<td><code>%LOCALAPPDATA%\2048-Atelier\data\save.json</code> と同じ場所の <code>save.bak</code></td>
+<td><code>%LOCALAPPDATA%\2048-Atelier\exports</code> と <code>logs</code></td>
+</tr>
+<tr>
+<td>Native 1.0.1</td>
+<td>App サンドボックス。設定で JSON を書き出し／読み込み</td>
+<td>原生版の保存ガイドを参照</td>
+</tr>
+<tr>
+<td>Touch v1</td>
+<td>サイトの IndexedDB。設定で書き出し／読み込み</td>
+<td>ブラウザー・端末・サイトごと</td>
+</tr>
+</tbody></table></div>
+<p>デスクトップ版は約五秒ごとと主要操作後に背景で保存し、通常終了時には最後の書き込みを待ちます。主セーブがない・壊れている場合は、直前の読み取り可能な <code>save.bak</code> を試します。予備は一世代で、無制限の履歴ではありません。重要な進行は別の場所にもコピーしてください。乱数、取り消し履歴、各モード、記録を含むため、数値の手動編集は整合性を壊すことがあります。</p>
+<h2 id="06-saves-s2">デスクトップ版のバックアップ</h2>
+<ol>
+<li>自動プレイを止め、開いているすべてのゲームを正常終了します。</li>
+<li>Mac は Finder でゲーム内の <code>data</code> を開きます。Windows は Explorer のアドレス欄に <code>%LOCALAPPDATA%\2048-Atelier\data</code> を入力します。</li>
+<li>存在する <code>save.json</code> と <code>save.bak</code> を一組として日付付きの別フォルダーへコピーします。</li>
+<li>画像も必要なら <code>exports</code> を別にコピーします。画像から対局を復元することはできません。</li>
+</ol>
+<p>コピー中はゲームを起動しないでください。旧版も終了します。新しい排他ロックに従わない旧プロセスの書き込みは防げません。<code>2048.exe</code> や <code>game.py</code> だけのコピーでは、ユーザーデータを保存したことになりません。</p>
+<h2 id="06-saves-s3">Mac と Windows の v12 間で移行</h2>
+<ol>
+<li>両方がデスクトップ v12 であることを確認し、両端の現在のデータをバックアップします。</li>
+<li>移行先を一度起動・終了して保存フォルダーを作ります。</li>
+<li>両端を終了した状態で、移行元の主セーブと予備を一組で移行先の <code>data</code> にコピーします。</li>
+<li>移行元に <code>save.bak</code> がない場合は、移行先の古い予備を先に別のバックアップ先へ移します。壊れた主セーブから無関係な古い局へ戻ることを避けます。</li>
+<li>起動し、モード、点数、盤面、取り消し履歴を確認します。これは移行先を<strong>置き換える</strong>操作で、二台の成績を統合しません。</li>
+</ol>
+<p>Windows の旧フォルダーからの自動移行は、ユーザーデータに <strong>save.json と save.bak の両方が存在しない場合だけ</strong>です。片方でもあれば自動上書きせず、元ファイルも削除しません。移行させるために削除を繰り返すのではなく、上記の手順で明示的に移してください。</p>
+<h2 id="06-saves-s4">更新と復旧</h2>
+<p>Windows 更新では旧ウィンドウを閉じ、新しいゲームを別フォルダーへ完全に展開します。ユーザーデータは残します。Mac のソース更新では <code>data</code>、<code>exports</code>、その Mac の環境を保持します。仮想環境は別の PC へそのまま移す用途に向かないので、導入章に従って再作成してください。</p>
+<p>予備から復元したと表示された場合は盤面を確認し、現在のファイルも保存します。両方壊れている場合は原本を診断用に残し、自分で保管した正常なコピーを使います。有効なコピーなしでの復旧は保証できません。容量不足、読み取り専用、ディスクの切断は保存失敗の原因になります。表示された問題を解決して正常終了してください。</p>
+<h2 id="06-saves-s5">別の版との互換性</h2>
+<p>Native、Touch、Python のセーブは異なる形式です。拡張子が <code>.json</code> でも相互に読み込めません。原生・Web の読み込みは、その版の現在の進行を置き換えます。移行先を先に書き出してください。自動 iCloud・プラットフォーム間同期はありません。App 削除、サイトデータ消去、ブラウザー変更の前に対応する版でバックアップします。</p>
+<div class="chapter-nav"><a href="#05-ai-replay">← デスクトップ版の AI・コーチ・リプレイ</a><a href="#07-macos">macOS の導入とトラブル対処 →</a></div></article>
+<article data-chapter="07-macos" aria-labelledby="07-macos"><h1 id="07-macos">macOS の導入とトラブル対処</h1>
+<h2 id="07-macos-s1">Mac で遊ぶ版</h2>
+<p><strong>Python デスクトップ版 v12</strong> を使います。現在の配布はソースフォルダーと起動スクリプトで、独立した <code>.app</code> パッケージではありません。<code>iOS/Lumina.xcodeproj</code> は iPhone / iPad 用です。説明書内の SwiftUI ホスト表示も、デスクトップ版の代わりとなる Mac 配布アプリではありません。</p>
+<p>以下は <code>~/2048-Atelier</code> を例にしています。実際のゲームフォルダーに読み替えてください。初回は Mac 上で Python 環境を作成し、他の端末の仮想環境はコピーしないでください。</p>
+<h2 id="07-macos-s2">準備済みの Mac</h2>
+<ol>
+<li>外付けディスクを接続し、ゲームフォルダーを開きます。</li>
+<li><code>启动游戏.command</code> をダブルクリックし、ウィンドウと AI の準備を待ちます。</li>
+<li>ロビーでクラシックまたは続きから開始します。起動時の問題はターミナルに表示されます。</li>
+<li>通常終了し、保存完了後にディスクを取り出します。</li>
+</ol>
+<p>ターミナルからは次でも起動できます。</p>
+<pre><code class="language-sh">cd ~/2048-Atelier
+.venv/bin/python game.py
+</code></pre>
+<h2 id="07-macos-s3">別の Mac で初回準備</h2>
+<p><strong>64 ビット Python 3.12～3.14</strong> と、固定された依存関係の導入成功が必要です。ターミナルで実際のゲームフォルダーへ移動し、一行ずつ実行します。</p>
+<pre><code class="language-sh">python3 --version
+python3 -m venv .venv
+.venv/bin/python -m pip install -r requirements.txt
+.venv/bin/python game.py
+</code></pre>
+<p>最初の出力を確認します。<code>python3</code> が対応版でなければ、インストール済みの対応 Python を環境作成に使います。初回ダウンロードには通信が必要ですが、準備後のゲームと AI はサーバーに依存しません。<a href="../../reference/desktop-requirements.txt">依存版の一覧</a>を参照してください。ゲーム専用の <code>.venv</code> を使い、<code>sudo pip</code> でシステム Python を変更する必要はありません。</p>
+<p>コピーしてきた <code>.venv</code> が動かない場合は、ゲーム終了後に旧環境を改名して保持し、この Mac で新しく作ります。<code>data</code> は残します。CPU アーキテクチャが変わる場合も再作成します。実行確認した開発機は Apple Silicon Mac で、すべての Intel Mac・macOS 版を実機確認したわけではありません。</p>
+<h2 id="07-macos-s4">起動時の対処</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>症状</th>
+<th>確認・対処</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ファイルがない</td>
+<td>ディスクの接続とフォルダー名を確認。空白を含むパスは引用符で囲む</td>
+</tr>
+<tr>
+<td>ダブルクリックで動かない</td>
+<td>ターミナルで <code>/bin/zsh &quot;启动游戏.command&quot;</code> を実行し、最初のエラーを見る</td>
+</tr>
+<tr>
+<td>Python やパッケージがない</td>
+<td>バージョン確認後、<code>.venv/bin/python -m pip</code> で requirements を導入</td>
+</tr>
+<tr>
+<td><code>.venv/bin/python</code> が動かない</td>
+<td>他の PC 由来か確認。旧環境を保持して作り直す</td>
+</tr>
+<tr>
+<td>別の起動があると出る</td>
+<td>元のウィンドウを探し正常終了。動作中のロックは削除しない</td>
+</tr>
+<tr>
+<td>手動は動くが AI が準備中</td>
+<td>初期化を待つ。止まったままならターミナル出力を保存</td>
+</tr>
+<tr>
+<td>文字が欠ける</td>
+<td><code>fonts/</code> と全リソースを保持。システムの苹方は再配布せずローカルで読む</td>
+</tr>
+<tr>
+<td>保存・撮影に失敗</td>
+<td>フォルダーの書込権限、空き容量、接続を確認。セーブは <code>data/</code></td>
+</tr>
+</tbody></table></div>
+<p>ダウンロードに対する macOS の警告が出たら、配布元と整合性を確認し、OS が示す個別の開く手順に従います。システム保護を全体で無効化しないでください。起動中の旧画面には新ソースが自動反映されないため、更新後は終了して起動し直します。</p>
+<div class="chapter-nav"><a href="#06-saves">← セーブ・バックアップ・移行・更新</a><a href="#08-windows">Windows の導入とトラブル対処 →</a></div></article>
+<article data-chapter="08-windows" aria-labelledby="08-windows"><h1 id="08-windows">Windows の導入とトラブル対処</h1>
+<h2 id="08-windows-s1">Windows ポータブル版</h2>
+<p>対象は <strong>Windows 10 / 11、Intel・AMD x64</strong> です。32 ビット版やネイティブ ARM64 版ではなく、ARM 上のエミュレーションも未検証です。元の配布物は <code>2048-v12-Windows-x64.zip</code> です。今回の <code>2048-v12-Windows-x64-with-docs.zip</code> は、同じゲーム・実行環境に全版の三言語説明書を追加しています。</p>
+<ol>
+<li>Windows PC に ZIP をコピーし、右クリックの「すべて展開」でローカルフォルダーへ展開します。</li>
+<li>展開後の <code>2048-Windows</code> を開き、<strong>2048.exe</strong> をダブルクリックします。</li>
+<li>最初の AI 準備に数秒待ちます。手動では遊べます。別途 Python を入れたり、プレイ中に通信したりする必要はありません。</li>
+<li>クラシックで矢印操作を試し、終了・再起動して盤面が戻ることを確認します。</li>
+<li><code>README.zh-CN.md / README.en.md / README.ja.md</code>、または <code>docs/index.html</code> をオフラインで読めます。</li>
+</ol>
+<p><code>runtime/</code>、<code>fonts/</code>、JSON、Python ファイルを含めた全構成を保持してください。<strong>ZIP の中から起動したり exe だけコピーしたりしないでください。</strong> Python 3.13.15 と固定依存関係を同梱しており、PC に別の Python があっても入れ替える必要はありません。</p>
+<h2 id="08-windows-s2">セーブは exe の横ではない</h2>
+<p>Explorer のアドレス欄に <code>%LOCALAPPDATA%\2048-Atelier</code> を入力します。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>フォルダー</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>data</code></td>
+<td>主セーブ <code>save.json</code>、予備 <code>save.bak</code>、プロセスロック</td>
+</tr>
+<tr>
+<td><code>exports</code></td>
+<td>P で保存した画像</td>
+</tr>
+<tr>
+<td><code>logs</code></td>
+<td>起動ログ <code>latest.log</code>、自己診断 <code>diagnostics.json</code></td>
+</tr>
+<tr>
+<td><code>cache/numba</code></td>
+<td>再生成可能な AI キャッシュ。進行データではない</td>
+</tr>
+</tbody></table></div>
+<p>バックアップ・更新・移行は<a href="#06-saves">第 6 章</a>にあります。別の場所へ展開しても、ユーザーフォルダーの進行はリセットされません。</p>
+<h2 id="08-windows-s3">起動できないとき</h2>
+<ol>
+<li>完全に展開済みで Windows 10 / 11 x64 か確認します。</li>
+<li><strong>启动游戏.bat</strong> を開き、コンソールの最初のエラーを保存します。</li>
+<li><strong>check-windows.bat</strong> を実行します。依存版、中文字形、十二問のパズル、三問の練習、一時セーブ、背景 AI を確認します。個人の対局は変更せず、結果を読むために画面が停止します。</li>
+<li><code>%LOCALAPPDATA%\2048-Atelier\logs</code> を確認します。<code>diagnostics.json</code> は報告を書き出せた場合のみ作られます。依存関係の読み込みで先に失敗した場合はコンソール出力を保存します。</li>
+<li>下表で確認し、版・OS・エラー全文・再現手順を添えて報告します。</li>
+</ol>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>症状</th>
+<th>対処</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>runtime / Python / DLL がない</td>
+<td>元のパッケージを完全展開し直す。不明なサイトで単独 DLL を探さない</td>
+</tr>
+<tr>
+<td>別の起動がある</td>
+<td>元の画面へ戻る。終了で OS ロックが解除される。ファイルが残るだけではロック中とは限らない</td>
+</tr>
+<tr>
+<td>中国語が四角になる</td>
+<td><code>fonts/NotoSansSC-*.otf</code> と <code>fonts/OFL.txt</code> を確認し、字体を削除しない</td>
+</tr>
+<tr>
+<td>exe だけ失敗する</td>
+<td>bat のコンソールと latest.log を確認。ログなしならコンソール内容を報告</td>
+</tr>
+<tr>
+<td>AI だけ止まる</td>
+<td>初回準備を待ち、自己診断でワーカー・Numba の問題を見る</td>
+</tr>
+<tr>
+<td>拡大率・全画面の不具合</td>
+<td>ウィンドウへ戻し、OS 拡大率と解像度を記録</td>
+</tr>
+<tr>
+<td>保存・撮影失敗</td>
+<td>ユーザーフォルダーの権限・容量を確認。システム領域への導入は不要</td>
+</tr>
+<tr>
+<td>更新が反映されない</td>
+<td>旧画面を閉じ、新しく完全展開した場所から起動</td>
+</tr>
+</tbody></table></div>
+<p>起動前に DPI awareness を設定しますが、全マルチモニター構成の検証を意味しません。Windows が配布元を警告した場合は元ファイルと出所を確認し、OS の個別ファイル用の処理に従ってください。保護機能の全体無効化や、管理者権限での強制起動は不要です。</p>
+<h2 id="08-windows-s4">Windows ソース版</h2>
+<p>ポータブル版ならこの節は不要です。<strong>64 ビット Python 3.12～3.14</strong> が必要です。<code>启动游戏.bat</code> は同梱 runtime、既存 <code>.venv</code> の順に使い、なければ対応 Python を探して環境と依存関係を準備します。初回は通信が必要ですが、準備済みなら毎回再導入しません。</p>
+<p>Python 3.13 を導入済みの場合、ゲームフォルダーのコマンドプロンプトでの例です。</p>
+<pre><code class="language-bat">py -3.13 -m venv .venv
+.venv\Scripts\python.exe -m pip install --only-binary=:all: -r requirements.txt
+.venv\Scripts\python.exe game.py
+</code></pre>
+<h2 id="08-windows-s5">検証範囲</h2>
+<p>元のパッケージでは ZIP CRC、依存ファイルの SHA-256、135 個の x64 PE と必須 DLL の参照を確認しています。<a href="../../reference/desktop-v12-validation.md">v12 検証記録</a>を参照してください。<strong>Windows 実機では未実行です。</strong> 静的確認は画面、音、GPU、拡大率、実画面のフレームレート検証ではありません。デスクトップ動画は同じ Python ゲームを Mac で動かしたもので、Windows 録画ではありません。</p>
+<div class="chapter-nav"><a href="#07-macos">← macOS の導入とトラブル対処</a><a href="#09-mobile">iPhone・iPad・Web 版 →</a></div></article>
+<article data-chapter="09-mobile" aria-labelledby="09-mobile"><h1 id="09-mobile">iPhone・iPad・Web 版</h1>
+<h2 id="09-mobile-s1">iPhone と iPad：共通の原生プロジェクト</h2>
+<p><strong>Native 1.0.1（build 2）</strong> は Swift / SwiftUI の Universal App ソースで、WebView ではありません。iPhone と iPad は同じ規則とコードを使い、幅に応じて配置を変えます。最低配布対象は iOS / iPadOS 16.4、ツールチェーンは Swift 6.0 以上、言語モードは Swift 5 です。最低 OS とコンパイラー要件は別のものです。</p>
+<p>ゲーム内 <code>iOS/</code> に <code>Lumina.xcodeproj</code>、コア、画面、リソース、テスト、説明書があります。<strong>署名済み IPA、TestFlight 招待、App Store 公開版は含みません。</strong> Mac に完全な Xcode と対応 iOS SDK を入れ、プロジェクトで自分の Team と Bundle Identifier を設定し、端末を選んで Run します。Command Line Tools だけでは iPhone へ導入できません。<a href="../native/docs/ja/index.html#06-build">導入・署名・ビルド・端末確認</a>に手順があります。</p>
+<h2 id="09-mobile-s2">原生版の操作</h2>
+<p>起動時はクラシックです。上のモード名から切り替えます。盤面内をスワイプし、戻る矢印で取り消し、電球でヒント、自動プレイで開始／停止します。三点メニューにはやり直し、再開局、パズル・レスキューの選択があります。設定には明暗、音、触覚、動きを減らす、AI 品質、JSON バックアップがあります。</p>
+<p>外部キーボードは矢印と WASD に対応します。デスクトップの Z/R/C/P は適用しないでください。動作中に最大二回のスワイプを待機でき、メニュー・背景移行・手動への切り替えで待機入力を処理して AI を止めます。狭い iPhone は縦配置、広い iPad は盤面と情報を左右に置き、小さいウィンドウにも合わせます。長い説明はスクロールできます。</p>
+<p>AI を止め、設定から JSON を「ファイル」などへ書き出します。読み込みは原生版の進行を置き換えるので、移行先を先に保存してください。Python・Touch の JSON とは別形式です。原生版はヒントを依頼した時点で補助使用になり、推奨手を実行しなくても同じです。</p>
+<h2 id="09-mobile-s3">既存の九章をすべて保持</h2>
+<ul>
+<li><a href="../native/docs/ja/index.html#01-start">操作・ジェスチャー・iPhone/iPad 配置</a></li>
+<li><a href="../native/docs/ja/index.html#02-rules">六モード</a>と<a href="../native/docs/ja/index.html#03-expedition">能力・得点</a></li>
+<li><a href="../native/docs/ja/index.html#04-ai-data">AI・記録・バックアップ</a></li>
+<li><a href="../native/docs/ja/index.html#05-faq">問題への対処</a>と<a href="../native/docs/ja/index.html#06-build">ビルド・導入</a></li>
+<li><a href="../native/docs/ja/index.html#07-gallery">九本の実演</a>、<a href="../native/docs/ja/index.html#08-solutions">解答</a>、<a href="../native/docs/ja/index.html#09-release">更新と検証</a></li>
+</ul>
+<p>インストール済みなら操作章から、ソースを受け取った場合はビルド章から読みます。Mac 上のテストとレイアウト画像は、実機のタッチ、回転、Split View、背景復帰、VoiceOver、表示性能の代わりにはなりません。</p>
+<h2 id="09-mobile-s4">Touch v1：独立した Web 版</h2>
+<p>Web 版はネイティブ App とは別の版です。Safari のタッチ操作とホーム画面への追加に対応します。ネイティブ App はこの章の前半にある導入・操作手順を参照してください。</p>
+<ol>
+<li>Safari で <a href="https://lumina-2048.vercel.app/">LUMINA Web 版</a>を開きます。現在はアクセス制限があるため、利用権限のある Vercel アカウントでログインしてください。</li>
+<li>初回読込完了を待ち、共有 → ホーム画面に追加を選びます。</li>
+<li>オフライン準備後に切断してホーム画面から起動を試します。キャッシュ前はオフライン利用を保証しません。</li>
+<li>盤面内スワイプ、方向ボタン、矢印／WASD で遊べます。</li>
+<li>設定で JSON を書き出し、別端末の <strong>Touch 版</strong>へ読み込みます。移行先も先に保存します。</li>
+</ol>
+<p>六モード、ヒント、Worker AI、取り消し／やり直し、直近 100 操作リプレイ、レスキュー比較、明暗、音、動きを減らす設定があります。メニュー・背景・手動切り替えで自動プレイを止めます。Python 版の全キー操作はなく、AI の時間設定もデスクトップと同じではありません。</p>
+<p>保存はサイトの IndexedDB で、予備とページ離脱時の緊急記録を持ちます。ブラウザー、端末、ホーム画面環境間で自動同期しません。サイトデータ削除、プライベート閲覧、OS の容量整理で失われる場合があるため、重要データは書き出してください。更新後も旧画面の場合は、先に保存し、接続して開き直して更新を待ちます。最初にサイトデータを消さないでください。</p>
+<p>旧 URL から移行する場合は、先に旧サイトの設定で「导出进度」を選び、新サイトの「导入进度」で読み込んでください。ブラウザーのセーブは URL をまたいで自動移行されません。ホーム画面のアイコンも新しい URL から追加し直してください。</p>
+<p>ソースは <code>mobile/</code> です。開発用 <code>python3 serve.py</code> は通常 Service Worker を登録しません。携帯端末向けの公開には HTTPS が必要です。原生との規則比較、Web 自動テスト、ブラウザー配置確認は、実機のオフライン起動・触覚・システムジェスチャーの検証を意味しません。</p>
+<div class="chapter-nav"><a href="#08-windows">← Windows の導入とトラブル対処</a><a href="#10-gallery">十七本のゲーム実演 →</a></div></article>
+<article data-chapter="10-gallery" aria-labelledby="10-gallery"><h1 id="10-gallery">十七本のゲーム実演</h1>
+<p>デスクトップ八本と原生九本を収録。実際のコードで動かした画像から MP4 を作り、その配布 MP4 を復号して GIF にしています。12 fps の教材で、実画面の性能測定ではありません。HTML は停止状態から再生でき、MP4 も開けます。Markdown は通常自動で繰り返します。</p>
+<h2 id="10-gallery-s1">Mac / Windows デスクトップ v12 の操作</h2>
+<p>Mac の実際の Python / pygame 描画を SDL dummy と独立した一時セーブで記録しています。Windows と共通コードですが、Windows 実機の録画ではありません。無音で、個人セーブは使いません。</p>
+<h3 id="10-gallery-s2">ロビー：クラシックを先頭に</h3>
+<p>クラシックのページから精选玩法へ移り、戻って開始します。対局中は B でロビーへ戻れます。</p>
+<figure class="motion"><img src="../media/10-desktop-lobby-poster.png" data-gif="../media/10-desktop-lobby.gif" data-poster="../media/10-desktop-lobby-poster.png" alt="ロビー：クラシックを先頭に" loading="lazy" width="1080" height="820"><button class="motion-toggle" type="button" aria-pressed="false">動図を再生</button><figcaption>ロビー：クラシックを先頭に</figcaption></figure><details class="video-source"><summary>MP4 · 動画プレイヤー</summary><video controls playsinline preload="none" poster="../media/10-desktop-lobby-poster.png" src="../media/10-desktop-lobby.mp4" width="1080" height="820" aria-label="ロビー：クラシックを先頭に"></video></details>
+<p><a href="../media/10-desktop-lobby.gif">GIF</a> · <a href="../media/10-desktop-lobby.mp4">MP4 · 6.00 s</a> · <a href="../media/10-desktop-lobby-poster.png">PNG</a></p>
+<h3 id="10-gallery-s3">クラシック：移動・取り消し・やり直し</h3>
+<p>seed 42 の実際の新局で左・下・左・上・右、その後に取り消しとやり直し。盤面・得点・手数が一緒に戻ります。</p>
+<figure class="motion"><img src="../media/11-desktop-classic-poster.png" data-gif="../media/11-desktop-classic.gif" data-poster="../media/11-desktop-classic-poster.png" alt="クラシック：移動・取り消し・やり直し" loading="lazy" width="1080" height="820"><button class="motion-toggle" type="button" aria-pressed="false">動図を再生</button><figcaption>クラシック：移動・取り消し・やり直し</figcaption></figure><details class="video-source"><summary>MP4 · 動画プレイヤー</summary><video controls playsinline preload="none" poster="../media/11-desktop-classic-poster.png" src="../media/11-desktop-classic.mp4" width="1080" height="820" aria-label="クラシック：移動・取り消し・やり直し"></video></details>
+<p><a href="../media/11-desktop-classic.gif">GIF</a> · <a href="../media/11-desktop-classic.mp4">MP4 · 7.00 s</a> · <a href="../media/11-desktop-classic-poster.png">PNG</a></p>
+<h3 id="10-gallery-s4">AI 分析・一手・リプレイ</h3>
+<p>実際のワーカーで分析し、左の予測、一手実行、履歴表示を行います。リプレイでは現在の盤面を変えません。</p>
+<figure class="motion"><img src="../media/12-desktop-ai-replay-poster.png" data-gif="../media/12-desktop-ai-replay.gif" data-poster="../media/12-desktop-ai-replay-poster.png" alt="AI 分析・一手・リプレイ" loading="lazy" width="1080" height="820"><button class="motion-toggle" type="button" aria-pressed="false">動図を再生</button><figcaption>AI 分析・一手・リプレイ</figcaption></figure><details class="video-source"><summary>MP4 · 動画プレイヤー</summary><video controls playsinline preload="none" poster="../media/12-desktop-ai-replay-poster.png" src="../media/12-desktop-ai-replay.mp4" width="1080" height="820" aria-label="AI 分析・一手・リプレイ"></video></details>
+<p><a href="../media/12-desktop-ai-replay.gif">GIF</a> · <a href="../media/12-desktop-ai-replay.mp4">MP4 · 8.50 s</a> · <a href="../media/12-desktop-ai-replay-poster.png">PNG</a></p>
+<h3 id="10-gallery-s5">パズル：二手で 64</h3>
+<p>第一章を初期状態から上・上と動かし、実際に三つ星で達成します。解答を含みます。</p>
+<figure class="motion"><img src="../media/13-desktop-puzzle-poster.png" data-gif="../media/13-desktop-puzzle.gif" data-poster="../media/13-desktop-puzzle-poster.png" alt="パズル：二手で 64" loading="lazy" width="1080" height="820"><button class="motion-toggle" type="button" aria-pressed="false">動図を再生</button><figcaption>パズル：二手で 64</figcaption></figure><details class="video-source"><summary>MP4 · 動画プレイヤー</summary><video controls playsinline preload="none" poster="../media/13-desktop-puzzle-poster.png" src="../media/13-desktop-puzzle.mp4" width="1080" height="820" aria-label="パズル：二手で 64"></video></details>
+<p><a href="../media/13-desktop-puzzle.gif">GIF</a> · <a href="../media/13-desktop-puzzle.mp4">MP4 · 5.33 s</a> · <a href="../media/13-desktop-puzzle-poster.png">PNG</a></p>
+<h3 id="10-gallery-s6">遠征：能力選択と充電</h3>
+<p>seed 13 の新局で蓄能核心を選び、移動とエネルギー、説明パネルを見ます。第一ステージの導入で、六ステージ全編ではありません。</p>
+<figure class="motion"><img src="../media/14-desktop-expedition-poster.png" data-gif="../media/14-desktop-expedition.gif" data-poster="../media/14-desktop-expedition-poster.png" alt="遠征：能力選択と充電" loading="lazy" width="1080" height="820"><button class="motion-toggle" type="button" aria-pressed="false">動図を再生</button><figcaption>遠征：能力選択と充電</figcaption></figure><details class="video-source"><summary>MP4 · 動画プレイヤー</summary><video controls playsinline preload="none" poster="../media/14-desktop-expedition-poster.png" src="../media/14-desktop-expedition.mp4" width="1080" height="820" aria-label="遠征：能力選択と充電"></video></details>
+<p><a href="../media/14-desktop-expedition.gif">GIF</a> · <a href="../media/14-desktop-expedition.mp4">MP4 · 8.00 s</a> · <a href="../media/14-desktop-expedition-poster.png">PNG</a></p>
+<h3 id="10-gallery-s7">レスキュー：三手と経路比較</h3>
+<p>練習一問目を右・上・上で三空きに戻し、成功後に比較を開いて進めます。解答を含みます。</p>
+<figure class="motion"><img src="../media/15-desktop-rescue-poster.png" data-gif="../media/15-desktop-rescue.gif" data-poster="../media/15-desktop-rescue-poster.png" alt="レスキュー：三手と経路比較" loading="lazy" width="1080" height="820"><button class="motion-toggle" type="button" aria-pressed="false">動図を再生</button><figcaption>レスキュー：三手と経路比較</figcaption></figure><details class="video-source"><summary>MP4 · 動画プレイヤー</summary><video controls playsinline preload="none" poster="../media/15-desktop-rescue-poster.png" src="../media/15-desktop-rescue.mp4" width="1080" height="820" aria-label="レスキュー：三手と経路比較"></video></details>
+<p><a href="../media/15-desktop-rescue.gif">GIF</a> · <a href="../media/15-desktop-rescue.mp4">MP4 · 6.83 s</a> · <a href="../media/15-desktop-rescue-poster.png">PNG</a></p>
+<h3 id="10-gallery-s8">デイリー：固定日付と履歴</h3>
+<p>正式な daily_game で 2026-09-29 を生成し、移動・取り消し・やり直しを示します。無効な方向は手数に入りません。</p>
+<figure class="motion"><img src="../media/16-desktop-daily-poster.png" data-gif="../media/16-desktop-daily.gif" data-poster="../media/16-desktop-daily-poster.png" alt="デイリー：固定日付と履歴" loading="lazy" width="1080" height="820"><button class="motion-toggle" type="button" aria-pressed="false">動図を再生</button><figcaption>デイリー：固定日付と履歴</figcaption></figure><details class="video-source"><summary>MP4 · 動画プレイヤー</summary><video controls playsinline preload="none" poster="../media/16-desktop-daily-poster.png" src="../media/16-desktop-daily.mp4" width="1080" height="820" aria-label="デイリー：固定日付と履歴"></video></details>
+<p><a href="../media/16-desktop-daily.gif">GIF</a> · <a href="../media/16-desktop-daily.mp4">MP4 · 6.67 s</a> · <a href="../media/16-desktop-daily-poster.png">PNG</a></p>
+<h3 id="10-gallery-s9">スプリント：残り手数を見る</h3>
+<p>seed 42 の新局を五手進め、取り消しとやり直しを行います。手数の説明で、60 手目の終了映像ではありません。</p>
+<figure class="motion"><img src="../media/17-desktop-sprint-poster.png" data-gif="../media/17-desktop-sprint.gif" data-poster="../media/17-desktop-sprint-poster.png" alt="スプリント：残り手数を見る" loading="lazy" width="1080" height="820"><button class="motion-toggle" type="button" aria-pressed="false">動図を再生</button><figcaption>スプリント：残り手数を見る</figcaption></figure><details class="video-source"><summary>MP4 · 動画プレイヤー</summary><video controls playsinline preload="none" poster="../media/17-desktop-sprint-poster.png" src="../media/17-desktop-sprint.mp4" width="1080" height="820" aria-label="スプリント：残り手数を見る"></video></details>
+<p><a href="../media/17-desktop-sprint.gif">GIF</a> · <a href="../media/17-desktop-sprint.mp4">MP4 · 7.50 s</a> · <a href="../media/17-desktop-sprint-poster.png">PNG</a></p>
+<h2 id="10-gallery-s10">iPhone / iPad 原生版の操作（Mac ホスト表示）</h2>
+<p>九本の GIF はネイティブコードを実行して採取した動画から変換し、元の MP4 も同梱しています。環境は macOS ネイティブプレビューで、<strong>iPhone / iPad の録画や実機 FPS 検査ではありません</strong>。下の英語帯は教材の注釈です。HTML では停止可能、Markdown では通常ループします。MP4 は H.264 形式です。HTML の動画プレイヤーを開くか、ダウンロードして再生できます。すべてローカルで、通信は不要です。</p>
+<h3 id="10-gallery-s11">クラシック：移動・合体・出現</h3>
+<p>seed 42 で実際に進めた中盤から再開。盤面全体の移動、同じ数字の合体、得点、新タイルを確認します。方向は下の帯に表示します。</p>
+<figure class="motion"><img src="../native/docs/media/01-classic-poster.png" data-gif="../native/docs/media/01-classic.gif" data-poster="../native/docs/media/01-classic-poster.png" alt="クラシック：移動・合体・出現" loading="lazy" width="1000" height="700"><button class="motion-toggle" type="button" aria-pressed="false">動図を再生</button><figcaption>クラシック：移動・合体・出現</figcaption></figure><details class="video-source"><summary>MP4 · 動画プレイヤー</summary><video controls playsinline preload="none" poster="../native/docs/media/01-classic-poster.png" src="../native/docs/media/01-classic.mp4" width="1000" height="700" aria-label="クラシック：移動・合体・出現"></video></details>
+<p>最大タイルを角付近に保つ練習に。合体しない移動でも新タイルは出ます。</p>
+<p><a href="../native/docs/media/01-classic.gif">GIF</a> · <a href="../native/docs/media/01-classic.mp4">MP4 · 6.08 s</a> · <a href="../native/docs/media/01-classic-poster.png">PNG</a></p>
+<h3 id="10-gallery-s12">戻す・やり直す：同じ出現を復元</h3>
+<p>一手動かし、戻して、やり直します。盤面、点数、手数が一緒に変わります。</p>
+<figure class="motion"><img src="../native/docs/media/02-undo-redo-poster.png" data-gif="../native/docs/media/02-undo-redo.gif" data-poster="../native/docs/media/02-undo-redo-poster.png" alt="戻す・やり直す：同じ出現を復元" loading="lazy" width="1000" height="700"><button class="motion-toggle" type="button" aria-pressed="false">動図を再生</button><figcaption>戻す・やり直す：同じ出現を復元</figcaption></figure><details class="video-source"><summary>MP4 · 動画プレイヤー</summary><video controls playsinline preload="none" poster="../native/docs/media/02-undo-redo-poster.png" src="../native/docs/media/02-undo-redo.mp4" width="1000" height="700" aria-label="戻す・やり直す：同じ出現を復元"></video></details>
+<p>やり直しは三点メニュー内です。乱数状態も復元するので引き直しではありません。</p>
+<p><a href="../native/docs/media/02-undo-redo.gif">GIF</a> · <a href="../native/docs/media/02-undo-redo.mp4">MP4 · 5.58 s</a> · <a href="../native/docs/media/02-undo-redo-poster.png">PNG</a></p>
+<h3 id="10-gallery-s13">AI：ヒント・実行・自動・停止</h3>
+<p>ヒントを要求して実行し、自動プレイを開始してから止めます。</p>
+<figure class="motion"><img src="../native/docs/media/03-ai-poster.png" data-gif="../native/docs/media/03-ai.gif" data-poster="../native/docs/media/03-ai-poster.png" alt="AI：ヒント・実行・自動・停止" loading="lazy" width="1000" height="700"><button class="motion-toggle" type="button" aria-pressed="false">動図を再生</button><figcaption>AI：ヒント・実行・自動・停止</figcaption></figure><details class="video-source"><summary>MP4 · 動画プレイヤー</summary><video controls playsinline preload="none" poster="../native/docs/media/03-ai-poster.png" src="../native/docs/media/03-ai.mp4" width="1000" height="700" aria-label="AI：ヒント・実行・自動・停止"></video></details>
+<p>下部表示が手動からアシストへ変化。止めてもアシスト区分は残ります。</p>
+<p><a href="../native/docs/media/03-ai.gif">GIF</a> · <a href="../native/docs/media/03-ai.mp4">MP4 · 11.5 s</a> · <a href="../native/docs/media/03-ai-poster.png">PNG</a></p>
+<h3 id="10-gallery-s14">遠征：三択と序盤</h3>
+<p>seed 42 の新しい遠征で蓄電コアを選び、数手動かします。</p>
+<figure class="motion"><img src="../native/docs/media/04-expedition-draft-poster.png" data-gif="../native/docs/media/04-expedition-draft.gif" data-poster="../native/docs/media/04-expedition-draft-poster.png" alt="遠征：三択と序盤" loading="lazy" width="1000" height="700"><button class="motion-toggle" type="button" aria-pressed="false">動図を再生</button><figcaption>遠征：三択と序盤</figcaption></figure><details class="video-source"><summary>MP4 · 動画プレイヤー</summary><video controls playsinline preload="none" poster="../native/docs/media/04-expedition-draft-poster.png" src="../native/docs/media/04-expedition-draft.mp4" width="1000" height="700" aria-label="遠征：三択と序盤"></video></details>
+<p>複数組の合体でエネルギーが増えます。ステージ点と累計点の違いを確認します。</p>
+<p><a href="../native/docs/media/04-expedition-draft.gif">GIF</a> · <a href="../native/docs/media/04-expedition-draft.mp4">MP4 · 7.25 s</a> · <a href="../native/docs/media/04-expedition-draft-poster.png">PNG</a></p>
+<h3 id="10-gallery-s15">遠征：凝時と交換</h3>
+<p>実際の操作で 12 エネルギーを得た状態から、凝時、異なる二枚の交換、二回の移動を実演します。</p>
+<figure class="motion"><img src="../native/docs/media/05-expedition-powers-poster.png" data-gif="../native/docs/media/05-expedition-powers.gif" data-poster="../native/docs/media/05-expedition-powers-poster.png" alt="遠征：凝時と交換" loading="lazy" width="1000" height="700"><button class="motion-toggle" type="button" aria-pressed="false">動図を再生</button><figcaption>遠征：凝時と交換</figcaption></figure><details class="video-source"><summary>MP4 · 動画プレイヤー</summary><video controls playsinline preload="none" poster="../native/docs/media/05-expedition-powers-poster.png" src="../native/docs/media/05-expedition-powers.mp4" width="1000" height="700" aria-label="遠征：凝時と交換"></video></details>
+<p>能力を使っても残り手数は変わらず、凝時中の移動では新タイルが出ません。</p>
+<p><a href="../native/docs/media/05-expedition-powers.gif">GIF</a> · <a href="../native/docs/media/05-expedition-powers.mp4">MP4 · 6.42 s</a> · <a href="../native/docs/media/05-expedition-powers-poster.png">PNG</a></p>
+<h3 id="10-gallery-s16">パズル：二手で 64</h3>
+<p>第 01 問を最初から、上、上と動かして 64 にします。</p>
+<figure class="motion"><img src="../native/docs/media/06-puzzle-poster.png" data-gif="../native/docs/media/06-puzzle.gif" data-poster="../native/docs/media/06-puzzle-poster.png" alt="パズル：二手で 64" loading="lazy" width="1000" height="700"><button class="motion-toggle" type="button" aria-pressed="false">動図を再生</button><figcaption>パズル：二手で 64</figcaption></figure><details class="video-source"><summary>MP4 · 動画プレイヤー</summary><video controls playsinline preload="none" poster="../native/docs/media/06-puzzle-poster.png" src="../native/docs/media/06-puzzle.mp4" width="1000" height="700" aria-label="パズル：二手で 64"></video></details>
+<p>解答を含みます。ヒントと戻すを使わず、星三つを取得します。</p>
+<p><a href="../native/docs/media/06-puzzle.gif">GIF</a> · <a href="../native/docs/media/06-puzzle.mp4">MP4 · 4.67 s</a> · <a href="../native/docs/media/06-puzzle-poster.png">PNG</a></p>
+<h3 id="10-gallery-s17">レスキュー：失敗する手と救済ルート</h3>
+<p>練習「一线生机」で元の左移動による詰みを再現。最初からやり直して、右、上、上と進めます。</p>
+<figure class="motion"><img src="../native/docs/media/07-rescue-poster.png" data-gif="../native/docs/media/07-rescue.gif" data-poster="../native/docs/media/07-rescue-poster.png" alt="レスキュー：失敗する手と救済ルート" loading="lazy" width="1000" height="700"><button class="motion-toggle" type="button" aria-pressed="false">動図を再生</button><figcaption>レスキュー：失敗する手と救済ルート</figcaption></figure><details class="video-source"><summary>MP4 · 動画プレイヤー</summary><video controls playsinline preload="none" poster="../native/docs/media/07-rescue-poster.png" src="../native/docs/media/07-rescue.mp4" width="1000" height="700" aria-label="レスキュー：失敗する手と救済ルート"></video></details>
+<p>二つの結末を比較します。成功には出現後の空き三マスが必要。クラシック全局の録画ではなく、問題の実操作です。</p>
+<p><a href="../native/docs/media/07-rescue.gif">GIF</a> · <a href="../native/docs/media/07-rescue.mp4">MP4 · 7.58 s</a> · <a href="../native/docs/media/07-rescue-poster.png">PNG</a></p>
+<h3 id="10-gallery-s18">デイリー：同じ日付で再開始</h3>
+<p>例の日付 2026-09-29 で三手動かし、最初から始め直します。</p>
+<figure class="motion"><img src="../native/docs/media/08-daily-poster.png" data-gif="../native/docs/media/08-daily.gif" data-poster="../native/docs/media/08-daily-poster.png" alt="デイリー：同じ日付で再開始" loading="lazy" width="1000" height="700"><button class="motion-toggle" type="button" aria-pressed="false">動図を再生</button><figcaption>デイリー：同じ日付で再開始</figcaption></figure><details class="video-source"><summary>MP4 · 動画プレイヤー</summary><video controls playsinline preload="none" poster="../native/docs/media/08-daily-poster.png" src="../native/docs/media/08-daily.mp4" width="1000" height="700" aria-label="デイリー：同じ日付で再開始"></video></details>
+<p>最初の二枚が元に戻ることを確認します。通信による同期ではありません。</p>
+<p><a href="../native/docs/media/08-daily.gif">GIF</a> · <a href="../native/docs/media/08-daily.mp4">MP4 · 5.83 s</a> · <a href="../native/docs/media/08-daily-poster.png">PNG</a></p>
+<h3 id="10-gallery-s19">スプリント：最後の三手</h3>
+<p>seed 42 の本物の局を 57 手目まで進め、残り三手と終了を収録します。</p>
+<figure class="motion"><img src="../native/docs/media/09-sprint-poster.png" data-gif="../native/docs/media/09-sprint.gif" data-poster="../native/docs/media/09-sprint-poster.png" alt="スプリント：最後の三手" loading="lazy" width="1000" height="700"><button class="motion-toggle" type="button" aria-pressed="false">動図を再生</button><figcaption>スプリント：最後の三手</figcaption></figure><details class="video-source"><summary>MP4 · 動画プレイヤー</summary><video controls playsinline preload="none" poster="../native/docs/media/09-sprint-poster.png" src="../native/docs/media/09-sprint.mp4" width="1000" height="700" aria-label="スプリント：最後の三手"></video></details>
+<p>残りが 3 から 0 へ減ります。秒数制限ではなく、第 61 手はありません。</p>
+<p><a href="../native/docs/media/09-sprint.gif">GIF</a> · <a href="../native/docs/media/09-sprint.mp4">MP4 · 5.58 s</a> · <a href="../native/docs/media/09-sprint-poster.png">PNG</a></p>
+<p><a href="../native/docs/media/index.html">Media / 媒体 / メディア</a></p>
+<div class="chapter-nav"><a href="#09-mobile">← iPhone・iPad・Web 版</a><a href="#11-solutions">十二問のパズルと三問のレスキュー解答 →</a></div></article>
+<article data-chapter="11-solutions" aria-labelledby="11-solutions"><h1 id="11-solutions">十二問のパズルと三問のレスキュー解答</h1>
+<p>以下の十二章・三問の練習は、資源・初期盤面・経路をデスクトップ v12 と照合しています。ボタン位置は各版の操作章を参照してください。</p>
+<p>まず自分で試してから読んでください。すべて初期盤面からのルートなので、対応する問題を最初から始めます。矢印は移動方向、0 は空白です。方向は翻訳で変わらないよう、同梱リソースから直接生成しています。</p>
+<p>外部説明書の閲覧はアプリの外なので、解答を読んだことを自動判定してアシスト扱いにはできません。自力挑戦を大切にする場合は外部解答を避け、既知ルートの練習と初見の解法発見を区別してください。</p>
+<h2 id="11-solutions-s1">パズル 01 · 借一步</h2>
+<p>目標 / 標準 / 上限: <strong>64 / 2 / 3</strong></p>
+<pre><code class="language-text">   2    8    8   16
+   4    4    2   16
+   4    8    8    0
+  16    4    4   32
+</code></pre>
+<p>ルート: <strong>↑  ↑</strong></p>
+<h2 id="11-solutions-s2">パズル 02 · 转身</h2>
+<p>目標 / 標準 / 上限: <strong>64 / 2 / 3</strong></p>
+<pre><code class="language-text">   8   32    2    0
+   8    8   16   16
+   4    4    8    8
+   0   16    4   16
+</code></pre>
+<p>ルート: <strong>←  ↑</strong></p>
+<h2 id="11-solutions-s3">パズル 03 · 留白</h2>
+<p>目標 / 標準 / 上限: <strong>128 / 3 / 4</strong></p>
+<pre><code class="language-text">   2    2   64   32
+   8   16   16   16
+  16    0    0    4
+  32   16    8    4
+</code></pre>
+<p>ルート: <strong>→  ↑  ←</strong></p>
+<h2 id="11-solutions-s4">パズル 04 · 折返</h2>
+<p>目標 / 標準 / 上限: <strong>128 / 3 / 4</strong></p>
+<pre><code class="language-text">   0   16   16    0
+  32   16   16   32
+  16    4   16    0
+   4    4    0   32
+</code></pre>
+<p>ルート: <strong>↑  →  ←</strong></p>
+<h2 id="11-solutions-s5">パズル 05 · 暗流</h2>
+<p>目標 / 標準 / 上限: <strong>256 / 3 / 4</strong></p>
+<pre><code class="language-text">   2    2   64   16
+   0    4    0    4
+   0   32   32  128
+  64    0   16    4
+</code></pre>
+<p>ルート: <strong>←  ↑  ←</strong></p>
+<h2 id="11-solutions-s6">パズル 06 · 挪一寸</h2>
+<p>目標 / 標準 / 上限: <strong>256 / 4 / 5</strong></p>
+<pre><code class="language-text">  16   32   32   32
+  16    4    0   16
+   4    0   32   64
+  64   64    0   32
+</code></pre>
+<p>ルート: <strong>←  ↑  ←  ←</strong></p>
+<h2 id="11-solutions-s7">パズル 07 · 连锁</h2>
+<p>目標 / 標準 / 上限: <strong>512 / 4 / 5</strong></p>
+<pre><code class="language-text"> 128   64    0    2
+ 256   32    2   64
+   0   32    2    4
+ 128    0   32   64
+</code></pre>
+<p>ルート: <strong>↑  ↑  ←  ↑</strong></p>
+<h2 id="11-solutions-s8">パズル 08 · 破局</h2>
+<p>目標 / 標準 / 上限: <strong>512 / 4 / 5</strong></p>
+<pre><code class="language-text">   4   64   64  128
+   0    2  128    4
+  32   64   64    0
+  64    0    0   64
+</code></pre>
+<p>ルート: <strong>←  ←  ↑  ↑</strong></p>
+<h2 id="11-solutions-s9">パズル 09 · 回声</h2>
+<p>目標 / 標準 / 上限: <strong>1024 / 4 / 5</strong></p>
+<pre><code class="language-text">   4  256    0  256
+ 128  256   64  128
+  64   64   64    0
+ 256    4   64    2
+</code></pre>
+<p>ルート: <strong>←  ↑  →  ↑</strong></p>
+<h2 id="11-solutions-s10">パズル 10 · 逆风</h2>
+<p>目標 / 標準 / 上限: <strong>1024 / 5 / 6</strong></p>
+<pre><code class="language-text">   4    4  128    2
+  64    0  512   64
+ 128  256  128  256
+   0   64    4  256
+</code></pre>
+<p>ルート: <strong>↑  ←  ←  ↑  ←</strong></p>
+<h2 id="11-solutions-s11">パズル 11 · 归位</h2>
+<p>目標 / 標準 / 上限: <strong>2048 / 5 / 6</strong></p>
+<pre><code class="language-text"> 128    0    4  256
+ 256  256    0  512
+   4    4    0    4
+ 512    2    0  512
+</code></pre>
+<p>ルート: <strong>←  ↑  →  ↑  ↑</strong></p>
+<h2 id="11-solutions-s12">パズル 12 · 最后一线</h2>
+<p>目標 / 標準 / 上限: <strong>2048 / 5 / 6</strong></p>
+<pre><code class="language-text"> 256    0  256    0
+ 256  128  512  256
+ 256  128  256  128
+   2  128  512  256
+</code></pre>
+<p>ルート: <strong>↑  ↓  ←  ←  ↑</strong></p>
+<h2 id="11-solutions-s13">内蔵レスキュー</h2>
+<p>六手以内に空きを三マス作ります。新タイル出現後に判定します。「元のルート」は移動不能になる比較例であり、推奨手ではありません。</p>
+<h3 id="11-solutions-s14">一线生机</h3>
+<p>元のルート（失敗）: ←</p>
+<p>救済ルート（成功）: <strong>→ ↑ ↑</strong></p>
+<h3 id="11-solutions-s15">腾挪之间</h3>
+<p>元のルート（失敗）: ↓</p>
+<p>救済ルート（成功）: <strong>↑ ← ↑ ← ↑</strong></p>
+<h3 id="11-solutions-s16">逆转时刻</h3>
+<p>元のルート（失敗）: ↑</p>
+<p>救済ルート（成功）: <strong>← ← → ↓ ←</strong></p>
+<p>個人レスキューは開始盤面が異なり、共通の矢印解答はありません。その問題のヒントや比較リプレイを使ってください。</p>
+<div class="chapter-nav"><a href="#10-gallery">← 十七本のゲーム実演</a><a href="#12-support">よくある質問・開発・検証 →</a></div></article>
+<article data-chapter="12-support" aria-labelledby="12-support"><h1 id="12-support">よくある質問・開発・検証</h1>
+<h2 id="12-support-s1">よくある質問</h2>
+<p><strong>Mac はロビー、原生版は盤面から始まるのはなぜ？</strong> v12 はモード選択、Native 1.0.1 はクラシックから開始します。入口が異なりますが、どちらもクラシックを先頭にしています。</p>
+<p><strong>Mac 用 exe は？</strong> <code>.exe</code> は Windows 用、<code>.command</code> は Mac の起動スクリプトです。Python コードは共通で、実行環境は OS ごとに準備します。iPhone / iPad は別の Swift 工程です。</p>
+<p><strong>説明書は三言語なのにゲームは中国語？</strong> 今回は説明書と README の三言語化で、ゲーム内言語切り替えを追加する変更ではありません。訳文にも実際のボタン名を残しています。</p>
+<p><strong>自動プレイなら必ず 32768？</strong> 保証しません。時間制限・評価関数とランダムな結果があり、過去の高得点は特定の試行です。全端末・全版の保証ではありません。</p>
+<p><strong>携帯と PC のデイリーが違う？</strong> 版、日付、操作順、取り消し、補助を確認してください。規則比較の成功は、全開始状態やセーブの互換性を意味しません。特に遠征の選択肢の並べ方は版によって異なります。</p>
+<p><strong>GIF が遅く見える？</strong> 読みやすさと容量のため 12 fps で採取した教材です。実画面のフレームレート測定ではありません。MP4 を開くと再生操作ができます。</p>
+<p><strong>星や記録が予想と違う？</strong> 補助使用、取り消し、最短手数、表示中のモードを確認します。現在局を取り消しても過去の最高記録は下がりません。</p>
+<h2 id="12-support-s2">ソースと開発</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>パス</th>
+<th>役割</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>game.py</code>, <code>air_ui.py</code>, <code>interface_base.py</code></td>
+<td>デスクトップ起動と画面</td>
+</tr>
+<tr>
+<td><code>engine.py</code>, <code>modes.py</code>, <code>persistence.py</code></td>
+<td>規則、モード保存、背景保存</td>
+</tr>
+<tr>
+<td><code>ai.py</code>, <code>search_native.py</code></td>
+<td>探索と別プロセス</td>
+</tr>
+<tr>
+<td><code>expedition.py</code>, <code>rescue.py</code>, <code>puzzles.py</code></td>
+<td>専用モードと解法</td>
+</tr>
+<tr>
+<td><code>desktop_start.py</code>, <code>platform_paths.py</code>, <code>check_runtime.py</code></td>
+<td>起動、保存先、ロック、診断</td>
+</tr>
+<tr>
+<td><code>tests/</code>, <code>validation/v12/</code></td>
+<td>デスクトップテストと証拠</td>
+</tr>
+<tr>
+<td><code>iOS/</code></td>
+<td>Swift 原生工程</td>
+</tr>
+<tr>
+<td><code>mobile/</code></td>
+<td>Touch Web 工程</td>
+</tr>
+<tr>
+<td><code>docs/</code>, <code>README*.md</code></td>
+<td>全版ガイドと三言語入口</td>
+</tr>
+</tbody></table></div>
+<p>説明書単独 ZIP は文章、媒体、参照報告、生成ツールを含み、<strong>実行ゲームや完全な原生ソースは含みません</strong>。Windows-with-docs ZIP は Windows ゲームと環境を含みますが、完全な iOS 工程は含みません。元のゲームルートが各版の工程と配布物をまとめた場所です。</p>
+<p>デスクトップ環境を準備し、ゲームルートで実行します。</p>
+<pre><code class="language-sh">python -m unittest discover -s tests
+</code></pre>
+<p><code>python</code> はゲーム用の実体に置き換えます。Mac は <code>.venv/bin/python</code>、Windows ソースは <code>.venv\Scripts\python.exe</code> です。ポータブル Windows では <code>check-windows.bat</code> を使います。Web は <code>mobile/</code> 内で <code>node --test tests/*.test.js</code>、開発起動は <code>python3 serve.py</code> です。原生版のテスト・Xcode・実機確認は専用ビルド章を参照してください。</p>
+<p>ゲーム全体の <code>THIRD_PARTY.md</code>、<code>fonts/OFL.txt</code>、Windows <code>licenses/</code> を残します。苹方などシステム字体はローカルで読むもので、Windows 配布用にコピーしません。コードが読めることだけで、明示されていない再配布許諾を推定しないでください。</p>
+<h2 id="12-support-s3">検証記録を区別する</h2>
+<p>保管された v12 報告は <strong>90 テスト成功</strong>、遠征六ステージ 6,098 点・123 手、実敗局からのレスキュー抽出、字体代替、Windows 静的確認を記録しています。以前の v12 の証拠であり、今回の説明書更新で新たに実施したハードウェア試験ではありません。</p>
+<p>Native 1.0.1 の記録には <strong>38 のコア／操作確認、5,760 回の混合操作</strong>があります。Web にも独立した規則・ブラウザー確認があります。別の版の検証で代用はできません。</p>
+<p>今回のリンク・アンカー、翻訳章、解答経路、GIF / MP4 の復号とフレーム数、配布資源、Windows 実行ファイル不変、個人セーブ不変の確認は<a href="../QA.md">文書 QA</a>を参照してください。オフライン HTML のブラウザーによる外観・操作確認は未完了です。構造検査をクリック操作済みと表現していません。</p>
+<h2 id="12-support-s4">問題報告の書式</h2>
+<pre><code class="language-text">版：Mac/Windows v12、Native 1.0.1、Touch v1
+OS・端末・CPU：
+導入方法・配布ファイル名：
+モード・日付・章：
+正確な再現手順：
+期待した結果・実際の結果：
+再現するか：
+AI・取り消し・モード変更の有無：
+エラー全文・画像・関連ログ：
+</code></pre>
+<p>セーブ調査前にはバックアップし、診断に提供してよいコピーだけ共有します。パスワードや署名証明書は不要です。端末と版を明記し、PC のキー問題と携帯のジェスチャーを混同しないようにしてください。</p>
+<div class="chapter-nav"><a href="#11-solutions">← 十二問のパズルと三問のレスキュー解答</a><span>LUMINA · ALL EDITIONS</span></div></article></main></div><script id="reader-config" type="application/json">{"play":"動図を再生","pause":"動図を停止","results":"検索結果","none":"該当する内容はありません"}</script><script src="../reader.js"></script></body></html>
