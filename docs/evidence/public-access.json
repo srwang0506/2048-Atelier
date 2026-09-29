@@ -1,0 +1,106 @@
+{
+  "url": "https://lumina-2048.vercel.app/",
+  "credentials_sent": false,
+  "checks": [
+    {
+      "path": "/",
+      "status": "200",
+      "matches_published_file": true,
+      "error": null
+    },
+    {
+      "path": "/ai-worker.js",
+      "status": "200",
+      "matches_published_file": true,
+      "error": null
+    },
+    {
+      "path": "/app.js",
+      "status": "200",
+      "matches_published_file": true,
+      "error": null
+    },
+    {
+      "path": "/engine.js",
+      "status": "200",
+      "matches_published_file": true,
+      "error": null
+    },
+    {
+      "path": "/icon-180.png",
+      "status": "200",
+      "matches_published_file": true,
+      "error": null
+    },
+    {
+      "path": "/icon-192.png",
+      "status": "200",
+      "matches_published_file": true,
+      "error": null
+    },
+    {
+      "path": "/icon-512.png",
+      "status": "200",
+      "matches_published_file": true,
+      "error": null
+    },
+    {
+      "path": "/icon.svg",
+      "status": "200",
+      "matches_published_file": true,
+      "error": null
+    },
+    {
+      "path": "/index.html",
+      "status": "200",
+      "matches_published_file": true,
+      "error": null
+    },
+    {
+      "path": "/manifest.webmanifest",
+      "status": "200",
+      "matches_published_file": true,
+      "error": null
+    },
+    {
+      "path": "/puzzle-levels.json",
+      "status": "200",
+      "matches_published_file": true,
+      "error": null
+    },
+    {
+      "path": "/rescue-practice.json",
+      "status": "200",
+      "matches_published_file": true,
+      "error": null
+    },
+    {
+      "path": "/solver.js",
+      "status": "200",
+      "matches_published_file": true,
+      "error": null
+    },
+    {
+      "path": "/storage.js",
+      "status": "200",
+      "matches_published_file": true,
+      "error": null
+    },
+    {
+      "path": "/styles.css",
+      "status": "200",
+      "matches_published_file": true,
+      "error": null
+    },
+    {
+      "path": "/sw.js",
+      "status": "200",
+      "matches_published_file": true,
+      "error": null
+    }
+  ],
+  "passed": true,
+  "verified_date": "2026-09-29",
+  "access": "Public; no account or sign-in required.",
+  "runtime_unchanged": true
+}

@@ -28,7 +28,7 @@ If the App is already installed, begin with controls. If you received source, be
 
 The web edition is separate from the native App. It supports Safari touch controls and adding the game to the Home Screen. For the native App, use the installation and control instructions above.
 
-1. Open [LUMINA for the web](https://lumina-2048.vercel.app/) in Safari. Access is currently restricted; sign in with an authorized Vercel account.
+1. Open [LUMINA for the web](https://lumina-2048.vercel.app/) in Safari. The website is public; no account or sign-in is required.
 2. Wait for full initial loading, then Share → Add to Home Screen.
 3. Wait for offline preparation before testing a disconnected Home Screen launch. Offline availability is not promised before caching completes.
 4. Swipe inside the board, use direction buttons or arrows/WASD.

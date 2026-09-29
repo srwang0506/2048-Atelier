@@ -6,7 +6,7 @@ Slide tiles, merge equal numbers and work your way from 2 to 2048—and beyond. 
 
 **Web edition: [Open LUMINA 2048](https://lumina-2048.vercel.app/)**
 
-The website currently requires an authorized Vercel account. Before switching addresses, export progress with 「导出进度」 in the old site’s settings, then import it with 「导入进度」 on the new site. Saves do not move automatically between addresses.
+The website is public. Open the link to play; no account or sign-in is required. Before switching addresses, export progress with 「导出进度」 in the old site’s settings, then import it with 「导入进度」 on the new site. Saves do not move automatically between addresses.
 
 **Downloads: [App packages and offline manuals](https://github.com/srwang0506/2048-Atelier/releases/latest)** · [Source code](https://github.com/srwang0506/2048-Atelier)
 

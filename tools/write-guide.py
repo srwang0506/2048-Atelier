@@ -1025,7 +1025,7 @@ w('zh-CN',9,r'''
 
 网页版与原生 App 分开使用，支持 Safari 触屏操作和添加到主屏幕。原生 App 的安装与操作请看本章前半部分。
 
-1. 在 Safari 打开 [LUMINA 网页版](https://lumina-2048.vercel.app/)。当前入口为受限访问，需要有权限的 Vercel 账号登录。
+1. 在 Safari 打开 [LUMINA 网页版](https://lumina-2048.vercel.app/)。无需注册或登录，也不需要 Vercel 账号。
 2. 等首次完整加载，使用分享 → 添加到主屏幕。
 3. 等离线准备完成后，再测试断网从主屏幕进入。首次打开前或资源未缓存完整时不能承诺离线。
 4. 以棋盘内滑动或方向按钮游玩，也可用方向键 / WASD。
@@ -1068,7 +1068,7 @@ If the App is already installed, begin with controls. If you received source, be
 
 The web edition is separate from the native App. It supports Safari touch controls and adding the game to the Home Screen. For the native App, use the installation and control instructions above.
 
-1. Open [LUMINA for the web](https://lumina-2048.vercel.app/) in Safari. Access is currently restricted; sign in with an authorized Vercel account.
+1. Open [LUMINA for the web](https://lumina-2048.vercel.app/) in Safari. The website is public; no account or sign-in is required.
 2. Wait for full initial loading, then Share → Add to Home Screen.
 3. Wait for offline preparation before testing a disconnected Home Screen launch. Offline availability is not promised before caching completes.
 4. Swipe inside the board, use direction buttons or arrows/WASD.
@@ -1111,7 +1111,7 @@ AI を止め、設定から JSON を「ファイル」などへ書き出しま�
 
 Web 版はネイティブ App とは別の版です。Safari のタッチ操作とホーム画面への追加に対応します。ネイティブ App はこの章の前半にある導入・操作手順を参照してください。
 
-1. Safari で [LUMINA Web 版](https://lumina-2048.vercel.app/)を開きます。現在はアクセス制限があるため、利用権限のある Vercel アカウントでログインしてください。
+1. Safari で [LUMINA Web 版](https://lumina-2048.vercel.app/)を開きます。アカウント登録やログインは不要です。リンクを開くと遊べます。
 2. 初回読込完了を待ち、共有 → ホーム画面に追加を選びます。
 3. オフライン準備後に切断してホーム画面から起動を試します。キャッシュ前はオフライン利用を保証しません。
 4. 盤面内スワイプ、方向ボタン、矢印／WASD で遊べます。
@@ -1639,9 +1639,9 @@ readmes={'zh-CN': '# LUMINA 2048\n'
        'Windows が起動しない場合は `启动游戏.bat` でエラーを確認するか、`check-windows.bat` '
        'で診断します。[版と検証の説明](docs/ja/12-support.md)に対応範囲があります。Windows 実機、iPhone / iPad 端末での受け入れ確認は未完了です。\n'}
 web_notices={
- 'zh-CN':'**网页版入口：[打开 LUMINA 2048](https://lumina-2048.vercel.app/)**\n\n当前网页需要有权限的 Vercel 账号登录。换网址前，请在旧网页设置中「导出进度」，再到新网页「导入进度」；存档不会自动跟随网址迁移。',
- 'en':'**Web edition: [Open LUMINA 2048](https://lumina-2048.vercel.app/)**\n\nThe website currently requires an authorized Vercel account. Before switching addresses, export progress with 「导出进度」 in the old site’s settings, then import it with 「导入进度」 on the new site. Saves do not move automatically between addresses.',
- 'ja':'**Web 版：[LUMINA 2048 を開く](https://lumina-2048.vercel.app/)**\n\n現在は利用権限のある Vercel アカウントでのログインが必要です。URL を切り替える前に、旧サイトの設定で「导出进度」を選び、新サイトの「导入进度」で読み込んでください。セーブは新しい URL へ自動では移行されません。'
+ 'zh-CN':'**网页版入口：[打开 LUMINA 2048](https://lumina-2048.vercel.app/)**\n\n网页版已公开，无需注册或登录，打开链接即可游玩。换网址前，请在旧网页设置中「导出进度」，再到新网页「导入进度」；存档不会自动跟随网址迁移。',
+ 'en':'**Web edition: [Open LUMINA 2048](https://lumina-2048.vercel.app/)**\n\nThe website is public. Open the link to play; no account or sign-in is required. Before switching addresses, export progress with 「导出进度」 in the old site’s settings, then import it with 「导入进度」 on the new site. Saves do not move automatically between addresses.',
+ 'ja':'**Web 版：[LUMINA 2048 を開く](https://lumina-2048.vercel.app/)**\n\nWeb 版は公開されています。アカウント登録やログインは不要で、リンクを開くと遊べます。URL を切り替える前に、旧サイトの設定で「导出进度」を選び、新サイトの「导入进度」で読み込んでください。セーブは新しい URL へ自動では移行されません。'
 }
 download_notices={'zh-CN': '**下载：[应用包和离线文档](https://github.com/srwang0506/2048-Atelier/releases/latest)** · [查看源码](https://github.com/srwang0506/2048-Atelier)\n\nWindows 请下载 Releases 中的 Windows x64 包；GitHub 的“Download ZIP”只下载源码。iPhone / iPad 当前提供可构建的原生源码，尚无已签名安装包。', 'en': '**Downloads: [App packages and offline manuals](https://github.com/srwang0506/2048-Atelier/releases/latest)** · [Source code](https://github.com/srwang0506/2048-Atelier)\n\nFor Windows, choose the Windows x64 package in Releases. GitHub’s “Download ZIP” contains source code only. The iPhone/iPad edition currently provides buildable native source, without a signed installer.', 'ja': '**ダウンロード：[アプリ配布物・オフライン説明書](https://github.com/srwang0506/2048-Atelier/releases/latest)** · [ソースコード](https://github.com/srwang0506/2048-Atelier)\n\nWindows は Releases の Windows x64 パッケージを選んでください。GitHub の「Download ZIP」はソースのみです。iPhone / iPad 版は現在、ビルド用の原生ソースを提供しており、署名済みインストーラーはありません。'}
 for lang in web_notices:
